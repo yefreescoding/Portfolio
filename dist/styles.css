@@ -21,8 +21,8 @@ body {
 }
 
 :root {
-  --color-bg: rgb(228, 180, 188);
-  --color-main: rgb(232, 224, 206);
+  --color-bg: hsl(350, 47%, 80%);
+  --color-main: hsl(42, 36%, 86%);
 }
 
 .grid {
