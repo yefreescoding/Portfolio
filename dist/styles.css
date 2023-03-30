@@ -1,1 +1,59 @@
-/*# sourceMappingURL=styles.css.map */
+:root {
+  --general-font: "Fira Code", monospace;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  outline: 0.5px grey solid;
+}
+
+body {
+  font-family: var(--general-font);
+  background-color: var(--color-bg);
+  padding: 2rem;
+}
+
+:root {
+  --color-bg: rgb(228, 180, 188);
+  --color-main: rgb(232, 224, 206);
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+header {
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3rem;
+  padding: 1rem;
+  background-color: var(--color-main);
+}
+header .logo-container {
+  flex-basis: 60px;
+}
+header .logo-container img {
+  width: 100%;
+}
+header nav {
+  flex: 1;
+}
+header nav ul {
+  list-style-type: none;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+header nav ul > * {
+  flex: 1;
+}/*# sourceMappingURL=styles.css.map */

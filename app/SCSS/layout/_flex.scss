@@ -1,0 +1,32 @@
+@use "../util" as u;
+
+.flex {
+  display: flex;
+}
+
+header {
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3rem;
+  padding: 1rem;
+  background-color: var(--color-main);
+
+  .logo-container {
+    flex-basis: 60px;
+    img {
+      width: 100%;
+    }
+  }
+
+  nav {
+    flex: 1;
+    ul {
+      list-style-type: none;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    ul > * {
+      flex: 1;
+    }
+  }
+}
