@@ -1,0 +1,24 @@
+@use "../util" as u;
+
+header {
+  nav {
+    a {
+      font-family: var(--general-font);
+      color: var(--Black-ish);
+      font-size: 1.5rem;
+      font-weight: 700;
+      border: 1px var(--Black-ish) solid;
+      padding: .5rem;
+      transition: all .17s linear;
+
+      @include u.breakpoint(medium){
+        border: none;
+      }
+    }
+
+    a:is(:hover, :active){
+      border: 4px var(--Black-ish) solid;
+      box-shadow: 6px 4px 0 var(--Black-ish);
+    }
+  }
+}

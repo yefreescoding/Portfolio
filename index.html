@@ -19,16 +19,19 @@
       <img src="resources/icons/github copy Small.png" alt="web site logo">
     </div>
     <!--* BARRA DE NAVEGACIÓN *--> 
-    <nav>
+    <nav data-visible="false">
       <!--* LINKS contenedor *-->
       <ul class="links-container flex">
         <li><a href="#" class="links-container__link">Projects</a></li>
         <li><a href="#" class="links-container__link">Blog</a></li>
         <li><a href="#" class="links-container__link">Socials</a></li>
-        <li><a href="#" class="links-container__link">Git Repository</a></li>
+        <li><a href="#" class="links-container__link">Git Repo</a></li>
         <li><a href="#" class="links-container__link">Contact</a></li>
       </ul>
     </nav>
+    <button id="toggle-mobile-menu" data-fixed="false">
+      <img src="resources/icons/old-computer.png" alt="old computer icon">
+    </button>
   </header>
 <!--*** FULL WEB PAGE CONTAINER ***-->
   <div class="web-page-cont grid">
@@ -49,7 +52,7 @@
       </div>
       <!--** RIGHT SIDE, Desktop. TOP SIDE, mobile **-->
       <div class="img-conte flex">
-        <img class="img-conte__imagen" src="resources/images/hero-images/hero-profile Background Removed.png" alt="Vector portrait picture.">
+        <img class="img-conte__imagen" src="resources/images/hero-images/hero-profile.png" alt="Vector portrait picture.">
       </div>
     </main>
     <!--** QUICK LINKS **-->
@@ -186,5 +189,7 @@
   <!--** PIE de la pagina **-->
   <footer>
   </footer>
+
+  <script src="app/scripts/script.js"></script>
 </body>
 </html>

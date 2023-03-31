@@ -16,8 +16,8 @@
   grid-template-columns: 
     repeat(auto-fit, minmax(min(var(--min-column-size), 100%), 1fr));
 
-  grid-template-rows: auto;
-  height: 80dvh;
+  grid-template-rows: 1fr;
+  // height: 80dvh;
   // width: min(100% - 1rem, 100%);
   //margin-inline: auto;
   border-bottom: solid 3px black;
@@ -29,11 +29,15 @@
     padding: 1.5rem;
   }
   .img-conte {
+    margin: 1rem auto;
     align-items: center;
     justify-content: center;
     &__imagen {
-      max-width: 70%;
+      max-width: 90%;
+      border-radius: 50%;
       display: block;
+      margin: auto;
+      // @include u.breakpoint
     }
   }
 }
