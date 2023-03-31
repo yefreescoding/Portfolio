@@ -11,13 +11,16 @@ html {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
-  outline: 0.5px grey solid;
+}
+
+a, a:visited, a:active {
+  text-decoration: none;
 }
 
 body {
   font-family: var(--general-font);
   background-color: var(--color-bg);
-  padding: 2rem;
+  padding: 0.5rem;
 }
 
 :root {
@@ -27,6 +30,69 @@ body {
 
 .grid {
   display: grid;
+}
+
+.web-page-cont {
+  border: 4px solid black;
+  background-color: var(--color-main);
+  gap: 2rem;
+}
+
+#home {
+  --min-column-size: 20rem;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(var(--min-column-size), 100%), 1fr));
+  grid-template-rows: auto;
+  height: 80dvh;
+  border-bottom: solid 3px black;
+}
+#home .intro-cont {
+  flex-flow: column;
+  gap: 1rem;
+  align-items: start;
+  justify-content: center;
+  padding: 1.5rem;
+}
+#home .img-conte {
+  align-items: center;
+  justify-content: center;
+}
+#home .img-conte__imagen {
+  max-width: 70%;
+  display: block;
+}
+
+.quick-links {
+  position: relative;
+  inset: 0;
+  gap: 1rem;
+  padding: 0 3rem;
+}
+.quick-links__contenedor {
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(10rem, 100%), 1fr));
+}
+.quick-links__contenedor a {
+  background-color: rgb(166, 164, 137);
+  color: white;
+  padding: 0.7rem 0.9rem;
+  border: 3px black solid;
+}
+
+.projects-sect {
+  padding: 1rem;
+}
+@media (min-width: 56.25em) {
+  .projects-sect {
+    grid-auto-flow: column;
+    grid-auto-columns: 45%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 2rem;
+  }
+  .projects-sect > * {
+    scroll-snap-align: start;
+  }
 }
 
 .flex {
@@ -39,12 +105,15 @@ header {
   gap: 3rem;
   padding: 1rem;
   background-color: var(--color-main);
+  border: 4px solid black;
+  border-bottom: 0;
 }
 header .logo-container {
   flex-basis: 60px;
 }
 header .logo-container img {
   width: 100%;
+  display: block;
 }
 header nav {
   flex: 1;
@@ -56,4 +125,38 @@ header nav ul {
 }
 header nav ul > * {
   flex: 1;
+}
+
+.projects-sect {
+  gap: 1rem;
+  padding: 1rem;
+}
+.projects-sect .project-container {
+  gap: 1rem;
+  flex-flow: column;
+  background-color: rgb(237, 235, 222);
+  border: 4px solid black;
+  width: min(100% - 1rem, 40rem);
+  margin-inline: auto;
+}
+.projects-sect .project-container__header {
+  padding: 0.5rem;
+  gap: 1rem;
+  align-items: center;
+  border-bottom: 3px solid black;
+}
+.projects-sect .project-container__header .close-open {
+  flex-basis: 5rem;
+  flex-wrap: nowrap;
+}
+.projects-sect .project-container__header h4 {
+  flex: 1;
+}
+.projects-sect .project-container__info {
+  padding: 1rem;
+  flex-flow: column;
+  gap: 1.5rem;
+}
+.projects-sect .project-container__links {
+  padding: 1rem;
 }/*# sourceMappingURL=styles.css.map */

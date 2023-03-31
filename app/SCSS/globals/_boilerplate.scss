@@ -10,11 +10,15 @@ html {
   margin: 0;
   padding: 0;
 
-  outline: .5px grey solid;
+  // outline: .5px grey solid;
+}
+
+a, a:visited, a:active {
+  text-decoration: none;
 }
 
 body {
   font-family: var(--general-font);
   background-color: var(--color-bg);
-  padding: 2rem;
+  padding: .5rem;
 }
