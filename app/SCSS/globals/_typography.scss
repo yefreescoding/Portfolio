@@ -2,23 +2,85 @@
 
 header {
   nav {
-    a {
-      font-family: var(--general-font);
-      color: var(--Black-ish);
-      font-size: 1.5rem;
-      font-weight: 700;
-      border: 1px var(--Black-ish) solid;
-      padding: .5rem;
-      transition: all .17s linear;
 
+    li {
+      border: 3px var(--Black-ish) solid;
+      text-align: center;
+      transition: all .17s linear;
+      a {
+        font-family: var(--general-font);
+        color: var(--Black-ish);
+        font-size: 1.5rem;
+        font-weight: 700;
+        padding: .5rem;
+        
+      }
       @include u.breakpoint(medium){
         border: none;
       }
+      &:is(:hover, :active){
+        border: 4px var(--Black-ish) solid;
+        box-shadow: 6px 4px 0 var(--Black-ish);
+      }
     }
 
-    a:is(:hover, :active){
-      border: 4px var(--Black-ish) solid;
-      box-shadow: 6px 4px 0 var(--Black-ish);
+  }
+}
+
+.intro-cont {
+
+  &__header{
+    font-size: 2.5rem;
+
+    @include u.breakpoint(medium){
+      font-size: 5rem;
     }
   }
+
+  &__phrase {
+    font-size: 1.5rem;
+    color: grey;
+    line-height: 35px;
+  }
+
+  .mail-anchor {
+    position: relative;
+    color: white;
+    background-color: #111;
+    font-size: 1.2rem;
+    padding: 4px;
+    margin-bottom: 1rem;
+    // transform: perspective(7000px) rotate(55deg);
+    transition: all .23s linear;
+    
+
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   inset: -5px;
+    //   background: linear-gradient(25deg, hsl(120, 85%, 33%), hsl(120, 100%, 86%));
+    //   // transform: translateZ(-25px);
+    //   z-index: -1;
+    //   box-shadow: 0 0 16px lightgreen;
+    // }
+
+    &:is(:hover, :active) {
+      box-shadow: 0 0 16px hsl(120, 96%, 41%);
+      color: hsl(120, 96%, 41%);
+    }
+
+  }
+  .nan-btn {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: hsl(0, 0%, 64%);
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+      color: hsl(0, 0%, 7%);
+    }
+  }
+
+
 }

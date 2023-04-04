@@ -23,14 +23,14 @@ header {
 
   nav {
     position: fixed;
-    inset: 1.3rem 1.8rem auto auto;
+    inset: 1.3rem 1.8rem auto 30%;
     z-index: 9998;
     background-color: var(--color-main);
     transform: translateX(120%);
     border: 4px solid var(--Black-ish);
     box-shadow: 5px 6px var(--Black-ish);
     flex: 1;
-    width: 15rem;
+    // width: 15rem;
     transition: transform .35s ease-in;
     ul {
       flex-flow: column;
