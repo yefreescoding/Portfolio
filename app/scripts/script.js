@@ -7,10 +7,27 @@ toggleMobile.addEventListener("click", function(){
 
   if (visible === "false"){
     navBarMobile.setAttribute("data-visible", true);
-    toggleMobile.setAttribute("data-fixed", true)
+    toggleMobile.setAttribute("data-fixed", true);
   } else {
     navBarMobile.setAttribute("data-visible", false);
-    toggleMobile.setAttribute("data-fixed", false)
+    toggleMobile.setAttribute("data-fixed", false);
   }
-})
+});
 
+
+
+$(document).ready(function(){
+
+  const projectsToggle = $("#projects-toggle");
+
+  const projectSection = $(".projects-sect"); 
+
+  // projectSection.css("display", "none");
+
+  projectsToggle.click(function(){
+
+    projectSection.slideToggle("slow");
+
+  });
+
+});

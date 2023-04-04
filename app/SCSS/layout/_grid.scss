@@ -20,7 +20,7 @@
   // height: 80dvh;
   // width: min(100% - 1rem, 100%);
   //margin-inline: auto;
-  border-bottom: solid 3px black;
+  border-bottom: solid 3px var(--Black-ish);
   .intro-cont {
     flex-flow: column;
     gap: 2.5rem;
@@ -49,20 +49,32 @@
   inset: 0;
   gap: 1rem;
   padding: 0 3rem;
+  margin-bottom: 1rem;
   &__contenedor {
     gap: .5rem;
     grid-template-columns: 
       repeat(auto-fit, minmax(min(10rem, 100%), 1fr));
     
     
-      a {
+      .q-links {
         background-color: rgb(166, 164, 137);
         color: white;
         padding: .7rem .9rem;
-        border: 3px black solid;
+        border: 3px var(--Black-ish) solid;
       }
   } 
 }
+/*
+  #toggle{
+  text
+  place-self: center;
+  font-size: 2rem;
+  padding: 1rem;
+  background-color: #111;
+  color: white;
+  border: transparent;
+}
+*/
 
 .projects-sect {
   // gap: 1rem;

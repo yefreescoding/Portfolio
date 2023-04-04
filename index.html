@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="dist/styles.css">
   <title>Yefree's personal portfolio | web app developer</title>
   <!--** Link to the JQuery library **-->
-  <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 <body>
   <!--** HEADER of the web page **-->
@@ -65,16 +65,104 @@
     <div class="quick-links grid">
       <h2>Quick-links</h2>
       <div class="quick-links__contenedor grid">
-        <a href="">Repository &#8599;</a>
-        <a href="">Projects &#8599;</a>
-        <a href="">About &#8599;</a>
-        <a href="">Contact &#8599;</a>
+        <span class="q-links" id="projects-toggle">Projects &#8599;</span>
+        <a class="q-links" href="">About &#8599;</a>
+        <a class="q-links" href="">GitHub &#8599;</a>
+        <a class="q-links" href="">Contact &#8599;</a>
       </div>
     </div>
      <!--** PROJECTS section **-->
-  <section class="projects-sect grid">
-    <!--**************-->
-    <div class="project-container flex">
+    <!-- <button id="toggle">Projects</button> -->
+    <section class="projects-sect grid">
+      <!--**************-->
+      <div class="project-container flex">
+        <!--** HEADER of the container **-->
+        <div class="project-container__header flex">
+          <div class="close-open">
+            <img src="" alt="X">
+            <img src="" alt="O">
+          </div>
+          <h4>Landing Page</h4>
+        </div>
+        <!--** IMAGE of the container **-->
+        <img class="project-container__img" src="resources/images/projects-img/landing-page-leana-deeb.png" alt="Project screenshot">
+        <!--** INFORMATION of the container **-->
+        <div class="project-container__info flex">
+          <h3>
+            Influencer Landing Page.
+          </h3>
+          <p>
+            This a landing page I made as a project to learn 
+            the basics of web responsive design, use of different
+            medias such as images and videos.
+          </p>
+        </div>
+        <!--** LINK of the container **-->
+        <div class="project-container__links">
+          <a href="#" target="_blank">Git Repo</a>
+          <a href="#" target="_blank">Live Site</a>
+        </div>
+      </div>
+      <!--**************-->
+      <div class="project-container flex">
+        <!--** HEADER of the container **-->
+        <div class="project-container__header flex">
+          <div class="close-open">
+            <img src="" alt="X">
+            <img src="" alt="O">
+          </div>
+          <h4>Titulo del proyecto</h4>
+        </div>
+        <!--** IMAGE of the container **-->
+        <div class="project-container__img">
+          <img src="" alt="Project screenshot">
+        </div>
+        <!--** INFORMATION of the container **-->
+        <div class="project-container__info flex">
+          <h3>
+            Name of the project.
+          </h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui quia alias iste ipsa hic perspiciatis tenetur vitae, esse odio eius sequi cum laudantium fugiat iure magni sit laboriosam libero.
+          </p>
+        </div>
+        <!--** LINK of the container **-->
+        <div class="project-container__links">
+          <a href="#" target="_blank">Git Repository</a>
+          <a href="#" target="_blank">Live Site</a>
+        </div>
+      </div>
+      <!--**************-->
+      <div class="project-container flex">
+        <!--** HEADER of the container **-->
+        <div class="project-container__header flex">
+          <div class="close-open">
+            <img src="" alt="X">
+            <img src="" alt="O">
+          </div>
+          <h4>Titulo del proyecto</h4>
+        </div>
+        <!--** IMAGE of the container **-->
+        <div class="project-container__img">
+          <img src="" alt="Project screenshot">
+        </div>
+        <!--** INFORMATION of the container **-->
+        <div class="project-container__info flex">
+          <h3>
+            Name of the project.
+          </h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui quia alias iste ipsa hic perspiciatis tenetur vitae, esse odio eius sequi cum laudantium fugiat iure magni sit laboriosam libero.
+          </p>
+        </div>
+        <!--** LINK of the container **-->
+        <div class="project-container__links">
+          <a href="#" target="_blank">Git Repository</a>
+          <a href="#" target="_blank">Live Site</a>
+        </div>
+      </div>
+          <!--**************-->
+      <div class="project-container flex">
       <!--** HEADER of the container **-->
       <div class="project-container__header flex">
         <div class="close-open">
@@ -101,96 +189,9 @@
         <a href="#" target="_blank">Git Repository</a>
         <a href="#" target="_blank">Live Site</a>
       </div>
-    </div>
-    <!--**************-->
-    <div class="project-container flex">
-      <!--** HEADER of the container **-->
-      <div class="project-container__header flex">
-        <div class="close-open">
-          <img src="" alt="X">
-          <img src="" alt="O">
-        </div>
-        <h4>Titulo del proyecto</h4>
       </div>
-      <!--** IMAGE of the container **-->
-      <div class="project-container__img">
-        <img src="" alt="Project screenshot">
-      </div>
-      <!--** INFORMATION of the container **-->
-      <div class="project-container__info flex">
-        <h3>
-          Name of the project.
-        </h3>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui quia alias iste ipsa hic perspiciatis tenetur vitae, esse odio eius sequi cum laudantium fugiat iure magni sit laboriosam libero.
-        </p>
-      </div>
-      <!--** LINK of the container **-->
-      <div class="project-container__links">
-        <a href="#" target="_blank">Git Repository</a>
-        <a href="#" target="_blank">Live Site</a>
-      </div>
-    </div>
-     <!--**************-->
-    <div class="project-container flex">
-      <!--** HEADER of the container **-->
-      <div class="project-container__header flex">
-        <div class="close-open">
-          <img src="" alt="X">
-          <img src="" alt="O">
-        </div>
-        <h4>Titulo del proyecto</h4>
-      </div>
-      <!--** IMAGE of the container **-->
-      <div class="project-container__img">
-        <img src="" alt="Project screenshot">
-      </div>
-      <!--** INFORMATION of the container **-->
-      <div class="project-container__info flex">
-        <h3>
-          Name of the project.
-        </h3>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui quia alias iste ipsa hic perspiciatis tenetur vitae, esse odio eius sequi cum laudantium fugiat iure magni sit laboriosam libero.
-        </p>
-      </div>
-      <!--** LINK of the container **-->
-      <div class="project-container__links">
-        <a href="#" target="_blank">Git Repository</a>
-        <a href="#" target="_blank">Live Site</a>
-      </div>
-    </div>
-         <!--**************-->
-    <div class="project-container flex">
-    <!--** HEADER of the container **-->
-    <div class="project-container__header flex">
-      <div class="close-open">
-        <img src="" alt="X">
-        <img src="" alt="O">
-      </div>
-      <h4>Titulo del proyecto</h4>
-    </div>
-    <!--** IMAGE of the container **-->
-    <div class="project-container__img">
-      <img src="" alt="Project screenshot">
-    </div>
-    <!--** INFORMATION of the container **-->
-    <div class="project-container__info flex">
-      <h3>
-        Name of the project.
-      </h3>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui quia alias iste ipsa hic perspiciatis tenetur vitae, esse odio eius sequi cum laudantium fugiat iure magni sit laboriosam libero.
-      </p>
-    </div>
-    <!--** LINK of the container **-->
-    <div class="project-container__links">
-      <a href="#" target="_blank">Git Repository</a>
-      <a href="#" target="_blank">Live Site</a>
-    </div>
-    </div>
-    
-  </section>
+      
+    </section>
   </div>
   <!--** PIE de la pagina **-->
   <footer>

@@ -46,7 +46,7 @@ header {
   .mail-anchor {
     position: relative;
     color: white;
-    background-color: #111;
+    background-color: var(--Black-ish);
     font-size: 1.2rem;
     padding: 4px;
     margin-bottom: 1rem;
@@ -81,6 +81,42 @@ header {
       color: hsl(0, 0%, 7%);
     }
   }
-
-
+  
+  
 }
+
+.q-links {
+ text-align: start;
+ cursor: pointer;
+ font-size: 1.1rem;
+ font-weight: bold;
+ letter-spacing: 3px;
+ transform: perspective(7000px);
+ transform-style: preserve-3d;
+ transition: all .20s linear;
+
+ &:is(:hover, :active){
+  transform: rotateX(8deg) rotateY(8deg) translateX(-3px);
+  box-shadow: 3px 3px 0 var(--Black-ish);
+ }
+}
+
+.project-container__links {
+  a {
+    padding: 6px;
+    background-color: transparent;
+    color: var(--Black-ish);
+    padding: 3px;
+    border: var(--Black-ish) 3px solid;
+    transition: all .20s linear;
+    &:is(:hover, :active){
+      //color: white;
+      //background-color: var(--Black-ish);
+      border: 3px var(--Black-ish) solid;
+      box-shadow: 3px 3px 0 var(--Black-ish);
+      transform: translateY(6px);
+    } 
+  }
+}
+
+
