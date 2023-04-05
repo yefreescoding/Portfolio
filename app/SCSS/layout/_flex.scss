@@ -46,7 +46,7 @@ header {
       position: relative;
       transform: translateX(0);
       inset: 0;
-      border: 0;
+      border: transparent 4px solid;
       box-shadow: none;
       ul {
         align-items: center;
@@ -91,9 +91,26 @@ header {
   }
 }
 
+.skills-container__section {
+  flex-flow: column;
+  background-color: var(--color-bg-skills);
+  gap: 1rem;
+  border-radius: 15px;
+  padding: 1rem;
+  border: 3px solid var(--Black-ish);
+
+  &>*{
+    flex: 1;
+  }
+
+  img {
+    width: 40%;
+  }
+}
+
 .projects-sect {
   gap: 1rem;
-  padding: 1rem;
+  // padding: .5rem;
 
   .project-container {
     flex-flow: column;
@@ -110,11 +127,13 @@ header {
       border-bottom: 3px solid black;
 
       .close-open {
-        flex-basis: 5rem;
+        gap: .2rem;
+        flex-basis: 3rem;
         flex-wrap: nowrap;
-      }
-      h4 {
-        flex: 1;
+
+        img{
+          width: 20px;
+        }
       }
     }
 

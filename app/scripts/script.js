@@ -16,13 +16,14 @@ toggleMobile.addEventListener("click", function(){
 
 
 
+/*
 $(document).ready(function(){
 
   const projectsToggle = $("#projects-toggle");
 
   const projectSection = $(".projects-sect"); 
 
-  // projectSection.css("display", "none");
+  projectSection.css("display", "none");
 
   projectsToggle.click(function(){
 
@@ -31,3 +32,4 @@ $(document).ready(function(){
   });
 
 });
+*/

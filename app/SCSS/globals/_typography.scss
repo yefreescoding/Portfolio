@@ -2,7 +2,6 @@
 
 header {
   nav {
-
     li {
       border: 3px var(--Black-ish) solid;
       text-align: center;
@@ -13,6 +12,7 @@ header {
         font-size: 1.5rem;
         font-weight: 700;
         padding: .5rem;
+        border: 4px transparent solid;
         
       }
       @include u.breakpoint(medium){
@@ -20,10 +20,10 @@ header {
       }
       &:is(:hover, :active){
         border: 4px var(--Black-ish) solid;
-        box-shadow: 6px 4px 0 var(--Black-ish);
+        box-shadow: 5px 2px 0 var(--Black-ish);
+        transform: translateX(-3px);
       }
     }
-
   }
 }
 
@@ -99,6 +99,29 @@ header {
   transform: rotateX(8deg) rotateY(8deg) translateX(-3px);
   box-shadow: 3px 3px 0 var(--Black-ish);
  }
+}
+
+.skills-container {
+  &__section {
+    h3 {
+      font-size: 2rem;
+      color: var(--Black-ish);
+    }
+
+    p{
+      font-size: 1.1rem;
+
+      @include u.breakpoint-down(small){
+        font-size: 1.2rem;
+        text-align: justify;
+      }
+    }
+  }
+}
+
+h2.projects-title {
+  text-align: center;
+  font-size: 3.5rem;
 }
 
 .project-container__links {

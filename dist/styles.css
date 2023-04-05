@@ -5,6 +5,7 @@
 html {
   box-sizing: border-box;
   font-size: 100%;
+  scroll-behavior: smooth;
 }
 
 *, *::after, *::before {
@@ -34,6 +35,7 @@ header nav li a {
   font-size: 1.5rem;
   font-weight: 700;
   padding: 0.5rem;
+  border: 4px transparent solid;
 }
 @media (min-width: 43.75em) {
   header nav li {
@@ -42,7 +44,8 @@ header nav li a {
 }
 header nav li:is(:hover, :active) {
   border: 4px var(--Black-ish) solid;
-  box-shadow: 6px 4px 0 var(--Black-ish);
+  box-shadow: 5px 2px 0 var(--Black-ish);
+  transform: translateX(-3px);
 }
 
 .intro-cont__header {
@@ -97,6 +100,25 @@ header nav li:is(:hover, :active) {
   box-shadow: 3px 3px 0 var(--Black-ish);
 }
 
+.skills-container__section h3 {
+  font-size: 2rem;
+  color: var(--Black-ish);
+}
+.skills-container__section p {
+  font-size: 1.1rem;
+}
+@media (max-width: 43.7485em) {
+  .skills-container__section p {
+    font-size: 1.2rem;
+    text-align: justify;
+  }
+}
+
+h2.projects-title {
+  text-align: center;
+  font-size: 3.5rem;
+}
+
 .project-container__links a {
   padding: 6px;
   background-color: transparent;
@@ -112,9 +134,11 @@ header nav li:is(:hover, :active) {
 }
 
 :root {
-  --color-bg: hsl(350, 47%, 80%);
-  --color-main: hsl(40, 100%, 99%);
+  --color-bg: #FABE64;
+  --color-main: hsl(36, 100%, 99%);
   --Black-ish: hsl(0, 0%, 8%);
+  --color-bg-elem: hsl(36, 33%, 41%);
+  --color-bg-skills: #FFCC80;
 }
 
 .grid {
@@ -157,8 +181,6 @@ header nav li:is(:hover, :active) {
 }
 
 .quick-links {
-  position: relative;
-  inset: 0;
   gap: 1rem;
   padding: 0 3rem;
   margin-bottom: 1rem;
@@ -168,7 +190,7 @@ header nav li:is(:hover, :active) {
   grid-template-columns: repeat(auto-fit, minmax(min(10rem, 100%), 1fr));
 }
 .quick-links__contenedor .q-links {
-  background-color: rgb(166, 164, 137);
+  background-color: var(--color-bg-elem);
   color: white;
   padding: 0.7rem 0.9rem;
   border: 3px var(--Black-ish) solid;
@@ -185,8 +207,45 @@ header nav li:is(:hover, :active) {
   border: transparent;
 }
 */
-.projects-sect {
+#skills {
+  gap: 2rem;
+  width: min(100% - 1.5rem, 100%);
+  margin-inline: auto;
+  margin-bottom: 5rem;
+}
+#skills .title-skills {
+  text-align: center;
+}
+#skills .title-skills span {
+  font-size: 1.1rem;
+}
+#skills .title-skills h2 {
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+#skills .skills-container {
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+}
+@media (min-width: 43.75em) {
+  #skills .skills-container {
+    padding-inline: 3.5rem;
+  }
+}
+#skills .skills-container__section {
+  background-color: var(--color-bg-skills);
+  flex-flow: column;
+  gap: 1rem;
+  border-radius: 15px;
   padding: 1rem;
+  border: 3px solid var(--Black-ish);
+}
+#skills .skills-container__section img {
+  width: 40%;
+}
+
+.projects-sect {
+  margin-bottom: 8rem;
 }
 @media (min-width: 56.25em) {
   .projects-sect {
@@ -244,7 +303,7 @@ header nav ul {
     position: relative;
     transform: translateX(0);
     inset: 0;
-    border: 0;
+    border: transparent 4px solid;
     box-shadow: none;
   }
   header nav ul {
@@ -284,9 +343,23 @@ header button[data-fixed=true] {
   }
 }
 
+.skills-container__section {
+  flex-flow: column;
+  background-color: var(--color-bg-skills);
+  gap: 1rem;
+  border-radius: 15px;
+  padding: 1rem;
+  border: 3px solid var(--Black-ish);
+}
+.skills-container__section > * {
+  flex: 1;
+}
+.skills-container__section img {
+  width: 40%;
+}
+
 .projects-sect {
   gap: 1rem;
-  padding: 1rem;
 }
 .projects-sect .project-container {
   flex-flow: column;
@@ -303,11 +376,12 @@ header button[data-fixed=true] {
   border-bottom: 3px solid black;
 }
 .projects-sect .project-container__header .close-open {
-  flex-basis: 5rem;
+  gap: 0.2rem;
+  flex-basis: 3rem;
   flex-wrap: nowrap;
 }
-.projects-sect .project-container__header h4 {
-  flex: 1;
+.projects-sect .project-container__header .close-open img {
+  width: 20px;
 }
 .projects-sect .project-container .project-container__img {
   display: block;
