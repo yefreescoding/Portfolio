@@ -21,27 +21,28 @@
   // width: min(100% - 1rem, 100%);
   //margin-inline: auto;
   border-bottom: solid 3px var(--Black-ish);
+  align-items: center;
   .intro-cont {
     flex-flow: column;
     gap: 2.5rem;
     align-items: start;
     justify-content: center;
     padding: 1.5rem;
-  }
-  .img-conte {
-    margin: 1rem auto;
-    align-items: center;
-    justify-content: center;
-    &__imagen {
-      max-width: 90%;
-      height: 90%;
-      border-radius: 50%;
-      display: block;
-      margin: auto;
-      object-fit: cover;
-      // @include u.breakpoint
+
+    &__buttons{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
     }
   }
+  .img-conte {
+    width: 100%;
+    border-radius: 50%;
+    display: block;
+    object-fit: cover;
+    // @include u.breakpoint
+  }
+
 }
 
 .quick-links {

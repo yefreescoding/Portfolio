@@ -31,9 +31,12 @@ header {
 
   &__header{
     font-size: 2.5rem;
+    line-height: 75px;
+    text-align: center;
 
     @include u.breakpoint(medium){
       font-size: 5rem;
+      text-align: left;
     }
   }
 
@@ -41,17 +44,20 @@ header {
     font-size: 1.5rem;
     color: grey;
     line-height: 35px;
+    text-align: center;
+    @include u.breakpoint(medium){
+      text-align: left;
+    }
   }
 
   .mail-anchor {
     position: relative;
     color: white;
     background-color: var(--Black-ish);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     padding: 4px;
-    margin-bottom: 1rem;
     // transform: perspective(7000px) rotate(55deg);
-    transition: all .23s linear;
+    transition: all .5s linear;
     
 
     // &::after {
@@ -65,6 +71,8 @@ header {
     // }
 
     &:is(:hover, :active) {
+      transform: translateY(-.5rem);
+      transition: all .20s linear;
       box-shadow: 0 0 16px hsl(120, 96%, 41%);
       color: hsl(120, 96%, 41%);
     }
