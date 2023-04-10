@@ -14,6 +14,16 @@ toggleMobile.addEventListener("click", function(){
   }
 });
 
+$(document).ready(function(){
+  const moreAboutToggle = $("#more-about");
+  const moreAboutContent = $(".more-content-about");
+
+  moreAboutContent.css("display", "none");
+
+  moreAboutToggle.click(function(){
+    moreAboutContent.slideToggle("slow");
+  });
+});
 
 
 /*

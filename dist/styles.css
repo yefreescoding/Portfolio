@@ -49,13 +49,13 @@ header nav li:is(:hover, :active) {
 }
 
 .intro-cont__header {
-  font-size: 2.5rem;
-  line-height: 75px;
+  font-size: 3rem;
   text-align: center;
+  width: 100%;
 }
 @media (min-width: 43.75em) {
   .intro-cont__header {
-    font-size: 5rem;
+    font-size: 3em;
     text-align: left;
   }
 }
@@ -110,6 +110,17 @@ header nav li:is(:hover, :active) {
   box-shadow: 3px 3px 0 var(--Black-ish);
 }
 
+.title-skills {
+  text-align: center;
+}
+.title-skills span {
+  font-size: 1.1rem;
+}
+.title-skills h2 {
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
 .skills-container__section h3 {
   font-size: 2rem;
   color: var(--Black-ish);
@@ -122,6 +133,14 @@ header nav li:is(:hover, :active) {
     font-size: 1.2rem;
     text-align: justify;
   }
+}
+
+.about-me h2 {
+  text-align: center;
+  font-size: 3rem;
+}
+.about-me p {
+  font-size: 1.5rem;
 }
 
 h2.projects-title {
@@ -172,11 +191,11 @@ h2.projects-title {
 #home .intro-cont {
   flex-flow: column;
   gap: 2.5rem;
-  align-items: start;
-  justify-content: center;
+  place-items: center;
   padding: 1.5rem;
 }
 #home .intro-cont__buttons {
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -221,16 +240,6 @@ h2.projects-title {
   width: min(100% - 1.5rem, 100%);
   margin-inline: auto;
   margin-bottom: 5rem;
-}
-#skills .title-skills {
-  text-align: center;
-}
-#skills .title-skills span {
-  font-size: 1.1rem;
-}
-#skills .title-skills h2 {
-  text-transform: uppercase;
-  font-size: 3rem;
 }
 #skills .skills-container {
   gap: 2rem;
@@ -365,6 +374,28 @@ header button[data-fixed=true] {
 }
 .skills-container__section img {
   width: 40%;
+}
+
+.about-me {
+  flex-flow: column;
+  width: min(100% - 1.5rem, 50rem);
+  margin-inline: auto;
+  gap: 1.5rem;
+}
+.about-me #more-about {
+  font-size: 1.6rem;
+  width: auto;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: transparent;
+  border: 0;
+  margin-inline: auto;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.about-me #more-about:hover {
+  text-decoration: underline;
+  color: hsl(300, 76%, 72%);
 }
 
 .projects-sect {

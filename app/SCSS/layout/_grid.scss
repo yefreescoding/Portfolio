@@ -23,13 +23,14 @@
   border-bottom: solid 3px var(--Black-ish);
   align-items: center;
   .intro-cont {
+    // width: 100%;
     flex-flow: column;
     gap: 2.5rem;
-    align-items: start;
-    justify-content: center;
+    place-items: center;
     padding: 1.5rem;
 
     &__buttons{
+      width: 100%;
       display: flex;
       align-items: center;
       gap: 1rem;
@@ -79,18 +80,6 @@
   width: min(100% - 1.5rem, 100%);
   margin-inline: auto;
   margin-bottom: 5rem;
-  .title-skills {
-    text-align: center;
-    
-    span {
-      font-size: 1.1rem;
-    }
-
-    h2 {
-      text-transform: uppercase;
-      font-size: 3rem;
-    }
-  }
   
   .skills-container {
     gap: 2rem;

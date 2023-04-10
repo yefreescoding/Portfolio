@@ -108,6 +108,30 @@ header {
   }
 }
 
+.about-me {
+  flex-flow: column;
+  width: min(100% - 1.5rem, 50rem);
+  margin-inline: auto;
+  gap: 1.5rem;
+
+  #more-about {
+    font-size: 1.6rem;
+    width: auto;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: transparent;
+    border: 0;
+    margin-inline: auto;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+      text-decoration: underline;
+      color: hsl(300, 76%, 72%);
+    }
+  }
+}
+
 .projects-sect {
   gap: 1rem;
   // padding: .5rem;
