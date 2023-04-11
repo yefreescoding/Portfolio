@@ -136,12 +136,13 @@
 }
 
 footer {
+  align-items: center;
   background-color: var(--Black-ish);
   color: var(--color-main);
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   height: 10rem;
-  padding: 2rem;
+  padding: 1rem;
 
   .copyright {
     place-items: end;
