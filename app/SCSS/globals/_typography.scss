@@ -3,25 +3,21 @@
 header {
   nav {
     li {
-      border: 3px var(--Black-ish) solid;
-      text-align: center;
-      transition: all .17s linear;
+      // border: 3px var(--Black-ish) solid;
       a {
+        text-align: center;
         font-family: var(--general-font);
         color: var(--Black-ish);
         font-size: 1.5rem;
         font-weight: 700;
         padding: .5rem;
-        border: 4px transparent solid;
-        
-      }
-      @include u.breakpoint(medium){
-        border: none;
-      }
-      &:is(:hover, :active){
-        border: 4px var(--Black-ish) solid;
-        box-shadow: 5px 2px 0 var(--Black-ish);
-        transform: translateX(-3px);
+        border: 4px transparent solid; 
+        transition: all .2s linear;
+        &:is(:hover, :active){
+          border: 4px var(--Black-ish) solid;
+          box-shadow: 2px 3px 0 var(--Black-ish);
+          transform: translateX(-3px);
+        }
       }
     }
   }
@@ -31,23 +27,24 @@ header {
 
   &__header{
     // line-height: 75px;
-    font-size: 3rem;
+    font-size: 3.8rem;
     text-align: center;
     width: 100%;
 
     @include u.breakpoint(medium){
-      font-size: 3em;
+      font-size: 4.8em;
       text-align: left;
     }
   }
 
   &__phrase {
+    width: 100%;
     font-size: 1.5rem;
     color: grey;
-    line-height: 35px;
     text-align: center;
     @include u.breakpoint(medium){
       text-align: left;
+      font-size: 2rem;
     }
   }
 
@@ -173,6 +170,33 @@ h2.projects-title {
       box-shadow: 3px 3px 0 var(--Black-ish);
       transform: translateY(6px);
     } 
+  }
+}
+
+.contact {
+  h2 {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+  }
+  .container-form {
+    &__quote {
+      p {
+        font-size: 1.2rem;
+      }
+
+      div {
+
+        font-size: 1.2rem;
+
+        span {
+          color: grey;
+        }
+        a {
+          color: var(--Black-ish);
+          text-decoration: underline;
+        }
+      }
+    }
   }
 }
 

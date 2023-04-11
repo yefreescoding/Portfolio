@@ -33,7 +33,7 @@
       width: 100%;
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 3rem;
     }
   }
   .img-conte {
@@ -79,7 +79,6 @@
   gap: 2rem;
   width: min(100% - 1.5rem, 100%);
   margin-inline: auto;
-  margin-bottom: 5rem;
   
   .skills-container {
     gap: 2rem;
@@ -110,7 +109,7 @@
 .projects-sect {
   // gap: 1rem;
   // padding: .5rem;
-  margin-bottom: 8rem;
+  margin-bottom: 3rem;
 
   @include u.breakpoint(large){
     grid-auto-flow: column;
@@ -121,6 +120,34 @@
 
     >* {
       scroll-snap-align: start;
+    }
+  }
+}
+
+.contact {
+  grid-template-rows: auto 1fr;
+  gap: 2rem;
+  background-color: var(--color-bg-skills);
+  padding: 2rem;
+  .container-form {
+    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+    gap: 3rem;
+  }
+}
+
+footer {
+  background-color: var(--Black-ish);
+  color: var(--color-main);
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  height: 10rem;
+  padding: 2rem;
+
+  .copyright {
+    place-items: end;
+    a {
+      color: var(--color-main);
+      text-decoration: underline;
     }
   }
 }

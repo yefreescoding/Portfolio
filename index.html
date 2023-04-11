@@ -26,7 +26,7 @@
       <ul class="links-container flex">
         <!-- <li><a href="" class="links-container__link">Projects</a></li> -->
         <li><a href="#skills" class="links-container__link">About</a></li>
-        <li><a href="https://twitter.com/YefreeCodes" class="links-container__link" target="_blank">Twitter</a></li>
+        <!-- <li><a href="https://twitter.com/YefreeCodes" class="links-container__link" target="_blank">Twitter</a></li> -->
         <li><a href="https://github.com/yefreescoding" class="links-container__link" target="_blank">Git Repo</a></li>
         <li><a href="#contact" class="links-container__link">Contact</a></li>
       </ul>
@@ -63,7 +63,7 @@
         <a class="q-links" href="#projects" id="projects-toggle">Projects &#8599;</a>
         <a class="q-links" href="#about">About &#8599;</a>
         <a class="q-links" href="">GitHub &#8599;</a>
-        <a class="q-links" href="">Let's connect &#8599;</a>
+        <a class="q-links" href="#contact">Let's connect &#8599;</a>
       </div>
     </div>
     <!--** SKILLS section **-->
@@ -119,7 +119,7 @@
         <h2>&lt;SKILLS/&gt;</h2>
       </div>
     </section>
-    <section class="about-me flex">
+    <section id="about" class="about-me flex">
       <h2>
         &lt;About me&gt;
       </h2>
@@ -153,8 +153,8 @@
       </h2>
     </section>
     <!--** PROJECTS section **-->
-    <h2 class="projects-title">FEATURED PROJECTS</h2>
-    <section id="projects" class="projects-sect grid">
+    <h2 id="projects" class="projects-title">FEATURED PROJECTS</h2>
+    <section class="projects-sect grid">
       
       <!--**************-->
       <div class="project-container flex">
@@ -270,22 +270,22 @@
       </div>
       
     </section>
-    <section class="contact">
+    <section id="contact" class="contact grid">
       <h2>Say hi...</h2>
-      <div class="container-form">
-        <div class="text-form">
+      <div class="container-form grid">
+        <div class="container-form__quote flex">
           <p>
             I am open to new job opportunities, ready to be part
             of a work team and give as much value as I can. Ready
             for new and exciting challenges.
           </p>
-          <div>
+          <div class="grid">
             <span class="links-to">
               Email me at:
             </span>
             <a href="">yefree13santos@outlook.com</a>
           </div>
-          <div>
+          <div class="grid">
             <span class="links-to">
               Follow:
             </span>
@@ -294,7 +294,7 @@
             <a href="">GitHub</a>
           </div>
         </div>
-        <form action="">
+        <form class="container-form__form flex" action="">
           <input type="text" placeholder="Your name*">
           <input type="email" placeholder="Your email*">
           <input type="url" placeholder="Your web page (If it exist)">
@@ -305,15 +305,15 @@
     </section>
   </div>
   <!--** PIE de la pagina **-->
-  <footer>
+  <footer class="grid">
     <div class="logo-footer">
       <img src="" alt="">
-      <div>
+      <div class="grid">
         <span>Yefree De Los Santos</span>
         <span>Front End Developer</span>
       </div>
     </div>
-    <div class="copyright">
+    <div class="copyright grid">
       <span>2023, all right reserved.</span>
       <span>Made by <a href="">Yefree De Los Santos</a></span>
     </div>
