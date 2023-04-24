@@ -4,20 +4,21 @@ header {
   nav {
     li {
       // border: 3px var(--Black-ish) solid;
+      padding: .5rem;
+      position: relative;
+      border: 4px transparent solid; 
+      transition: all .24s linear;
       a {
         text-align: center;
         font-family: var(--general-font);
         color: var(--Black-ish);
-        font-size: 1.5rem;
+        font-size: 1.1rem;
         font-weight: 700;
-        padding: .5rem;
-        border: 4px transparent solid; 
-        transition: all .2s linear;
-        &:is(:hover, :active){
-          border: 4px var(--Black-ish) solid;
-          box-shadow: 2px 3px 0 var(--Black-ish);
-          transform: translateX(-3px);
-        }
+      }
+      &:is(:hover, :active){
+        border: 4px var(--Black-ish) solid;
+        box-shadow: 2px 3px 0 var(--Black-ish);
+        transform: translate(-3px, -3px);
       }
     }
   }
@@ -27,7 +28,7 @@ header {
 
   &__header{
     // line-height: 75px;
-    font-size: 3.8rem;
+    font-size: clamp(20px, 16px + 4.5vw, 28px);
     text-align: center;
     width: 100%;
 
@@ -38,13 +39,14 @@ header {
   }
 
   &__phrase {
-    width: 100%;
-    font-size: 1.5rem;
+    // width: 100%;
+    font-size: 1.1rem;
     color: grey;
     text-align: center;
+
     @include u.breakpoint(medium){
       text-align: left;
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   }
 
@@ -108,15 +110,17 @@ header {
 }
 
 .title-skills {
+  margin-top: 2rem;
   text-align: center;
+  gap: .5rem;
   
   span {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   h2 {
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
@@ -125,15 +129,22 @@ header {
   &__section {
     h3 {
       font-size: 2rem;
-      color: var(--Black-ish);
+      color: hsl(0, 25%, 95%);
     }
 
     p{
-      font-size: 1.1rem;
-
+      font-size: 1rem;
       @include u.breakpoint-down(small){
-        font-size: 1.2rem;
         text-align: justify;
+      }
+    }
+
+    a {
+      font-weight: bold;
+      color: white;
+
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
@@ -142,11 +153,11 @@ header {
 .about-me {
   h2 {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   p{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 

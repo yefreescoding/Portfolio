@@ -38,15 +38,16 @@
 <!--*** FULL WEB PAGE CONTAINER ***-->
   <div class="web-page-cont grid">
     <!--*** MAIN section, introduction. ***-->
-    <main id="home" class="grid">
+    <main id="home" class="grid hidden">
       <!--** LEFT SIDE, Desktop. BOTTOM SIDE, mobile **-->
       <div class="intro-cont flex">
         <h1 class="intro-cont__header">
-          "Hello world";
+          console.log
+          ("Yefree De Los Santos");
         </h1>
         <div class="grid">
-          <span class="intro-cont__phrase">Welcome to my personal portfolio</span>
-          <span class="intro-cont__phrase">I am a junior front end developer.</span>
+          <span class="intro-cont__phrase">Hello world, I am a Junior Front End Developer</span>
+          <span class="intro-cont__phrase">I love build artistic and creative things for the web.</span>
         </div>
         <div class="intro-cont__buttons grid">
           <a class="mail-anchor" href = "mailto: yefree13santos@eoutlook.com" target="_blank"> &lt;Let's connect ;)/&gt;</a>
@@ -60,74 +61,22 @@
     <div class="quick-links grid">
       <h2>Quick-links</h2>
       <div class="quick-links__contenedor grid">
-        <a class="q-links" href="#projects" id="projects-toggle">Projects &#8599;</a>
-        <a class="q-links" href="#about">About &#8599;</a>
-        <a class="q-links" href="">GitHub &#8599;</a>
-        <a class="q-links" href="#contact">Let's connect &#8599;</a>
+        <a class="q-links hidden" href="#projects" id="projects-toggle">Projects &#8599;</a>
+        <a class="q-links hidden" href="#about">About &#8599;</a>
+        <a class="q-links hidden" href="">GitHub &#8599;</a>
+        <a class="q-links hidden" href="#contact">Let's connect &#8599;</a>
       </div>
     </div>
-    <!--** SKILLS section **-->
-    <section id="skills" class="grid">
-      <div class="title-skills">
-        <span>"Good design is like a refrigerator—when it works, no one notices, but when it doesn't, it sure stinks." - Irene Au</span>
-        <h2>&lt;SKILLS&gt;</h2>
-      </div>
-      <div class="skills-container grid">
-        <!--**************-->
-        <div class="skills-container__section flex">
-          <img src="resources/icons/html.png" alt="HTML icon logo">
-          <h3>HTML</h3>
-          <p>
-            I am skilled in HTML and capable of 
-            creating basic to complex web page 
-            structures. I use semantic HTML tags 
-            to create organized and responsive web 
-            pages with various elements such as forms, 
-            images, and videos. I can create engaging 
-            and interactive web pages.
-          </p>
-          <a href="">See Projects &rarr;</a>
-        </div>
-        <!--**************-->
-        <div class="skills-container__section flex">
-          <img src="resources/icons/css-line.png" alt="HTML icon logo">
-          <h3>CSS</h3>
-          <p>
-            I am skilled in CSS and can create visually 
-            appealing and responsive web pages. I use CSS 
-            to design custom styles, layouts, and animations 
-            that enhance the user experience. I am proficient
-            in modern CSS frameworks and libraries.
-          </p>
-          <a href="">Go to my instagram &rarr;</a>
-        </div>
-        <!--**************-->
-        <div class="skills-container__section flex">
-          <img src="resources/icons/javascript.png" alt="HTML icon logo">
-          <h3>JavaScript</h3>
-          <p>
-            I am skilled in JavaScript and can create 
-            interactive web pages with animations, event
-            handling, form validation, and data manipulation. 
-            I have expertise in modern JavaScript frameworks 
-            and libraries such as React, and jQuery.
-          </p>
-          <a href="">Go to my CV &rarr;</a>
-        </div>
-      </div>
-      <div class="title-skills">
-        <h2>&lt;SKILLS/&gt;</h2>
-      </div>
-    </section>
+    <!--============ABOUT ME===========-->
     <section id="about" class="about-me flex">
       <h2>
         &lt;About me&gt;
       </h2>
       <p>
-        My name is Yefree De Los Santos, I was born in the beautiful island 
+        My name is <strong>Yefree De Los Santos</strong>, I was born in the beautiful island 
         the Dominican Republic, but right now I'm currently based in Madrid, Spain.
       </p>
-      <button id="more-about">more</button>
+      <button id="more-about">more...</button>
       <div class="more-content-about">
         <p>
           Since I was a little boy I always liked everything related to visual arts,
@@ -152,6 +101,60 @@
         &lt;About me/&gt;
       </h2>
     </section>
+    <!--** SKILLS section **-->
+    <section id="skills" class="grid">
+      <div class="title-skills grid">
+        <span>"Good design is like a refrigerator—when it works, no one notices, but when it doesn't, it sure stinks." - Irene Au</span>
+        <h2>&lt;SKILLS&gt;</h2>
+      </div>
+      <div class="skills-container grid">
+        <!--**************-->
+        <div class="skills-container__section hidden html flex">
+          <img src="resources/icons/html.png" alt="HTML icon logo">
+          <h3>HTML</h3>
+          <p>
+            I am skilled in HTML and capable of 
+            creating basic to complex web page 
+            structures. I use semantic HTML tags 
+            to create organized and responsive web 
+            pages with various elements such as forms, 
+            images, and videos. I create engaging 
+            and interactive pages.
+          </p>
+          <a href="https://github.com/yefreescoding?tab=repositories" target="_blank">See Projects &rarr;</a>
+        </div>
+        <!--**************-->
+        <div class="skills-container__section hidden css flex">
+          <img src="resources/icons/css-line.png" alt="HTML icon logo">
+          <h3>CSS</h3>
+          <p>
+            I am skilled in CSS and can create visually 
+            appealing and responsive web pages. I use CSS 
+            to design custom styles, layouts, and animations 
+            that enhance the user experience. I am proficient
+            in modern CSS frameworks and libraries.
+          </p>
+          <a href="https://www.instagram.com/ysvcodes/" target="_blank">Go to my instagram &rarr;</a>
+        </div>
+        <!--**************-->
+        <div class="skills-container__section hidden js flex">
+          <img src="resources/icons/javascript.png" alt="HTML icon logo">
+          <h3>JavaScript</h3>
+          <p>
+            I am skilled in JavaScript and can create 
+            interactive web pages with animations, event
+            handling, form validation, and data manipulation. 
+            I have expertise in modern JavaScript frameworks 
+            and libraries such as React, and jQuery.
+          </p>
+          <a href="#">Go to my CV &rarr;</a>
+        </div>
+      </div>
+      <div class="title-skills">
+        <h2>&lt;SKILLS/&gt;</h2>
+      </div>
+    </section>
+    
     <!--** PROJECTS section **-->
     <h2 id="projects" class="projects-title">FEATURED PROJECTS</h2>
     <section class="projects-sect grid">
@@ -181,8 +184,8 @@
         </div>
         <!--** LINK of the container **-->
         <div class="project-container__links">
-          <a href="#" target="_blank">Git Repo</a>
-          <a href="#" target="_blank">Live Site</a>
+          <a href="https://github.com/yefreescoding/Redesign-web-page.git" target="_blank">Git Repo</a>
+          <a href="https://redesign-web-page.vercel.app/" target="_blank">Live Site</a>
         </div>
       </div>
       <!--**************-->
@@ -193,23 +196,25 @@
             <img src="resources/icons/new-moon.png" alt="X">
             <img src="resources/icons/dry-clean.png" alt="O">
           </div>
-          <h4>Artist personal page</h4>
+          <h4>Web Blog</h4>
         </div>
         <!--** IMAGE of the container **-->
-        <img class="project-container__img" src="resources/images/projects-img/saint-levant-landing-page.png" alt="Project screenshot">
+        <img class="project-container__img" src="resources/images/projects-img/project-img-blog.png" alt="Project screenshot">
         <!--** INFORMATION of the container **-->
         <div class="project-container__info flex">
           <h3>
-            Saint Levant Un-official site.
+            Personal blog.
           </h3>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui quia alias iste ipsa hic perspiciatis tenetur vitae, esse odio eius sequi cum laudantium fugiat iure magni sit laboriosam libero.
+            Esta es una pagina web que hice para tener mi propio
+            blog, en el que yo tenga el control maximo. Sin duda
+            una gran prueba para practicar.
           </p>
         </div>
         <!--** LINK of the container **-->
         <div class="project-container__links">
-          <a href="#" target="_blank">Git Repository</a>
-          <a href="#" target="_blank">Live Site</a>
+          <a href="https://github.com/yefreescoding/blog-personal.git" target="_blank">Git Repository</a>
+          <a href="https://blog-personal-flame.vercel.app/" target="_blank">Live Site</a>
         </div>
       </div>
       <!--**************-->

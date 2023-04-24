@@ -43,3 +43,25 @@ $(document).ready(function(){
 
 });
 */
+
+// Create an instance of IntersectionObserver with a callback function as a parameter
+const observer = new IntersectionObserver((entries) => {
+  // For each entry in the entries array passed to the callback function
+  entries.forEach((entry) => {
+    // Log the current entry to the console
+    console.log(entry);
+    // If the current entry is intersecting with the viewport
+    if (entry.isIntersecting) {
+      // Add the 'show' class to the target element of the entry
+      entry.target.classList.add('show');
+    } // else {
+      // Otherwise, remove the 'show' class from the target element of the entry
+      //entry.target.classList.remove('show');
+    //}
+  });
+});
+
+// Find all elements with the class 'hide'
+const hiddenElements = document.querySelectorAll('.hidden');
+// For each element found, add it to the observer to be monitored for intersection
+hiddenElements.forEach((el) => observer.observe(el));

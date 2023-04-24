@@ -9,7 +9,7 @@ html {
 }
 
 *, *::after, *::before {
-  box-sizing: inherit;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -21,27 +21,42 @@ a, a:visited, a:active {
 body {
   font-family: var(--general-font);
   background-color: var(--color-bg);
-  padding: 0.8rem;
+  width: min(100%, 1440px);
+  margin: 0 auto;
 }
 
+.hidden {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 1s ease-in;
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+header nav li {
+  padding: 0.5rem;
+  position: relative;
+  border: 4px transparent solid;
+  transition: all 0.24s linear;
+}
 header nav li a {
   text-align: center;
   font-family: var(--general-font);
   color: var(--Black-ish);
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  padding: 0.5rem;
-  border: 4px transparent solid;
-  transition: all 0.2s linear;
 }
-header nav li a:is(:hover, :active) {
+header nav li:is(:hover, :active) {
   border: 4px var(--Black-ish) solid;
   box-shadow: 2px 3px 0 var(--Black-ish);
-  transform: translateX(-3px);
+  transform: translate(-3px, -3px);
 }
 
 .intro-cont__header {
-  font-size: 3.8rem;
+  font-size: clamp(20px, 16px + 4.5vw, 28px);
   text-align: center;
   width: 100%;
 }
@@ -52,15 +67,14 @@ header nav li a:is(:hover, :active) {
   }
 }
 .intro-cont__phrase {
-  width: 100%;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   color: grey;
   text-align: center;
 }
 @media (min-width: 43.75em) {
   .intro-cont__phrase {
     text-align: left;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 .intro-cont .mail-anchor {
@@ -104,36 +118,44 @@ header nav li a:is(:hover, :active) {
 }
 
 .title-skills {
+  margin-top: 2rem;
   text-align: center;
+  gap: 0.5rem;
 }
 .title-skills span {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 .title-skills h2 {
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .skills-container__section h3 {
   font-size: 2rem;
-  color: var(--Black-ish);
+  color: hsl(0, 25%, 95%);
 }
 .skills-container__section p {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 @media (max-width: 43.7485em) {
   .skills-container__section p {
-    font-size: 1.2rem;
     text-align: justify;
   }
+}
+.skills-container__section a {
+  font-weight: bold;
+  color: white;
+}
+.skills-container__section a:hover {
+  text-decoration: underline;
 }
 
 .about-me h2 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .about-me p {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 h2.projects-title {
@@ -188,6 +210,7 @@ h2.projects-title {
 .web-page-cont {
   border: 4px solid black;
   background-color: var(--color-main);
+  padding: 1%;
   gap: 2rem;
 }
 
@@ -195,15 +218,14 @@ h2.projects-title {
   --min-column-size: 20rem;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(min(var(--min-column-size), 100%), 1fr));
-  grid-template-rows: 1fr;
   border-bottom: solid 3px var(--Black-ish);
-  align-items: center;
+  place-items: center;
 }
 #home .intro-cont {
+  width: 100%;
   flex-flow: column;
   gap: 2.5rem;
-  place-items: center;
-  padding: 1.5rem;
+  padding: 5%;
 }
 #home .intro-cont__buttons {
   width: 100%;
@@ -213,23 +235,23 @@ h2.projects-title {
 }
 #home .img-conte {
   width: 100%;
-  border-radius: 50%;
+  aspect-ratio: 4/4;
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .quick-links {
   gap: 1rem;
   padding: 0 3rem;
-  margin-bottom: 1rem;
+  text-align: center;
 }
 .quick-links__contenedor {
   gap: 0.5rem;
   grid-template-columns: repeat(auto-fit, minmax(min(10rem, 100%), 1fr));
 }
 .quick-links__contenedor .q-links {
-  background-color: var(--color-bg-elem);
+  background-color: grey;
   color: white;
   padding: 0.7rem 0.9rem;
   border: 3px var(--Black-ish) solid;
@@ -261,7 +283,7 @@ h2.projects-title {
   }
 }
 #skills .skills-container__section {
-  background-color: var(--color-bg-skills);
+  background-color: rgb(195, 195, 195);
   flex-flow: column;
   gap: 1rem;
   border-radius: 15px;
@@ -269,7 +291,29 @@ h2.projects-title {
   border: 3px solid var(--Black-ish);
 }
 #skills .skills-container__section img {
-  width: 40%;
+  width: 8rem;
+  aspect-ratio: 1;
+}
+#skills .skills-container__section h3 {
+  flex: 1;
+  color: #111;
+}
+#skills .skills-container__section p {
+  flex-grow: 1;
+  flex: 2;
+}
+#skills .skills-container__section a {
+  align-self: flex-end;
+  color: #111;
+}
+#skills .skills-container .css {
+  background: linear-gradient(140deg, grey, hsl(49, 100%, 50%));
+  color: hsl(0, 24%, 93%);
+  transition-delay: 300ms;
+}
+#skills .skills-container .js {
+  background: hsl(49, 100%, 50%);
+  transition-delay: 600ms;
 }
 
 .projects-sect {
@@ -292,7 +336,6 @@ h2.projects-title {
   grid-template-rows: auto 1fr;
   gap: 2rem;
   background-color: var(--color-bg-skills);
-  padding: 2rem;
 }
 .contact .container-form {
   grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
@@ -335,6 +378,16 @@ header .logo-container {
 header .logo-container img {
   width: 100%;
   display: block;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  transition: all 0.24s linear;
+  position: relative;
+  cursor: pointer;
+}
+header .logo-container img:hover {
+  box-shadow: 4px 4px 0 #111;
+  border: 2px solid var(--color-main);
+  transform: translate(-4px, -4px);
 }
 header nav {
   flex: auto;
@@ -345,7 +398,7 @@ header nav {
   transform: translateX(120%);
   border: 4px solid var(--Black-ish);
   box-shadow: 5px 6px var(--Black-ish);
-  transition: transform 0.35s ease-in;
+  transition: transform 0.24s ease-in;
 }
 header nav ul {
   flex-flow: column;
@@ -380,6 +433,7 @@ header button {
   border: transparent;
   z-index: 9999;
   transition: all 0.17s linear;
+  cursor: pointer;
 }
 header button img {
   width: 100%;
@@ -461,6 +515,11 @@ header button[data-fixed=true] {
 }
 .projects-sect .project-container .project-container__img {
   display: block;
+  aspect-ratio: 16/6;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
   width: 100%;
   flex: 1;
 }
@@ -475,6 +534,9 @@ header button[data-fixed=true] {
   flex: 1;
 }
 
+.container-form {
+  padding: 0.5rem;
+}
 .container-form__quote {
   flex-flow: column;
   gap: 3rem;
@@ -488,7 +550,7 @@ header button[data-fixed=true] {
   border: var(--Black-ish) 2px solid;
   box-shadow: 3px 6px 0 var(--Black-ish);
   padding: 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 .container-form__form button {
   align-self: flex-end;
