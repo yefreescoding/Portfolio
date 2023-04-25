@@ -119,7 +119,6 @@ header nav li:is(:hover, :active) {
 
 .title-skills {
   margin-top: 2rem;
-  text-align: center;
   gap: 0.5rem;
 }
 .title-skills span {
@@ -151,7 +150,6 @@ header nav li:is(:hover, :active) {
 }
 
 .about-me h2 {
-  text-align: center;
   font-size: 2rem;
 }
 .about-me p {
@@ -231,7 +229,7 @@ h2.projects-title {
   width: 100%;
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 1rem;
 }
 #home .img-conte {
   width: 100%;
@@ -336,6 +334,7 @@ h2.projects-title {
   grid-template-rows: auto 1fr;
   gap: 2rem;
   background-color: var(--color-bg-skills);
+  padding: 1rem;
 }
 .contact .container-form {
   grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
@@ -343,16 +342,18 @@ h2.projects-title {
 }
 
 footer {
-  align-items: center;
+  text-align: center;
   background-color: var(--Black-ish);
   color: var(--color-main);
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
+  grid-template-columns: 1fr;
+  place-content: center;
   height: 10rem;
-  padding: 1rem;
 }
-footer .copyright {
-  place-items: end;
+@media (min-width: 43.75em) {
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
 }
 footer .copyright a {
   color: var(--color-main);
@@ -468,7 +469,7 @@ header button[data-fixed=true] {
 
 .about-me {
   flex-flow: column;
-  width: min(100% - 1.5rem, 50rem);
+  width: min(100% - 1rem, 60rem);
   margin-inline: auto;
   gap: 1.5rem;
 }
@@ -486,6 +487,27 @@ header button[data-fixed=true] {
 .about-me #more-about:hover {
   text-decoration: underline;
   color: hsl(300, 76%, 72%);
+}
+.about-me .more-content-about {
+  display: flex;
+  flex-wrap: wrap;
+  border: #111 3px solid;
+}
+.about-me .more-content-about :is(h3, p) {
+  padding: 3%;
+}
+.about-me .more-content-about h3 {
+  text-transform: uppercase;
+}
+.about-me .more-content-about .who-i-am {
+  border: 1.5px solid #111;
+  flex-basis: 400px;
+  flex-grow: 1;
+}
+.about-me .more-content-about :is(.likes, .favorite) {
+  border: 1.5px solid #111;
+  flex-basis: 200px;
+  flex-grow: 1;
 }
 
 .projects-sect {

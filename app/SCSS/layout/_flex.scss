@@ -119,7 +119,7 @@ header {
 
 .about-me {
   flex-flow: column;
-  width: min(100% - 1.5rem, 50rem);
+  width: min(100% - 1rem, 60rem);
   margin-inline: auto;
   gap: 1.5rem;
 
@@ -137,6 +137,35 @@ header {
     &:hover {
       text-decoration: underline;
       color: hsl(300, 76%, 72%);
+    }
+  }
+
+  .more-content-about {
+    display: flex;
+    // align-items: flex-start;
+    flex-wrap: wrap;
+    // gap: 2em;
+    border: #111 3px solid;
+    
+    :is(h3, p){
+      padding: 3%;
+    }
+
+    h3 {
+      text-transform: uppercase;
+      // color: orange;
+    }
+    .who-i-am {
+      border: 1.5px solid #111;
+      flex-basis: 400px;
+      flex-grow: 1;
+    }
+
+    :is(.likes, .favorite){
+      border: 1.5px solid #111;
+      flex-basis: 200px;
+      flex-grow: 1;
+      // border: 1px solid #111;
     }
   }
 }
