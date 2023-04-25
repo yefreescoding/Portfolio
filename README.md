@@ -1,6 +1,6 @@
 # MY PERSONAL PORTFOLIO SITE. VERSION 1.0 😋
 
-My latest project is a one-page portfolio website that showcases my best work and highlights my skills as a junior web developer. Built using semantic HTML5, CSS(SCSS) and JavaScript, this site not only displays my important information, but also reflects a bit of my personality. Check it out and let me know what you think! 🌟💻.
+My latest project is a one-page portfolio website that showcases my best work and highlights my skills as a junior web developer. I built it using semantic HTML5, CSS (SCSS), and JavaScript. This site not only displays my important information but also reflects my personality. Check it out and let me know what you think! 🌟💻
 
 ## Table of contents
 
@@ -17,14 +17,17 @@ My latest project is a one-page portfolio website that showcases my best work an
 
 ## Overview
 
+This is a "little" challenge I dived myself into to practice the basic fundamentals of web design and markup.
+
 ### Screenshot
 
-![](./screenshot.jpg)
+![](screenshots/desktop.png)
+![](screenshots/mobile.png)
 
 ### Links
 
-- Code repository URL: (https://github.com/yefreescoding/Portfolio-web-dev-version1.git)
-- Live Site URL: (https://portfolio-web-dev-version1.vercel.app/)
+- Code repository URL: (https://github.com/yefreescoding/Portfolio.git)
+- Live Site URL: (https://portfolioyefreevaldez.vercel.app/)
 
 ## My process
 
@@ -40,12 +43,13 @@ My latest project is a one-page portfolio website that showcases my best work an
 
 ### What I learned
 
-So far I've learned how to create responsive web designs without using media queries, although I will be using them thanks to some good tips and advices I've found on the internet, my code looks much cleaner an readable.
-
-To see how you can add code snippets, see below:
+So far, I have learned how to create responsive web designs without using media queries. However, thanks to some good tips and advice that I found on the internet, I will be using them. As a result, my code will look much cleaner and be more readable.
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<div class="title-skills grid">
+    <span>"Good design is like a refrigerator—when it works, no one notices, but when it doesn't, it sure stinks." - Irene Au</span>
+    <h2>&lt;SKILLS&gt;</h2>
+</div>
 ```
 ```css(scss)
 --min-column-size: 25rem;
@@ -53,13 +57,33 @@ To see how you can add code snippets, see below:
     repeat(auto-fit, minmax(min(var(--min-column-size), 100%), 1fr));
 ```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+// Create an instance of IntersectionObserver with a callback function as a parameter
+const observer = new IntersectionObserver((entries) => {
+  // For each entry in the entries array passed to the callback function
+  entries.forEach((entry) => {
+    // Log the current entry to the console
+    console.log(entry);
+    // If the current entry is intersecting with the viewport
+    if (entry.isIntersecting) {
+      // Add the 'show' class to the target element of the entry
+      entry.target.classList.add('show');
+    } // else {
+      // Otherwise, remove the 'show' class from the target element of the entry
+      //entry.target.classList.remove('show');
+    //}
+  });
+});
+
+// Find all elements with the class 'hide'
+const hiddenElements = document.querySelectorAll('.hidden');
+// For each element found, add it to the observer to be monitored for intersection
+hiddenElements.forEach((el) => observer.observe(el));
 ```
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+- Use this section to outline areas that you want to continue focusing on in future projects, these could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect:
+
+I want to continue learning about manipulating the DOM, and practice with all the new CSS concepts that keep emerging, such as positioning elements with Flexbox and Grid. Additionally, I believe I need to gain a deeper understanding of the concepts of JavaScript
 
 ### Useful resources
 
