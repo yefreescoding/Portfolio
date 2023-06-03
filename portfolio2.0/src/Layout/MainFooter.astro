@@ -1,0 +1,31 @@
+---
+import footerLinks from '../Data/footerDataLinks';
+import socialLinks from '../Data/footerDataSocials';
+---
+<footer class="footer grid">
+  <div class="footer__top">
+    <div class="footer__links logo-footer">
+      {
+        footerLinks.map(link => 
+          <a class="footer__link" href={link.link} aria-label="Links to outside websites">{link.name}</a>
+        )
+      }
+    </div>
+    <div class="footer__links copyright grid">
+      {
+        socialLinks.map(link => 
+          <a class="footer__link" href={link.link} aria-label="Links to outside websites">{link.name}</a>
+        )
+      }
+    </div>
+  </div>
+  <div class="footer__buttom">
+    <p>
+      • Made by Yefree | copyright &copy; <span id="year"></span> | All right reserved •
+    </p>
+  </div>
+</footer>
+
+<script defer>
+  document.querySelector('#year').textContent = new Date().getFullYear().toString();
+</script>

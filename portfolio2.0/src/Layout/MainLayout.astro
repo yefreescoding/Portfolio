@@ -1,0 +1,20 @@
+---
+// import styles
+import '../styles/globals.css';
+
+// import components
+import MainHead from './MainHead.astro';
+import Footer from './MainFooter.astro';
+import Header from './MainHeader.astro';
+
+const {title} = Astro.props;
+---
+<!DOCTYPE html>
+<html>
+  <MainHead {title}/>
+  <body>
+    <Header/>
+    <slot/>
+    <Footer/>
+  </body>
+</html>
