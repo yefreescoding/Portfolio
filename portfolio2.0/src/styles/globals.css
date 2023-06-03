@@ -1,5 +1,11 @@
 :root {
   --general-font: 'Fira Code', monospace;
+
+  --color-bg: hsl(199, 79%, 15%);
+  --color-main: hsl(36, 100%, 99%);
+  --Black-ish: hsl(0, 0%, 8%);
+  --color-bg-elem: hsl(36, 33%, 41%);
+  --color-bg-skills: #ffcc80;
 }
 
 html {
@@ -11,7 +17,7 @@ html {
 *,
 *::after,
 *::before {
-  box-sizing: border-box;
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
@@ -20,13 +26,14 @@ a,
 a:visited,
 a:active {
   text-decoration: none;
+  /* color: hsl(0, 0%, 15%); */
 }
 
 body {
   font-family: var(--general-font);
   background-color: var(--color-bg);
-  width: min(100%, 1440px);
-  margin: 0 auto;
+  width: min(100%, 90em);
+  margin-inline: auto;
 }
 
 .hidden {
@@ -38,6 +45,82 @@ body {
 .show {
   opacity: 1;
   transform: translateX(0);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 3rem; */
+  padding: 1rem;
+  background-color: var(--color-main);
+  border: 2px solid hsl(32, 91%, 58%);
+  border-bottom: 0;
+}
+header__home {
+  /* flex-basis: 3.3rem; */
+  font-weight: 800;
+}
+header nav {
+  flex: auto;
+  position: fixed;
+  inset: 1.3rem 1.8rem auto 30%;
+  z-index: 9998;
+  background-color: var(--color-main);
+  transform: translateX(120%);
+  border: 4px solid var(--Black-ish);
+  box-shadow: 5px 6px var(--Black-ish);
+  transition: transform 0.24s ease-in;
+}
+header nav ul {
+  flex-flow: column;
+  list-style-type: none;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding: 5rem 1rem;
+}
+@media (min-width: 56.25em) {
+  header nav {
+    position: relative;
+    transform: translateX(0);
+    inset: 0;
+    border: transparent 4px solid;
+    box-shadow: none;
+  }
+  header nav ul {
+    flex-flow: wrap;
+    justify-content: end;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+    gap: 1rem;
+  }
+}
+header nav[data-visible='true'] {
+  transform: translateX(0);
+}
+header button {
+  flex-basis: 3rem;
+  background-color: transparent;
+  border: transparent;
+  z-index: 9999;
+  transition: all 0.17s linear;
+  cursor: pointer;
+}
+header button img {
+  width: 100%;
+}
+header button[data-fixed='true'] {
+  transform: scale(0.7, 0.7);
+  -webkit-transform: scale(0.7, 0.7);
+  position: fixed;
+  width: 4.5rem;
+  inset: 1.7rem 1.5rem auto auto;
+}
+@media (min-width: 56.25em) {
+  .nav__mobile {
+    display: none;
+  }
 }
 
 header nav li {
@@ -195,14 +278,6 @@ h2.projects-title {
 .contact .container-form__quote div a {
   color: var(--Black-ish);
   text-decoration: underline;
-}
-
-:root {
-  --color-bg: #e38d86;
-  --color-main: hsl(36, 100%, 99%);
-  --Black-ish: hsl(0, 0%, 8%);
-  --color-bg-elem: hsl(36, 33%, 41%);
-  --color-bg-skills: #ffcc80;
 }
 
 .grid {
@@ -369,94 +444,6 @@ footer .copyright a {
 
 .flex {
   display: flex;
-}
-
-header {
-  align-items: center;
-  justify-content: space-between;
-  gap: 3rem;
-  padding: 1rem;
-  background-color: var(--color-main);
-  border: 4px solid black;
-  border-bottom: 0;
-}
-header .logo-container {
-  flex-basis: 3.3rem;
-}
-header .logo-container img {
-  width: 100%;
-  display: block;
-  border: 2px solid transparent;
-  border-radius: 50%;
-  transition: all 0.24s linear;
-  position: relative;
-  cursor: pointer;
-}
-header .logo-container img:hover {
-  box-shadow: 4px 4px 0 #111;
-  border: 2px solid var(--color-main);
-  transform: translate(-4px, -4px);
-}
-header nav {
-  flex: auto;
-  position: fixed;
-  inset: 1.3rem 1.8rem auto 30%;
-  z-index: 9998;
-  background-color: var(--color-main);
-  transform: translateX(120%);
-  border: 4px solid var(--Black-ish);
-  box-shadow: 5px 6px var(--Black-ish);
-  transition: transform 0.24s ease-in;
-}
-header nav ul {
-  flex-flow: column;
-  list-style-type: none;
-  gap: 3rem;
-  flex-wrap: wrap;
-  padding: 5rem 1rem;
-}
-@media (min-width: 56.25em) {
-  header nav {
-    position: relative;
-    transform: translateX(0);
-    inset: 0;
-    border: transparent 4px solid;
-    box-shadow: none;
-  }
-  header nav ul {
-    flex-flow: wrap;
-    justify-content: end;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 0;
-    gap: 1rem;
-  }
-}
-header nav[data-visible='true'] {
-  transform: translateX(0);
-}
-header button {
-  flex-basis: 3rem;
-  background-color: transparent;
-  border: transparent;
-  z-index: 9999;
-  transition: all 0.17s linear;
-  cursor: pointer;
-}
-header button img {
-  width: 100%;
-}
-header button[data-fixed='true'] {
-  transform: scale(0.7, 0.7);
-  -webkit-transform: scale(0.7, 0.7);
-  position: fixed;
-  width: 4.5rem;
-  inset: 1.7rem 1.5rem auto auto;
-}
-@media (min-width: 56.25em) {
-  header button {
-    display: none;
-  }
 }
 
 .skills-container__section {

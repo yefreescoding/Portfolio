@@ -4,11 +4,14 @@
 import Nav from "../Components/Nav.astro";
 ---
 
-<header class="flex">
+<header class="header">
   <!--* LOGO contenedor *-->
-  <a href="/" class="logo-container" aria-label="Go Home">
+  <a href="/" class="header__home" aria-label="Go Home">
     yefree Valdez
   </a>
   <!--* BARRA DE NAVEGACIÓN *--> 
   <Nav/>
+  <button id="dark-light" type="button" class="header__switch">
+    Light mode.
+  </button>
 </header>

@@ -14,7 +14,9 @@ const {title} = Astro.props;
   <MainHead {title}/>
   <body>
     <Header/>
-    <slot/>
-    <Footer/>
+    <div class="web-page-cont grid">
+      <slot/>
+      <Footer/>
+    </div>
   </body>
 </html>
