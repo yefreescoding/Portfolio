@@ -2,16 +2,16 @@
 import footerLinks from '../Data/footerDataLinks';
 import socialLinks from '../Data/footerDataSocials';
 ---
-<footer class="footer grid">
+<footer class="footer">
   <div class="footer__top">
-    <div class="footer__links logo-footer">
+    <div class="footer__links">
       {
         footerLinks.map(link => 
           <a class="footer__link" href={link.link} aria-label="Links to outside websites">{link.name}</a>
         )
       }
     </div>
-    <div class="footer__links copyright grid">
+    <div class="footer__links footer__links--right">
       {
         socialLinks.map(link => 
           <a class="footer__link" href={link.link} aria-label="Links to outside websites">{link.name}</a>
