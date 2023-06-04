@@ -79,6 +79,9 @@ body {
   transform: translateX(0);
 }
 
+/* ============================= */
+/* ============================= */
+
 .header,
 .nav__ul {
   display: flex;
@@ -185,6 +188,8 @@ body {
   transform: translate(-3px, -3px);
 }
 
+/* ============================= */
+/* ============================= */
 .intro-cont__header {
   text-align: center;
   width: 100%;
