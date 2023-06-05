@@ -12,7 +12,7 @@ const skills = [
   {
     image: '/images/icons/javascript.png',
     name: 'javascript',
-    description: `Vanilla Javascript es lo mejor, me peleo con cualquiera que piense diferente.`,
+    description: `Vanilla Javascript es lo mejor, nadie me hará cambiar de opinion.`,
   },
   {
     image: '/images/icons/favicon.svg',
