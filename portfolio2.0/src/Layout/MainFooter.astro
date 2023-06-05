@@ -1,31 +1,47 @@
 ---
-import footerLinks from '../Data/footerDataLinks';
-import socialLinks from '../Data/footerDataSocials';
+import footerLinks from "../Data/footerDataLinks";
+import socialLinks from "../Data/footerDataSocials";
 ---
+
 <footer class="footer">
   <div class="footer__top">
     <div class="footer__links">
       {
-        footerLinks.map(link => 
-          <a class="footer__link" href={link.link} aria-label="Links to outside websites">{link.name}</a>
-        )
+        footerLinks.map((link) => (
+          <a
+            class="footer__link"
+            href={link.link}
+            aria-label="Links to outside websites"
+          >
+            {link.name}
+          </a>
+        ))
       }
     </div>
     <div class="footer__links footer__links--right">
       {
-        socialLinks.map(link => 
-          <a class="footer__link" href={link.link} aria-label="Links to outside websites">{link.name}</a>
-        )
+        socialLinks.map((link) => (
+          <a
+            class="footer__link"
+            href={link.link}
+            aria-label="Links to outside websites"
+          >
+            {link.name}
+          </a>
+        ))
       }
     </div>
   </div>
   <div class="footer__bottom">
-    <p class="footer__p">
-      • Made by Yefree | copyright &copy; <span id="year"></span> | All right reserved •
-    </p>
+    <small class="footer__p">
+      • Made by Yefree | copyright &copy; <span id="year"></span> | All right reserved
+      •
+    </small>
   </div>
 </footer>
 
 <script defer>
-  document.querySelector('#year').textContent = new Date().getFullYear().toString();
+  document.querySelector("#year").textContent = new Date()
+    .getFullYear()
+    .toString();
 </script>

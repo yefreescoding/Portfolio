@@ -1,9 +1,10 @@
 :root {
-  --general-font: 'Fira Code', monospace;
+  --general-font: 'Monomaniac One', sans-serif;
+  --secondary-font: 'Rubik', sans-serif;
 
   --secondary-color: hsl(32, 91%, 58%);
   --color-bg: hsl(199, 79%, 15%);
-  --color-main: hsl(36, 100%, 99%);
+  --color-main: hsl(36, 100%, 95%);
   --Black-ish: hsl(0, 0%, 8%);
   --color-bg-elem: hsl(36, 33%, 41%);
   --color-bg-skills: #ffcc80;
@@ -27,6 +28,13 @@ html {
   /* outline: #ffcc80 0.5px solid; */
 }
 
+body {
+  font-family: var(--secondary-font);
+  background-color: var(--color-bg);
+  width: min(100%, 90em);
+  margin-inline: auto;
+}
+
 img,
 video,
 svg {
@@ -40,6 +48,7 @@ ul {
 }
 
 button {
+  font-family: var(--general-font);
   cursor: pointer;
   background-color: transparent;
   border: 0.5px solid transparent;
@@ -52,29 +61,28 @@ a:active {
   /* color: hsl(0, 0%, 15%); */
 }
 
+h1, h2, h3, h4 {
+  font-family: var(--general-font);
+}
+
 h1 {
   font-size: clamp(2rem, 1rem + 5vw, 4rem);
 }
 h2 {
-  font-size: clamp(1.1rem, 1rem + 4vw, 1.75rem);
+  font-size: clamp(1.8rem, 1rem + 4vw, 2.8rem);
 }
 h3 {
-  font-size: clamp(1rem, 1rem + 3.5vw, 1.5rem);
+  font-size: clamp(1.5rem, 1rem + 3.5vw, 1.8rem);
 }
 h4 {
   font-size: clamp(0.9rem, 1rem + 3vw, 1.3rem);
 }
 p {
-  font-size: clamp(0.8rem, 1rem + 3vw, 1.3rem);
-  line-height: 1.55;
+  font-size: clamp(1rem, 1rem + 3.5vw, 1.6rem);
+  line-height: 1.5;
 }
 
-body {
-  font-family: var(--general-font);
-  background-color: var(--color-bg);
-  width: min(100%, 90em);
-  margin-inline: auto;
-}
+
 
 .hidden {
   opacity: 0;
@@ -111,7 +119,7 @@ body {
 .header__switch,
 .nav__links {
   flex: 1;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-weight: 600;
   text-transform: capitalize;
 }
@@ -138,24 +146,22 @@ body {
 
 @media (max-width: 39.9em) {
   .nav {
-    flex: auto;
-    position: fixed;
-    inset: 3.125rem 0 auto 0;
+    position: absolute;
+    inset: var(--header-footer-height) 0 auto 0;
     height: 10rem;
     z-index: 9998;
-    background-color: var(--color-main);
-    transform: translateX(120%);
-    border: 4px solid var(--Black-ish);
+    background-color: var(--color-bg);
+    border: 2px solid var(--secondary-color);
     box-shadow: 5px 6px var(--Black-ish);
+    transform: translateX(120%);
     transition: transform 0.24s ease-in;
   }
 
   .nav__ul {
     flex-flow: column;
-    list-style-type: none;
     gap: 3rem;
     flex-wrap: wrap;
-    padding: 5rem 1rem;
+    padding: min(5vh, 10rem) 1rem;
   }
 }
 .nav[data-visible='true'] {
@@ -167,7 +173,7 @@ body {
   aspect-ratio: 1;
   z-index: 9999;
   background-color: var(--secondary-color);
-  background-image: url('../../public/images/icons/old-computer.png');
+  background-image: url('../../public/images/icons/more.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -208,7 +214,7 @@ body {
   place-items: center;
 }
 .cover__image {
-  width: 37.5rem;
+  width: 38.5rem;
   aspect-ratio: 16/9;
   object-fit: cover;
   object-position: top;
@@ -310,12 +316,13 @@ body {
 
 .section-about {
   grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
-  align-items: start;
+  /* align-items: start; */
 }
 
 .section-about__article {
-  padding: 1rem;
+  padding: 3rem;
   gap: 1rem;
+  border: 2px solid var(--secondary-color);
 }
 
 h2.projects-title {
@@ -479,7 +486,8 @@ h2.projects-title {
 .footer__bottom {
   padding: 1rem;
 }
-.footer {
+.footer,
+.footer__bottom {
   text-align: center;
   border-top: 2px solid var(--secondary-color);
   color: var(--secondary-color);
@@ -487,13 +495,13 @@ h2.projects-title {
 
 .footer__top {
   grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+  gap: 2rem;
 }
 .footer__links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
   text-transform: capitalize;
 }
 
@@ -502,10 +510,6 @@ h2.projects-title {
   flex: 1;
   flex-basis: 3rem;
   flex-grow: 1;
-}
-
-.footer__bottom {
-  border-top: 2px solid var(--secondary-color);
 }
 
 .flex {
