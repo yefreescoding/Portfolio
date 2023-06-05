@@ -61,7 +61,10 @@ a:active {
   /* color: hsl(0, 0%, 15%); */
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--general-font);
 }
 
@@ -70,6 +73,8 @@ h1 {
 }
 h2 {
   font-size: clamp(1.8rem, 1rem + 4vw, 2.8rem);
+  text-transform: capitalize;
+  letter-spacing: 1.5px;
 }
 h3 {
   font-size: clamp(1.5rem, 1rem + 3.5vw, 1.8rem);
@@ -252,10 +257,9 @@ p {
   text-align: center;
 }
 
-.quick-links__h2{
-  text-transform: capitalize;
+.quick-links__h2 {
   color: var(--color-bg);
-  letter-spacing: 1.5px;
+  /* letter-spacing: 1.5px; */
 }
 .quick-links__contenedor {
   gap: 1rem;
@@ -288,45 +292,50 @@ p {
   gap: 2rem;
 }
 
+.section-skills__text,
+.section-skills__article {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  color: var(--secondary-color);
+}
+
 .section-skills {
+  padding: 1rem;
   background-color: var(--color-bg);
 }
 .section-skills__header {
   text-align: center;
+  text-transform: capitalize;
   color: var(--secondary-color);
-}
-
-.section-skills__quote {
-  padding-inline-start: 5rem;
+  padding-inline: 5vw;
 }
 
 .section-skills__container {
-  grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(25rem, 100%), 1fr));
 }
 
 .section-skills__skills {
-  grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr));
 }
+
 .section-skills__article {
-  display: flex;
-  background-color: rgb(195, 195, 195);
-  flex-flow: column;
-  gap: 1rem;
-  border-radius: 15px;
-  padding: 1rem;
-  border: 3px solid var(--Black-ish);
+  background-color: #74a0b3;
+  color: var(--color-bg);
+  border: 3px solid var(--secondary-color);
+  text-align: center;
 }
-#skills .skills-container__section img {
-  width: 8rem;
+.section-skills__image {
+  width: 4rem;
   aspect-ratio: 1;
 }
-#skills .skills-container__section h3 {
-  flex: 1;
-  color: #111;
+.section-skills__h3 {
 }
-#skills .skills-container__section p {
-  flex-grow: 1;
-  flex: 2;
+.section-skills__p {
+  font-size: 1rem;
 }
 #skills .skills-container__section a {
   align-self: flex-end;
@@ -341,7 +350,6 @@ p {
   background: hsl(49, 100%, 50%);
   transition-delay: 600ms;
 }
-
 
 .title-skills {
   margin-top: 2rem;
@@ -441,8 +449,6 @@ h2.projects-title {
   background-color: var(--color-main);
   overflow-x: hidden;
 }
-
-
 
 /*
   #toggle{
@@ -611,4 +617,4 @@ h2.projects-title {
   box-shadow: 3px 6px 0 var(--Black-ish);
   border-radius: 20px;
   font-size: 1.3rem;
-} 
+}

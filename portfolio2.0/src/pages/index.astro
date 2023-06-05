@@ -1,14 +1,14 @@
 ---
 // import layouts
-import MainLayout from "../Layout/MainLayout.astro";
+import MainLayout from '../Layout/MainLayout.astro';
 
 // import components
-import Cover from "../Components/Cover.astro";
-import QuickLinks from "../Components/Quick-links.astro";
-import ContactForm from "../Components/ContactForm.astro";
+import Cover from '../Components/Cover.astro';
+import QuickLinks from '../Components/Quick-links.astro';
+import ContactForm from '../Components/ContactForm.astro';
 
 // import data
-import skills from "../Data/skillsData";
+import skills from '../Data/skillsData';
 ---
 
 <MainLayout title="Yefree Valdez">
@@ -29,12 +29,13 @@ import skills from "../Data/skillsData";
     </header>
     <div class="section-skills__container">
       <div class="section-skills__text">
-        <h3>Front end developer asjfhkaasda</h3>
+        <h3>Desarrollador de interfaces de aplicaciones web</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi
-          architecto dolores accusamus tempora id maiores, dolor dicta error
-          quisquam. Quasi dignissimos nemo nisi molestiae, aliquid corporis
-          blanditiis laborum reprehenderit quae.
+          Comenzando con HTML, CSS y JavaScript, aprendí a programar por mi
+          cuenta. Sin embargo, hoy en día hay mucho por descubrir más allá de
+          JavaScript estándar: hoy trabajo con TypeScript en React, uso Redux o
+          Context para la administración de estado y uso SASS como preprocesador
+          para CS.
         </p>
       </div>
       <div class="section-skills__skills">
@@ -47,16 +48,11 @@ import skills from "../Data/skillsData";
                 alt="HTML icon logo"
               />
               <h3 class="section-skills__h3">{skill.name}</h3>
-              <a class="section-skills__link" href={skill.link} target="_blank">
-                Live Site
-              </a>
+              <p class="section-skills__p">{skill.description}</p>
             </article>
           ))
         }
       </div>
-    </div>
-    <div class="title-skills">
-      <h2>&lt;SKILLS/&gt;</h2>
     </div>
   </section>
   <!--** PROJECTS section **-->
