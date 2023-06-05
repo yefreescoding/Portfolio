@@ -227,11 +227,11 @@ body {
   border: none;
 }
 .cover__links {
-  font-size: 1, 1rem;
+  font-size: 1.1rem;
   padding: 0.5rem;
-  transition: all 0.5s linear;
   font-weight: bold;
   width: fit-content;
+  transition: all 0.5s linear;
 }
 .cover__links--mail {
   color: var(--color-bg);
@@ -243,7 +243,6 @@ body {
   transition: all 0.2s linear;
 }
 .cover__links--nan {
-  font-size: 1.1rem;
   color: hsl(35, 85%, 80%);
 }
 .cover__links--nan:hover {
