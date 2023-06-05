@@ -4,76 +4,55 @@ import MainLayout from "../Layout/MainLayout.astro";
 
 // import components
 import Cover from "../Components/Cover.astro";
+import QuickLinks from "../Components/Quick-links.astro";
+import ContactForm from "../Components/ContactForm.astro";
+
+// import data
+import skills from "../Data/skillsData";
 ---
 
 <MainLayout title="Yefree Valdez">
   <Cover
     coverTitle="{ Hola Mundo };"
-    description="Handcrafted web developer, illustrator and cheeseburger lover."
+    description="Desarrollador front end, diseñador e ilustrador."
     coverImage="/images/hero-images/hero-cover.PNG"
   />
-  <!--** QUICK LINKS **-->
-  <div class="quick-links grid">
-    <h2>Quick-links</h2>
-    <div class="quick-links__contenedor grid">
-      <a class="q-links hidden" href="#projects" id="projects-toggle"
-        >Projects &#8599;</a
-      >
-      <a class="q-links hidden" href="#about">About &#8599;</a>
-      <a class="q-links hidden" href="">GitHub &#8599;</a>
-      <a class="q-links hidden" href="#contact">Let's connect &#8599;</a>
-    </div>
-  </div>
+  <QuickLinks />
   <!--** SKILLS section **-->
-  <section id="skills" class="grid">
-    <div class="title-skills grid">
-      <span
-        >"Good design is like a refrigerator—when it works, no one notices, but
-        when it doesn't, it sure stinks." - Irene Au</span
-      >
-      <h2>&lt;SKILLS&gt;</h2>
-    </div>
-    <div class="skills-container grid">
-      <!--**************-->
-      <div class="skills-container__section hidden html flex">
-        <img src="resources/icons/html.png" alt="HTML icon logo" />
-        <h3>HTML</h3>
+  <section id="skills" class="section-skills">
+    <header class="section-skills__header">
+      <p class="section-skills__quote">
+        "Good design is like a refrigerator—when it works, no one notices, but
+        when it doesn't, it sure stinks." - Irene Au
+      </p>
+      <h2 class="section-skills__h2">skills</h2>
+    </header>
+    <div class="section-skills__container">
+      <div class="section-skills__text">
+        <h3>Front end developer asjfhkaasda</h3>
         <p>
-          I am skilled in HTML and capable of creating basic to complex web page
-          structures. I use semantic HTML tags to create organized and
-          responsive web pages with various elements such as forms, images, and
-          videos. I create engaging and interactive pages.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi
+          architecto dolores accusamus tempora id maiores, dolor dicta error
+          quisquam. Quasi dignissimos nemo nisi molestiae, aliquid corporis
+          blanditiis laborum reprehenderit quae.
         </p>
-        <a
-          href="https://github.com/yefreescoding?tab=repositories"
-          target="_blank">See Projects &rarr;</a
-        >
       </div>
-      <!--**************-->
-      <div class="skills-container__section hidden css flex">
-        <img src="resources/icons/css-line.png" alt="HTML icon logo" />
-        <h3>CSS</h3>
-        <p>
-          I am skilled in CSS and can create visually appealing and responsive
-          web pages. I use CSS to design custom styles, layouts, and animations
-          that enhance the user experience. I am proficient in modern CSS
-          frameworks and libraries.
-        </p>
-        <a href="https://www.instagram.com/ysvcodes/" target="_blank"
-          >Go to my instagram &rarr;</a
-        >
-      </div>
-      <!--**************-->
-      <div class="skills-container__section hidden js flex">
-        <img src="resources/icons/javascript.png" alt="HTML icon logo" />
-        <h3>JavaScript</h3>
-        <p>
-          I am skilled in JavaScript and can create interactive web pages with
-          animations, event handling, form validation, and data manipulation. I
-          have expertise in modern JavaScript frameworks and libraries such as
-          React, and jQuery.
-        </p>
-        <a href="#">Go to my CV &rarr;</a>
+      <div class="section-skills__skills">
+        {
+          skills.map((skill) => (
+            <article class="section-skills__article">
+              <img
+                class="section-skills__image"
+                src={skill.image}
+                alt="HTML icon logo"
+              />
+              <h3 class="section-skills__h3">{skill.name}</h3>
+              <a class="section-skills__link" href={skill.link} target="_blank">
+                Live Site
+              </a>
+            </article>
+          ))
+        }
       </div>
     </div>
     <div class="title-skills">
@@ -219,33 +198,5 @@ import Cover from "../Components/Cover.astro";
       </div>
     </div>
   </section>
-  <section id="contact" class="contact grid">
-    <h2>Say hi...</h2>
-    <div class="container-form grid">
-      <div class="container-form__quote flex">
-        <p>
-          I am open to new job opportunities, ready to be part of a work team
-          and give as much value as I can. Ready for new and exciting
-          challenges.
-        </p>
-        <div class="grid">
-          <span class="links-to"> Email me at:</span>
-          <a href="">yefree13santos@outlook.com</a>
-        </div>
-        <div class="grid">
-          <span class="links-to"> Follow:</span>
-          <a href="">Instagram</a>
-          <a href="">Twitter</a>
-          <a href="">GitHub</a>
-        </div>
-      </div>
-      <form class="container-form__form flex" action="">
-        <input type="text" placeholder="Your name*" />
-        <input type="email" placeholder="Your email*" />
-        <input type="url" placeholder="Your web page (If it exist)" />
-        <input type="text" placeholder="How can I help?" />
-        <button type="submit">Get in touch</button>
-      </form>
-    </div>
-  </section>
+  <ContactForm />
 </MainLayout>

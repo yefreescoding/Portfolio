@@ -1,7 +1,15 @@
 ---
+// import Layouts
 import MainLayout from "../Layout/MainLayout.astro";
+
+// import components
+import Cover from "../Components/Cover.astro";
 ---
 
 <MainLayout>
-  <h1>Ni idea de donde esta esa pagina, sorry</h1>
+  <Cover
+    coverImage="/images/icons/error-404.png"
+    coverTitle="UPSI!"
+    description="Parece que hubo en error con la direcion de esta pagina, o esta en mantenimiento."
+  />
 </MainLayout>

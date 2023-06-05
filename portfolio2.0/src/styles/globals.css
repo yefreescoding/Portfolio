@@ -82,17 +82,6 @@ p {
   line-height: 1.5;
 }
 
-.hidden {
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: all 1s ease-in;
-}
-
-.show {
-  opacity: 1;
-  transform: translateX(0);
-}
-
 /* ============================= */
 /* ============================= */
 
@@ -212,8 +201,8 @@ p {
   place-items: center;
 }
 .cover__image {
-  width: 38.5rem;
-  aspect-ratio: 16/9;
+  width: 30.5rem;
+  aspect-ratio: 1;
   object-fit: cover;
   object-position: top;
 }
@@ -256,20 +245,103 @@ p {
 /* ============================= */
 /* ============================= */
 
-.q-links {
-  text-align: start;
-  cursor: pointer;
-  font-size: 1.1rem;
-  font-weight: bold;
-  letter-spacing: 3px;
-  transform: perspective(7000px);
-  transform-style: preserve-3d;
-  transition: all 0.2s linear;
+.quick-links {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem 3rem;
+  text-align: center;
 }
+
+.quick-links__h2{
+  text-transform: capitalize;
+  color: var(--color-bg);
+  letter-spacing: 1.5px;
+}
+.quick-links__contenedor {
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(10rem, 100%), 1fr));
+}
+.quick-links__link {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--color-bg);
+  background-color: var(--secondary-color);
+  border: 3px var(--color-bg) solid;
+  padding: 0.5rem 0;
+  transition: all 0.2s ease;
+}
+
 .q-links:is(:hover, :active) {
-  transform: rotateX(8deg) rotateY(8deg) translateX(-3px);
+  transform: translate(-3px, -3px);
   box-shadow: 3px 3px 0 var(--Black-ish);
 }
+
+/* ============================= */
+/* ============================= */
+
+.section-skills,
+.section-skills__header,
+.section-skills__container,
+.section-skills__skills {
+  display: grid;
+  gap: 2rem;
+}
+
+.section-skills {
+  background-color: var(--color-bg);
+}
+.section-skills__header {
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+.section-skills__quote {
+  padding-inline-start: 5rem;
+}
+
+.section-skills__container {
+  grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+}
+
+.section-skills__skills {
+  grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+}
+.section-skills__article {
+  display: flex;
+  background-color: rgb(195, 195, 195);
+  flex-flow: column;
+  gap: 1rem;
+  border-radius: 15px;
+  padding: 1rem;
+  border: 3px solid var(--Black-ish);
+}
+#skills .skills-container__section img {
+  width: 8rem;
+  aspect-ratio: 1;
+}
+#skills .skills-container__section h3 {
+  flex: 1;
+  color: #111;
+}
+#skills .skills-container__section p {
+  flex-grow: 1;
+  flex: 2;
+}
+#skills .skills-container__section a {
+  align-self: flex-end;
+  color: #111;
+}
+#skills .skills-container .css {
+  background: linear-gradient(140deg, grey, hsl(49, 100%, 50%));
+  color: hsl(0, 24%, 93%);
+  transition-delay: 300ms;
+}
+#skills .skills-container .js {
+  background: hsl(49, 100%, 50%);
+  transition-delay: 600ms;
+}
+
 
 .title-skills {
   margin-top: 2rem;
@@ -370,21 +442,7 @@ h2.projects-title {
   overflow-x: hidden;
 }
 
-.quick-links {
-  gap: 1rem;
-  padding: 0 3rem;
-  text-align: center;
-}
-.quick-links__contenedor {
-  gap: 0.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(10rem, 100%), 1fr));
-}
-.quick-links__contenedor .q-links {
-  background-color: grey;
-  color: white;
-  padding: 0.7rem 0.9rem;
-  border: 3px var(--Black-ish) solid;
-}
+
 
 /*
   #toggle{
@@ -397,53 +455,6 @@ h2.projects-title {
   border: transparent;
 }
 */
-#skills {
-  gap: 2rem;
-  width: min(100% - 1.5rem, 100%);
-  margin-inline: auto;
-}
-#skills .skills-container {
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
-}
-@media (min-width: 43.75em) {
-  #skills .skills-container {
-    padding-inline: 3.5rem;
-  }
-}
-#skills .skills-container__section {
-  background-color: rgb(195, 195, 195);
-  flex-flow: column;
-  gap: 1rem;
-  border-radius: 15px;
-  padding: 1rem;
-  border: 3px solid var(--Black-ish);
-}
-#skills .skills-container__section img {
-  width: 8rem;
-  aspect-ratio: 1;
-}
-#skills .skills-container__section h3 {
-  flex: 1;
-  color: #111;
-}
-#skills .skills-container__section p {
-  flex-grow: 1;
-  flex: 2;
-}
-#skills .skills-container__section a {
-  align-self: flex-end;
-  color: #111;
-}
-#skills .skills-container .css {
-  background: linear-gradient(140deg, grey, hsl(49, 100%, 50%));
-  color: hsl(0, 24%, 93%);
-  transition-delay: 300ms;
-}
-#skills .skills-container .js {
-  background: hsl(49, 100%, 50%);
-  transition-delay: 600ms;
-}
 
 .projects-sect {
   margin-bottom: 3rem;
