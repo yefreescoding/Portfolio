@@ -8,7 +8,7 @@ const footerLinks = [
     link: '/projects/',
   },
   {
-    name: 'Buy me a coffer',
+    name: 'Support',
     link: '/404/',
   },
   {

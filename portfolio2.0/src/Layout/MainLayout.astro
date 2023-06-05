@@ -6,17 +6,19 @@ import '../styles/globals.css';
 import MainHead from './MainHead.astro';
 import Footer from './MainFooter.astro';
 import Header from './MainHeader.astro';
+import Cover from '../Components/Cover.astro';
 
-const {title} = Astro.props;
+const { title } = Astro.props;
 ---
+
 <!DOCTYPE html>
 <html>
-  <MainHead {title}/>
+  <MainHead {title} />
   <body>
-    <Header/>
+    <Header />
     <div class="web-page-cont grid">
-      <slot/>
+      <slot />
     </div>
-    <Footer/>
+    <Footer />
   </body>
 </html>

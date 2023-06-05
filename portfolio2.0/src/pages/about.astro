@@ -1,7 +1,43 @@
 ---
-import MainLayout from "../Layout/MainLayout.astro";
+// import Layouts
+import MainLayout from '../Layout/MainLayout.astro';
+
+// import components
+import Cover from '../Components/Cover.astro';
+
+// import data
+import aboutMe from '../Data/aboutMeData';
 ---
 
 <MainLayout>
-  <h1>About me</h1>
+  <Cover
+    coverTitle="About me"
+    description="Aqui podras conocerme un poco mas, mi trabajo, mis habilidades y algunas de mis aficiones."
+    coverImage="/images/hero-images/hero-cover.PNG"
+  />
+  <section id="about" class="section-about">
+    <article class="section-about__article">
+      {aboutMe.map((p) => <p>{p.para}</p>)}
+    </article>
+    <div class="section-about__div">
+      <article class="section-about__article">
+        <h3 class="section-about__h3">Thing I like</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eos
+          nemo quia est ex pariatur accusantium ipsam doloremque optio, porro
+          architecto praesentium eius consectetur, iure placeat, dolor magnam.
+          Amet, dolores!
+        </p>
+      </article>
+      <article class="section-about__article">
+        <h3 class="section-about__h3">Goals</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eos
+          nemo quia est ex pariatur accusantium ipsam doloremque optio, porro
+          architecto praesentium eius consectetur, iure placeat, dolor magnam.
+          Amet, dolores!
+        </p>
+      </article>
+    </div>
+  </section>
 </MainLayout>
