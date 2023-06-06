@@ -1,44 +1,49 @@
-const toggleMobile = document.querySelector('#toggle-mobile-menu');
+const toggleMobile = document.querySelector("#toggle-mobile-menu");
 
-const navBarMobile = document.querySelector('.nav');
+const navBarMobile = document.querySelector(".nav");
 
-toggleMobile.addEventListener('click', function () {
-  const visible = navBarMobile.getAttribute('data-visible');
+toggleMobile.addEventListener("click", function () {
+  const visible = navBarMobile.getAttribute("data-visible");
 
-  if (visible === 'false') {
-    navBarMobile.setAttribute('data-visible', true);
-    toggleMobile.setAttribute('data-fixed', true);
+  if (visible === "false") {
+    navBarMobile.setAttribute("data-visible", true);
+    toggleMobile.setAttribute("data-fixed", true);
   } else {
-    navBarMobile.setAttribute('data-visible', false);
-    toggleMobile.setAttribute('data-fixed', false);
+    navBarMobile.setAttribute("data-visible", false);
+    toggleMobile.setAttribute("data-fixed", false);
   }
 });
 
 // =============================
 // =============================
 
-const loader = document.querySelector('.loader');
+const loader = document.querySelector(".loader");
 
 const loaderTime = setTimeout(loading, 1500);
 
 function loading() {
-  loader.classList.add('loaded');
+  loader.classList.add("loaded");
 }
 
 // =============================
 // =============================
 
-const darkModeBtn = document.querySelector('#dark-light');
-const darkModeBtnText = document.querySelector('#mode');
+const darkModeBtn = document.querySelector("#dark-light");
+const darkModeBtnText = document.querySelector("#mode");
 
-darkModeBtn.addEventListener('click', () => {
-  const mode = darkModeBtnText.getAttribute('data-mode');
+darkModeBtn.addEventListener("click", () => {
+  const mode = darkModeBtnText.getAttribute("data-mode");
 
-  if (mode === 'light') {
-    darkModeBtnText.setAttribute('data-mode', 'dark');
-    darkModeBtnText.textContent = 'dark';
+  if (mode === "light") {
+    darkModeBtnText.setAttribute("data-mode", "dark");
+    darkModeBtnText.textContent = "dark";
   } else {
-    darkModeBtnText.setAttribute('data-mode', 'light');
-    darkModeBtnText.textContent = 'light';
+    darkModeBtnText.setAttribute("data-mode", "light");
+    darkModeBtnText.textContent = "light";
   }
+
+  document.body.classList.toggle("dark-mode");
 });
+
+// =============================
+// =============================
