@@ -4,7 +4,7 @@
 
   --secondary-color: hsl(32, 91%, 58%);
   --color-bg: hsl(199, 79%, 15%);
-  --color-main: hsl(36, 100%, 95%);
+  --color-main: hsl(36, 24%, 96%);
   --Black-ish: hsl(0, 0%, 30%);
   --color-bg-elem: hsl(36, 33%, 41%);
   --color-bg-skills: #ffcc80;
@@ -208,8 +208,8 @@ p {
 .cover__image {
   width: 30.5rem;
   aspect-ratio: 1;
-  object-fit: cover;
-  object-position: top;
+  object-fit: contain;
+  /* object-position: top; */
 }
 .cover__text {
   gap: 2rem;
@@ -288,7 +288,7 @@ p {
 .section-skills__container,
 .section-skills__skills {
   display: grid;
-  gap: 2rem;
+  /* gap: 2rem; */
 }
 
 .section-skills__text,
@@ -301,18 +301,23 @@ p {
 }
 
 .section-skills {
-  padding: min(10vh, 15rem) 2rem;
+  padding: min(10vh, 15rem) 0;
   background-color: var(--color-bg);
 }
 .section-skills__header {
   text-align: center;
   text-transform: capitalize;
   color: var(--secondary-color);
-  padding-inline: 5vw;
+}
+
+.section-skills__quote {
+  padding: 3vw;
+  border-bottom: 2px solid var(--secondary-color);
 }
 
 .section-skills__container {
   grid-template-columns: repeat(auto-fit, minmax(min(25rem, 100%), 1fr));
+  padding: 2rem;
 }
 
 .section-skills__skills {
@@ -325,13 +330,11 @@ p {
   text-align: center;
   background-color: #74a0b3;
   color: var(--color-bg);
-  border: 3px solid var(--secondary-color);
+  border: 2px solid var(--secondary-color);
 }
 .section-skills__image {
   width: 4rem;
   aspect-ratio: 1;
-}
-.section-skills__h3 {
 }
 .section-skills__p {
   font-size: 1rem;
@@ -404,17 +407,9 @@ h2.projects-title {
   overflow-x: hidden;
 }
 
-/*
-  #toggle{
-  text
-  place-self: center;
-  font-size: 2rem;
-  padding: 1rem;
-  background-color: #111;
-  color: white;
-  border: transparent;
-}
-*/
+/* ================================= */
+/* ================================= */
+/* ================================= */
 
 .projects-sect {
   margin-bottom: 3rem;
