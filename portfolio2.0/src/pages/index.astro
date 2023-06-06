@@ -9,6 +9,7 @@ import ContactForm from '../Components/ContactForm.astro';
 
 // import data
 import skills from '../Data/skillsData';
+import projects from '../Data/projectsData';
 ---
 
 <MainLayout title="Yefree Valdez">
@@ -56,142 +57,28 @@ import skills from '../Data/skillsData';
     </div>
   </section>
   <!--** PROJECTS section **-->
-  <h2 id="projects" class="projects-title">FEATURED PROJECTS</h2>
-  <section class="projects-sect grid">
+  <section id="projects" class="projects">
+    <h2 class="projects__h2">proyectos</h2>
     <!--**************-->
-    <div class="project-container flex">
-      <!--** HEADER of the container **-->
-      <div class="project-container__header flex">
-        <div class="close-open flex">
-          <img src="resources/icons/new-moon.png" alt="X" />
-          <img src="resources/icons/dry-clean.png" alt="O" />
-        </div>
-        <h4>Landing Page</h4>
-      </div>
-      <!--** IMAGE of the container **-->
-      <img
-        class="project-container__img"
-        src="resources/images/projects-img/landing-page-leana-deeb.png"
-        alt="Project screenshot"
-      />
-      <!--** INFORMATION of the container **-->
-      <div class="project-container__info flex">
-        <h3>Influencer Landing Page.</h3>
-        <p>
-          This a landing page I made as a project to learn the basics of web
-          responsive design, use of different medias such as images and videos.
-        </p>
-      </div>
-      <!--** LINK of the container **-->
-      <div class="project-container__links">
-        <a
-          href="https://github.com/yefreescoding/Redesign-web-page.git"
-          target="_blank">Git Repo</a
-        >
-        <a href="https://redesign-web-page.vercel.app/" target="_blank"
-          >Live Site</a
-        >
-      </div>
-    </div>
-    <!--**************-->
-    <div class="project-container flex">
-      <!--** HEADER of the container **-->
-      <div class="project-container__header flex">
-        <div class="close-open flex">
-          <img src="resources/icons/new-moon.png" alt="X" />
-          <img src="resources/icons/dry-clean.png" alt="O" />
-        </div>
-        <h4>Web Blog</h4>
-      </div>
-      <!--** IMAGE of the container **-->
-      <img
-        class="project-container__img"
-        src="resources/images/projects-img/project-img-blog.png"
-        alt="Project screenshot"
-      />
-      <!--** INFORMATION of the container **-->
-      <div class="project-container__info flex">
-        <h3>Personal blog.</h3>
-        <p>
-          Esta es una pagina web que hice para tener mi propio blog, en el que
-          yo tenga el control maximo. Sin duda una gran prueba para practicar.
-        </p>
-      </div>
-      <!--** LINK of the container **-->
-      <div class="project-container__links">
-        <a
-          href="https://github.com/yefreescoding/blog-personal.git"
-          target="_blank">Git Repository</a
-        >
-        <a href="https://blog-personal-flame.vercel.app/" target="_blank"
-          >Live Site</a
-        >
-      </div>
-    </div>
-    <!--**************-->
-    <div class="project-container flex">
-      <!--** HEADER of the container **-->
-      <div class="project-container__header flex">
-        <div class="close-open flex">
-          <img src="resources/icons/new-moon.png" alt="X" />
-          <img src="resources/icons/dry-clean.png" alt="O" />
-        </div>
-        <h4>Titulo del proyecto</h4>
-      </div>
-      <!--** IMAGE of the container **-->
-      <img
-        class="project-container__img"
-        src="resources/images/projects-img/traditional-jap.png"
-        alt="Project screenshot"
-      />
-      <!--** INFORMATION of the container **-->
-      <div class="project-container__info flex">
-        <h3>Name of the project.</h3>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui
-          quia alias iste ipsa hic perspiciatis tenetur vitae, esse odio eius
-          sequi cum laudantium fugiat iure magni sit laboriosam libero.
-        </p>
-      </div>
-      <!--** LINK of the container **-->
-      <div class="project-container__links">
-        <a
-          href="https://github.com/yefreescoding/stuff-i-coded-for-fun.git"
-          target="_blank">Git Repository</a
-        >
-        <a href="https://stuff-i-coded-for-fun.vercel.app/" target="_blank"
-          >Live Site</a
-        >
-      </div>
-    </div>
-    <!--**************-->
-    <div class="project-container flex" style="display: none;">
-      <!--** HEADER of the container **-->
-      <div class="project-container__header flex">
-        <div class="close-open flex">
-          <img src="resources/icons/new-moon.png" alt="X" />
-          <img src="resources/icons/dry-clean.png" alt="O" />
-        </div>
-        <h4>Titulo del proyecto</h4>
-      </div>
-      <!--** IMAGE of the container **-->
-      <div class="project-container__img">
-        <img src="" alt="Project screenshot" />
-      </div>
-      <!--** INFORMATION of the container **-->
-      <div class="project-container__info flex">
-        <h3>Name of the project.</h3>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui
-          quia alias iste ipsa hic perspiciatis tenetur vitae, esse odio eius
-          sequi cum laudantium fugiat iure magni sit laboriosam libero.
-        </p>
-      </div>
-      <!--** LINK of the container **-->
-      <div class="project-container__links">
-        <a href="#" target="_blank">Git Repository</a>
-        <a href="#" target="_blank">Live Site</a>
-      </div>
+    <div class="projects__wrap">
+      {
+        projects.map((project) => (
+          <article class="projects__article flex">
+            <h3 class="projects__h3">{project.name}</h3>
+            <a
+              href={project.link}
+              class="projects__link project-container__info flex"
+            >
+              <img
+                class="projects__image"
+                src={project.image}
+                alt="Project screenshot"
+              />
+              <p class="projects__p">{project.description}</p>
+            </a>
+          </article>
+        ))
+      }
     </div>
   </section>
   <ContactForm />

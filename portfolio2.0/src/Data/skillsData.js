@@ -19,5 +19,10 @@ const skills = [
     name: 'Astro',
     description: `De lo mejorcito que hay en cuanto a frameworks a dia de hoy.`,
   },
+  {
+    image: '/images/icons/react.png',
+    name: 'React',
+    description: `De lo mejorcito que hay en cuanto a frameworks a dia de hoy.`,
+  },
 ];
 export default skills;
