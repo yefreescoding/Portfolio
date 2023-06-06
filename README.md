@@ -1,6 +1,6 @@
-# MY PERSONAL PORTFOLIO SITE. VERSION 1.0 😋
+# MY PERSONAL PORTFOLIO SITE. VERSION 2.1 😋
 
-My latest project is a one-page portfolio website that showcases my best work and highlights my skills as a junior web developer. I built it using semantic HTML5, CSS (SCSS), and JavaScript. This site not only displays my important information but also reflects my personality. Check it out and let me know what you think! 🌟💻
+My latest project is a one-page portfolio website that showcases my best work and highlights my skills as a junior web developer. I built it using semantic HTML5, CSS (SCSS), and JavaScript. Build entirely with Astro This site not only displays my important information but also reflects my personality. Check it out and let me know what you think! 🌟💻
 
 ## Table of contents
 
@@ -9,11 +9,10 @@ My latest project is a one-page portfolio website that showcases my best work an
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
+  - [Interesting code](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -35,27 +34,30 @@ This is a "little" challenge I dived myself into to practice the basic fundament
 
 - Semantic HTML5 markup
 - CSS custom properties
-- SCSS
 - FlexBox
 - CSS Grid
 - Mobile-first workflow
 - JavaScript
+- Astro
 
-### What I learned
-
-So far, I have learned how to create responsive web designs without using media queries. However, thanks to some good tips and advice that I found on the internet, I will be using them. As a result, my code will look much cleaner and be more readable.
+### Interesting code
 
 ```html
 <div class="title-skills grid">
-    <span>"Good design is like a refrigerator—when it works, no one notices, but when it doesn't, it sure stinks." - Irene Au</span>
-    <h2>&lt;SKILLS&gt;</h2>
+  <span
+    >"Good design is like a refrigerator—when it works, no one notices, but when
+    it doesn't, it sure stinks." - Irene Au</span
+  >
+  <h2>&lt;SKILLS&gt;</h2>
 </div>
 ```
+
 ```css(scss)
 --min-column-size: 25rem;
- grid-template-columns: 
+ grid-template-columns:
     repeat(auto-fit, minmax(min(var(--min-column-size), 100%), 1fr));
 ```
+
 ```js
 // Create an instance of IntersectionObserver with a callback function as a parameter
 const observer = new IntersectionObserver((entries) => {
@@ -68,8 +70,8 @@ const observer = new IntersectionObserver((entries) => {
       // Add the 'show' class to the target element of the entry
       entry.target.classList.add('show');
     } // else {
-      // Otherwise, remove the 'show' class from the target element of the entry
-      //entry.target.classList.remove('show');
+    // Otherwise, remove the 'show' class from the target element of the entry
+    //entry.target.classList.remove('show');
     //}
   });
 });
@@ -79,9 +81,8 @@ const hiddenElements = document.querySelectorAll('.hidden');
 // For each element found, add it to the observer to be monitored for intersection
 hiddenElements.forEach((el) => observer.observe(el));
 ```
-### Continued development
 
-- Use this section to outline areas that you want to continue focusing on in future projects, these could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect:
+### Continued development
 
 I want to continue learning about manipulating the DOM, and practice with all the new CSS concepts that keep emerging, such as positioning elements with Flexbox and Grid. Additionally, I believe I need to gain a deeper understanding of the concepts of JavaScript
 
@@ -94,8 +95,3 @@ I want to continue learning about manipulating the DOM, and practice with all th
 
 - Website - [Yefree De Los Santos](https://www.your-site.com)
 - Twitter - [@YefreeCodes](https://twitter.com/YefreeCodes)
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-

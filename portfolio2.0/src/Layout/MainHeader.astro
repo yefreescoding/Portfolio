@@ -1,19 +1,17 @@
 ---
 //import components
 
-import Nav from "../Components/Nav.astro";
+import Nav from '../Components/Nav.astro';
 ---
 
 <header class="header">
   <!--* LOGO contenedor *-->
   <div class="header__home">
-    <a href="/" class="nav__links" aria-label="Go Home">
-      yefree Valdez
-    </a>
+    <a href="/" class="nav__links" aria-label="Go Home"> yefree Valdez</a>
   </div>
-  <!--* BARRA DE NAVEGACIÓN *--> 
-  <Nav/>
+  <!--* BARRA DE NAVEGACIÓN *-->
+  <Nav />
   <button id="dark-light" type="button" class="header__switch">
-    <span id="mode">Light</span> mode
+    <span id="mode" data-mode="light">Light</span> mode
   </button>
 </header>
