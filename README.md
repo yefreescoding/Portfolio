@@ -21,7 +21,6 @@ This is a "little" challenge I dived myself into to practice the basic fundament
 ### Screenshot
 
 ![](screenshots/desktop.png)
-![](screenshots/mobile.png)
 
 ### Links
 
