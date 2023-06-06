@@ -507,14 +507,6 @@ p {
 /* ================================= */
 /* ================================= */
 
-.flex {
-  display: flex;
-}
-
-.about-me .projects-sect {
-  gap: 1rem;
-}
-
 .footer,
 .footer__top,
 .footer__bottom {
