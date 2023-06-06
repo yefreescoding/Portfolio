@@ -62,12 +62,6 @@ a:active {
   color: var(--clr-text-1);
 }
 
-h1,
-h2,
-h3,
-h4 {
-}
-
 h1 {
   font-size: clamp(2rem, 1rem + 5vw, 4rem);
 }
@@ -192,7 +186,7 @@ p {
   transition: all 0.2s linear;
 }
 .nav__links:is(:hover, :active) {
-  border: 1.5px var(--secondary-color) solid;
+  border: 1.5px var(--clr-border) solid;
 }
 
 /* ============================= */
@@ -251,10 +245,14 @@ p {
 /* ============================= */
 /* ============================= */
 
-.quick-links {
+.quick-links,
+.quick-links__contenedor {
   display: grid;
   gap: 1rem;
-  padding: min(8vh, 10rem) 2rem;
+}
+
+.quick-links {
+  padding: 2vh 2rem;
   text-align: center;
   border-block: solid 2px var(--clr-border);
 }
@@ -263,7 +261,6 @@ p {
   color: var(--clr-text-2);
 }
 .quick-links__contenedor {
-  gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(min(10rem, 100%), 1fr));
 }
 .quick-links__link {
@@ -360,42 +357,6 @@ p {
   border: 2px solid var(--clr-border);
 }
 
-/* ================================= */
-/* ================================= */
-/* ================================= */
-
-.contact h2 {
-  font-size: 2.4rem;
-  text-transform: uppercase;
-}
-.contact .container-form__quote p {
-  font-size: 1.2rem;
-}
-.contact .container-form__quote div {
-  font-size: 1.2rem;
-}
-.contact .container-form__quote div span {
-  color: grey;
-}
-.contact .container-form__quote div a {
-  color: var(--Black-ish);
-  text-decoration: underline;
-}
-
-.contact {
-  grid-template-rows: auto 1fr;
-  gap: 2rem;
-  background-color: var(--color-bg-skills);
-  padding: 1rem;
-}
-.contact .container-form {
-  grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
-  gap: 3rem;
-}
-
-.grid {
-  display: grid;
-}
 
 /* ================================= */
 /* ================================= */
@@ -437,10 +398,6 @@ p {
 .projects__wrap > * {
   scroll-snap-align: start;
 }
-.projects__article {
-}
-.projects__h3 {
-}
 .projects__image {
   aspect-ratio: 16/9;
   object-fit: cover;
@@ -464,34 +421,43 @@ p {
 /* ================================= */
 /* ================================= */
 
-.container-form {
-  padding: 0.5rem;
-}
-.container-form__quote {
-  flex-flow: column;
-  gap: 3rem;
-}
-.container-form__form {
-  flex-flow: column;
+.contact__text,
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  padding: 0 2vw;
   gap: 1rem;
+  color: var(--clr-text-2);
 }
-.container-form__form input {
+
+.contact {
+  display: grid;
+  grid-template-columns: 
+    repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+  padding: 3vh 3vw;
+  background-color: var(--clr-background-3);
+}
+
+.contact__form input {
   border-radius: 20px;
-  border: var(--Black-ish) 2px solid;
-  box-shadow: 3px 6px 0 var(--Black-ish);
+  border: var(--clr-border-2) 2px solid;
+  box-shadow: 3px 6px 0 var(--clr-box-shd);
   padding: 0.5rem;
   font-size: 1rem;
 }
-.container-form__form button {
+.contact__submit {
   align-self: flex-end;
-  width: auto;
-  padding: 1rem 1.5rem;
   cursor: pointer;
-  background-color: var(--color-bg-skills);
-  border: var(--Black-ish) 2px solid;
-  box-shadow: 3px 6px 0 var(--Black-ish);
+  font-size: 1.1rem;
+  font-weight: 600;
+  width: fit-content;
+  padding: .8rem 1rem;
+  color: var(--clr-text-2);
+  background-color: var(--clr-background-2);
+  border: var(--clr-border-2) 2px solid;
+  box-shadow: 3px 6px 0 var(--clr-box-shd);
   border-radius: 20px;
-  font-size: 1.3rem;
 }
 
 /* ================================= */
@@ -510,8 +476,8 @@ p {
 .footer,
 .footer__bottom {
   text-align: center;
-  border-top: 2px solid var(--secondary-color);
-  color: var(--secondary-color);
+  border-top: 2px solid var(--clr-border);
+  color: var(--clr-text-1);
 }
 
 .footer__top {
@@ -527,7 +493,7 @@ p {
 }
 
 .footer__link {
-  color: var(--secondary-color);
+  color: var(--clr-text-1);
   flex: 1;
   flex-basis: 3rem;
   flex-grow: 1;
@@ -540,13 +506,13 @@ p {
 .loader {
   position: fixed;
   inset: 0;
-  background-color: var(--secondary-color);
+  background-color: var(--clr-background-2);
   z-index: 99999;
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  color: var(--color-bg);
+  color: var(--clr-text-2);
 }
 
 .loaded {
@@ -556,7 +522,7 @@ p {
 .line-wobble {
   --uib-size: 80px;
   --uib-speed: 1.75s;
-  --uib-color: var(--color-bg);
+  --uib-color: var(--clr-background-1);
   --uib-line-weight: 5px;
 
   position: relative;
