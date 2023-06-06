@@ -13,3 +13,11 @@ toggleMobile.addEventListener('click', function () {
     toggleMobile.setAttribute('data-fixed', false);
   }
 });
+
+const loader = document.querySelector('.loader');
+
+const loaderTime = setTimeout(loading, 1500);
+
+function loading() {
+  loader.classList.add('loaded');
+}
