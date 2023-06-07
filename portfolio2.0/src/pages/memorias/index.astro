@@ -1,11 +1,12 @@
 ---
 // import lauouts
-import MainLayout from '../Layout/MainLayout.astro';
+import MainLayout from '../../Layout/MainLayout.astro';
 
 // import components
-import Cover from '../Components/Cover.astro';
-import QuickLinks from '../Components/Quick-links.astro';
-import ContactForm from '../Components/ContactForm.astro';
+import Cover from '../../Components/Cover.astro';
+import QuickLinks from '../../Components/Quick-links.astro';
+
+const allPost = await Astro.glob('./*.md');
 ---
 
 <MainLayout title="Memorias - Yefree">
@@ -18,10 +19,13 @@ import ContactForm from '../Components/ContactForm.astro';
   <section class="thoughts" aria-label="Articulos memorias">
     <div class="thoughts__div">
       <h2 class="thoughts__h2">2023</h2>
-      <a class="thoughts__a" href="../content/thoughts-1">
-        ¿Por qué empece estudiar programación?
-      </a>
+      {
+        allPost.map((post) => (
+          <a class="thoughts__a" href={post.url}>
+            {post.frontmatter.title}
+          </a>
+        ))
+      }
     </div>
   </section>
-  <!-- <ContactForm /> -->
 </MainLayout>

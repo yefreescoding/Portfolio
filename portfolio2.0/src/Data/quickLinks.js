@@ -13,7 +13,7 @@ const quickLinks = [
   },
   {
     name: 'memorias',
-    link: '/thoughts/',
+    link: './memorias/',
   },
 ];
 

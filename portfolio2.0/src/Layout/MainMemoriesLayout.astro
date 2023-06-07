@@ -1,0 +1,27 @@
+---
+// import Layouts
+import MainLayout from './MainLayout.astro';
+
+// import utils
+import { formatDate, formatDateMonth } from '../js/functions';
+
+// drontmatter
+const { frontmatter } = Astro.props;
+
+const { title, date, image } = frontmatter;
+---
+
+<MainLayout>
+  <header class="blog-hdr">
+    <h1 class="blog-hdr__h1">{title}</h1>
+    <span class="blog-hdr__date">{formatDateMonth(date)}</span>
+  </header>
+  <section class="blog-section">
+    <div class="blog-section__content">
+      <slot />
+    </div>
+    <a style="width: fit-content;" class="nav__links" href="/memorias/"
+      >Todas las memorias</a
+    >
+  </section>
+</MainLayout>
