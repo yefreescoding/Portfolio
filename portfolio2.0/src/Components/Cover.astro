@@ -4,11 +4,7 @@ const { coverTitle, description, coverImage } = Astro.props;
 
 <section id="home" class="cover" aria-label="Portada de la pagina">
   <!--** LEFT SIDE, Desktop. BOTTOM SIDE, mobile **-->
-  <img
-    class="cover__image img-conte flex"
-    src={coverImage}
-    alt="Vector portrait picture."
-  />
+  <img class="cover__image" src={coverImage} alt="Vector portrait picture." />
   <div class="cover__text">
     <h1 class="cover__h1">
       {coverTitle}
@@ -21,8 +17,5 @@ const { coverTitle, description, coverImage } = Astro.props;
     >
       Conecta Conmigo ;)</a
     >
-    <!-- <div class="cover__text cover__text--bottom intro-cont__buttons">
-    </div> -->
   </div>
-  <!--** RIGHT SIDE, Desktop. TOP SIDE, mobile **-->
 </section>
