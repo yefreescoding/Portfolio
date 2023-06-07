@@ -2,7 +2,7 @@
 const { coverTitle, description, coverImage } = Astro.props;
 ---
 
-<main id="home" class="cover">
+<section id="home" class="cover" aria-label="Portada de la pagina">
   <!--** LEFT SIDE, Desktop. BOTTOM SIDE, mobile **-->
   <img
     class="cover__image img-conte flex"
@@ -14,20 +14,15 @@ const { coverTitle, description, coverImage } = Astro.props;
       {coverTitle}
     </h1>
     <p class="cover__p">{description}</p>
-    <div class="cover__text cover__text--bottom intro-cont__buttons">
-      <a
-        class="cover__links cover__links--mail"
-        href="mailto: yefree13santos@eoutlook.com"
-        target="_blank"
-      >
-        Let's connect ;)</a
-      >
-      <a
-        href="documents/CV-Yefree-2023.pdf"
-        class="cover__links cover__links--nan"
-        target="_blank">Curriculum</a
-      >
-    </div>
+    <a
+      class="cover__links cover__links--mail"
+      href="mailto: yefree13santos@eoutlook.com"
+      target="_blank"
+    >
+      Conecta Conmigo ;)</a
+    >
+    <!-- <div class="cover__text cover__text--bottom intro-cont__buttons">
+    </div> -->
   </div>
   <!--** RIGHT SIDE, Desktop. TOP SIDE, mobile **-->
-</main>
+</section>

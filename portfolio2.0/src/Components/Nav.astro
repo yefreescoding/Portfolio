@@ -1,26 +1,31 @@
 ---
 //data imports
 import navData from '../Data/navData';
-
-
 ---
 
 <nav class="nav" data-visible="false">
-    <!--* LINKS contenedor *-->
-    <ul class="nav__ul">
-      {
-        navData.map(link => 
-          <li class="nav__li">
-            <a href={link.link} class="nav__links" aria-label="links to navigate" >{link.name}</a>
-          </li>
-        )
-      }
-      </li>
-    </ul>
-  </nav>
-  <button id="toggle-mobile-menu" class="nav__mobile" data-fixed="false"></button>
+  <!--* LINKS contenedor *-->
+  <ul class="nav__ul">
+    {
+      navData.map((link) => (
+        <li class="nav__li">
+          <a
+            href={link.link}
+            class="nav__links"
+            aria-label="links to outside websites"
+            target="_blank"
+          >
+            {link.name}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<button id="toggle-mobile-menu" class="nav__mobile" data-fixed="false"></button>
 
 <script>
-  //import utils 
-import '../js/utils';
+  //import utils
+  import '../js/utils';
 </script>

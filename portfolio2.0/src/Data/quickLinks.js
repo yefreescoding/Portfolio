@@ -1,19 +1,19 @@
 const quickLinks = [
   {
-    name: 'home',
+    name: 'Inicio',
     link: '/',
   },
   {
-    name: 'projects',
+    name: 'Sobre mi',
+    link: '/about/',
+  },
+  {
+    name: 'proyectos',
     link: '#projects',
   },
   {
-    name: 'thoughts',
+    name: 'memorias',
     link: '/thoughts/',
-  },
-  {
-    name: 'contact',
-    link: '/404/',
   },
 ];
 
