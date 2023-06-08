@@ -207,8 +207,8 @@ p {
 
 .cover__text,
 .cover__image {
-  flex-basis: 20em;
-  flex-grow: 1;
+  flex-basis: 25em;
+  flex-grow: 2;
 }
 
 .cover {
@@ -218,8 +218,7 @@ p {
   overflow: hidden;
 }
 .cover__image {
-  width: 100%;
-  max-width: 100%;
+  width: min(100%, 30rem);
   aspect-ratio: 1;
   object-fit: contain;
   border: solid 0.5px var(--clr-border);
