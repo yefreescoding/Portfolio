@@ -1,5 +1,16 @@
 ---
-const { title } = Astro.props;
+// import Components
+import SiteMeta from '../Components/SiteMeta.astro';
+import FontsLinks from '../Components/FontsLinks.astro';
+
+const {
+  title = 'Yefree Valdez',
+  subtitle,
+  description = 'Yefree web developer portfolio',
+  url = 'https://portfolioyefreevaldez.vercel.app',
+  image = '/',
+  author = 'Yefree De Los Santos',
+} = Astro.props;
 ---
 
 <head>
@@ -7,24 +18,16 @@ const { title } = Astro.props;
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="generator" content={Astro.generator} />
+  <SiteMeta
+    title={title}
+    subtitle={subtitle}
+    description={description.substring(0, 100)}
+    url={Astro.site
+      ? `${Astro.site}/${title.toLowerCase().replaceAll(' ', '-')}`
+      : `https://portfolioyefreevaldez.vercel.app`}
+    image={image}
+    author={author}
+  />
   <!-- Google Fonts import -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
-  <title>{title}</title>
+  <FontsLinks />
 </head>

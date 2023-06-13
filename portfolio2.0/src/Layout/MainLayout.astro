@@ -7,12 +7,12 @@ import MainHead from './MainHead.astro';
 import Footer from './MainFooter.astro';
 import Header from './MainHeader.astro';
 
-const { title } = Astro.props;
+const { subtitle } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html>
-  <MainHead {title} />
+  <MainHead {subtitle} />
   <body class="dark-mode">
     <div class="loader">
       <p>cargando la página</p>
