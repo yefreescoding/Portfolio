@@ -6,6 +6,7 @@ import '../styles/globals.css';
 import MainHead from './MainHead.astro';
 import Footer from './MainFooter.astro';
 import Header from './MainHeader.astro';
+// import Loader from './Loader.astro';
 
 const { subtitle } = Astro.props;
 ---
@@ -13,11 +14,8 @@ const { subtitle } = Astro.props;
 <!DOCTYPE html>
 <html>
   <MainHead {subtitle} />
-  <body class="dark-mode">
-    <div class="loader">
-      <p>cargando la página</p>
-      <div class="line-wobble"></div>
-    </div>
+  <body class="">
+    <!-- <Loader /> -->
     <Header />
     <main class="web-page-cont grid">
       <slot />

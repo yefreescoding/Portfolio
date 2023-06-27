@@ -22,9 +22,70 @@ import navData from '../Data/navData';
     }
   </ul>
 </nav>
-
 <button id="toggle-mobile-menu" class="nav__mobile" data-fixed="false"></button>
 
+<style lang="scss">
+  .nav {
+    flex: 2;
+  }
+  .nav__ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  @media (width < 39.9em) {
+    .nav {
+      position: fixed;
+      inset: 43px 0 auto 0;
+      height: 10rem;
+      background-color: var(--clr-background-1);
+      border: 2px solid var(--clr-border);
+      box-shadow: 5px 6px var(--clr-box-shd);
+      transform: translateX(120%);
+      transition: transform 0.24s ease-in;
+    }
+
+    .nav__ul {
+      flex-flow: column;
+      gap: 3rem;
+      flex-wrap: wrap;
+      padding: min(5vh, 10rem) 1rem;
+    }
+  }
+  .nav[data-visible='true'] {
+    transform: translateX(0);
+  }
+
+  .nav__mobile {
+    width: 2.5rem;
+    aspect-ratio: 1;
+    z-index: 9999;
+    background-color: var(--clr-text-1);
+    background-image: url('/images/icons/more.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: all 0.17s linear;
+  }
+  @media (min-width: 40em) {
+    .nav__mobile {
+      display: none;
+    }
+  }
+  .nav__li {
+    position: relative;
+  }
+  .nav__links {
+    color: var(--clr-text-1);
+    text-align: center;
+    border: 1px transparent solid;
+    transition: all 0.2s linear;
+  }
+  .nav__links:is(:hover, :active) {
+    border-bottom: 1px var(--clr-border) solid;
+  }
+</style>
 <script>
   //import utils
   import '../js/utils';

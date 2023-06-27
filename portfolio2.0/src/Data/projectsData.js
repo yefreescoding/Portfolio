@@ -17,5 +17,11 @@ const projects = [
     image: '/images/projects-img/music-gram.png',
     description: `Un sitio web creado para mostrar contenido estático sobre los artistas y la música, que mas me gusta y me inspira.`,
   },
+  {
+    link: 'https://music-gram-yefreescoding.vercel.app',
+    name: 'Cocina con Micaela',
+    image: '/images/projects-img/cocina-con-micaela.png',
+    description: `Si te gusta comer, y quieres aprender a hacer platos fáciles y sencillos. Esta pagina web es para ti.`,
+  },
 ];
 export default projects;

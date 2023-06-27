@@ -15,3 +15,45 @@ import Nav from '../Components/Nav.astro';
     <span id="mode" data-mode="dark">Dark</span> mode
   </button>
 </header>
+
+<style lang="scss" is:global>
+  /* ============================= */
+  /* ============================= */
+
+  .header,
+  .nav__ul,
+  .header__home {
+    display: flex;
+    align-items: center;
+  }
+
+  .header__home,
+  .nav,
+  .nav__ul,
+  .header__switch {
+    padding: 0.5rem 1rem;
+    text-align: center;
+    height: 100%;
+  }
+
+  .header__home,
+  .header__switch,
+  .nav__links {
+    flex: 1;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--clr-text-1);
+  }
+
+  .header {
+    justify-content: space-between;
+    position: fixed;
+    inset: 10px 10px auto 10px;
+    border-radius: 1rem;
+    border: solid 2px var(--clr-border-2);
+    box-shadow: 4px 4px 0 var(--clr-border-2);
+    background-color: var(--clr-background-2);
+    padding: 0.5rem 0;
+  }
+</style>
