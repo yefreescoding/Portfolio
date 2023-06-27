@@ -24,10 +24,50 @@ import SkillsSection from '../Components/SkillsSection.astro';
   <SkillsSection />
   <!--** PROJECTS section **-->
   <section id="projects" class="projects">
-    <h2 class="projects__h2">proyectos</h2>
+    <h2 class="projects__h2">
+      Mis ultimos
+      <span class="highlight">proyectos</span>
+    </h2>
     <!--**************-->
-    <div class="projects__wrap">
-      {
+    <di class="projects__wrap">
+      <div class="projects__links" aria-label="Links hacia los proyectos">
+        <button type="button" id="project-1">Music Gram</button>
+      </div>
+      <article id="project-display" class="projects__display">
+        <h3>Titulo del proyecto</h3>
+        <img src="" alt="Imagen del proyecto" />
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum velit
+          eveniet atque sapiente harum aperiam, similique voluptas?
+        </p>
+      </article>
+      <div class="project__key_points">
+        <h3></h3>
+        <ul class="project__ul">
+          <li class="project__li">
+            <img src="" alt="icono key points" />
+            <span class="key-text">ipsum</span>
+          </li>
+          <li class="project__li">
+            <img src="" alt="icono key points" />
+            <span class="key-text">dolor</span>
+          </li>
+          <li class="project__li">
+            <img src="" alt="icono key points" />
+            <span class="key-text">dolor</span>
+          </li>
+          <li class="project__li">
+            <img src="" alt="icono key points" />
+            <span class="key-text">dolor</span>
+          </li>
+          <li class="project__li">
+            <img src="" alt="icono key points" />
+            <span class="key-text">Lorem</span>
+          </li>
+        </ul> .
+      </div>
+      <div class="projects__info"></div>
+      <!-- {
         projects.map((project) => (
           <article class="projects__article flex">
             <h3 class="projects__h3">{project.name}</h3>
@@ -44,8 +84,75 @@ import SkillsSection from '../Components/SkillsSection.astro';
             </a>
           </article>
         ))
-      }
-    </div>
+      } -->
+    </di>
   </section>
   <ContactForm />
 </MainLayout>
+
+<style lang="scss" is:global>
+  .projects,
+  .projects__article,
+  .projects__link {
+    display: flex;
+    flex-flow: column;
+    // gap: 1rem;
+  }
+
+  .highlight {
+    color: var(--clr-text-2);
+  }
+
+  .projects {
+    gap: 2rem;
+    // align-items: center;
+    // text-align: center;
+    // margin-block: 3rem;
+  }
+
+  // .projects__wrap {
+  //   display: grid;
+  //   gap: 2rem;
+  //   grid-auto-flow: row;
+  //   grid-auto-rows: 25%;
+  //   overflow-y: scroll;
+  //   scroll-snap-type: y mandatory;
+  //   scroll-padding: 2rem;
+  //   scrollbar-width: none;
+  // }
+  // @media (min-width: 40em) {
+  //   .projects__wrap {
+  //     grid-auto-flow: column;
+  //     grid-auto-columns: 45%;
+  //     overflow-x: scroll;
+  //   }
+  // }
+
+  // /* Hide scrollbar for Chrome, Safari and Opera */
+  // .projects__wrap::-webkit-scrollbar {
+  //   display: none;
+  // }
+
+  // .projects__wrap > * {
+  //   scroll-snap-align: start;
+  // }
+  .projects__link {
+    border: 2px solid var(--clr-border-2);
+    background-color: var(--clr-background-3);
+    position: relative;
+    transition: all 0.15s ease;
+  }
+  .projects__image {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+  .projects__link:is(:hover, :active) {
+    box-shadow: 3px 3px 0 var(--clr-box-shd);
+    transform: translate(-3px, -3px);
+  }
+  .projects__p {
+    padding: 1vh 5vw;
+    font-size: 1rem;
+    color: var(--clr-text-2);
+  }
+</style>
