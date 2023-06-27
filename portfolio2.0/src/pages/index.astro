@@ -4,12 +4,13 @@ import MainLayout from '../Layout/MainLayout.astro';
 
 // import components
 import Cover from '../Components/Cover.astro';
-import QuickLinks from '../Components/Quick-links.astro';
+// import QuickLinks from '../Components/Quick-links.astro';
 import ContactForm from '../Components/ContactForm.astro';
 
 // import data
-import skills from '../Data/skillsData';
+// import skills from '../Data/skillsData';
 import projects from '../Data/projectsData';
+import SkillsSection from '../Components/SkillsSection.astro';
 ---
 
 <MainLayout subtitle="HOME">
@@ -20,45 +21,7 @@ import projects from '../Data/projectsData';
   />
   <!-- <QuickLinks /> -->
   <!--** SKILLS section **-->
-  <section id="skills" class="section-skills">
-    <header class="section-skills__header">
-      <p class="section-skills__quote">
-        <q
-          >La vida no se trata de encontrarte a ti mismo. La vida se trata de
-          crearte a ti mismo.</q
-        >
-        — George Bernard Shaw
-      </p>
-      <h2 class="section-skills__h2">habilidades</h2>
-    </header>
-    <div class="section-skills__container">
-      <div class="section-skills__text">
-        <h3>Desarrollador de interfaces de aplicaciones web</h3>
-        <p>
-          Comenzando con HTML, CSS y JavaScript, aprendí a programar por mi
-          cuenta. Sin embargo, hoy en día hay mucho por descubrir más allá de
-          JavaScript estándar: hoy trabajo con TypeScript en React, uso Redux o
-          Context para la administración de estado y uso SASS como preprocesador
-          para CS.
-        </p>
-      </div>
-      <div class="section-skills__skills">
-        {
-          skills.map((skill) => (
-            <article class="section-skills__article">
-              <img
-                class="section-skills__image"
-                src={skill.image}
-                alt="HTML icon logo"
-              />
-              <h3 class="section-skills__h3">{skill.name}</h3>
-              <p class="section-skills__p">{skill.description}</p>
-            </article>
-          ))
-        }
-      </div>
-    </div>
-  </section>
+  <SkillsSection />
   <!--** PROJECTS section **-->
   <section id="projects" class="projects">
     <h2 class="projects__h2">proyectos</h2>

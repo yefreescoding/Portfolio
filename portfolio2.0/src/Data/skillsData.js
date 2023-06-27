@@ -1,17 +1,17 @@
 const skills = [
   {
     image: '/images/icons/html.png',
-    name: 'html',
+    name: 'HTML',
     description: `Paginas HTML organizadas, limpias y accesibles.`,
   },
   {
     image: '/images/icons/css-line.png',
-    name: 'css',
+    name: 'CSS',
     description: `Desde cero, con SASS, y también Tailwind.`,
   },
   {
     image: '/images/icons/javascript.png',
-    name: 'javascript',
+    name: 'JavaScript',
     description: `Vanilla Javascript es lo mejor, nadie me hará cambiar de opinion.`,
   },
   {
@@ -21,7 +21,27 @@ const skills = [
   },
   {
     image: '/images/icons/react.png',
-    name: 'React',
+    name: 'ReactJS',
+    description: `De lo mejorcito que hay en cuanto a frameworks a dia de hoy.`,
+  },
+  {
+    image: '/images/icons/react.png',
+    name: 'NodeJS',
+    description: `De lo mejorcito que hay en cuanto a frameworks a dia de hoy.`,
+  },
+  {
+    image: '/images/icons/react.png',
+    name: 'MySQL',
+    description: `De lo mejorcito que hay en cuanto a frameworks a dia de hoy.`,
+  },
+  {
+    image: '/images/icons/react.png',
+    name: 'PHP',
+    description: `De lo mejorcito que hay en cuanto a frameworks a dia de hoy.`,
+  },
+  {
+    image: '/images/icons/react.png',
+    name: 'ViteJS',
     description: `De lo mejorcito que hay en cuanto a frameworks a dia de hoy.`,
   },
 ];

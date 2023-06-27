@@ -1,0 +1,110 @@
+---
+// vainitas
+import skills from '../Data/skillsData';
+---
+
+<section id="skills" class="section-skills">
+  <div class="section-skills__container">
+    <div class="section-skills__text">
+      <h2 class="section-skills__h2">habilidades</h2>
+      <h3>Las herramientas que utilizo:</h3>
+      <p>
+        Comenzando con HTML, CSS y JavaScript, aprendí a programar por mi
+        cuenta. Sin embargo, hoy en día hay mucho por descubrir más allá de
+        Vanilla JavaScript: hoy estoy trbajando con la libreria de REACTJS,
+        frameworks Astro y NextJS, utilizo Vitest como herramienta de testing,
+        SASS y Tailwind como preprocesador para CSS.
+      </p>
+    </div>
+    <div class="section-skills__skills">
+      {
+        skills.map((skill) => (
+          <article class="section-skills__article">
+            <img
+              class="section-skills__image"
+              src={skill.image}
+              alt="HTML icon logo"
+            />
+            <h3 class="section-skills__h3">{skill.name}</h3>
+            <p class="section-skills__p">{skill.description}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+  <blockquote class="section-skills__quote">
+    <p>
+      La vida no se trata de encontrarte a ti mismo. La vida se trata de crearte
+      a ti mismo.
+    </p>
+    <cite> — George Bernard Shaw</cite>
+  </blockquote>
+</section>
+
+<style lang="scss" is:global>
+  .section-skills,
+  .section-skills__container,
+  .section-skills__skills {
+    display: grid;
+    color: var(--clr-text-1);
+  }
+
+  .section-skills__text,
+  .section-skills__article {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+  }
+
+  .section-skills__text {
+    padding: 5vh 3vw;
+  }
+
+  .section-skills {
+    background-color: var(--clr-background-1);
+    border: 2px solid var(--clr-border-2);
+  }
+  .section-skills__header {
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  .section-skills__quote {
+    text-align: center;
+    padding: 5vh 0;
+    outline: solid var(--clr-border-2) 2px;
+  }
+
+  .section-skills__container {
+    grid-template-columns: repeat(auto-fit, minmax(min(25rem, 100%), 1fr));
+  }
+
+  .section-skills__h2 {
+    color: var(--clr-text-2);
+  }
+
+  .section-skills__skills {
+    grid-template-columns: repeat(auto-fit, minmax(min(13rem, 100%), 1fr));
+  }
+
+  .section-skills__article {
+    align-items: center;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: var(--clr-text-2);
+    color: var(--clr-background-1);
+    outline: solid var(--clr-border-2);
+  }
+  .section-skills__image {
+    width: 4rem;
+    aspect-ratio: 1;
+  }
+
+  // .section-skills__h3 {
+  //   color: var(--clr-text-2);
+  // }
+  .section-skills__p {
+    font-size: 1rem;
+    color: var(--clr-text-3);
+  }
+</style>
