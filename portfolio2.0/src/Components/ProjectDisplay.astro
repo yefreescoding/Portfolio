@@ -1,0 +1,92 @@
+<div id="project-display" class="project__display">
+  <div class="project__links" aria-label="Links hacia los proyectos">
+    <ul class="project__ul">
+      <li class="project__li">
+        <button type="button" id="project-1">Music Gram</button>
+      </li>
+      <li class="project__li">
+        <button type="button" id="project-1">Cocina con Micaela</button>
+      </li>
+      <li class="project__li">
+        <button type="button" id="project-1">Personal Blog</button>
+      </li>
+    </ul> .
+  </div>
+  <article class="project__text">
+    <h3>Titulo del proyecto</h3>
+    <img src="" alt="Imagen del proyecto" />
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum velit
+      eveniet atque sapiente harum aperiam, similique voluptas?
+    </p>
+  </article>
+  <div class="project__key_points">
+    <h3>Key outputs</h3>
+    <ul class="project__ul">
+      <li class="project__li">
+        <img src="" alt="icono key points" />
+        <span class="key-text">ipsum calsk aldsam</span>
+      </li>
+      <li class="project__li">
+        <img src="" alt="icono key points" />
+        <span class="key-text">dolor dasj sas</span>
+      </li>
+      <li class="project__li">
+        <img src="" alt="icono key points" />
+        <span class="key-text">dolor asn sddkns</span>
+      </li>
+      <li class="project__li">
+        <img src="" alt="icono key points" />
+        <span class="key-text">dolor nnlkasdnl ss</span>
+      </li>
+      <li class="project__li">
+        <img src="" alt="icono key points" />
+        <span class="key-text">Loremsda ds deded</span>
+      </li>
+    </ul> .
+  </div>
+</div>
+
+<style lang="scss" is:global>
+  .project__display {
+    gap: 3rem;
+    flex-wrap: wrap;
+    &,
+    .project__links,
+    .project__ul,
+    .project__li {
+      display: flex;
+    }
+
+    .project__links,
+    .project__ul {
+      flex-direction: column;
+      justify-content: flex-start;
+      text-align: left;
+    }
+
+    .project__links {
+      flex: 1;
+      flex-basis: 5em;
+      flex-grow: 1;
+      flex-wrap: wrap;
+    }
+    .project__ul {
+    }
+    .project__li {
+      flex: 1;
+      button {
+        padding: 1rem;
+      }
+    }
+    .project__text {
+      flex-basis: 10em;
+      flex-grow: 3;
+    }
+    .project__key_points {
+      flex: 1;
+      flex-basis: 5em;
+      flex-grow: 1;
+    }
+  }
+</style>
