@@ -4,18 +4,90 @@ const { coverTitle, description, coverImage } = Astro.props;
 
 <section id="home" class="cover" aria-label="Portada de la pagina">
   <!--** LEFT SIDE, Desktop. BOTTOM SIDE, mobile **-->
-  <img class="cover__image" src={coverImage} alt="Vector portrait picture." />
   <div class="cover__text">
     <h1 class="cover__h1">
       {coverTitle}
     </h1>
     <p class="cover__p">{description}</p>
-    <a
-      class="cover__links cover__links--mail"
-      href="mailto: yefree13santos@eoutlook.com"
-      target="_blank"
-    >
-      Conecta Conmigo ;)</a
-    >
+    <div class="cover__div">
+      <a
+        class="cover__links cover__links--mail"
+        href="mailto: yefree13santos@eoutlook.com"
+        target="_blank"
+      >
+        Conecta Conmigo ;)
+      </a>
+      <a
+        class="cover__links cover__links--cv"
+        href="cv/YefreeCV2023.pdf"
+        target="_blank"
+      >
+        Curriculum PDF
+      </a>
+    </div>
   </div>
+  <img class="cover__image" src={coverImage} alt="Vector portrait picture." />
 </section>
+
+<style>
+  .cover,
+  .cover__text,
+  .cover__div {
+    display: flex;
+  }
+
+  .cover__text,
+  .cover__image {
+    flex-basis: 25em;
+    flex-grow: 2;
+  }
+
+  .cover {
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .cover__image {
+    width: min(100%, 30rem);
+    aspect-ratio: 1;
+    object-fit: contain;
+  }
+  .cover__text {
+    flex-flow: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 5vh 3vw;
+  }
+
+  @media (width < 40em) {
+    .cover__text {
+      text-align: center;
+    }
+  }
+
+  .cover__h1 {
+    color: var(--clr-text-2);
+  }
+
+  .cover__div {
+    gap: 1rem;
+    justify-content: flex-start;
+  }
+  .cover__links {
+    font-size: 1.1rem;
+    padding: 1rem;
+    font-weight: bold;
+    width: fit-content;
+    border-radius: 0.3rem;
+    border: 2px solid var(--clr-border-2);
+    box-shadow: 4px 4px 0 var(--clr-border-2);
+    color: var(--clr-text-1);
+    transition: all 0.5s ease-in-out;
+  }
+  .cover__links--mail {
+    background-color: var(--clr-background-3);
+  }
+  .cover__links:is(:hover, :active) {
+    transform: translateY(-0.5rem);
+    transition: all 0.2s ease-in-out;
+  }
+</style>
