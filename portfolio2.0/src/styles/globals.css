@@ -136,7 +136,7 @@ p {
 
 .web-page-cont {
   border: 2px solid var(--secondary-color) 0;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   margin: 15vh 0;
   width: min(100%, 80em);
   margin-inline: auto;
