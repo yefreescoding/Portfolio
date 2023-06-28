@@ -2,19 +2,19 @@
   <div class="project__links" aria-label="Links hacia los proyectos">
     <ul class="project__ul">
       <li class="project__li">
-        <button type="button" id="project-1">Music Gram</button>
+        <button type="button" id="project-1">01. Music Gram</button>
       </li>
       <li class="project__li">
-        <button type="button" id="project-1">Cocina con Micaela</button>
+        <button type="button" id="project-1">02. Cocina con Micaela</button>
       </li>
       <li class="project__li">
-        <button type="button" id="project-1">Personal Blog</button>
+        <button type="button" id="project-1">03. Personal Blog</button>
       </li>
     </ul> .
   </div>
   <article class="project__text">
     <h3>Titulo del proyecto</h3>
-    <img src="" alt="Imagen del proyecto" />
+    <img src="/images/projects-img/music-gram.webp" alt="Imagen del proyecto" />
     <p>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum velit
       eveniet atque sapiente harum aperiam, similique voluptas?
@@ -24,37 +24,35 @@
     <h3>Key outputs</h3>
     <ul class="project__ul">
       <li class="project__li">
-        <img src="" alt="icono key points" />
-        <span class="key-text">ipsum calsk aldsam</span>
+        <img src="/images/icons/web.webp" alt="icono key points" />
+        <span class="key-text">Clean Code</span>
       </li>
       <li class="project__li">
-        <img src="" alt="icono key points" />
-        <span class="key-text">dolor dasj sas</span>
+        <img src="/images/icons/performance.avif" alt="icono key points" />
+        <span class="key-text">Gran perfomance</span>
       </li>
       <li class="project__li">
-        <img src="" alt="icono key points" />
-        <span class="key-text">dolor asn sddkns</span>
+        <img src="/images/icons/smartphone.avif" alt="icono key points" />
+        <span class="key-text">Diseño responsive</span>
       </li>
       <li class="project__li">
-        <img src="" alt="icono key points" />
-        <span class="key-text">dolor nnlkasdnl ss</span>
+        <img src="/images/icons/test.avif" alt="icono key points" />
+        <span class="key-text">Testing front y back end</span>
       </li>
-      <li class="project__li">
-        <img src="" alt="icono key points" />
-        <span class="key-text">Loremsda ds deded</span>
-      </li>
-    </ul> .
+    </ul>
   </div>
 </div>
 
 <style lang="scss" is:global>
   .project__display {
     gap: 3rem;
+    align-items: flex-start;
     flex-wrap: wrap;
     &,
     .project__links,
     .project__ul,
-    .project__li {
+    .project__li,
+    .project__text {
       display: flex;
     }
 
@@ -67,7 +65,7 @@
 
     .project__links {
       flex: 1;
-      flex-basis: 5em;
+      flex-basis: 15em;
       flex-grow: 1;
       flex-wrap: wrap;
     }
@@ -75,17 +73,41 @@
     }
     .project__li {
       flex: 1;
+      padding: 1rem;
+      align-items: center;
+      gap: 1rem;
       button {
-        padding: 1rem;
+        width: fit-content;
+        font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+        border-bottom: 3px transparent solid;
+        transition: all 0.2s linear;
+        &:hover {
+          border-bottom: 3px solid var(--clr-text-2);
+        }
+      }
+      img {
+        width: 3rem;
+        aspect-ratio: 1;
+        object-fit: contain;
+      }
+      span {
+        font-size: clamp(1.1rem, 1.5vw, 1.5rem);
       }
     }
     .project__text {
-      flex-basis: 10em;
+      flex-basis: 20em;
       flex-grow: 3;
+      flex-direction: column;
+      gap: 0.8rem;
+
+      img {
+        aspect-ratio: 16/9;
+        object-fit: contain;
+      }
     }
     .project__key_points {
       flex: 1;
-      flex-basis: 5em;
+      flex-basis: 15em;
       flex-grow: 1;
     }
   }
