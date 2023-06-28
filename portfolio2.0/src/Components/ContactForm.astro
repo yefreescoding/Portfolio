@@ -2,19 +2,63 @@
 ---
 
 <section id="contact" class="contact">
-    <div class="contact__text">
-        <h2 class="contact__h2">Contacta conmigo</h2>
-        <p>
-            ¿Te interesa mi trabajo? Estoy abierto a nuevas oportunidades
-            laborales, listo para ser parte de un trabajo equipo y dar todo el
-            valor que pueda. Listo para lo nuevo y emocionante Desafíos.
-        </p>
-    </div>
-    <form class="contact__form" action="">
-        <input type="text" placeholder="Your name*" />
-        <input type="email" placeholder="Your email*" />
-        <input type="url" placeholder="Your web page (If it exist)" />
-        <input type="text" placeholder="How can I help?" />
-        <button class="contact__submit" type="submit">Get in touch</button>
-    </form>
+  <div class="contact__text">
+    <h2 class="contact__h2">Contacta conmigo</h2>
+    <p>
+      ¿Te interesa mi trabajo? Estoy abierto a nuevas oportunidades laborales,
+      listo para ser parte de un trabajo equipo y dar todo el valor que pueda.
+      Listo para lo nuevo y emocionante Desafíos.
+    </p>
+  </div>
+  <form class="contact__form" action="">
+    <input type="text" placeholder="Your name*" />
+    <input type="email" placeholder="Your email*" />
+    <input type="url" placeholder="Your web page (If it exist)" />
+    <input type="text" placeholder="How can I help?" />
+    <button class="contact__submit" type="submit">Get in touch</button>
+  </form>
 </section>
+
+<style>
+  .contact__text,
+  .contact__form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2vw;
+    gap: 1rem;
+    color: var(--clr-text-2);
+  }
+
+  .contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+    background-color: var(--clr-background-3);
+    border-top: 2px solid var(--clr-border);
+  }
+
+  .contact__form input {
+    border-radius: 20px;
+    border: var(--clr-border-2) 2px solid;
+    box-shadow: 3px 6px 0 var(--clr-box-shd);
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  .contact__submit {
+    align-self: flex-end;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    width: fit-content;
+    padding: 0.8rem 1rem;
+    color: var(--clr-text-2);
+    background-color: var(--clr-background-2);
+    border: var(--clr-border-2) 2px solid;
+    box-shadow: 3px 6px 0 var(--clr-box-shd);
+    border-radius: 20px;
+  }
+
+  .projects,
+  .contact {
+    padding: 10vh 0;
+  }
+</style>

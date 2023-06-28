@@ -1,6 +1,6 @@
 ---
-import footerLinks from "../Data/footerDataLinks";
-import socialLinks from "../Data/footerDataSocials";
+import footerLinks from '../Data/footerDataLinks';
+import socialLinks from '../Data/footerDataSocials';
 ---
 
 <footer class="footer">
@@ -40,8 +40,45 @@ import socialLinks from "../Data/footerDataSocials";
   </div>
 </footer>
 
+<style>
+  .footer,
+  .footer__top,
+  .footer__bottom {
+    display: grid;
+  }
+  .footer__top,
+  .footer__bottom {
+    padding: 1rem;
+  }
+  .footer,
+  .footer__bottom {
+    text-align: center;
+    /* border-top: 2px solid var(--clr-border); */
+    color: var(--clr-text-1);
+  }
+
+  .footer__top {
+    grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+    gap: 2rem;
+  }
+  .footer__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+  }
+
+  .footer__link {
+    color: var(--clr-text-1);
+    flex: 1;
+    flex-basis: 3rem;
+    flex-grow: 1;
+  }
+</style>
+
 <script defer>
-  document.querySelector("#year").textContent = new Date()
+  document.querySelector('#year').textContent = new Date()
     .getFullYear()
     .toString();
 </script>
