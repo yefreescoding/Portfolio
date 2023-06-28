@@ -53,6 +53,8 @@ html {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
+
+  /* outline: grey solid; */
 }
 
 body {
@@ -107,18 +109,38 @@ p {
   line-height: 1.5;
 }
 
+.btn {
+  font-size: 1.1em;
+  padding: 1rem;
+  font-weight: bold;
+  width: fit-content;
+  border-radius: 0.3rem;
+  border: 2px solid var(--clr-border-2);
+  box-shadow: 4px 4px 0 var(--clr-border-2);
+  color: var(--clr-text-1);
+  transition: all 0.5s ease-in-out;
+}
+
+.btn:is(:hover, :active) {
+  transform: translateY(-0.5rem);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn.principal {
+  background-color: var(--clr-background-3);
+}
+
+.btn.secondary {
+  background-color: var(--clr-background-2);
+}
+
 .web-page-cont {
   border: 2px solid var(--secondary-color) 0;
-  /* background-color: var(--clr-background-2); */
   overflow-x: hidden;
   margin: 15vh 0;
   width: min(100%, 80em);
   margin-inline: auto;
 }
-
-/* ============================= */
-/* ============================= */
-/* ============================= */
 
 .quick-links,
 .quick-links__contenedor {
@@ -174,10 +196,6 @@ p {
   gap: 1rem;
   border: 2px solid var(--clr-border);
 }
-
-/* ================================= */
-/* ================================= */
-/* ================================= */
 
 /* ================================= */
 /* ================================= */

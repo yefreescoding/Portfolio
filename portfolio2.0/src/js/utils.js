@@ -17,17 +17,6 @@ toggleMobile.addEventListener('click', function () {
 // =============================
 // =============================
 
-const loader = document.querySelector('.loader');
-
-const loaderTime = setTimeout(loading, 1500);
-
-function loading() {
-  loader.classList.add('loaded');
-}
-
-// =============================
-// =============================
-
 const darkModeBtn = document.querySelector('#dark-light');
 const darkModeBtnText = document.querySelector('#mode');
 
