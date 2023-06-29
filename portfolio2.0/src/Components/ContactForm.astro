@@ -5,17 +5,19 @@
   <div class="contact__text">
     <h2 class="contact__h2">Contacta conmigo</h2>
     <p>
-      ¿Te interesa mi trabajo? Estoy abierto a nuevas oportunidades laborales,
-      listo para ser parte de un trabajo equipo y dar todo el valor que pueda.
-      Listo para lo nuevo y emocionante Desafíos.
+      ¿Te ha gustado mi trabajo? Estoy abierto a nuevas oportunidades laborales,
+      me gustaria ser parte de un equipo de desarrolladores y dar todo el valor
+      que pueda. Estoy listo para lo nuevo y emocionante Desafíos.
     </p>
   </div>
-  <form class="contact__form" action="">
-    <input type="text" placeholder="Your name*" />
-    <input type="email" placeholder="Your email*" />
-    <input type="url" placeholder="Your web page (If it exist)" />
-    <input type="text" placeholder="How can I help?" />
-    <button class="contact__submit" type="submit">Get in touch</button>
+  <form class="contact__form">
+    <input type="text" name="" placeholder="Your name*" required />
+    <input type="email" name="" placeholder="Your email*" required />
+    <input type="url" name="" placeholder="Your web page (If it exist)" />
+    <input type="text" name="" placeholder="How can I help?" required />
+    <button id="" class="contact__submit btn principal" type="submit">
+      Enviar mensaje
+    </button>
   </form>
 </section>
 
@@ -26,34 +28,34 @@
     flex-direction: column;
     padding: 0 2vw;
     gap: 1rem;
-    color: var(--clr-text-2);
+    color: var(--clr-text-1);
   }
 
   .contact {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
-    background-color: var(--clr-background-3);
-    border-top: 2px solid var(--clr-border);
+    background-color: var(--clr-text-3);
+    border: 2px solid var(--clr-border-2);
   }
 
   .contact__form input {
-    border-radius: 20px;
+    border-radius: 10px;
     border: var(--clr-border-2) 2px solid;
-    box-shadow: 3px 6px 0 var(--clr-box-shd);
-    padding: 0.5rem;
+    box-shadow: 3px 6px 0 var(--clr-border-2);
+    padding: 0.8rem;
     font-size: 1rem;
   }
   .contact__submit {
     align-self: flex-end;
-    cursor: pointer;
-    font-size: 1.1rem;
-    font-weight: 600;
-    width: fit-content;
-    padding: 0.8rem 1rem;
-    color: var(--clr-text-2);
-    background-color: var(--clr-background-2);
-    border: var(--clr-border-2) 2px solid;
-    box-shadow: 3px 6px 0 var(--clr-box-shd);
-    border-radius: 20px;
+    // cursor: pointer;
+    // font-size: 1.1rem;
+    // font-weight: 600;
+    // width: fit-content;
+    // padding: 0.8rem 1rem;
+    // color: var(--clr-text-2);
+    // background-color: var(--clr-background-2);
+    // border: var(--clr-border-2) 2px solid;
+    // box-shadow: 3px 6px 0 var(--clr-box-shd);
+    // border-radius: 20px;
   }
 </style>

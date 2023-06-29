@@ -19,9 +19,9 @@
   :root {
     --clr-text-1: hsl(32, 91%, 8%);
     --clr-text-2: hsl(253, 78%, 57%);
-    --clr-text-3: hsl(30, 22%, 96%);
+    --clr-text-3: hsl(30, 0%, 98%);
     --clr-background-1: hsl(165, 74%, 65%);
-    --clr-background-2: hsl(84, 38%, 95%);
+    --clr-background-2: hsl(84, 38%, 94%);
     --clr-background-3: hsl(90, 100%, 72%);
     --clr-border: hsl(32, 100%, 64%);
     --clr-border-2: hsl(201, 98%, 9%);
