@@ -1,5 +1,5 @@
 :root {
-  --fnt-text-1: 'Monomaniac One', sans-serif;
+  /* --fnt-text-1: 'Monomaniac One', sans-serif; */
   --fnt-text-2: 'Rubik', sans-serif;
 
   --clr-text-1: hsl(31, 29%, 95%);
@@ -12,7 +12,7 @@
   --clr-border-2: hsl(200, 13%, 98%);
   --clr-box-shd: hsla(214, 53%, 7%);
 
-  --header-footer-height: 4rem;
+  /* --header-footer-height: 4rem; */
 }
 
 @media (prefers-color-scheme: light) {

@@ -4,17 +4,16 @@ import MainLayout from '../../Layout/MainLayout.astro';
 
 // import components
 import Cover from '../../Components/Cover.astro';
-import QuickLinks from '../../Components/Quick-links.astro';
 
 const allPost = await Astro.glob('./*.md');
 ---
 
-<MainLayout title="Memorias - Yefree">
-  <Cover
+<MainLayout title="Diario - Yefree">
+  <!-- <Cover
     coverTitle="Memorias"
     description="Todos mis pensamientos y experienzas plasmadas en esta seccion sobre desarrollo web"
     coverImage="/images/hero-images/thoughts-hero.webp"
-  />
+  /> -->
   <section class="thoughts" aria-label="Articulos memorias">
     <div class="thoughts__div">
       <h2 class="thoughts__h2">2023</h2>
@@ -40,6 +39,7 @@ const allPost = await Astro.glob('./*.md');
     position: relative;
     grid-template-columns: min(15%, 20em) 1fr;
     border: solid 2px var(--clr-border-2);
+    // height: ;
   }
 
   .thoughts::before {

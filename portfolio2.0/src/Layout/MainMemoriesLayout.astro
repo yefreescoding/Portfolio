@@ -35,9 +35,11 @@ const { title, date, image } = frontmatter;
     padding: 2vh 3vw;
   }
   .blog-hdr {
-    text-align: center;
     border-bottom: 2px solid var(--clr-border-2);
     padding: 3vh 2.5vw;
+    @media (width > 40em) {
+      text-align: center;
+    }
   }
   .blog-section__content {
     width: min(100%, 90ch);
