@@ -119,9 +119,9 @@ p {
 
 .btn {
   --shadow-length: 3px;
-  font-size: 1.1em;
-  padding: 1rem;
+  /* font-size: clamp(0.8rem, 2vw, 1.1); */
   font-weight: bold;
+  padding: 1rem;
   width: fit-content;
   border-radius: 0.3rem;
   border: 2px solid var(--clr-border-2);
@@ -147,7 +147,6 @@ p {
 
 .web-page-cont {
   border: 2px solid var(--secondary-color) 0;
-  /* overflow-x: hidden; */
   margin: 15vh 0;
   width: min(100% - 2rem, 80em);
   margin-inline: auto;
