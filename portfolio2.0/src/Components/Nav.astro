@@ -36,23 +36,40 @@ import navData from '../Data/navData';
     gap: 1rem;
   }
 
-  @media (width < 39.9em) {
+  @media (width < 39.998em) {
     .nav {
       position: fixed;
-      inset: 43px 0 auto 0;
+      inset: 0 1rem auto 1rem;
       height: 10rem;
-      background-color: var(--clr-background-1);
+      background-color: var(--clr-background-2);
       border: 2px solid var(--clr-border);
       box-shadow: 5px 6px var(--clr-box-shd);
-      transform: translateX(120%);
+      // transform: translateX(120%);
       transition: transform 0.24s ease-in;
     }
 
     .nav__ul {
       flex-flow: column;
       gap: 3rem;
-      flex-wrap: wrap;
+      align-items: start;
+      // flex-wrap: wrap;
       padding: min(5vh, 10rem) 1rem;
+      // background-color: red;
+    }
+
+    .nav__li {
+      // position: relative;
+      // font-size: 2rem;
+    }
+    .nav__links {
+      // color: var(--clr-text-1);
+      // background-color: red;
+      text-align: left;
+      font-size: 2.5rem;
+      border: 3px transparent solid;
+      transition: all 0.2s linear;
+      .mobile {
+      }
     }
   }
   .nav[data-visible='true'] {
@@ -64,14 +81,12 @@ import navData from '../Data/navData';
     aspect-ratio: 1;
     z-index: 9999;
     background-color: transparent;
-    background-image: url('/images/icons/more.png');
+    background-image: url('/images/icons/more.avif');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     transition: all 0.17s linear;
-  }
-  @media (min-width: 40em) {
-    .nav__mobile {
+    @media (min-width: 40em) {
       display: none;
     }
   }

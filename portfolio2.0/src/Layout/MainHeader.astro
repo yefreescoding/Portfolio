@@ -23,7 +23,6 @@ import Nav from '../Components/Nav.astro';
   .nav__ul,
   .header__home {
     display: flex;
-    align-items: center;
   }
 
   .header__home,
@@ -31,7 +30,7 @@ import Nav from '../Components/Nav.astro';
   .nav__ul,
   .header__switch {
     padding: 0.5rem 1rem;
-    text-align: center;
+    // text-align: center;
     height: 100%;
   }
 
@@ -41,11 +40,12 @@ import Nav from '../Components/Nav.astro';
     flex: 1;
     text-transform: capitalize;
     font-weight: 600;
-    font-size: 1.1rem;
+    // font-size: 1.1rem;
     color: var(--clr-text-1);
   }
 
   .header {
+    align-items: center;
     z-index: 9999;
     justify-content: space-between;
     position: fixed;

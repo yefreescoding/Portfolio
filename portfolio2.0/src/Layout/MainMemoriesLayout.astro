@@ -20,9 +20,7 @@ const { title, date, image } = frontmatter;
     <div class="blog-section__content">
       <slot />
     </div>
-    <a style="font-size: 1.3rem;" class="nav__links" href="/memorias/"
-      >Todas las memorias</a
-    >
+    <a class="btn principal" href="/memorias/">Todas las memorias</a>
   </section>
 </MainLayout>
 
@@ -30,7 +28,7 @@ const { title, date, image } = frontmatter;
   .blog-hdr,
   .blog-section,
   .blog-section__content {
-    color: var(--clr-text-3);
+    color: var(--clr-text-1);
     display: flex;
     flex-flow: column;
     gap: 1rem;
@@ -38,11 +36,11 @@ const { title, date, image } = frontmatter;
   }
   .blog-hdr {
     text-align: center;
-    border-bottom: 2px solid var(--clr-border);
+    border-bottom: 2px solid var(--clr-border-2);
     padding: 3vh 2.5vw;
   }
   .blog-section__content {
-    width: min(100%, 40em);
+    width: min(100%, 90ch);
     margin-inline: auto;
   }
 </style>
