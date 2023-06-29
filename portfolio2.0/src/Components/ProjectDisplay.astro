@@ -1,39 +1,41 @@
 ---
+const btnProject = [
+  {
+    name: '01. Music Gram',
+    id: 1,
+  },
+  {
+    name: '02. Personal blog',
+    id: 2,
+  },
+  {
+    name: '03. Influencer Landing Page',
+    id: 3,
+  },
+  {
+    name: '04. Cocina con Micaela',
+    id: 4,
+  },
+];
 ---
 
 <div id="project-display" class="project">
   <div class="project__links" aria-label="Links hacia los proyectos">
     <ul class="project__ul">
-      <li class="project__li">
-        <button
-          class="proj-btn selected"
-          data-id="project-1"
-          type="button"
-          id="project-1"
-        >
-          01. Music Gram
-        </button>
-      </li>
-      <li class="project__li">
-        <button
-          class="proj-btn"
-          data-id="project-2"
-          type="button"
-          id="project-2"
-        >
-          02. Cocina con Micaela
-        </button>
-      </li>
-      <li class="project__li">
-        <button
-          class="proj-btn"
-          data-id="project-3"
-          type="button"
-          id="project-3"
-        >
-          03. Personal Blog
-        </button>
-      </li>
+      {
+        btnProject.map((btn) => (
+          <li class="project__li">
+            <button
+              class="proj-btn"
+              data-id={`project-${btn.id}`}
+              type="button"
+              id="project-1"
+            >
+              {btn.name}
+            </button>
+          </li>
+        ))
+      }
     </ul>
   </div>
   <article class="project__text">
@@ -47,8 +49,10 @@
       <!-- Description -->
     </p>
     <div class="project__action">
-      <a id="link-live" class="btn principal" href="/">Ir al sitio &#8599;</a>
-      <a id="link-git" class="btn secondary" href="/">GitHub</a>
+      <a id="link-live" class="btn principal" href="/" target="_blank"
+        >Ir al sitio &#8599;</a
+      >
+      <a id="link-git" class="btn secondary" href="/" target="_blank">GitHub</a>
     </div>
   </article>
   <div class="project__key_points">
@@ -183,24 +187,31 @@
   const projects = [
     {
       linkLive: 'https://music-gram-yefreescoding.vercel.app',
-      linkGit: 'https://music-gram-yefreescoding.vercel.app',
+      linkGit: 'https://github.com/yefreescoding/music-gram.git',
       name: 'Music Gram',
       image: '/images/projects-img/music-gram.webp',
       description: `Un sitio web creado para mostrar contenido estático sobre los artistas y la música, que mas me gusta y me inspira.`,
     },
     {
-      linkLive: 'https://music-gram-yefreescoding.vercel.app',
-      linkGit: 'https://music-gram-yefreescoding.vercel.app',
+      linkLive: 'https://you-me-blog.vercel.app',
+      linkGit: 'https://github.com/yefreescoding/you-me-blog.git',
       name: 'Personal blog',
       image: '/images/projects-img/blog.png',
       description: `Mi blog personal, creado desde cero. Siempre quise tener mi propio blog, y poder crear este sitio web la verdad me llena de orgullo.`,
     },
     {
-      linkLive: 'https://music-gram-yefreescoding.vercel.app',
-      linkGit: 'https://music-gram-yefreescoding.vercel.app',
+      linkLive: 'https://redesign-web-page.vercel.app',
+      linkGit: 'https://github.com/yefreescoding/Astro-leanna-deeb.git',
       name: 'Influencer landing page',
       image: '/images/projects-img/influencer-landing.png',
       description: `Rediseño landing page de una influencer. Quise crear un pequeño sitio web de una pagina. Sin uso de librerías, todo en Vanilla`,
+    },
+    {
+      linkLive: 'https://micaela-kitchen.vercel.app',
+      linkGit: 'https://github.com/yefreescoding/micaela-kitchen.git',
+      name: 'Cocina con Micaela',
+      image: '/images/projects-img/cocina-con-micaela.webp',
+      description: `Recetas, recetas y mas recetas.`,
     },
   ];
 
@@ -223,9 +234,9 @@
     const item = projects[project];
     projTitle.textContent = item.name;
     projImg.src = item.image;
+    projDesc.textContent = item.description;
     linkLive.href = item.linkLive;
     linkGit.href = item.linkGit;
-    projDesc.textContent = item.description;
   }
 
   section.addEventListener('click', (e) => {
@@ -243,8 +254,11 @@
     } else if (id === 'project-2') {
       currentItem = 1;
       showProject(currentItem);
-    } else {
+    } else if (id === 'project-3') {
       currentItem = 2;
+      showProject(currentItem);
+    } else if (id === 'project-4') {
+      currentItem = 3;
       showProject(currentItem);
     }
   });

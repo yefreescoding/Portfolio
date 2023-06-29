@@ -25,3 +25,24 @@ const { title, date, image } = frontmatter;
     >
   </section>
 </MainLayout>
+
+<style lang="scss">
+  .blog-hdr,
+  .blog-section,
+  .blog-section__content {
+    color: var(--clr-text-3);
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+    padding: 2vh 3vw;
+  }
+  .blog-hdr {
+    text-align: center;
+    border-bottom: 2px solid var(--clr-border);
+    padding: 3vh 2.5vw;
+  }
+  .blog-section__content {
+    width: min(100%, 40em);
+    margin-inline: auto;
+  }
+</style>
