@@ -110,20 +110,23 @@ p {
 }
 
 .btn {
+  --shadow-length: 3px;
   font-size: 1.1em;
   padding: 1rem;
   font-weight: bold;
   width: fit-content;
   border-radius: 0.3rem;
   border: 2px solid var(--clr-border-2);
-  box-shadow: 4px 4px 0 var(--clr-border-2);
+  box-shadow: var(--shadow-length) var(--shadow-length) 0 var(--clr-border-2);
   color: var(--clr-text-1);
   transition: all 0.5s ease-in-out;
 }
 
 .btn:is(:hover, :active) {
-  transform: translateY(-0.5rem);
   transition: all 0.2s ease-in-out;
+  transform: translate(-3px, -3px);
+  box-shadow: calc(var(--shadow-length) * 2) calc(var(--shadow-length) * 2) 0
+    var(--clr-border-2);
 }
 
 .btn.principal {

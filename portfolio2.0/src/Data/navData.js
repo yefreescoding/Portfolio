@@ -5,7 +5,7 @@ const navData = [
   },
   {
     name: 'proyectos',
-    link: '#projects',
+    link: '/#projects',
   },
   {
     name: 'GitHub',
