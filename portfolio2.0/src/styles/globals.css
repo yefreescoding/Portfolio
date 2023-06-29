@@ -90,7 +90,7 @@ a:active {
 }
 
 h1 {
-  font-size: clamp(2rem, 1rem + 4vw, 3.5rem);
+  font-size: clamp(3rem, 1rem + 4vw, 4.5rem);
   /* text-wrap: balance; */
 }
 h2 {
@@ -138,8 +138,13 @@ p {
   border: 2px solid var(--secondary-color) 0;
   /* overflow-x: hidden; */
   margin: 15vh 0;
-  width: min(100%, 80em);
+  width: min(100% - 2rem, 80em);
   margin-inline: auto;
+}
+
+.projects,
+.contact {
+  padding: 10vh 0;
 }
 
 .quick-links,
