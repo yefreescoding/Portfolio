@@ -2,14 +2,14 @@
   --fnt-text-1: 'Monomaniac One', sans-serif;
   --fnt-text-2: 'Rubik', sans-serif;
 
-  --clr-text-1: hsl(31, 79%, 90%);
-  --clr-text-2: hsl(198, 97%, 95%);
-  --clr-text-3: hsl(31, 27%, 78%);
+  --clr-text-1: hsl(31, 29%, 95%);
+  --clr-text-2: hsl(267, 82%, 74%);
+  --clr-text-3: hsl(0, 3%, 6%);
   --clr-background-1: hsl(199, 79%, 5%);
-  --clr-background-2: hsl(0, 0%, 23%);
-  --clr-background-3: hsl(197, 42%, 16%);
+  --clr-background-2: hsl(165, 19%, 4%);
+  --clr-background-3: hsl(263, 91%, 48%);
   --clr-border: hsl(32, 100%, 94%);
-  --clr-border-2: hsl(201, 98%, 89%);
+  --clr-border-2: hsl(200, 13%, 98%);
   --clr-box-shd: hsla(214, 53%, 7%);
 
   --header-footer-height: 4rem;
@@ -30,14 +30,14 @@
 }
 
 body.dark-mode {
-  --clr-text-1: hsl(31, 79%, 90%);
-  --clr-text-2: hsl(198, 97%, 95%);
-  --clr-text-3: hsl(31, 27%, 78%);
+  --clr-text-1: hsl(31, 29%, 95%);
+  --clr-text-2: hsl(267, 82%, 74%);
+  --clr-text-3: hsl(0, 3%, 6%);
   --clr-background-1: hsl(199, 79%, 5%);
-  --clr-background-2: hsl(0, 0%, 23%);
-  --clr-background-3: hsl(197, 42%, 16%);
+  --clr-background-2: hsl(165, 19%, 4%);
+  --clr-background-3: hsl(263, 91%, 48%);
   --clr-border: hsl(32, 100%, 94%);
-  --clr-border-2: hsl(201, 98%, 89%);
+  --clr-border-2: hsl(200, 13%, 98%);
   --clr-box-shd: hsla(214, 53%, 7%);
 }
 
@@ -60,6 +60,7 @@ html {
 body {
   font-family: var(--fnt-text-2);
   background-color: var(--clr-background-2);
+  color: var(--clr-text-1);
   overflow-x: hidden;
   transition: all 0.3s ease-in-out;
 }
@@ -89,14 +90,21 @@ a:active {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+  letter-spacing: 1.25;
+  text-wrap: balance;
+}
+
 h1 {
   font-size: clamp(3rem, 1rem + 4vw, 4.5rem);
-  /* text-wrap: balance; */
 }
 h2 {
   font-size: clamp(1.8rem, 1rem + 4vw, 2.8rem);
-  text-transform: capitalize;
-  letter-spacing: 1.5px;
+  color: var(--clr-text-2);
 }
 h3 {
   font-size: clamp(1.5rem, 1rem + 3.5vw, 1.9rem);
