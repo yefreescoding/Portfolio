@@ -8,7 +8,7 @@ const navData = [
     link: '/#projects',
   },
   {
-    name: 'diario',
+    name: 'mini blog',
     link: '/memorias/',
   },
   {

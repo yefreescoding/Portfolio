@@ -11,7 +11,7 @@ import skills from '../Data/skillsData';
       <p>
         Comenzando con HTML, CSS y JavaScript, aprendí a programar por mi
         cuenta. Sin embargo, hoy en día hay mucho por descubrir más allá de
-        Vanilla JavaScript: hoy estoy trbajando con la libreria de REACTJS,
+        Vanilla JavaScript: hoy estoy trabajando con la libreria de REACTJS, los
         frameworks Astro y NextJS, utilizo Vitest como herramienta de testing,
         SASS y Tailwind como preprocesador para CSS.
       </p>
@@ -25,19 +25,15 @@ import skills from '../Data/skillsData';
               src={skill.image}
               alt="HTML icon logo"
             />
-            <h3 class="section-skills__h3">{skill.name}</h3>
-            <p class="section-skills__p">{skill.description}</p>
+            <h3 class="section-skills__h3 font-bold">{skill.name}</h3>
           </article>
         ))
       }
+      <!-- <p class="section-skills__p">{skill.description}</p> -->
     </div>
   </div>
   <blockquote class="section-skills__quote">
-    <p>
-      La vida no se trata de encontrarte a ti mismo. La vida se trata de crearte
-      a ti mismo.
-    </p>
-    <cite> — George Bernard Shaw</cite>
+    <p>Y cada dia sigo aprendieno algo nuevo...</p>
   </blockquote>
 </section>
 
@@ -59,6 +55,7 @@ import skills from '../Data/skillsData';
   .section-skills__text {
     padding: 5vh 3vw;
     outline: solid var(--clr-border-2);
+    gap: 1rem;
   }
 
   .section-skills {

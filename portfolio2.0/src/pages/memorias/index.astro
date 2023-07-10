@@ -19,7 +19,7 @@ const allPost = await Astro.glob('./*.md');
       <h2 class="thoughts__h2">2023</h2>
       {
         allPost.map((post) => (
-          <a class="thoughts__a btn" href={post.url}>
+          <a class="thoughts__a btn text-left" href={post.url}>
             {post.frontmatter.title}
           </a>
         ))

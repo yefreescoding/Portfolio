@@ -1,4 +1,14 @@
 ---
+import ProjectCard from '../Components/ProjectCard.astro';
+interface Props {
+  name: string;
+  description: string;
+  link: string;
+  github: string;
+  position?: boolean;
+  imagesrc: string;
+}
+
 const btnProject = [
   {
     name: '01. Music Gram',
@@ -17,45 +27,73 @@ const btnProject = [
     id: 4,
   },
 ];
+
+const {
+  name,
+  description,
+  link,
+  github,
+  position = true,
+  imagesrc,
+} = Astro.props as Props;
 ---
 
-<div id="project-display" class="project">
-  <div class="project__links" aria-label="Links hacia los proyectos">
-    <ul class="project__ul">
-      {
-        btnProject.map((btn) => (
-          <li class="project__li">
-            <button
-              class="proj-btn"
-              data-id={`project-${btn.id}`}
-              type="button"
-              id={`project-${btn.id}`}
+<div id="project-display" class="project flex flex-wrap gap-[5rem] my-8">
+  {
+    position && (
+      <>
+        <article class="proj_article basis-[30em] grow flex flex-col">
+          <h3 id="proj-title">{name}</h3>
+          <p id="proj-desc">{description}</p>
+          <div class="w-full flex flex-col gap-4 my-[2rem] lg:flex-row">
+            <a class="btn principal" href={link} target="_blank">
+              {' '}
+              Ir al sitio
+            </a>
+            <a
+              id="link-git"
+              class="btn secondary"
+              href={github}
+              target="_blank"
             >
-              {btn.name}
-            </button>
-          </li>
-        ))
-      }
-    </ul>
-  </div>
-  <article class="project__text">
-    <h3 id="proj-title"></h3>
-    <img
-      id="proj-img"
-      src="/images/projects-img/music-gram.webp"
-      alt="Imagen del proyecto"
-    />
-    <p id="proj-desc">
-      <!-- Description -->
-    </p>
-    <div class="project__action">
-      <a id="link-live" class="btn principal" href="/" target="_blank"
-        >Ir al sitio &#8599;</a
-      >
-      <a id="link-git" class="btn secondary" href="/" target="_blank">GitHub</a>
-    </div>
-  </article>
-  <div class="project__key_points">
+              GitHub
+            </a>
+          </div>
+        </article>
+        <div class="basis-[30em] grow">
+          <ProjectCard imagesrc={imagesrc} />
+        </div>
+      </>
+    )
+  }
+  {
+    !position && (
+      <>
+        <div class="basis-[30em] grow">
+          <ProjectCard imagesrc={imagesrc} />
+        </div>
+        <article class="proj_article basis-[30em] grow flex flex-col justify-around">
+          <h3 id="proj-title">{name}</h3>
+          <p id="proj-desc">{description}</p>
+          <div class="w-full flex flex-col gap-4 my-[2rem] lg:flex-row">
+            <a class="btn principal" href={link} target="_blank">
+              {' '}
+              Ir al sitio
+            </a>
+            <a
+              id="link-git"
+              class="btn secondary"
+              href={github}
+              target="_blank"
+            >
+              GitHub
+            </a>
+          </div>
+        </article>
+      </>
+    )
+  }
+  <!-- <div class="project__key_points">
     <h3>Key outputs</h3>
     <ul class="project__ul">
       <li class="project__li">
@@ -75,10 +113,10 @@ const btnProject = [
         <span class="key-text">Testing front y back end</span>
       </li>
     </ul>
-  </div>
+  </div> -->
 </div>
 
-<style lang="scss" is:global>
+<!-- <style lang="scss" is:global>
   .project {
     gap: 1rem;
     align-items: flex-start;
@@ -183,9 +221,9 @@ const btnProject = [
       }
     }
   }
-</style>
+</style> -->
 
-<script defer>
+<!-- <script defer>
   const projects = [
     {
       linkLive: 'https://music-gram-yefreescoding.vercel.app',
@@ -264,4 +302,4 @@ const btnProject = [
       showProject(currentItem);
     }
   });
-</script>
+</script> -->

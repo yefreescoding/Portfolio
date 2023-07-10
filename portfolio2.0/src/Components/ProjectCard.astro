@@ -1,0 +1,86 @@
+---
+interface Props {
+  imagesrc: string;
+}
+
+const { imagesrc } = Astro.props as Props;
+---
+
+<div class="card">
+  <div class="tools rounded-2xl">
+    <div class="circle">
+      <span class="red box"></span>
+    </div>
+    <div class="circle">
+      <span class="yellow box"></span>
+    </div>
+    <div class="circle">
+      <span class="green box"></span>
+    </div>
+  </div>
+  <div class="card__content">
+    <img
+      id="proj-img"
+      src={imagesrc}
+      alt="Imagen del proyecto"
+      class="w-full rounded-b-2xl"
+    />
+  </div>
+</div>
+
+<style>
+  .card {
+    /* width: 190px; */
+    /* height: 254px; */
+    margin: 0 auto;
+    background-color: var(--clr-background-2);
+    border-radius: 1rem;
+    border: 2px solid var(--clr-border-2);
+    outline: var(--clr-background-2);
+    z-index: 1;
+    position: relative;
+    isolation: isolate;
+    transform: rotate(-3deg);
+    /* overflow: hidden; */
+  }
+
+  .card::after {
+    content: '';
+    position: absolute;
+    inset: 0.5rem -0.5rem -0.5rem 0.5rem;
+    border-radius: inherit;
+    border: inherit;
+    z-index: -1;
+  }
+  .tools {
+    display: flex;
+    align-items: center;
+    padding: 9px;
+    background-color: var(--clr-background-2);
+  }
+
+  .circle {
+    padding: 0 4px;
+  }
+
+  .box {
+    display: inline-block;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border-radius: 50%;
+  }
+
+  .red {
+    background-color: #ff605c;
+  }
+
+  .yellow {
+    background-color: #ffbd44;
+  }
+
+  .green {
+    background-color: #00ca4e;
+  }
+</style>

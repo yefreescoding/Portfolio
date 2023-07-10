@@ -5,11 +5,11 @@ const { coverTitle, description, coverImage } = Astro.props;
 <section id="home" class="cover" aria-label="Portada de la pagina">
   <!--** LEFT SIDE, Desktop. BOTTOM SIDE, mobile **-->
   <div class="cover__text">
-    <h1 class="cover__h1">
+    <h1 class="cover__h1 font-extrabold">
       {coverTitle}
     </h1>
     <p class="cover__p">{description}</p>
-    <div class="cover__div">
+    <div class="cover__div flex flex-col lg:flex-row gap-4 my-[2rem]">
       <a
         class="cover__links btn principal"
         href="mailto: yefree13santos@eoutlook.com"
@@ -65,11 +65,5 @@ const { coverTitle, description, coverImage } = Astro.props;
   .cover__h1 {
     color: var(--clr-text-2);
     text-shadow: 3px 3px 0 var(--clr-border-2);
-    /* -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black; */
-  }
-  .cover__div {
-    gap: 1rem;
-    justify-content: flex-start;
   }
 </style>
