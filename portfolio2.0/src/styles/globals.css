@@ -15,8 +15,10 @@
   /* --header-footer-height: 4rem; */
 }
 
-.menu-img[data-dark='true'] {
-  filter: invert(0);
+@media (prefers-color-scheme: dark) {
+  .menu-img[data-dark='true'] {
+    filter: invert(100%);
+  }
 }
 
 @media (prefers-color-scheme: light) {
