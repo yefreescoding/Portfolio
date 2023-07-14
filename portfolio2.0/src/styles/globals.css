@@ -15,6 +15,10 @@
   /* --header-footer-height: 4rem; */
 }
 
+.menu-img[data-dark='true'] {
+  filter: invert(0);
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     --clr-text-1: hsl(32, 91%, 8%);
@@ -39,6 +43,10 @@ body.dark-mode {
   --clr-border: hsl(32, 100%, 94%);
   --clr-border-2: hsl(200, 13%, 98%);
   --clr-box-shd: hsla(214, 53%, 7%);
+}
+
+body.dark-mode .menu-img[data-dark='true'] {
+  filter: invert(100%);
 }
 
 html {
@@ -121,7 +129,6 @@ p {
 
 .btn {
   --shadow-length: 3px;
-  /* font-size: clamp(0.8rem, 2vw, 1.1); */
   font-weight: bold;
   padding: 1rem;
   text-align: center;

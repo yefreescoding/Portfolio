@@ -1,6 +1,9 @@
 ---
 //data imports
 import navData from '../Data/navData';
+
+// import components
+import DarkModeToggle from '../Components/DarkModeToggle.astro';
 ---
 
 <nav class="nav" data-visible="false">
@@ -19,18 +22,16 @@ import navData from '../Data/navData';
         </li>
       ))
     }
+    <DarkModeToggle />
   </ul>
 </nav>
-<button
-  id="toggle-mobile-menu"
-  class="nav__mobile btn secondary"
-  data-fixed="false"></button>
 
 <style lang="scss">
   .nav {
     flex: 2;
   }
   .nav__ul {
+    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
@@ -55,34 +56,16 @@ import navData from '../Data/navData';
       padding: min(5vh, 10rem) 1rem;
     }
     .nav__links {
-      // color: var(--clr-text-1);
-      // background-color: red;
       text-align: left;
       font-size: 2.5rem;
       border: 3px transparent solid;
       transition: all 0.2s linear;
-      .mobile {
-      }
     }
   }
   .nav[data-visible='true'] {
     transform: translateX(0);
   }
 
-  .nav__mobile {
-    width: 2.5rem;
-    aspect-ratio: 1;
-    z-index: 9999;
-    background-color: var(--clr-text-3);
-    background-image: url('/images/icons/more.avif');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    transition: all 0.17s linear;
-    @media (min-width: 40em) {
-      display: none;
-    }
-  }
   .nav__li {
     position: relative;
   }

@@ -1,18 +1,21 @@
 ---
 //import components
-
 import Nav from '../Components/Nav.astro';
 ---
 
-<header class="header">
+<header class="header px-4 md:px-[0]">
   <!--* LOGO contenedor *-->
   <div class="header__home">
     <a href="/" class="nav__links" aria-label="Go Home"> yefree Valdez</a>
   </div>
-  <!--* BARRA DE NAVEGACIÓN *-->
   <Nav />
-  <button id="dark-light" type="button" class="header__switch">
-    <span id="mode" data-mode="dark">Dark</span> mode
+  <button id="toggle-mobile-menu" class="nav__mobile btn secondary">
+    <img
+      class="menu-img"
+      data-dark="true"
+      src="/images/icons/more.avif"
+      alt="icon-menu"
+    />
   </button>
 </header>
 
@@ -30,7 +33,6 @@ import Nav from '../Components/Nav.astro';
   .nav__ul,
   .header__switch {
     padding: 0.5rem 1rem;
-    // text-align: center;
     height: 100%;
   }
 
@@ -40,7 +42,6 @@ import Nav from '../Components/Nav.astro';
     flex: 1;
     text-transform: capitalize;
     font-weight: 600;
-    // font-size: 1.1rem;
     color: var(--clr-text-1);
   }
 
@@ -55,5 +56,22 @@ import Nav from '../Components/Nav.astro';
     box-shadow: 4px 4px 0 var(--clr-border-2);
     background-color: var(--clr-background-2);
     padding: 0.5rem 0;
+  }
+
+  .nav__mobile {
+    width: 3rem;
+    aspect-ratio: 1;
+    z-index: 9999;
+    background-color: transparent;
+    transition: all 0.17s linear;
+    img {
+      width: 100%;
+      &[data-dark='false'] {
+        filter: invert(100%);
+      }
+    }
+    @media (min-width: 40em) {
+      display: none;
+    }
   }
 </style>
