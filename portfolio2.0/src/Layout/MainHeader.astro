@@ -9,7 +9,7 @@ import Nav from '../Components/Nav.astro';
     <a href="/" class="nav__links" aria-label="Go Home"> yefree Valdez</a>
   </div>
   <Nav />
-  <button id="toggle-mobile-menu" class="nav__mobile btn secondary">
+  <button id="toggle-mobile-menu" class="nav__mobile">
     <img
       class="menu-img"
       data-dark="true"
@@ -60,6 +60,9 @@ import Nav from '../Components/Nav.astro';
 
   .nav__mobile {
     width: 3rem;
+    border-radius: 0.3rem;
+    border: 2px solid var(--clr-border-2);
+    padding: 5px;
     aspect-ratio: 1;
     z-index: 9999;
     background-color: transparent;

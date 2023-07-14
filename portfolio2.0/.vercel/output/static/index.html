@@ -21,8 +21,8 @@
 <!-- page title -->
 <title>Yefree Valdez | HOME</title>
   <!-- Google Fonts import -->
-<link rel="stylesheet" href="/_astro/404.a8833125.css" />
-<link rel="stylesheet" href="/_astro/post-1.0f6f5b55.css" />
+<link rel="stylesheet" href="/_astro/404.626fed4e.css" />
+<link rel="stylesheet" href="/_astro/post-1.c0988d2a.css" />
 <link rel="stylesheet" href="/_astro/404.fe3612dc.css" />
 <link rel="stylesheet" href="/_astro/index.0ca7e7ea.css" /><script type="module">const d=document.querySelector("#toggle-mobile-menu"),e=document.querySelector(".nav");d.addEventListener("click",function(){e.getAttribute("data-visible")==="false"?e.setAttribute("data-visible",!0):e.setAttribute("data-visible",!1)});const i=document.querySelector("#dark-light"),t=document.querySelector("#mode");i.addEventListener("click",()=>{t.getAttribute("data-mode")==="light"?(t.setAttribute("data-mode","dark"),t.textContent="dark"):(t.setAttribute("data-mode","light"),t.textContent="light"),document.body.classList.toggle("dark-mode")});
 </script>
@@ -58,12 +58,17 @@
             blog
           </a>
         </li>
-    <button id="dark-light" type="button" class="mode-toggle">
+    <!-- <button type="button" class="mode-toggle id="dark-light" ">
   <span id="mode" data-mode="dark">Dark</span> mode
-</button>
+</button> --><label class="relative inline-flex items-center cursor-pointer outline outline-3 rounded-lg pr-2 hover:outline-offset-[5px] transition-all">
+  <input id="dark-light" type="checkbox" value="" class="sr-only peer">
+  <div class="w-14 h-7 bg-gray-200 peer-focus:outline-none rounded-lg peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[4px] after:bg-white after:border-gray-300 after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-violet-600">
+  </div>
+  <span id="mode" class="ml-3 nav__links">Mode</span>
+</label>
   </ul>
 </nav>
-  <button id="toggle-mobile-menu" class="nav__mobile btn secondary">
+  <button id="toggle-mobile-menu" class="nav__mobile">
     <img class="menu-img" data-dark="true" src="/images/icons/more.avif" alt="icon-menu">
   </button>
 </header>
@@ -77,10 +82,10 @@
     </h1>
     <p class="cover__p astro-6W6NZWSY">Bienvenidos a mi pequeño espacio en la web. Desarrollador web front end, diseñador UI e ilustrador. </p>
     <div class="cover__div flex flex-col lg:flex-row gap-4 my-[2rem] astro-6W6NZWSY">
-      <a class="cover__links btn principal astro-6W6NZWSY" href="mailto: yefree13santos@eoutlook.com" target="_blank">
+      <a class="cover__links btn principal text-center astro-6W6NZWSY" href="mailto: yefree13santos@eoutlook.com" target="_blank">
         Conecta Conmigo ;)
       </a>
-      <a class="cover__links btn secondary astro-6W6NZWSY" href="cv/YefreeCV2023.pdf" target="_blank">
+      <a class="cover__links btn secondary text-center astro-6W6NZWSY" href="cv/YefreeCV2023.pdf" target="_blank">
         Curriculum PDF
       </a>
     </div>
@@ -157,7 +162,7 @@
         <article class="proj_article basis-[30em] grow flex flex-col">
           <h3 id="proj-title">music-gram</h3>
           <p id="proj-desc">Este es un proyecto inspirado por mi pasion por la musica, y las ganas de tener una pequeña biblioteca donde poder estar al tanto de mis artistas favoritos.</p>
-          <div class="w-full flex flex-col gap-4 my-[2rem] lg:flex-row">
+          <div class="w-full flex flex-col gap-4 my-[2rem] lg:flex-row text-center">
             <a class="btn principal" href="https://music-gram-yefreescoding.vercel.app" target="_blank">
                
               Ir al sitio
@@ -421,7 +426,7 @@
         <article class="proj_article basis-[30em] grow flex flex-col justify-around">
           <h3 id="proj-title">cocina con micaela</h3>
           <p id="proj-desc">Cuando te independizas tienes que aprender muchas cosas, y una de las mas importantes es cocinar. Esta pagina web te ayuda un poco en lo que es esa parte de ser adulto. ¡Ya no mas ir a la cas de tus padres a &#39;robarles&#39; cosas de la nevera!</p>
-          <div class="w-full flex flex-col gap-4 my-[2rem] lg:flex-row">
+          <div class="w-full flex flex-col gap-4 my-[2rem] lg:flex-row text-center">
             <a class="btn principal" href="https://micaela-kitchen.vercel.app" target="_blank">
                
               Ir al sitio
@@ -647,7 +652,7 @@
         <article class="proj_article basis-[30em] grow flex flex-col">
           <h3 id="proj-title">Blog para desarrolladores</h3>
           <p id="proj-desc">Un blog que utilizo para publicar algunas de mis experiencias y cositas que voy viviendo, y aprendiendo como desarrolador web.</p>
-          <div class="w-full flex flex-col gap-4 my-[2rem] lg:flex-row">
+          <div class="w-full flex flex-col gap-4 my-[2rem] lg:flex-row text-center">
             <a class="btn principal" href="https://you-me-blog.vercel.app" target="_blank">
                
               Ir al sitio

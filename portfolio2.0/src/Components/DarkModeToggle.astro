@@ -1,6 +1,16 @@
-<button id="dark-light" type="button" class="mode-toggle">
+<!-- <button type="button" class="mode-toggle id="dark-light" ">
   <span id="mode" data-mode="dark">Dark</span> mode
-</button>
+</button> -->
+<label
+  class="relative inline-flex items-center cursor-pointer outline outline-3 rounded-lg pr-2 hover:outline-offset-[5px] transition-all"
+>
+  <input id="dark-light" type="checkbox" value="" class="sr-only peer" />
+  <div
+    class="w-14 h-7 bg-gray-200 peer-focus:outline-none rounded-lg peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[4px] after:bg-white after:border-gray-300 after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-violet-600"
+  >
+  </div>
+  <span id="mode" class="ml-3 nav__links">Mode</span>
+</label>
 
 <style></style>
 

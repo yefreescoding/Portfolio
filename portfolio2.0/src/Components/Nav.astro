@@ -29,10 +29,11 @@ import DarkModeToggle from '../Components/DarkModeToggle.astro';
 <style lang="scss">
   .nav {
     flex: 2;
+    flex-grow: 1;
   }
   .nav__ul {
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 1rem;
   }
@@ -53,6 +54,7 @@ import DarkModeToggle from '../Components/DarkModeToggle.astro';
       flex-flow: column;
       gap: 3rem;
       align-items: start;
+      justify-content: center;
       padding: min(5vh, 10rem) 1rem;
     }
     .nav__links {
