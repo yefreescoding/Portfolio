@@ -9,6 +9,7 @@ import ContactForm from '../Components/ContactForm.astro';
 import ProjectDisplay from '../Components/ProjectDisplay.astro';
 
 import SkillsSection from '../Components/SkillsSection.astro';
+import DivisionHr from '../Components/DivisionHr.astro';
 ---
 
 <MainLayout subtitle="HOME">
@@ -21,8 +22,13 @@ import SkillsSection from '../Components/SkillsSection.astro';
   <!--** SKILLS section **-->
   <SkillsSection />
   <!--** PROJECTS section **-->
-  <section id="projects" class="projects flex flex-col gap-[1rem]">
-    <div class="flex flex-col gap-4 mb-[10vh]">
+  <DivisionHr />
+  <section
+    id="projects"
+    class="projects flex flex-col gap-[1rem]"
+    aria-label="Proyectos"
+  >
+    <header class="flex flex-col gap-4 mb-[10vh]">
       <h2 class="projects__h2">
         Mis ultimos
         <span class="text-green-400">proyectos</span>
@@ -32,7 +38,8 @@ import SkillsSection from '../Components/SkillsSection.astro';
         aqui presente. Estos son algunos de los proyectos en los que he
         trabajado y las tecnologias que he utilizado.
       </p>
-    </div>
+    </header>
+
     <!--**************-->
     <ProjectDisplay
       name="music-gram"
