@@ -23,7 +23,7 @@ const { coverTitle, description, coverImage } = Astro.props;
       <Buttons
         width="full"
         link="cv/YefreeCV2023.pdf"
-        size="sm"
+        size="lg"
         classes="cover__links text-center"
         theme="clr-background-1"
         isFilled
@@ -51,6 +51,8 @@ const { coverTitle, description, coverImage } = Astro.props;
   .cover {
     flex-wrap: wrap;
     overflow: hidden;
+    width: min(100% - 2rem, 80em);
+    margin-inline: auto;
   }
   .cover__image {
     width: min(100%, 30rem);

@@ -1,1 +1,43 @@
-<div>teting</div>
+<div class="banner">
+  <div class="text">
+    Trabajo en equipo • Comunicacion efectiva • Resolucion de problemas •
+    Analitico • <span class="text-5xl font-bold">+5</span> sitios webs creados •
+  </div>
+</div>
+
+<style>
+  .banner {
+    display: grid;
+    place-content: center;
+    position: relative;
+    overflow: hidden;
+    inset: 0;
+    margin: 10% 0 0 0;
+    width: 120%;
+    height: 80px;
+    background-color: var(--clr-background-3);
+    color: var(--text);
+    transform: rotate(3deg) translateX(-50px);
+  }
+
+  .banner .text {
+    font-size: 2rem;
+    text-align: center;
+    text-transform: capitalize;
+    white-space: nowrap;
+    position: relative;
+    animation-name: moveBanner;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes moveBanner {
+    0% {
+      left: 50%;
+    }
+    100% {
+      left: -900px;
+    }
+  }
+</style>

@@ -170,7 +170,7 @@ p {
 .web-page-cont {
   border: 2px solid var(--secondary-color) 0;
   margin: 15vh 0;
-  width: min(100% - 2rem, 80em);
+  /* width: min(100% - 2rem, 80em); */
   margin-inline: auto;
 }
 
