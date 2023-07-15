@@ -1,4 +1,5 @@
 ---
+import Buttons from './Buttons.astro';
 const { coverTitle, description, coverImage } = Astro.props;
 ---
 
@@ -10,20 +11,25 @@ const { coverTitle, description, coverImage } = Astro.props;
     </h1>
     <p class="cover__p">{description}</p>
     <div class="cover__div flex flex-col lg:flex-row gap-4 my-[2rem]">
-      <a
-        class="cover__links btn principal text-center"
-        href="mailto: yefree13santos@eoutlook.com"
-        target="_blank"
+      <Buttons
+        width="full"
+        link="mailto:yefree13santos@outlook.com"
+        size="lg"
+        classes="cover__links text-center"
+        isFilled
       >
-        Conecta Conmigo ;)
-      </a>
-      <a
-        class="cover__links btn secondary text-center"
-        href="cv/YefreeCV2023.pdf"
-        target="_blank"
+        Contacta Conmigo ;)
+      </Buttons>
+      <Buttons
+        width="full"
+        link="cv/YefreeCV2023.pdf"
+        size="sm"
+        classes="cover__links text-center"
+        theme="clr-background-1"
+        isFilled
       >
         Curriculum PDF
-      </a>
+      </Buttons>
     </div>
   </div>
   <img class="cover__image" src={coverImage} alt="Vector portrait picture." />
@@ -57,11 +63,6 @@ const { coverTitle, description, coverImage } = Astro.props;
     gap: 2rem;
     padding: 5vh 3vw;
   }
-  /* @media (width < 40em) {
-    .cover__text {
-      text-align: center;
-    }
-  } */
   .cover__h1 {
     color: var(--clr-text-2);
     text-shadow: 3px 3px 0 var(--clr-border-2);

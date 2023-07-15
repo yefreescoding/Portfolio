@@ -1,4 +1,5 @@
 ---
+import Buttons from '../Components/Buttons.astro';
 import footerLinks from '../Data/footerDataLinks';
 import socialLinks from '../Data/footerDataSocials';
 ---
@@ -8,26 +9,23 @@ import socialLinks from '../Data/footerDataSocials';
     <div class="footer__links">
       {
         footerLinks.map((link) => (
-          <a
-            class="footer__link btn"
-            href={link.link}
-            aria-label="Links to outside websites"
+          <Buttons
+            width="full"
+            link={link.link}
+            size="sm"
+            classes="footer__link"
           >
             {link.name}
-          </a>
+          </Buttons>
         ))
       }
     </div>
     <div class="footer__links footer__links--right">
       {
         socialLinks.map((link) => (
-          <a
-            class="footer__link btn"
-            href={link.link}
-            aria-label="Links to outside websites"
-          >
+          <Buttons link={link.link} size="sm" classes="footer__link">
             {link.name}
-          </a>
+          </Buttons>
         ))
       }
     </div>
@@ -40,7 +38,7 @@ import socialLinks from '../Data/footerDataSocials';
   </div>
 </footer>
 
-<style>
+<style is:global>
   .footer,
   .footer__top,
   .footer__bottom {
@@ -73,7 +71,6 @@ import socialLinks from '../Data/footerDataSocials';
   .footer__link {
     font-size: clamp(0.5rem, 1.5vw, 1.1rem);
     color: var(--clr-text-1);
-    width: fit-content;
     flex-basis: 3rem;
   }
 </style>

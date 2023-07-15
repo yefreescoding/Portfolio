@@ -144,7 +144,7 @@ p {
 .btn {
   --shadow-length: 3px;
   font-weight: bold;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 0.3rem;
   border: 2px solid var(--clr-border-2);
   box-shadow: var(--shadow-length) var(--shadow-length) 0 var(--clr-border-2);

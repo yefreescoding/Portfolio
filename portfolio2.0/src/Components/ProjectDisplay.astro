@@ -1,5 +1,9 @@
 ---
+// import components
 import ProjectCard from '../Components/ProjectCard.astro';
+import Buttons from './Buttons.astro';
+
+// Props
 interface Props {
   name: string;
   description: string;
@@ -38,62 +42,64 @@ const {
 } = Astro.props as Props;
 ---
 
-<div id="project-display" class="project flex flex-wrap gap-[5rem] my-8">
-  {
-    position && (
-      <>
-        <article class="proj_article basis-[30em] grow flex flex-col">
-          <h3 id="proj-title">{name}</h3>
-          <p id="proj-desc">{description}</p>
-          <div class="w-full flex flex-col gap-4 my-[2rem] lg:flex-row text-center">
-            <a class="btn principal" href={link} target="_blank">
-              {' '}
-              Ir al sitio
-            </a>
-            <a
-              id="link-git"
-              class="btn secondary"
-              href={github}
-              target="_blank"
-            >
-              GitHub
-            </a>
-          </div>
-        </article>
-        <div class="basis-[30em] grow">
-          <ProjectCard imagesrc={imagesrc} />
+{
+  position && (
+    <div
+      id="project-display"
+      class="project flex flex-wrap-reverse gap-[5rem] my-8"
+    >
+      <article class="proj_article basis-[30em] grow flex flex-col">
+        <h3 id="proj-title">{name}</h3>
+        <p id="proj-desc">{description}</p>
+        <div class="w-full flex flex-col gap-4 my-[2rem] lg:flex-row text-center">
+          <Buttons
+            width="fit"
+            link={link}
+            size="lg"
+            classes="self-end"
+            isFilled
+          >
+            Github
+          </Buttons>
+          <Buttons width="fit" link={github} size="lg" classes="self-end">
+            Github
+          </Buttons>
         </div>
-      </>
-    )
-  }
-  {
-    !position && (
-      <>
-        <div class="basis-[30em] grow">
-          <ProjectCard imagesrc={imagesrc} />
+      </article>
+      <div class="basis-[30em] grow">
+        <ProjectCard imagesrc={imagesrc} />
+      </div>
+    </div>
+  )
+}
+{
+  !position && (
+    <div id="project-display" class="project flex flex-wrap gap-[5rem] my-8">
+      <div class="basis-[30em] grow">
+        <ProjectCard imagesrc={imagesrc} />
+      </div>
+      <article class="proj_article basis-[30em] grow flex flex-col justify-around">
+        <h3 id="proj-title">{name}</h3>
+        <p id="proj-desc">{description}</p>
+        <div class="w-full flex flex-col gap-4 my-[2rem] lg:flex-row text-center">
+          <Buttons
+            width="fit"
+            link={link}
+            size="lg"
+            classes="self-end"
+            isFilled
+          >
+            Github
+          </Buttons>
+          <Buttons width="fit" link={github} size="lg" classes="self-end">
+            Github
+          </Buttons>
         </div>
-        <article class="proj_article basis-[30em] grow flex flex-col justify-around">
-          <h3 id="proj-title">{name}</h3>
-          <p id="proj-desc">{description}</p>
-          <div class="w-full flex flex-col gap-4 my-[2rem] lg:flex-row text-center">
-            <a class="btn principal" href={link} target="_blank">
-              {' '}
-              Ir al sitio
-            </a>
-            <a
-              id="link-git"
-              class="btn secondary"
-              href={github}
-              target="_blank"
-            >
-              GitHub
-            </a>
-          </div>
-        </article>
-      </>
-    )
-  }
-  <!-- <div class="project__key_points">
+      </article>
+    </div>
+  )
+}
+<!-- <div class="project__key_points">
     <h3>Key outputs</h3>
     <ul class="project__ul">
       <li class="project__li">
@@ -114,7 +120,6 @@ const {
       </li>
     </ul>
   </div> -->
-</div>
 
 <!-- <style lang="scss" is:global>
   .project {
