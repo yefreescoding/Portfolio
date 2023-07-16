@@ -1,19 +1,37 @@
+---
+import { HTMLAttributes } from 'astro/types';
+interface Props extends HTMLAttributes<'a'> {
+  topText?: boolean;
+  bottomText?: boolean;
+}
+
+const { topText = true, bottomText = true } = Astro.props;
+---
+
 <div class="banner">
-  <div class="text text-top rotate-2">
-    <p>
-      Trabajo en equipo • Colaborativo • Comunicacion efectiva • Resolucion de
-      problemas • Pensamiento Crítico y Analítico • Atencion al detalle •
-      Creativo
-    </p>
-  </div>
-  <div class="text text-bottom -rotate-2">
-    <p>
-      <span class="text-5xl font-bold">UDEMY</span> Python sin fronteras: HTML, CSS,
-      Flask y MySQL • <span class="text-5xl font-bold">18</span> Code wars katas
-      completados • <span class="text-5xl font-bold">566</span> Contribuciones en
-      Github
-    </p>
-  </div>
+  {
+    topText && (
+      <div class="text text-top rotate-2">
+        <p>
+          Trabajo en equipo • Colaborativo • Comunicacion efectiva • Resolucion
+          de problemas • Pensamiento Crítico y Analítico • Atencion al detalle •
+          Creativo
+        </p>
+      </div>
+    )
+  }
+  {
+    bottomText && (
+      <div class="text text-bottom -rotate-2">
+        <p>
+          <span class="text-5xl font-bold">UDEMY</span> Python sin fronteras:
+          HTML, CSS, Flask y MySQL • <span class="text-5xl font-bold">18</span>{' '}
+          Code wars katas completados •{' '}
+          <span class="text-5xl font-bold">566</span> Contribuciones en Github
+        </p>
+      </div>
+    )
+  }
 </div>
 
 <style>

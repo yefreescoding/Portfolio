@@ -4,6 +4,7 @@ import MainLayout from '../Layout/MainLayout.astro';
 
 // import components
 import Cover from '../Components/Cover.astro';
+import DivisionHr from '../Components/DivisionHr.astro';
 
 // import data
 import aboutMe from '../Data/aboutMeData';
@@ -31,13 +32,14 @@ import aboutMe from '../Data/aboutMeData';
         <h2 class="section-about__h3">Tecnologias</h2>
         <p>
           Como desarrollador de paginas y aplicaiones web, puedo decir que
-          domino los lenguajes fundamentales HTML, CSS y JavaScript. Tambien
-          tengo entendimiento basico de PHP y MySQL.
+          trabajo continuamente los lenguajes fundamentales HTML, CSS y
+          JavaScript. Tambien tengo entendimiento basico de PHP y, cracion,
+          administracion y modificacion de bases de datos MySQL.
         </p>
         <p>
-          Tambien domino las herramientas para que mi trabajo sea mas rapido,
-          efectivo y eficaz. Herramientas como git, npm, Gulp, NodeJS, ViteJS y
-          nvx.
+          Las herramientas que uilizo para que mi trabajo sea mas rapido,
+          efectivo y eficaz, que me ayudadan a colaborar en equipo. Herramientas
+          como git, npm, Gulp, NodeJS, ViteJS y nvx.
         </p>
         <p>
           Actualmente me encuentro desarrollando las mayoria de mis proyectos
@@ -56,14 +58,15 @@ import aboutMe from '../Data/aboutMeData';
       </article>
     </div>
   </section>
+  <DivisionHr bottomText={false} />
   <Cover
     coverTitle="¿Como puedo ayudarte?"
-    description="Mis objetivos son utilizar mis habilidades y conocimientos recién adquiridos para ayudar a las empresas a alcanzar sus metas y ofrecer experiencias en línea excepcionales. A través de mi formación académica y pasión por el desarrollo web, estoy listo para aportar valor a tu empresa y contribuir a su éxito en el mundo digital."
+    description="Gracias a mis habilidades y conocimientos recién adquiridos para ayudar a las empresas a alcanzar sus metas y ofrecer experiencias en línea excepcionales. A través de mi formación académica y pasión por el desarrollo web, estoy listo para aportar valor a tu empresa y contribuir a su éxito en el mundo digital."
   >
     <ul class="flex flex-col gap-8">
-      <li class="flex items-start">
+      <li class="flex items-start gap-4">
         <img
-          class="w-[8rem] aspect-square object-cover"
+          class="w-[5rem] aspect-square object-cover"
           src="/images/hero-images/web-dev-bg.avif"
           alt=""
         />
@@ -80,10 +83,10 @@ import aboutMe from '../Data/aboutMeData';
           </p>
         </div>
       </li>
-      <li class="flex items-start">
+      <li class="flex items-start gap-4">
         <img
-          class="w-[8rem] aspect-square object-cover"
-          src="/images/hero-images/web-dev-bg.avif"
+          class="w-[5rem] aspect-square object-cover"
+          src="/images/icons/performance.avif"
           alt=""
         />
         <div>
@@ -97,10 +100,10 @@ import aboutMe from '../Data/aboutMeData';
           </p>
         </div>
       </li>
-      <li class="flex items-start">
+      <li class="flex items-start gap-4">
         <img
-          class="w-[8rem] aspect-square object-cover"
-          src="/images/hero-images/web-dev-bg.avif"
+          class="w-[5rem] aspect-square object-cover"
+          src="/images/icons/team-work.avif"
           alt=""
         />
         <div>
@@ -114,10 +117,10 @@ import aboutMe from '../Data/aboutMeData';
           </p>
         </div>
       </li>
-      <li class="flex items-start">
+      <li class="flex items-start gap-4">
         <img
-          class="w-[8rem] aspect-square object-cover"
-          src="/images/hero-images/web-dev-bg.avif"
+          class="w-[5rem] aspect-square object-cover"
+          src="/images/icons/test.avif"
           alt=""
         />
         <div>
@@ -147,7 +150,7 @@ import aboutMe from '../Data/aboutMeData';
     grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
     color: var(--clr-text-1);
     padding: 0 5vw;
-    margin: 5vh 0;
+    margin: 8vh 0;
   }
 
   .section-about__article {
