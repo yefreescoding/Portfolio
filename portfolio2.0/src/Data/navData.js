@@ -13,7 +13,7 @@ const navData = [
   },
   {
     name: 'GitHub',
-    link: 'https://github.com/yefreescoding/Portfolio.git',
+    link: 'https://github.com/yefreescoding/',
   },
   {
     name: 'blog',

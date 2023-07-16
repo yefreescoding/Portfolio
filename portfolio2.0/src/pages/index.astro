@@ -17,7 +17,13 @@ import DivisionHr from '../Components/DivisionHr.astro';
     coverTitle="¡Hola mundo!"
     description="Bienvenidos a mi pequeño espacio en la web. Desarrollador web front end, diseñador UI e ilustrador. "
     coverImage="/images/hero-images/index-hero.webp"
-  />
+  >
+    <img
+      class="rounded-full aspect-square object-cover mb-4"
+      src="/images/hero-images/index-hero.webp"
+      alt="Personal foto."
+    />
+  </Cover>
   <!-- <QuickLinks /> -->
   <!--** SKILLS section **-->
   <SkillsSection />
@@ -43,14 +49,14 @@ import DivisionHr from '../Components/DivisionHr.astro';
     <!--**************-->
     <ProjectDisplay
       name="music-gram"
-      description="Este es un proyecto inspirado por mi pasion por la musica, y las ganas de tener una pequeña biblioteca donde poder estar al tanto de mis artistas favoritos."
+      description="Una pagina web donde poder ver los artistas del momento, sus ultimas canciones, colaboraciones y proximos consierto. Creado con ASTRO, y utilizando los fundamentos basicos de HTML, CSS y JavaScript."
       link="https://music-gram-yefreescoding.vercel.app"
       github="https://github.com/yefreescoding/music-gram.git"
       imagesrc="/images/projects-img/music-gram.webp"
     />
     <ProjectDisplay
       name="cocina con micaela"
-      description="Cuando te independizas tienes que aprender muchas cosas, y una de las mas importantes es cocinar. Esta pagina web te ayuda un poco en lo que es esa parte de ser adulto. ¡Ya no mas ir a la cas de tus padres a 'robarles' cosas de la nevera!"
+      description="Cuando te independizas tienes que aprender muchas cosas, y una de las mas importantes es cocinar. Esta pagina web te ayuda un poco en lo que es esa parte de ser adulto. ¡Ya no mas ir a la casa de tus padres a 'robarles' cosas de la nevera!"
       link="https://micaela-kitchen.vercel.app"
       github="https://github.com/yefreescoding/micaela-kitchen.git"
       position={false}

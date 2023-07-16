@@ -1,6 +1,6 @@
 ---
 import Buttons from './Buttons.astro';
-const { coverTitle, description, coverImage } = Astro.props;
+const { coverTitle, description, buttonsYes = true } = Astro.props;
 ---
 
 <section id="home" class="cover" aria-label="Portada de la pagina">
@@ -11,28 +11,36 @@ const { coverTitle, description, coverImage } = Astro.props;
     </h1>
     <p class="cover__p">{description}</p>
     <div class="cover__div flex flex-col lg:flex-row gap-4 my-[2rem]">
-      <Buttons
-        width="full"
-        link="mailto:yefree13santos@outlook.com"
-        size="lg"
-        classes="cover__links text-center"
-        isFilled
-      >
-        Contacta Conmigo ;)
-      </Buttons>
-      <Buttons
-        width="full"
-        link="cv/YefreeCV2023.pdf"
-        size="lg"
-        classes="cover__links text-center"
-        theme="clr-background-1"
-        isFilled
-      >
-        Curriculum PDF
-      </Buttons>
+      {
+        buttonsYes && (
+          <>
+            <Buttons
+              width="full"
+              link="mailto:yefree13santos@outlook.com"
+              size="lg"
+              classes="cover__links text-center"
+              isFilled
+            >
+              Contacta Conmigo ;)
+            </Buttons>
+            <Buttons
+              width="full"
+              link="cv/YefreeCV2023.pdf"
+              size="lg"
+              classes="cover__links text-center"
+              theme="clr-background-1"
+              isFilled
+            >
+              Curriculum PDF
+            </Buttons>
+          </>
+        )
+      }
     </div>
   </div>
-  <img class="cover__image" src={coverImage} alt="Vector portrait picture." />
+  <div class="cover__image grid place-items-center">
+    <slot />
+  </div>
 </section>
 
 <style>

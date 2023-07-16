@@ -1,4 +1,5 @@
 ---
+import Buttons from './Buttons.astro';
 ---
 
 <section id="contact" class="contact">
@@ -15,9 +16,15 @@
     <input type="email" name="" placeholder="Your email*" required />
     <input type="url" name="" placeholder="Your web page (If it exist)" />
     <input type="text" name="" placeholder="How can I help?" required />
-    <button id="" class="contact__submit btn principal" type="submit">
+    <Buttons
+      theme="clr-background-1"
+      width="fit"
+      size="lg"
+      classes="contact__submit"
+      isFilled
+    >
       Enviar mensaje
-    </button>
+    </Buttons>
   </form>
 </section>
 
@@ -37,6 +44,8 @@
     background-color: var(--clr-text-3);
     border: 2px solid var(--clr-border-2);
     gap: 2rem;
+    width: min(100% - 2rem, 80em);
+    margin-inline: auto;
   }
 
   .contact__form input {

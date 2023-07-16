@@ -1,6 +1,7 @@
 ---
 // import Layouts
 import MainLayout from './MainLayout.astro';
+import Buttons from '../Components/Buttons.astro';
 
 // import utils
 import { formatDate, formatDateMonth } from '../js/functions';
@@ -20,7 +21,9 @@ const { title, date, image } = frontmatter;
     <div class="blog-section__content">
       <slot />
     </div>
-    <a class="btn principal w-fit" href="/memorias/">Todas las memorias</a>
+    <Buttons width="fit" link="/memorias/" size="sm" classes="" isFilled>
+      Todas las entradas
+    </Buttons>
   </section>
 </MainLayout>
 

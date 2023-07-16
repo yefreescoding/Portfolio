@@ -7,8 +7,6 @@ draft: false
 category: tips
 ---
 
-## ¿Ahora... qué sigue?
-
 ### Expande tus habilidades más allá de lo básico
 
 Para aquellos autodidactas en el mundo del desarrollo web que ya dominan los fundamentos de HTML, CSS y JavaScript, y han creado sitios web estáticos, llega el momento de dar el siguiente paso en su carrera. En este artículo, exploraremos algunas direcciones a seguir para expandir tus habilidades y crecer como desarrollador web autodidacta.

@@ -12,9 +12,16 @@ import aboutMe from '../Data/aboutMeData';
 <MainLayout subtitle="About">
   <Cover
     coverTitle="Yefree Valdez"
-    description="Aqui podras conocerme un poco mas sobre mi , mi experiencia, habilidades y algunas de mis aficiones."
-    coverImage="/images/hero-images/about-hero.webp"
-  />
+    description="Conoce un poco mas sobre mi, experiencia, habilidades y aficiones. Quien soy dentro y fuera del desarollo web."
+    buttonsYes={false}
+  >
+    <img
+      class="w-[80%] rounded-full border-[3px] border-black aspect-square object-cover mb-4"
+      src="/images/hero-images/Subject.jpg"
+      alt="Personal foto."
+    />
+  </Cover>
+
   <section id="about" class="section-about">
     <article class="section-about__article">
       {aboutMe.map((p) => <p>{p.para}</p>)}
@@ -49,6 +56,83 @@ import aboutMe from '../Data/aboutMeData';
       </article>
     </div>
   </section>
+  <Cover
+    coverTitle="¿Como puedo ayudarte?"
+    description="Mis objetivos son utilizar mis habilidades y conocimientos recién adquiridos para ayudar a las empresas a alcanzar sus metas y ofrecer experiencias en línea excepcionales. A través de mi formación académica y pasión por el desarrollo web, estoy listo para aportar valor a tu empresa y contribuir a su éxito en el mundo digital."
+  >
+    <ul class="flex flex-col gap-8">
+      <li class="flex items-start">
+        <img
+          class="w-[8rem] aspect-square object-cover"
+          src="/images/hero-images/web-dev-bg.avif"
+          alt=""
+        />
+        <div>
+          <h4 class="text-md">
+            Desarrollo de sitios web funcionales y atractivos
+          </h4>
+          <p class="text-sm">
+            Como desarrollador front-end, puedo crear sitios web que no solo
+            sean visualmente atractivos, sino también funcionales y fáciles de
+            usar. Utilizo las últimas tecnologías y prácticas recomendadas para
+            garantizar una experiencia de usuario óptima y una navegación
+            intuitiva.
+          </p>
+        </div>
+      </li>
+      <li class="flex items-start">
+        <img
+          class="w-[8rem] aspect-square object-cover"
+          src="/images/hero-images/web-dev-bg.avif"
+          alt=""
+        />
+        <div>
+          <h4 class="text-md">Optimización de rendimiento y velocidad</h4>
+          <p class="text-sm">
+            La velocidad de carga y el rendimiento son aspectos clave para el
+            éxito de un sitio web. Implemento prácticas de optimización de
+            código y utilizo herramientas para maximizar la velocidad y el
+            rendimiento de los sitios web, lo que mejora la experiencia del
+            usuario y ayuda a retener a los visitantes.
+          </p>
+        </div>
+      </li>
+      <li class="flex items-start">
+        <img
+          class="w-[8rem] aspect-square object-cover"
+          src="/images/hero-images/web-dev-bg.avif"
+          alt=""
+        />
+        <div>
+          <h4 class="text-md">Colaboración y comunicación efectiva:</h4>
+          <p class="text-sm">
+            Valoro la colaboración y la comunicación efectiva con los miembros
+            del equipo y los interesados en el proyecto. Estoy dispuesto a
+            escuchar y comprender los requisitos y objetivos específicos de la
+            empresa para entregar soluciones alineadas con las expectativas y el
+            enfoque del negocio.
+          </p>
+        </div>
+      </li>
+      <li class="flex items-start">
+        <img
+          class="w-[8rem] aspect-square object-cover"
+          src="/images/hero-images/web-dev-bg.avif"
+          alt=""
+        />
+        <div>
+          <h4 class="text-md">Aprendizaje y mejora continua:</h4>
+          <p class="text-sm">
+            Como recién graduado, tengo una mentalidad de aprendizaje constante
+            y estoy entusiasmado por mantenerme actualizado con las últimas
+            tendencias y tecnologías en el campo del desarrollo web. Siempre
+            estoy dispuesto a adquirir nuevas habilidades y conocimientos para
+            proporcionar soluciones innovadoras y eficientes.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </Cover>
 </MainLayout>
 
 <style lang="scss">
@@ -62,6 +146,8 @@ import aboutMe from '../Data/aboutMeData';
   .section-about {
     grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
     color: var(--clr-text-1);
+    padding: 0 5vw;
+    margin: 5vh 0;
   }
 
   .section-about__article {

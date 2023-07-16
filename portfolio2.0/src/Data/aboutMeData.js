@@ -1,6 +1,6 @@
 const aboutMe = [
   {
-    para: `Hola, Mi nombre es Yefree De Los Santos Valdez. Desarrollador Front End, diseñador e ilustrador. Me encanta Trabajar en la web y asegurarse de que siga siendo un lugar para todos y nuestras pasiones creativas, personales y extrañas.`,
+    para: `Desarrollador Front End, diseñador e ilustrador. Me encanta Trabajar en la web y asegurarse de que siga siendo un lugar para todos y nuestras pasiones creativas, personales y extrañas.`,
   },
   {
     para: `Empece a programar por mi cuenta desde 2022, aprendiendo cada dia mas con todos los recursos a mis disposición que hay en internet, comunidades, hackatons y open source projects.

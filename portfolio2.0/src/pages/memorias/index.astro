@@ -3,25 +3,22 @@
 import MainLayout from '../../Layout/MainLayout.astro';
 
 // import components
-import Cover from '../../Components/Cover.astro';
+import Buttons from '../../Components/Buttons.astro';
 
 const allPost = await Astro.glob('./*.md');
+
+const reversedPosts = allPost.reverse();
 ---
 
 <MainLayout title="Diario - Yefree">
-  <!-- <Cover
-    coverTitle="Memorias"
-    description="Todos mis pensamientos y experienzas plasmadas en esta seccion sobre desarrollo web"
-    coverImage="/images/hero-images/thoughts-hero.webp"
-  /> -->
   <section class="thoughts" aria-label="Articulos memorias">
     <div class="thoughts__div">
       <h2 class="thoughts__h2">2023</h2>
       {
-        allPost.map((post) => (
-          <a class="thoughts__a btn text-left" href={post.url}>
+        reversedPosts.map((post) => (
+          <Buttons width="fit" link={post.url} size="md" classes="">
             {post.frontmatter.title}
-          </a>
+          </Buttons>
         ))
       }
     </div>
@@ -38,7 +35,8 @@ const allPost = await Astro.glob('./*.md');
   .thoughts {
     position: relative;
     grid-template-columns: min(15%, 20em) 1fr;
-    border: solid 2px var(--clr-border-2);
+    border: solid 3px var(--clr-border-2);
+    margin-right: 5vw;
     // height: ;
   }
 
