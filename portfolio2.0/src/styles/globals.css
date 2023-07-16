@@ -141,7 +141,7 @@ p {
   line-height: 1.5;
 }
 
-.btn {
+/* .btn {
   --shadow-length: 3px;
   font-weight: bold;
   padding: 0.5rem;
@@ -165,12 +165,11 @@ p {
 
 .btn.secondary {
   background-color: var(--clr-background-2);
-}
+} */
 
 .web-page-cont {
   border: 2px solid var(--secondary-color) 0;
   margin: 15vh 0;
-  /* width: min(100% - 2rem, 80em); */
   margin-inline: auto;
 }
 

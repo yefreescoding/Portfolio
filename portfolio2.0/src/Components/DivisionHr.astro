@@ -1,35 +1,68 @@
 <div class="banner">
-  <div class="text">
-    Trabajo en equipo • Comunicacion efectiva • Resolucion de problemas •
-    Analitico • <span class="text-5xl font-bold">+5</span> sitios webs creados •
+  <div class="text text-top rotate-2">
+    <p>
+      Trabajo en equipo • Colaborativo • Comunicacion efectiva • Resolucion de
+      problemas • Pensamiento Crítico y Analítico • Atencion al detalle •
+      Creativo
+    </p>
+  </div>
+  <div class="text text-bottom -rotate-2">
+    <p>
+      <span class="text-5xl font-bold">UDEMY</span> Python sin fronteras: HTML, CSS,
+      Flask y MySQL • <span class="text-5xl font-bold">18</span> Code wars katas
+      completados • <span class="text-5xl font-bold">566</span> Contribuciones en
+      Github
+    </p>
   </div>
 </div>
 
 <style>
   .banner {
+    overflow: hidden;
     display: grid;
     place-content: center;
     position: relative;
-    overflow: hidden;
     inset: 0;
-    margin: 10% 0 0 0;
-    width: 120%;
-    height: 80px;
-    background-color: var(--clr-background-3);
+    margin: 10vh 0;
+    width: 100%;
+    max-width: 100vw;
+    height: 100%;
+    background-color: transparent;
     color: var(--text);
-    transform: rotate(3deg) translateX(-50px);
   }
 
   .banner .text {
+    padding: 1rem;
+  }
+
+  .text-top {
+    z-index: 1;
+    background-color: var(--clr-background-3);
+  }
+
+  .text-bottom {
+    background-color: #171717;
+    color: #ffff;
+  }
+
+  .banner .text p {
     font-size: 2rem;
-    text-align: center;
-    text-transform: capitalize;
     white-space: nowrap;
+    text-align: center;
     position: relative;
-    animation-name: moveBanner;
-    animation-duration: 30s;
+    animation-duration: 60s;
+    animation-delay: 0;
+    animation-direction: normal;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+  }
+
+  .text-top p {
+    animation-name: moveBanner;
+  }
+
+  .text-bottom p {
+    animation-name: moveBanner-back;
   }
 
   @keyframes moveBanner {
@@ -38,6 +71,15 @@
     }
     100% {
       left: -900px;
+    }
+  }
+
+  @keyframes moveBanner-back {
+    0% {
+      left: -900px;
+    }
+    100% {
+      left: 50%;
     }
   }
 </style>
