@@ -21,10 +21,11 @@
 <!-- page title -->
 <title>Yefree Valdez | HOME</title>
   <!-- Google Fonts import -->
-<link rel="stylesheet" href="/_astro/404.626fed4e.css" />
-<link rel="stylesheet" href="/_astro/post-1.c0988d2a.css" />
-<link rel="stylesheet" href="/_astro/404.fe3612dc.css" />
-<link rel="stylesheet" href="/_astro/index.0ca7e7ea.css" /><script type="module">const d=document.querySelector("#toggle-mobile-menu"),e=document.querySelector(".nav");d.addEventListener("click",function(){e.getAttribute("data-visible")==="false"?e.setAttribute("data-visible",!0):e.setAttribute("data-visible",!1)});const i=document.querySelector("#dark-light"),t=document.querySelector("#mode");i.addEventListener("click",()=>{t.getAttribute("data-mode")==="light"?(t.setAttribute("data-mode","dark"),t.textContent="dark"):(t.setAttribute("data-mode","light"),t.textContent="light"),document.body.classList.toggle("dark-mode")});
+<link rel="stylesheet" href="/_astro/404.5a418cd6.css" />
+<link rel="stylesheet" href="/_astro/post-1.57eafb23.css" />
+<link rel="stylesheet" href="/_astro/404.fe55b97f.css" />
+<link rel="stylesheet" href="/_astro/404.b5c7b0e8.css" />
+<link rel="stylesheet" href="/_astro/index.edbad3ff.css" /><script type="module">const d=document.querySelector("#toggle-mobile-menu"),e=document.querySelector(".nav");d.addEventListener("click",function(){e.getAttribute("data-visible")==="false"?e.setAttribute("data-visible",!0):e.setAttribute("data-visible",!1)});const i=document.querySelector("#dark-light"),t=document.querySelector("#mode");i.addEventListener("click",()=>{t.getAttribute("data-mode")==="light"?(t.setAttribute("data-mode","dark"),t.textContent="dark"):(t.setAttribute("data-mode","light"),t.textContent="light"),document.body.classList.toggle("dark-mode")});
 </script>
 <script type="module" src="/_astro/page.d7d8fe59.js"></script></head>
   <body class="">
@@ -60,7 +61,7 @@
         </li>
     <!-- <button type="button" class="mode-toggle id="dark-light" ">
   <span id="mode" data-mode="dark">Dark</span> mode
-</button> --><label class="relative inline-flex items-center cursor-pointer outline outline-3 rounded-lg pr-2 hover:outline-offset-[5px] transition-all">
+</button> --><label class="relative inline-flex items-center cursor-pointer outline outline-3 outline-offset-[2px] rounded-lg pr-2 hover:outline-offset-[5px] transition-all">
   <input id="dark-light" type="checkbox" value="" class="sr-only peer">
   <div class="w-14 h-7 bg-gray-200 peer-focus:outline-none rounded-lg peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[4px] after:bg-white after:border-gray-300 after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-violet-600">
   </div>
@@ -82,12 +83,16 @@
     </h1>
     <p class="cover__p astro-6W6NZWSY">Bienvenidos a mi pequeño espacio en la web. Desarrollador web front end, diseñador UI e ilustrador. </p>
     <div class="cover__div flex flex-col lg:flex-row gap-4 my-[2rem] astro-6W6NZWSY">
-      <a class="cover__links btn principal text-center astro-6W6NZWSY" href="mailto: yefree13santos@eoutlook.com" target="_blank">
-        Conecta Conmigo ;)
-      </a>
-      <a class="cover__links btn secondary text-center astro-6W6NZWSY" href="cv/YefreeCV2023.pdf" target="_blank">
+      <a class="btn_component filled cover__links text-center astro-X7VO55FE" href="mailto:yefree13santos@outlook.com" target="_blank" data-size="lg" data-width="full" class="astro-6W6NZWSY" style="--background: var(--clr-background-3);">
+  
+        Contacta Conmigo ;)
+      
+</a>
+      <a class="btn_component filled cover__links text-center astro-X7VO55FE" href="cv/YefreeCV2023.pdf" target="_blank" data-size="lg" data-width="full" class="astro-6W6NZWSY" style="--background: var(--clr-background-1);">
+  
         Curriculum PDF
-      </a>
+      
+</a>
     </div>
   </div>
   <img class="cover__image astro-6W6NZWSY" src="/images/hero-images/index-hero.webp" alt="Vector portrait picture.">
@@ -144,8 +149,14 @@
   </blockquote>
 </section>
   
-  <section id="projects" class="projects flex flex-col gap-[1rem]">
-    <div class="flex flex-col gap-4 mb-[10vh]">
+  <div class="banner astro-ISFDFZTE">
+  <div class="text astro-ISFDFZTE">
+    Trabajo en equipo • Comunicacion efectiva • Resolucion de problemas •
+    Analitico • <span class="text-5xl font-bold astro-ISFDFZTE">+5</span> sitios webs creados •
+  </div>
+</div>
+  <section id="projects" class="projects flex flex-col gap-[1rem]" aria-label="Proyectos">
+    <header class="flex flex-col gap-4 mb-[10vh]">
       <h2 class="projects__h2">
         Mis ultimos
         <span class="text-green-400">proyectos</span>
@@ -155,25 +166,28 @@
         aqui presente. Estos son algunos de los proyectos en los que he
         trabajado y las tecnologias que he utilizado.
       </p>
-    </div>
+    </header>
+
     <!--**************-->
-    <div id="project-display" class="project flex flex-wrap gap-[5rem] my-8">
+    <div id="project-display" class="project flex flex-wrap-reverse gap-[5rem] my-8">
+      <article class="proj_article basis-[30em] grow flex flex-col">
+        <h3 id="proj-title">music-gram</h3>
+        <p id="proj-desc">Este es un proyecto inspirado por mi pasion por la musica, y las ganas de tener una pequeña biblioteca donde poder estar al tanto de mis artistas favoritos.</p>
+        <div class="w-full flex flex-col gap-4 my-[2rem] lg:flex-row text-center">
+          <a class="btn_component filled self-end astro-X7VO55FE" href="https://music-gram-yefreescoding.vercel.app" target="_blank" data-size="lg" data-width="fit" style="--background: var(--clr-background-3);">
   
-        <article class="proj_article basis-[30em] grow flex flex-col">
-          <h3 id="proj-title">music-gram</h3>
-          <p id="proj-desc">Este es un proyecto inspirado por mi pasion por la musica, y las ganas de tener una pequeña biblioteca donde poder estar al tanto de mis artistas favoritos.</p>
-          <div class="w-full flex flex-col gap-4 my-[2rem] lg:flex-row text-center">
-            <a class="btn principal" href="https://music-gram-yefreescoding.vercel.app" target="_blank">
-               
-              Ir al sitio
-            </a>
-            <a id="link-git" class="btn secondary" href="https://github.com/yefreescoding/music-gram.git" target="_blank">
-              GitHub
-            </a>
-          </div>
-        </article>
-        <div class="basis-[30em] grow">
-          <div class="card astro-OJOUEWUG">
+            Visitar web
+          
+</a>
+          <a class="btn_component self-end astro-X7VO55FE" href="https://github.com/yefreescoding/music-gram.git" target="_blank" data-size="lg" data-width="fit" style="--background: var(--clr-background-3);">
+  
+            Github
+          
+</a>
+        </div>
+      </article>
+      <div class="basis-[30em] grow">
+        <div class="card astro-OJOUEWUG">
   <div class="tools rounded-2xl astro-OJOUEWUG">
     <div class="circle astro-OJOUEWUG">
       <span class="red box astro-OJOUEWUG"></span>
@@ -189,10 +203,10 @@
     <img id="proj-img" src="/images/projects-img/music-gram.webp" alt="Imagen del proyecto" class="w-full rounded-b-2xl astro-OJOUEWUG">
   </div>
 </div>
-        </div>
-      
-  
-  <!-- <div class="project__key_points">
+      </div>
+    </div>
+
+<!-- <div class="project__key_points">
     <h3>Key outputs</h3>
     <ul class="project__ul">
       <li class="project__li">
@@ -213,7 +227,6 @@
       </li>
     </ul>
   </div> -->
-</div>
 
 <!-- <style lang="scss" is:global>
   .project {
@@ -402,11 +415,10 @@
     }
   });
 </script> -->
-    <div id="project-display" class="project flex flex-wrap gap-[5rem] my-8">
-  
-  
-        <div class="basis-[30em] grow">
-          <div class="card astro-OJOUEWUG">
+    
+<div id="project-display" class="project flex flex-wrap gap-[5rem] my-8">
+      <div class="basis-[30em] grow">
+        <div class="card astro-OJOUEWUG">
   <div class="tools rounded-2xl astro-OJOUEWUG">
     <div class="circle astro-OJOUEWUG">
       <span class="red box astro-OJOUEWUG"></span>
@@ -422,22 +434,25 @@
     <img id="proj-img" src="/images/projects-img/cocina-con-micaela.webp" alt="Imagen del proyecto" class="w-full rounded-b-2xl astro-OJOUEWUG">
   </div>
 </div>
+      </div>
+      <article class="proj_article basis-[30em] grow flex flex-col justify-around">
+        <h3 id="proj-title">cocina con micaela</h3>
+        <p id="proj-desc">Cuando te independizas tienes que aprender muchas cosas, y una de las mas importantes es cocinar. Esta pagina web te ayuda un poco en lo que es esa parte de ser adulto. ¡Ya no mas ir a la cas de tus padres a &#39;robarles&#39; cosas de la nevera!</p>
+        <div class="w-full flex flex-col gap-4 my-[2rem] lg:flex-row text-center">
+          <a class="btn_component filled self-end astro-X7VO55FE" href="https://micaela-kitchen.vercel.app" target="_blank" data-size="lg" data-width="fit" style="--background: var(--clr-background-3);">
+  
+            Visitar
+          
+</a>
+          <a class="btn_component self-end astro-X7VO55FE" href="https://github.com/yefreescoding/micaela-kitchen.git" target="_blank" data-size="lg" data-width="fit" style="--background: var(--clr-background-3);">
+  
+            Github
+          
+</a>
         </div>
-        <article class="proj_article basis-[30em] grow flex flex-col justify-around">
-          <h3 id="proj-title">cocina con micaela</h3>
-          <p id="proj-desc">Cuando te independizas tienes que aprender muchas cosas, y una de las mas importantes es cocinar. Esta pagina web te ayuda un poco en lo que es esa parte de ser adulto. ¡Ya no mas ir a la cas de tus padres a &#39;robarles&#39; cosas de la nevera!</p>
-          <div class="w-full flex flex-col gap-4 my-[2rem] lg:flex-row text-center">
-            <a class="btn principal" href="https://micaela-kitchen.vercel.app" target="_blank">
-               
-              Ir al sitio
-            </a>
-            <a id="link-git" class="btn secondary" href="https://github.com/yefreescoding/micaela-kitchen.git" target="_blank">
-              GitHub
-            </a>
-          </div>
-        </article>
-      
-  <!-- <div class="project__key_points">
+      </article>
+    </div>
+<!-- <div class="project__key_points">
     <h3>Key outputs</h3>
     <ul class="project__ul">
       <li class="project__li">
@@ -458,7 +473,6 @@
       </li>
     </ul>
   </div> -->
-</div>
 
 <!-- <style lang="scss" is:global>
   .project {
@@ -647,23 +661,25 @@
     }
   });
 </script> -->
-    <div id="project-display" class="project flex flex-wrap gap-[5rem] my-8">
+    <div id="project-display" class="project flex flex-wrap-reverse gap-[5rem] my-8">
+      <article class="proj_article basis-[30em] grow flex flex-col">
+        <h3 id="proj-title">Blog para desarrolladores</h3>
+        <p id="proj-desc">Un blog que utilizo para publicar algunas de mis experiencias y cositas que voy viviendo, y aprendiendo como desarrolador web.</p>
+        <div class="w-full flex flex-col gap-4 my-[2rem] lg:flex-row text-center">
+          <a class="btn_component filled self-end astro-X7VO55FE" href="https://you-me-blog.vercel.app" target="_blank" data-size="lg" data-width="fit" style="--background: var(--clr-background-3);">
   
-        <article class="proj_article basis-[30em] grow flex flex-col">
-          <h3 id="proj-title">Blog para desarrolladores</h3>
-          <p id="proj-desc">Un blog que utilizo para publicar algunas de mis experiencias y cositas que voy viviendo, y aprendiendo como desarrolador web.</p>
-          <div class="w-full flex flex-col gap-4 my-[2rem] lg:flex-row text-center">
-            <a class="btn principal" href="https://you-me-blog.vercel.app" target="_blank">
-               
-              Ir al sitio
-            </a>
-            <a id="link-git" class="btn secondary" href="https://github.com/yefreescoding/you-me-blog.git" target="_blank">
-              GitHub
-            </a>
-          </div>
-        </article>
-        <div class="basis-[30em] grow">
-          <div class="card astro-OJOUEWUG">
+            Visitar web
+          
+</a>
+          <a class="btn_component self-end astro-X7VO55FE" href="https://github.com/yefreescoding/you-me-blog.git" target="_blank" data-size="lg" data-width="fit" style="--background: var(--clr-background-3);">
+  
+            Github
+          
+</a>
+        </div>
+      </article>
+      <div class="basis-[30em] grow">
+        <div class="card astro-OJOUEWUG">
   <div class="tools rounded-2xl astro-OJOUEWUG">
     <div class="circle astro-OJOUEWUG">
       <span class="red box astro-OJOUEWUG"></span>
@@ -679,10 +695,10 @@
     <img id="proj-img" src="/images/projects-img/blog.webp" alt="Imagen del proyecto" class="w-full rounded-b-2xl astro-OJOUEWUG">
   </div>
 </div>
-        </div>
-      
-  
-  <!-- <div class="project__key_points">
+      </div>
+    </div>
+
+<!-- <div class="project__key_points">
     <h3>Key outputs</h3>
     <ul class="project__ul">
       <li class="project__li">
@@ -703,7 +719,6 @@
       </li>
     </ul>
   </div> -->
-</div>
 
 <!-- <style lang="scss" is:global>
   .project {
@@ -914,34 +929,34 @@
 </section>
 
     </main>
-    <footer class="footer astro-4C4KAKL5">
-  <div class="footer__top astro-4C4KAKL5">
-    <div class="footer__links astro-4C4KAKL5">
-      <a class="footer__link btn astro-4C4KAKL5" href="mailto: yefree13santos@outlook.com" aria-label="Links to outside websites">
-            Email
-          </a><a class="footer__link btn astro-4C4KAKL5" href="/projects/" aria-label="Links to outside websites">
-            Projects
-          </a><a class="footer__link btn astro-4C4KAKL5" href="/404/" aria-label="Links to outside websites">
-            Support
-          </a><a class="footer__link btn astro-4C4KAKL5" href="https://you-me-blog.vercel.app" aria-label="Links to outside websites">
-            blog
-          </a>
+    <footer class="footer">
+  <div class="footer__top">
+    <div class="footer__links">
+      <a class="btn_component footer__link astro-X7VO55FE" href="mailto: yefree13santos@outlook.com" target="_blank" data-size="sm" data-width="full" style="--background: var(--clr-background-3);">
+  Email
+</a><a class="btn_component footer__link astro-X7VO55FE" href="/projects/" target="_blank" data-size="sm" data-width="full" style="--background: var(--clr-background-3);">
+  Projects
+</a><a class="btn_component footer__link astro-X7VO55FE" href="/404/" target="_blank" data-size="sm" data-width="full" style="--background: var(--clr-background-3);">
+  Support
+</a><a class="btn_component footer__link astro-X7VO55FE" href="https://you-me-blog.vercel.app" target="_blank" data-size="sm" data-width="full" style="--background: var(--clr-background-3);">
+  blog
+</a>
     </div>
-    <div class="footer__links footer__links--right astro-4C4KAKL5">
-      <a class="footer__link btn astro-4C4KAKL5" href="/404/" aria-label="Links to outside websites">
-            github
-          </a><a class="footer__link btn astro-4C4KAKL5" href="/404/" aria-label="Links to outside websites">
-            twitter
-          </a><a class="footer__link btn astro-4C4KAKL5" href="/404/" aria-label="Links to outside websites">
-            discord
-          </a><a class="footer__link btn astro-4C4KAKL5" href="/404/" aria-label="Links to outside websites">
-            instagram
-          </a>
+    <div class="footer__links footer__links--right">
+      <a class="btn_component footer__link astro-X7VO55FE" href="/404/" target="_blank" data-size="sm" data-width="fit" style="--background: var(--clr-background-3);">
+  github
+</a><a class="btn_component footer__link astro-X7VO55FE" href="/404/" target="_blank" data-size="sm" data-width="fit" style="--background: var(--clr-background-3);">
+  twitter
+</a><a class="btn_component footer__link astro-X7VO55FE" href="/404/" target="_blank" data-size="sm" data-width="fit" style="--background: var(--clr-background-3);">
+  discord
+</a><a class="btn_component footer__link astro-X7VO55FE" href="/404/" target="_blank" data-size="sm" data-width="fit" style="--background: var(--clr-background-3);">
+  instagram
+</a>
     </div>
   </div>
-  <div class="footer__bottom astro-4C4KAKL5">
-    <small class="footer__p astro-4C4KAKL5">
-      • Made by Yefree | copyright &copy; <span id="year" class="astro-4C4KAKL5"></span> | All right reserved
+  <div class="footer__bottom">
+    <small class="footer__p">
+      • Made by Yefree | copyright &copy; <span id="year"></span> | All right reserved
       •
     </small>
   </div>
