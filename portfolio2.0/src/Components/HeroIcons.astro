@@ -7,18 +7,18 @@ const { img, position } = Astro.props;
 </div>
 <style>
   div {
-    --rotate-Y: 20deg;
-    --rotate-X: 20deg;
+    /* --rotate-Y: -15deg;
+    --rotate-X: -15deg; */
     position: absolute;
     width: 6rem;
     aspect-ratio: 10/6;
     border-radius: 1rem;
     transform: perspective(5000px) rotateX(var(--rotate-Y))
-      rotateY(var(--rotate-Y)) translateZ(1rem);
+      rotateY(var(--rotate-X)) translateZ(1rem);
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
 
-    animation: move 1.5s linear infinite alternate;
+    animation: move 3s linear infinite alternate;
   }
 
   div::after {
@@ -37,15 +37,19 @@ const { img, position } = Astro.props;
 
   @keyframes move {
     0% {
-      transform: rotateX(-20deg) rotateY(20deg);
+      transform: rotateX(0deg) rotateY(0deg);
     }
 
-    50% {
-      transform: rotateX(10deg) rotateY(-10deg);
+    35% {
+      transform: rotateX(15deg) rotateY(15deg);
+    }
+
+    75% {
+      transform: rotateX(-15deg) rotateY(15deg);
     }
 
     100% {
-      transform: rotateX(20deg) rotateY(-20deg);
+      transform: rotateX(-15deg) rotateY(-15deg);
     }
   }
 </style>

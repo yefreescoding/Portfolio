@@ -3,11 +3,11 @@
   --fnt-text-2: 'Rubik', sans-serif;
 
   --clr-text-1: hsl(31, 29%, 95%);
-  --clr-text-2: hsl(267, 82%, 74%);
+  --clr-text-2: #ceff1a;
   --clr-text-3: hsl(0, 3%, 6%);
   --clr-background-1: hsl(199, 79%, 5%);
-  --clr-background-2: hsl(165, 19%, 4%);
-  --clr-background-3: #600bea;
+  --clr-background-2: #222921;
+  --clr-background-3: #ceff1a;
   --clr-border: hsl(32, 100%, 94%);
   --clr-border-2: hsl(200, 13%, 98%);
   --clr-box-shd: hsla(214, 53%, 7%);
@@ -21,11 +21,11 @@
   }
   body.dark-mode {
     --clr-text-1: hsl(32, 91%, 8%);
-    --clr-text-2: hsl(253, 78%, 57%);
+    --clr-text-2: #ceff1a;
     --clr-text-3: hsl(30, 0%, 98%);
     --clr-background-1: hsl(165, 74%, 65%);
-    --clr-background-2: hsl(84, 38%, 94%);
-    --clr-background-3: #b8ff70;
+    --clr-background-2: #f2f5f2;
+    --clr-background-3: #ceff1a;
     --clr-border: hsl(32, 100%, 64%);
     --clr-border-2: #001e2d;
     --clr-box-shd: rgb(80, 80, 80);
@@ -41,18 +41,18 @@
     --clr-text-2: hsl(253, 78%, 57%);
     --clr-text-3: hsl(30, 0%, 98%);
     --clr-background-1: hsl(165, 74%, 65%);
-    --clr-background-2: hsl(84, 38%, 94%);
-    --clr-background-3: hsl(90, 100%, 72%);
+    --clr-background-2: #f2f5f2;
+    --clr-background-3: #ceff1a;
     --clr-border: hsl(32, 100%, 64%);
     --clr-border-2: hsl(201, 98%, 9%);
     --clr-box-shd: rgb(80, 80, 80);
   }
   body.dark-mode {
     --clr-text-1: hsl(31, 29%, 95%);
-    --clr-text-2: hsl(267, 82%, 74%);
+    --clr-text-2: #ceff1a;
     --clr-text-3: hsl(0, 3%, 6%);
     --clr-background-1: hsl(199, 79%, 5%);
-    --clr-background-2: hsl(165, 19%, 4%);
+    --clr-background-2: #222921;
     --clr-background-3: hsl(263, 91%, 48%);
     --clr-border: hsl(32, 100%, 94%);
     --clr-border-2: hsl(200, 13%, 98%);

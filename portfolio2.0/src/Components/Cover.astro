@@ -10,12 +10,12 @@ const { coverTitle, description, buttonsYes = true } = Astro.props;
       {coverTitle}
     </h1>
     <p class="cover__p">{description}</p>
-    <div class="cover__div flex flex-col lg:flex-row gap-4 my-[2rem]">
+    <div class="cover__div flex flex-col items-end lg:flex-row gap-4 my-[2rem]">
       {
         buttonsYes && (
           <>
             <Buttons
-              width="full"
+              width="fit"
               link="mailto:yefree13santos@outlook.com"
               size="lg"
               classes="cover__links text-center"
@@ -24,7 +24,7 @@ const { coverTitle, description, buttonsYes = true } = Astro.props;
               Contacta Conmigo ;)
             </Buttons>
             <Buttons
-              width="full"
+              width="fit"
               link="cv/YefreeCV2023.pdf"
               size="lg"
               classes="cover__links text-center"
@@ -75,6 +75,6 @@ const { coverTitle, description, buttonsYes = true } = Astro.props;
   }
   .cover__h1 {
     color: var(--clr-text-2);
-    text-shadow: 3px 3px 0 var(--clr-border-2);
+    font-size: clamp(2.3rem, calc(2.5rem + 4vw), 7rem);
   }
 </style>
