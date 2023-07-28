@@ -16,11 +16,12 @@ const reversedPosts = allPost.reverse();
       <h2 class="thoughts__h2">2023</h2>
       {
         reversedPosts.map((post) => (
-          <Buttons width="fit" link={post.url} size="md" classes="">
+          <Buttons width="fit" link={post.url} size="md" target="_self">
             {post.frontmatter.title}
           </Buttons>
         ))
       }
+      <a href=""></a>
     </div>
   </section>
 </MainLayout>

@@ -4,12 +4,11 @@ import MainLayout from '../Layout/MainLayout.astro';
 
 // import components
 import Cover from '../Components/Cover.astro';
-// import QuickLinks from '../Components/Quick-links.astro';
 import ContactForm from '../Components/ContactForm.astro';
 import ProjectDisplay from '../Components/ProjectDisplay.astro';
-
 import SkillsSection from '../Components/SkillsSection.astro';
 import DivisionHr from '../Components/DivisionHr.astro';
+import HeroIcons from '../Components/HeroIcons.astro';
 ---
 
 <MainLayout subtitle="HOME">
@@ -18,6 +17,18 @@ import DivisionHr from '../Components/DivisionHr.astro';
     description="Bienvenidos a mi pequeño espacio en la web. Desarrollador web front end, diseñador UI e ilustrador. "
     coverImage="/images/hero-images/index-hero.webp"
   >
+    <HeroIcons
+      img="/images/hero-images/hero-icons/coding.avif"
+      position="top-10 left-10"
+    />
+    <HeroIcons
+      img="/images/hero-images/hero-icons/web-anal.avif"
+      position="top-[25%] right-[10%]"
+    />
+    <HeroIcons
+      img="/images/hero-images/hero-icons/website.avif"
+      position="bottom-[10%] left-[10%]"
+    />
     <img
       class="rounded-full aspect-square object-cover mb-4"
       src="/images/hero-images/index-hero.webp"

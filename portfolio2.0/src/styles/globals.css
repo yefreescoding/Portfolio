@@ -27,7 +27,7 @@
     --clr-background-2: hsl(84, 38%, 94%);
     --clr-background-3: #b8ff70;
     --clr-border: hsl(32, 100%, 64%);
-    --clr-border-2: hsl(201, 98%, 9%);
+    --clr-border-2: #001e2d;
     --clr-box-shd: rgb(80, 80, 80);
   }
   body.dark-mode .menu-img[data-dark='true'] {
@@ -139,33 +139,8 @@ h4 {
 p {
   font-size: clamp(1rem, 1rem + 2.5vw, 1.5rem);
   line-height: 1.5;
+  text-wrap: balance;
 }
-
-/* .btn {
-  --shadow-length: 3px;
-  font-weight: bold;
-  padding: 0.5rem;
-  border-radius: 0.3rem;
-  border: 2px solid var(--clr-border-2);
-  box-shadow: var(--shadow-length) var(--shadow-length) 0 var(--clr-border-2);
-  color: var(--clr-text-1);
-  transition: all 0.5s ease-in-out;
-}
-
-.btn:is(:hover, :active) {
-  transition: all 0.2s ease-in-out;
-  transform: translate(-3px, -3px);
-  box-shadow: calc(var(--shadow-length) * 2) calc(var(--shadow-length) * 2) 0
-    var(--clr-border-2);
-}
-
-.btn.principal {
-  background-color: var(--clr-background-3);
-}
-
-.btn.secondary {
-  background-color: var(--clr-background-2);
-} */
 
 .web-page-cont {
   border: 2px solid var(--secondary-color) 0;
