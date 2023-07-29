@@ -3,7 +3,7 @@ const { img, position } = Astro.props;
 ---
 
 <div id="icon" class:list={[`icons__hero ${position}`]}>
-  <img src={img} alt="Icons web dev" />
+  <img width="50" height="50" src={img} alt="Icons web dev" />
 </div>
 <style>
   div {
@@ -53,9 +53,3 @@ const { img, position } = Astro.props;
     }
   }
 </style>
-
-<script defer>
-  const $icon = document.querySelector('.icon');
-
-  function rotateElement(event, element) {}
-</script>
