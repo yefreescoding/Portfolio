@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,8 +18,8 @@
 <!-- page title -->
 <title>Yefree Valdez | HOME</title>
   <!-- Google Fonts import -->
-<link rel="stylesheet" href="/_astro/404.f71315ea.css" />
-<link rel="stylesheet" href="/_astro/post-1.9b3beafb.css" />
+<link rel="stylesheet" href="/_astro/404.c4f80c1b.css" />
+<link rel="stylesheet" href="/_astro/post-1.23e2c707.css" />
 <link rel="stylesheet" href="/_astro/404.db68274a.css" />
 <link rel="stylesheet" href="/_astro/index.fe55b97f.css" />
 <link rel="stylesheet" href="/_astro/index.9958cd5c.css" />
@@ -60,14 +57,14 @@
             blog
           </a>
         </li>
-    <!-- <button type="button" class="mode-toggle id="dark-light" ">
-  <span id="mode" data-mode="dark">Dark</span> mode
-</button> --><label class="relative inline-flex items-center cursor-pointer outline outline-3 outline-offset-[2px] rounded-lg pr-2 hover:outline-offset-[5px] transition-all">
+    <li class="nav__li mt-2 astro-NMDTLA4C">
+      <label class="inline-flex items-center cursor-pointer outline outline-3 outline-offset-[2px] rounded-lg pr-2 hover:outline-offset-[5px] transition-all">
   <input id="dark-light" type="checkbox" value="" class="sr-only peer">
   <div class="w-14 h-7 bg-gray-200 peer-focus:outline-none rounded-lg peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[4px] after:bg-white after:border-gray-300 after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-violet-600">
   </div>
   <span id="mode" class="ml-3 nav__links">Mode</span>
 </label>
+    </li>
   </ul>
 </nav>
   <button id="toggle-mobile-menu" class="nav__mobile">
@@ -82,7 +79,7 @@
     <h1 class="cover__h1 font-extrabold astro-6W6NZWSY">
       ¡Hola mundo!
     </h1>
-    <p class="cover__p astro-6W6NZWSY">Bienvenidos a mi pequeño espacio en la web. Desarrollador web front end, diseñador UI e ilustrador. </p>
+    <p class="cover__p font-bold text-gray-700 astro-6W6NZWSY">Bienvenidos a mi pequeño espacio en la web. Desarrollador web front end, diseñador UI e ilustrador. </p>
     <div class="cover__div flex flex-col items-end lg:flex-row gap-4 my-[2rem] astro-6W6NZWSY">
       
             <a class="btn_component filled cover__links text-center astro-X7VO55FE" href="mailto:yefree13santos@outlook.com" target="_blank" data-size="lg" data-width="fit" class="astro-6W6NZWSY" style="--background: var(--clr-background-3);">
@@ -101,35 +98,14 @@
   <div class="cover__image grid place-items-center relative astro-6W6NZWSY">
     
     <div id="icon" class="icons__hero top-10 left-10 astro-JNR37TRC">
-  <img src="/images/hero-images/hero-icons/coding.avif" alt="Icons web dev" class="astro-JNR37TRC">
+  <img width="50" height="50" src="/images/hero-images/hero-icons/coding.avif" alt="Icons web dev" class="astro-JNR37TRC">
 </div>
-
-
-<script defer>
-  const $icon = document.querySelector('.icon');
-
-  function rotateElement(event, element) {}
-</script>
     <div id="icon" class="icons__hero top-[25%] right-[10%] astro-JNR37TRC">
-  <img src="/images/hero-images/hero-icons/web-anal.avif" alt="Icons web dev" class="astro-JNR37TRC">
+  <img width="50" height="50" src="/images/hero-images/hero-icons/web-anal.avif" alt="Icons web dev" class="astro-JNR37TRC">
 </div>
-
-
-<script defer>
-  const $icon = document.querySelector('.icon');
-
-  function rotateElement(event, element) {}
-</script>
     <div id="icon" class="icons__hero bottom-[10%] left-[10%] astro-JNR37TRC">
-  <img src="/images/hero-images/hero-icons/website.avif" alt="Icons web dev" class="astro-JNR37TRC">
+  <img width="50" height="50" src="/images/hero-images/hero-icons/website.avif" alt="Icons web dev" class="astro-JNR37TRC">
 </div>
-
-
-<script defer>
-  const $icon = document.querySelector('.icon');
-
-  function rotateElement(event, element) {}
-</script>
     <img class="rounded-full aspect-square object-cover mb-4" src="/images/hero-images/index-hero.webp" alt="Personal foto.">
   
   </div>
@@ -206,7 +182,7 @@
     <header class="flex flex-col gap-4 mb-[10vh]">
       <h2 class="projects__h2">
         Mis ultimos
-        <span class="text-green-400">proyectos</span>
+        <span class="text-green-600">proyectos</span>
       </h2>
       <p>
         El trabajo suele hablar por sí solo, toda la experiencia que tengo esta
@@ -216,6 +192,252 @@
     </header>
 
     <!--**************-->
+    
+<div id="project-display" class="project flex flex-wrap gap-[5rem] my-8">
+      <div class="basis-[30em] grow rotate-2">
+        <div class="card astro-OJOUEWUG">
+  <div class="tools astro-OJOUEWUG">
+    <div class="circle astro-OJOUEWUG">
+      <span class="red box astro-OJOUEWUG"></span>
+    </div>
+    <div class="circle astro-OJOUEWUG">
+      <span class="yellow box astro-OJOUEWUG"></span>
+    </div>
+    <div class="circle astro-OJOUEWUG">
+      <span class="green box astro-OJOUEWUG"></span>
+    </div>
+  </div>
+  <div class="card__content astro-OJOUEWUG">
+    <img id="proj-img" src="/images/projects-img/twitter-post-git.jpg" alt="Imagen del proyecto" class="w-full rounded-b-xl astro-OJOUEWUG" width="600" height="260">
+  </div>
+</div>
+      </div>
+      <article class="proj_article basis-[30em] grow flex flex-col justify-around">
+        <h3 id="proj-title">30 proyectos 30 dias</h3>
+        <p id="proj-desc">Repositorio de Github de un reto que me he propuesto a finales del mes de Julio. 30 proyectos en 30 dias, uno por dia. ¡No puedo dejar pasar ni uno solo!</p>
+        <div class="w-full flex flex-col gap-4 my-[2rem] lg:flex-row text-center">
+          <a class="btn_component filled self-end astro-X7VO55FE" href="https://yefreescoding.github.io/30-projects-30-days/" target="_blank" data-size="lg" data-width="fit" style="--background: var(--clr-background-3);">
+  
+            Visitar Sitio
+          
+</a>
+          <a class="btn_component self-end astro-X7VO55FE" href="https://github.com/yefreescoding/30-projects-30-days.git" target="_blank" data-size="lg" data-width="fit" style="--background: var(--clr-background-3);">
+  
+            Github Repo.
+          
+</a>
+        </div>
+      </article>
+    </div>
+<!-- <div class="project__key_points">
+    <h3>Key outputs</h3>
+    <ul class="project__ul">
+      <li class="project__li">
+        <img src="/images/icons/web.webp" alt="icono key points" />
+        <span class="key-text">Clean Code</span>
+      </li>
+      <li class="project__li">
+        <img src="/images/icons/performance.avif" alt="icono key points" />
+        <span class="key-text">Gran perfomance</span>
+      </li>
+      <li class="project__li">
+        <img src="/images/icons/smartphone.avif" alt="icono key points" />
+        <span class="key-text">Diseño responsive</span>
+      </li>
+      <li class="project__li">
+        <img src="/images/icons/test.avif" alt="icono key points" />
+        <span class="key-text">Testing front y back end</span>
+      </li>
+    </ul>
+  </div> -->
+
+<!-- <style lang="scss" is:global>
+  .project {
+    gap: 1rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    &,
+    &__links,
+    &__ul,
+    &__li,
+    &__text,
+    &__action,
+    &__key_points {
+      display: flex;
+    }
+
+    &__links,
+    &__ul,
+    &__text,
+    &__key_points {
+      flex-direction: column;
+      justify-content: flex-start;
+      text-align: left;
+    }
+
+    &__links {
+      flex: 1;
+      flex-basis: 15em;
+      flex-grow: 1;
+      flex-wrap: wrap;
+    }
+    &__li {
+      flex: 1;
+      padding: 1rem;
+      align-items: center;
+      gap: 1rem;
+      button {
+        width: fit-content;
+        color: var(--clr-text-1);
+        font-size: 1.4rem;
+        font-weight: 600;
+        text-align: left;
+        border-bottom: 3px transparent solid;
+        transition: all 0.2s linear;
+        &:hover {
+          border-bottom: 3px solid var(--clr-text-2);
+          color: var(--clr-text-2);
+        }
+        &.selected {
+          border-bottom: 3px solid var(--clr-text-2);
+          color: var(--clr-text-2);
+        }
+      }
+      img {
+        width: 3rem;
+        aspect-ratio: 1;
+        object-fit: contain;
+      }
+      span {
+        font-size: clamp(1rem, 1.5vw, 1.2rem);
+      }
+    }
+    &__text {
+      flex-basis: 20em;
+      flex-grow: 3;
+      gap: 0.5rem;
+      img {
+        aspect-ratio: 16/9;
+        object-fit: contain;
+      }
+    }
+
+    &__action {
+      gap: 1rem;
+    }
+
+    &__key_points {
+      --distance: 6px;
+      flex: 1;
+      flex-basis: 10em;
+      padding: 0.8rem;
+      position: relative;
+      border: 1px solid var(--clr-border-2);
+      background-color: var(--clr-background-2);
+
+      &::after,
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border: inherit;
+        z-index: -1;
+      }
+      &::after {
+        transform: translate(var(--distance), var(--distance));
+        background-color: var(--clr-background-1);
+      }
+      &::before {
+        transform: translate(
+          calc(var(--distance) * 2),
+          calc(var(--distance) * 2)
+        );
+        background-color: var(--clr-text-2);
+      }
+    }
+  }
+</style> -->
+
+<!-- <script defer>
+  const projects = [
+    {
+      linkLive: 'https://music-gram-yefreescoding.vercel.app',
+      linkGit: 'https://github.com/yefreescoding/music-gram.git',
+      name: 'Music Gram',
+      image: '/images/projects-img/music-gram.webp',
+      description: `Un sitio web creado para mostrar contenido estático sobre los artistas y la música, que mas me gusta y me inspira.`,
+    },
+    {
+      linkLive: 'https://you-me-blog.vercel.app',
+      linkGit: 'https://github.com/yefreescoding/you-me-blog.git',
+      name: 'Personal blog',
+      image: '/images/projects-img/blog.png',
+      description: `Mi blog personal, creado desde cero. Siempre quise tener mi propio blog, y poder crear este sitio web la verdad me llena de orgullo.`,
+    },
+    {
+      linkLive: 'https://redesign-web-page.vercel.app',
+      linkGit: 'https://github.com/yefreescoding/Astro-leanna-deeb.git',
+      name: 'Influencer landing page',
+      image: '/images/projects-img/influencer-landing.png',
+      description: `Rediseño landing page de una influencer. Quise crear un pequeño sitio web de una pagina. Sin uso de librerías, todo en Vanilla`,
+    },
+    {
+      linkLive: 'https://micaela-kitchen.vercel.app',
+      linkGit: 'https://github.com/yefreescoding/micaela-kitchen.git',
+      name: 'Cocina con Micaela',
+      image: '/images/projects-img/cocina-con-micaela.webp',
+      description: `Recetas, recetas y mas recetas.`,
+    },
+  ];
+
+  const projImg = document.getElementById('proj-img');
+  const projTitle = document.getElementById('proj-title');
+  const linkLive = document.getElementById('link-live');
+  const linkGit = document.getElementById('link-git');
+  const projDesc = document.getElementById('proj-desc');
+
+  const btnSelected = document.querySelectorAll('.proj-btn');
+  const section = document.getElementById('project-display');
+
+  let currentItem = 0;
+
+  window.addEventListener('DOMContentLoaded', () => {
+    showProject(currentItem);
+  });
+
+  function showProject(project) {
+    const item = projects[project];
+    projTitle.textContent = item.name;
+    projImg.src = item.image;
+    projDesc.textContent = item.description;
+    linkLive.href = item.linkLive;
+    linkGit.href = item.linkGit;
+  }
+
+  section.addEventListener('click', (e) => {
+    const id = e.target.dataset.id;
+    if (id) {
+      btnSelected.forEach((btn) => {
+        btn.classList.remove('selected');
+        e.target.classList.add('selected');
+      });
+    }
+
+    if (id === 'project-1') {
+      currentItem = 0;
+      showProject(currentItem);
+    } else if (id === 'project-2') {
+      currentItem = 1;
+      showProject(currentItem);
+    } else if (id === 'project-3') {
+      currentItem = 2;
+      showProject(currentItem);
+    } else if (id === 'project-4') {
+      currentItem = 3;
+      showProject(currentItem);
+    }
+  });
+</script> -->
     <div id="project-display" class="project flex flex-wrap-reverse gap-[5rem] my-8">
       <article class="proj_article basis-[30em] grow flex flex-col justify-around">
         <h3 id="proj-title">music-gram</h3>
@@ -247,7 +469,7 @@
     </div>
   </div>
   <div class="card__content astro-OJOUEWUG">
-    <img id="proj-img" src="/images/projects-img/music-gram.webp" alt="Imagen del proyecto" class="w-full rounded-b-xl astro-OJOUEWUG">
+    <img id="proj-img" src="/images/projects-img/music-gram.webp" alt="Imagen del proyecto" class="w-full rounded-b-xl astro-OJOUEWUG" width="600" height="260">
   </div>
 </div>
       </div>
@@ -478,7 +700,7 @@
     </div>
   </div>
   <div class="card__content astro-OJOUEWUG">
-    <img id="proj-img" src="/images/projects-img/cocina-con-micaela.webp" alt="Imagen del proyecto" class="w-full rounded-b-xl astro-OJOUEWUG">
+    <img id="proj-img" src="/images/projects-img/cocina-con-micaela.webp" alt="Imagen del proyecto" class="w-full rounded-b-xl astro-OJOUEWUG" width="600" height="260">
   </div>
 </div>
       </div>
@@ -739,7 +961,7 @@
     </div>
   </div>
   <div class="card__content astro-OJOUEWUG">
-    <img id="proj-img" src="/images/projects-img/blog.webp" alt="Imagen del proyecto" class="w-full rounded-b-xl astro-OJOUEWUG">
+    <img id="proj-img" src="/images/projects-img/blog.webp" alt="Imagen del proyecto" class="w-full rounded-b-xl astro-OJOUEWUG" width="600" height="260">
   </div>
 </div>
       </div>
