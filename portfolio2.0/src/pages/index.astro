@@ -47,7 +47,7 @@ import HeroIcons from '../Components/HeroIcons.astro';
     <header class="flex flex-col gap-4 mb-[10vh]">
       <h2 class="projects__h2">
         Mis ultimos
-        <span class="text-green-400">proyectos</span>
+        <span class="text-green-600">proyectos</span>
       </h2>
       <p>
         El trabajo suele hablar por sí solo, toda la experiencia que tengo esta
@@ -57,6 +57,14 @@ import HeroIcons from '../Components/HeroIcons.astro';
     </header>
 
     <!--**************-->
+    <ProjectDisplay
+      name="30 proyectos 30 dias"
+      description="Repositorio de Github de un reto que me he propuesto a finales del mes de Julio. 30 proyectos en 30 dias, uno por dia. ¡No puedo dejar pasar ni uno solo!"
+      link="https://yefreescoding.github.io/30-projects-30-days/"
+      github="https://github.com/yefreescoding/30-projects-30-days.git"
+      imagesrc="/images/projects-img/twitter-post-git.jpg"
+      position={false}
+    />
     <ProjectDisplay
       name="music-gram"
       description="Una pagina web donde poder ver los artistas del momento, sus ultimas canciones, colaboraciones y proximos consierto. Creado con ASTRO, y utilizando los fundamentos basicos de HTML, CSS y JavaScript."

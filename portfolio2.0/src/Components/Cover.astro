@@ -9,7 +9,7 @@ const { coverTitle, description, buttonsYes = true } = Astro.props;
     <h1 class="cover__h1 font-extrabold">
       {coverTitle}
     </h1>
-    <p class="cover__p">{description}</p>
+    <p class="cover__p font-bold text-gray-700">{description}</p>
     <div class="cover__div flex flex-col items-end lg:flex-row gap-4 my-[2rem]">
       {
         buttonsYes && (

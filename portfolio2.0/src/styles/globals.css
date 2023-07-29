@@ -1,6 +1,17 @@
 @font-face {
   font-family: 'Rubik', sans-serif;
-  src: url(/fonts/Rubik/Rubik-VariableFont_wght.ttf) format('ttf');
+  font-weight: 400;
+  src: url(/fonts/Rubik/static/Rubik-Medium.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+  src: url(/fonts/Rubik/static/Rubik-Bold.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 800;
+  src: url(/fonts/Rubik/static/Rubik-ExtraBold.ttf) format('ttf');
 }
 
 :root {
