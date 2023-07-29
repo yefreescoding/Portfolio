@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Rubik', sans-serif;
+  src: url(/fonts/Rubik/Rubik-VariableFont_wght.ttf) format('ttf');
+}
+
 :root {
   /* --fnt-text-1: 'Monomaniac One', sans-serif; */
   --fnt-text-2: 'Rubik', sans-serif;
@@ -11,8 +16,6 @@
   --clr-border: hsl(32, 100%, 94%);
   --clr-border-2: hsl(200, 13%, 98%);
   --clr-box-shd: hsla(214, 53%, 7%);
-
-  /* --header-footer-height: 4rem; */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -80,6 +83,9 @@ html {
 }
 
 body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
   font-family: var(--fnt-text-2);
   background-color: var(--clr-background-2);
   color: var(--clr-text-1);
