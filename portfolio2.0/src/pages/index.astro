@@ -35,10 +35,10 @@ import HeroIcons from '../Components/HeroIcons.astro';
       alt="Personal foto."
     />
   </Cover>
+  <DivisionHr />
   <!--** SKILLS section **-->
   <SkillsSection />
   <!--** PROJECTS section **-->
-  <DivisionHr />
   <section
     id="projects"
     class="projects flex flex-col gap-[1rem]"
@@ -49,10 +49,10 @@ import HeroIcons from '../Components/HeroIcons.astro';
         Mis ultimos
         <span class="text-green-600">proyectos</span>
       </h2>
-      <p>
+      <p class="projects__p">
         El trabajo suele hablar por sí solo, toda la experiencia que tengo esta
         aqui presente. Estos son algunos de los proyectos en los que he
-        trabajado y las tecnologias que he utilizado.
+        trabajado, ya sea de manera indivudual o en equipo.
       </p>
     </header>
 
@@ -88,10 +88,17 @@ import HeroIcons from '../Components/HeroIcons.astro';
       imagesrc="/images/projects-img/blog.webp"
     />
   </section>
+  <!--**************-->
   <ContactForm />
 </MainLayout>
 
 <style lang="scss" is:global>
+  .projects__p {
+    width: fit-content;
+    padding: 1rem;
+    background-color: var(--clr-text-3);
+    border: solid 2px var(--clr-border-2);
+  }
   .projects {
     width: min(100% - 2rem, 80em);
     margin-inline: auto;
