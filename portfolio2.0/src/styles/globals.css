@@ -19,11 +19,11 @@
   --fnt-text-2: 'Rubik', sans-serif;
 
   --clr-text-1: hsl(31, 29%, 95%);
-  --clr-text-2: #ceff1a;
+  --clr-text-2: #3ecc05;
   --clr-text-3: hsl(0, 3%, 6%);
   --clr-background-1: hsl(199, 79%, 5%);
   --clr-background-2: #222921;
-  --clr-background-3: #ceff1a;
+  --clr-background-3: #229b04;
   --clr-border: hsl(32, 100%, 94%);
   --clr-border-2: hsl(200, 13%, 98%);
   --clr-box-shd: hsla(214, 53%, 7%);
@@ -35,7 +35,7 @@
   }
   body.dark-mode {
     --clr-text-1: hsl(32, 91%, 8%);
-    --clr-text-2: #ceff1a;
+    --clr-text-2: hsl(253, 78%, 57%);
     --clr-text-3: hsl(30, 0%, 98%);
     --clr-background-1: hsl(165, 74%, 65%);
     --clr-background-2: #f2f5f2;
