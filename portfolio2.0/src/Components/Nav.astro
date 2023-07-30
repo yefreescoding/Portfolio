@@ -6,16 +6,16 @@ import navData from '../Data/navData';
 import DarkModeToggle from '../Components/DarkModeToggle.astro';
 ---
 
-<nav class="nav" data-visible="false">
+<nav class="nav" data-visible="false" aria-label="barra de navegacion">
   <!--* LINKS contenedor *-->
-  <ul class="nav__ul">
+  <ul class="nav__ul" aria-label="lista links de navegacion">
     {
       navData.map((link) => (
         <li class="nav__li">
           <a
             href={link.link}
             class="nav__links"
-            aria-label="links to outside websites"
+            aria-label={`Link hacia ${link.name}`}
           >
             {link.name}
           </a>

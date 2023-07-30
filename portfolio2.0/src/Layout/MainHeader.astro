@@ -3,13 +3,19 @@
 import Nav from '../Components/Nav.astro';
 ---
 
-<header class="header">
+<header class="header" aria-label="Cabecera de la pagina">
   <!--* LOGO contenedor *-->
-  <div class="header__home">
-    <a href="/" class="nav__links" aria-label="Go Home"> yefree Valdez</a>
+  <div class="header__home" aria-label="Logo de la pagina">
+    <a href="/" class="nav__links" aria-label="Link para vlver al inicio">
+      yefree Valdez</a
+    >
   </div>
   <Nav />
-  <button id="toggle-mobile-menu" class="nav__mobile">
+  <button
+    id="toggle-mobile-menu"
+    class="nav__mobile"
+    aria-label="Boton despliega menu moviles"
+  >
     <img
       class="menu-img"
       data-dark="true"
