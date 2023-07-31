@@ -5,16 +5,6 @@ import skills from '../Data/skillsData';
 
 <section id="skills" class="section-skills" aria-labelBy="work-expierence">
   <h2 id="work-expierence" class="section-skills__h2">Habilidades</h2>
-  <article class="section-skills__text">
-    <!-- <h3>Las herramientas que utilizo:</h3> -->
-    <p>
-      Comenzando con HTML, CSS y JavaScript, aprendí a programar por mi cuenta.
-      Sin embargo, hoy en día hay mucho por descubrir más allá de Vanilla
-      JavaScript: hoy estoy trabajando con la libreria de REACTJS, los
-      frameworks Astro y NextJS, utilizo Vitest como herramienta de testing,
-      SASS y Tailwind como preprocesador para CSS.
-    </p>
-  </article>
   <div class="section-skills__skills">
     {
       skills.map((skill) => (
@@ -29,7 +19,15 @@ import skills from '../Data/skillsData';
       ))
     }
   </div>
-  <p class="font-bold">¿Qué he podido crear con esto?</p>
+  <article class="section-skills__text">
+    <p class="projects__p">
+      Comenzando con HTML, CSS y JavaScript, aprendí a programar por mi cuenta.
+      Sin embargo, hoy en día hay mucho por descubrir más allá de Vanilla
+      JavaScript: hoy estoy trabajando con la libreria de REACTJS, los
+      frameworks Astro y NextJS, utilizo Vitest como herramienta de testing,
+      SASS y Tailwind como preprocesador para CSS.
+    </p>
+  </article>
 </section>
 
 <style lang="scss" is:global>
@@ -48,7 +46,6 @@ import skills from '../Data/skillsData';
 
   .section-skills__text {
     gap: 1rem;
-    padding: 1rem;
     background-color: var(--clr-text-3);
     border: solid 2px var(--clr-border-2);
   }
@@ -71,6 +68,7 @@ import skills from '../Data/skillsData';
   .section-skills__skills {
     display: flex;
     flex-wrap: wrap;
+    gap: 1rem;
   }
 
   .section-skills__article {
