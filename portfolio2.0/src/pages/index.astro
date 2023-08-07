@@ -9,6 +9,8 @@ import ProjectDisplay from '../Components/ProjectDisplay.astro';
 import SkillsSection from '../Components/SkillsSection.astro';
 import DivisionHr from '../Components/DivisionHr.astro';
 import HeroIcons from '../Components/HeroIcons.astro';
+
+import { projects } from '../Data/projects';
 ---
 
 <MainLayout subtitle="HOME">
@@ -46,8 +48,7 @@ import HeroIcons from '../Components/HeroIcons.astro';
   >
     <header class="flex flex-col gap-4 mb-[10vh]">
       <h2 class="projects__h2">
-        Mis ultimos
-        <span class="text-green-600">proyectos</span>
+        Mis ultimos<span class="text-green-600">proyectos</span>
       </h2>
       <p class="projects__p">
         El trabajo suele hablar por sí solo, toda la experiencia que tengo esta
@@ -57,72 +58,54 @@ import HeroIcons from '../Components/HeroIcons.astro';
     </header>
 
     <!--**************-->
-    <ProjectDisplay
-      name="30 proyectos 30 dias"
-      description="Repositorio de Github de un reto que me he propuesto a finales del mes de Julio. 30 proyectos en 30 dias, uno por dia. ¡No puedo dejar pasar ni uno solo!"
-      link="https://yefreescoding.github.io/30-projects-30-days/"
-      github="https://github.com/yefreescoding/30-projects-30-days.git"
-      imagesrc="/images/projects-img/twitter-post-git.jpg"
-      position={false}
-    />
-    <ProjectDisplay
-      name="music-gram"
-      description="Una pagina web donde poder ver los artistas del momento, sus ultimas canciones, colaboraciones y proximos consierto. Creado con ASTRO, y utilizando los fundamentos basicos de HTML, CSS y JavaScript."
-      link="https://music-gram-yefreescoding.vercel.app"
-      github="https://github.com/yefreescoding/music-gram.git"
-      imagesrc="/images/projects-img/music-gram.webp"
-    />
-    <ProjectDisplay
-      name="cocina con micaela"
-      description="Cuando te independizas tienes que aprender muchas cosas, y una de las mas importantes es cocinar. Esta pagina web te ayuda un poco en lo que es esa parte de ser adulto. ¡Ya no mas ir a la casa de tus padres a 'robarles' cosas de la nevera!"
-      link="https://micaela-kitchen.vercel.app"
-      github="https://github.com/yefreescoding/micaela-kitchen.git"
-      position={false}
-      imagesrc="/images/projects-img/cocina-con-micaela.webp"
-    />
-    <ProjectDisplay
-      name="Blog para desarrolladores"
-      description="Un blog que utilizo para publicar algunas de mis experiencias y cositas que voy viviendo, y aprendiendo como desarrolador web."
-      link="https://you-me-blog.vercel.app"
-      github="https://github.com/yefreescoding/you-me-blog.git"
-      imagesrc="/images/projects-img/blog.webp"
-    />
+    {
+      projects.map((project) => (
+        <ProjectDisplay
+          name={project.name}
+          description={project.description}
+          link={project.link}
+          github={project.github}
+          imagesrc={project.imagesrc}
+          position={project.position}
+        />
+      ))
+    }
   </section>
   <!--**************-->
   <ContactForm />
+
+  <style lang="scss" is:global>
+    .projects__p {
+      position: relative;
+      width: fit-content;
+      padding: 1rem;
+      background-color: var(--clr-text-3);
+      outline: solid 2px var(--clr-border-2);
+      --distance: 6px;
+
+      &::after,
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border: inherit;
+        z-index: -1;
+      }
+      &::after {
+        transform: translate(var(--distance), var(--distance));
+        background-color: var(--clr-background-1);
+      }
+      &::before {
+        transform: translate(
+          calc(var(--distance) * 2),
+          calc(var(--distance) * 2)
+        );
+        background-color: var(--clr-text-2);
+      }
+    }
+    .projects {
+      width: min(100% - 2rem, 80em);
+      margin-inline: auto;
+    }
+  </style>
 </MainLayout>
-
-<style lang="scss" is:global>
-  .projects__p {
-    position: relative;
-    width: fit-content;
-    padding: 1rem;
-    background-color: var(--clr-text-3);
-    outline: solid 2px var(--clr-border-2);
-    --distance: 6px;
-
-    &::after,
-    &::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border: inherit;
-      z-index: -1;
-    }
-    &::after {
-      transform: translate(var(--distance), var(--distance));
-      background-color: var(--clr-background-1);
-    }
-    &::before {
-      transform: translate(
-        calc(var(--distance) * 2),
-        calc(var(--distance) * 2)
-      );
-      background-color: var(--clr-text-2);
-    }
-  }
-  .projects {
-    width: min(100% - 2rem, 80em);
-    margin-inline: auto;
-  }
-</style>
