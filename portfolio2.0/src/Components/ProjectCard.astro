@@ -34,6 +34,7 @@ const { imagesrc } = Astro.props as Props;
   .card {
     --border-radius: 1rem;
     margin: 0 auto;
+
     background-color: var(--clr-background-2);
     border-radius: var(--border-radius);
     border: 2px solid var(--clr-border-2);
@@ -43,6 +44,11 @@ const { imagesrc } = Astro.props as Props;
     transform-style: preserve-3d;
     isolation: isolate;
     /* overflow: hidden; */
+  }
+
+  .card img {
+    aspect-ratio: 5/3;
+    object-fit: cover;
   }
 
   .card::after {

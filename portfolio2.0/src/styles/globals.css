@@ -27,6 +27,7 @@
   --clr-border: hsl(32, 100%, 94%);
   --clr-border-2: hsl(200, 13%, 98%);
   --clr-box-shd: hsla(214, 53%, 7%);
+  --clr-accent: hsl(343, 86%, 51%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -43,6 +44,7 @@
     --clr-border: hsl(32, 100%, 64%);
     --clr-border-2: #001e2d;
     --clr-box-shd: rgb(80, 80, 80);
+    --clr-accent: hsl(35, 100%, 50%);
   }
   body.dark-mode .menu-img[data-dark='true'] {
     filter: invert(0);
@@ -60,6 +62,7 @@
     --clr-border: hsl(32, 100%, 64%);
     --clr-border-2: hsl(201, 98%, 9%);
     --clr-box-shd: rgb(80, 80, 80);
+    --clr-accent: hsl(35, 100%, 50%);
   }
   body.dark-mode {
     --clr-text-1: hsl(31, 29%, 95%);
@@ -71,6 +74,7 @@
     --clr-border: hsl(32, 100%, 94%);
     --clr-border-2: hsl(200, 13%, 98%);
     --clr-box-shd: hsla(214, 53%, 7%);
+    --clr-accent: hsl(343, 86%, 51%);
   }
   body.dark-mode .menu-img[data-dark='true'] {
     filter: invert(100%);
@@ -160,9 +164,8 @@ p {
 }
 
 .web-page-cont {
-  border: 2px solid var(--secondary-color) 0;
-  margin: 15vh 0;
-  margin-inline: auto;
+  border: 2px solid var(--secondary-color);
+  margin: 15vh auto;
 }
 
 .projects,

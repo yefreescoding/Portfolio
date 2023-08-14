@@ -8,7 +8,6 @@ import ContactForm from '../Components/ContactForm.astro';
 import ProjectDisplay from '../Components/ProjectDisplay.astro';
 import SkillsSection from '../Components/SkillsSection.astro';
 import DivisionHr from '../Components/DivisionHr.astro';
-import HeroIcons from '../Components/HeroIcons.astro';
 
 import { projects } from '../Data/projects';
 ---
@@ -16,21 +15,9 @@ import { projects } from '../Data/projects';
 <MainLayout subtitle="HOME">
   <Cover
     coverTitle="¡Hola mundo!"
-    description="Bienvenidos a mi pequeño espacio en la web. Desarrollador web front end, diseñador UI e ilustrador. "
+    description="Desarrollador de software autodidacta, especializado en front end. Aportando mi granito de arena para que la web siga siendo ese lugar curioso, extraño y lleno de oportunidades. "
     coverImage="/images/hero-images/index-hero.webp"
   >
-    <HeroIcons
-      img="/images/hero-images/hero-icons/coding.avif"
-      position="top-10 left-20"
-    />
-    <HeroIcons
-      img="/images/hero-images/hero-icons/web-anal.avif"
-      position="top-[35%] right-[20%]"
-    />
-    <HeroIcons
-      img="/images/hero-images/hero-icons/website.avif"
-      position="bottom-[10%] left-[20%]"
-    />
     <img
       class="rounded-full aspect-square object-cover mb-4"
       src="/images/hero-images/index-hero.webp"
@@ -39,7 +26,6 @@ import { projects } from '../Data/projects';
   </Cover>
   <DivisionHr />
   <!--** SKILLS section **-->
-  <SkillsSection />
   <!--** PROJECTS section **-->
   <section
     id="projects"
@@ -48,7 +34,7 @@ import { projects } from '../Data/projects';
   >
     <header class="flex flex-col gap-4 mb-[10vh]">
       <h2 class="projects__h2">
-        Mis ultimos<span class="text-green-600">proyectos</span>
+        Mi <span class="text-green-600">experiencia</span>
       </h2>
       <p class="projects__p">
         El trabajo suele hablar por sí solo, toda la experiencia que tengo esta
@@ -56,56 +42,55 @@ import { projects } from '../Data/projects';
         trabajado, ya sea de manera indivudual o en equipo.
       </p>
     </header>
-
-    <!--**************-->
-    {
-      projects.map((project) => (
-        <ProjectDisplay
-          name={project.name}
-          description={project.description}
-          link={project.link}
-          github={project.github}
-          imagesrc={project.imagesrc}
-          position={project.position}
-        />
-      ))
-    }
+    <div class="grid md:grid-cols-2 grid-rows-[50em] gap-8">
+      {
+        projects.map((project) => (
+          <ProjectDisplay
+            name={project.name}
+            description={project.description}
+            link={project.link}
+            github={project.github}
+            imagesrc={project.imagesrc}
+          />
+        ))
+      }
+    </div>
   </section>
-  <!--**************-->
+  <SkillsSection />
   <ContactForm />
-
-  <style lang="scss" is:global>
-    .projects__p {
-      position: relative;
-      width: fit-content;
-      padding: 1rem;
-      background-color: var(--clr-text-3);
-      outline: solid 2px var(--clr-border-2);
-      --distance: 6px;
-
-      &::after,
-      &::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        border: inherit;
-        z-index: -1;
-      }
-      &::after {
-        transform: translate(var(--distance), var(--distance));
-        background-color: var(--clr-background-1);
-      }
-      &::before {
-        transform: translate(
-          calc(var(--distance) * 2),
-          calc(var(--distance) * 2)
-        );
-        background-color: var(--clr-text-2);
-      }
-    }
-    .projects {
-      width: min(100% - 2rem, 80em);
-      margin-inline: auto;
-    }
-  </style>
 </MainLayout>
+
+<style lang="scss" is:global>
+  .projects__p {
+    position: relative;
+    width: fit-content;
+    padding: 1rem;
+    background-color: var(--clr-text-3);
+    outline: solid 2px var(--clr-border-2);
+    --distance: 6px;
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: inherit;
+      z-index: -1;
+    }
+    &::after {
+      transform: translate(var(--distance), var(--distance));
+      background-color: var(--clr-background-1);
+    }
+    &::before {
+      transform: translate(
+        calc(var(--distance) * 2),
+        calc(var(--distance) * 2)
+      );
+      background-color: var(--clr-text-2);
+    }
+  }
+  .projects {
+    width: min(100% - 2rem, 80em);
+    margin-inline: auto;
+  }
+</style>

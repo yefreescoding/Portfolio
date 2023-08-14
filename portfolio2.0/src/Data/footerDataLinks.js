@@ -5,15 +5,15 @@ const footerLinks = [
   },
   {
     name: 'Projects',
-    link: '/projects/',
+    link: '/#projects/',
   },
   {
     name: 'Support',
     link: '/404/',
   },
   {
+    link: '/memorias/',
     name: 'blog',
-    link: 'https://you-me-blog.vercel.app',
   },
 ];
 

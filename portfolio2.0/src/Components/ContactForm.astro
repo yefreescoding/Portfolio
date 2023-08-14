@@ -3,29 +3,32 @@ import Buttons from './Buttons.astro';
 ---
 
 <section id="contact" class="contact">
-  <div class="contact__text">
-    <h2 class="contact__h2">Contacta conmigo</h2>
-    <p>
-      ¿Te ha gustado mi trabajo? Estoy abierto a nuevas oportunidades laborales,
-      me gustaria ser parte de un equipo de desarrolladores y dar todo el valor
-      que pueda. Estoy listo para lo nuevo y emocionante Desafíos.
-    </p>
+  <div class="form_wrapper">
+    <div class="contact__text">
+      <h2 class="contact__h2">Contacta conmigo</h2>
+      <p>
+        ¿Te ha gustado mi trabajo? Estoy abierto a nuevas oportunidades
+        laborales, me gustaria ser parte de un equipo de desarrolladores y dar
+        todo el valor que pueda. Estoy listo para lo nuevo y emocionante
+        Desafíos.
+      </p>
+    </div>
+    <form class="contact__form">
+      <input type="text" name="" placeholder="Your name*" required />
+      <input type="email" name="" placeholder="Your email*" required />
+      <input type="url" name="" placeholder="Your web page (If it exist)" />
+      <input type="text" name="" placeholder="How can I help?" required />
+      <Buttons
+        theme="clr-background-1"
+        width="fit"
+        size="lg"
+        classes="contact__submit"
+        isFilled
+      >
+        Enviar mensaje
+      </Buttons>
+    </form>
   </div>
-  <form class="contact__form">
-    <input type="text" name="" placeholder="Your name*" required />
-    <input type="email" name="" placeholder="Your email*" required />
-    <input type="url" name="" placeholder="Your web page (If it exist)" />
-    <input type="text" name="" placeholder="How can I help?" required />
-    <Buttons
-      theme="clr-background-1"
-      width="fit"
-      size="lg"
-      classes="contact__submit"
-      isFilled
-    >
-      Enviar mensaje
-    </Buttons>
-  </form>
 </section>
 
 <style lang="scss" is:global>
@@ -33,18 +36,23 @@ import Buttons from './Buttons.astro';
   .contact__form {
     display: flex;
     flex-direction: column;
-    padding: 0 2vw;
+    padding: 2rem;
     gap: 1rem;
     color: var(--clr-text-1);
   }
 
-  .contact {
+  .form_wrapper {
+    margin: 0 auto;
+    width: min(100%, 80em);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
     background-color: var(--clr-text-3);
     border: 2px solid var(--clr-border-2);
     gap: 2rem;
-    width: min(100% - 2rem, 80em);
+  }
+
+  .contact {
+    background-color: var(--clr-accent);
     margin: 10vh auto;
   }
 

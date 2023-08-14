@@ -9,74 +9,26 @@ interface Props {
   description: string;
   link: string;
   github: string;
-  position?: boolean;
   imagesrc: string;
 }
 
-const {
-  name,
-  description,
-  link,
-  github,
-  position = true,
-  imagesrc,
-} = Astro.props as Props;
+const { name, description, link, github, imagesrc } = Astro.props as Props;
 ---
 
-{
-  position && (
-    <div
-      id="project-display"
-      class="project flex flex-wrap-reverse gap-[5rem] my-8"
-    >
-      <article class="proj_article basis-[30em] grow flex flex-col justify-around">
-        <h3 id="proj-title">{name}</h3>
-        <p id="proj-desc">{description}</p>
-        <div class="w-full flex flex-col gap-4 my-[2rem] lg:flex-row text-center">
-          <Buttons
-            width="fit"
-            link={link}
-            size="lg"
-            classes="self-end"
-            isFilled
-          >
-            Visitar web
-          </Buttons>
-          <Buttons width="fit" link={github} size="lg" classes="self-end">
-            Github Repo.
-          </Buttons>
-        </div>
-      </article>
-      <div class="basis-[30em] grow -rotate-2">
-        <ProjectCard imagesrc={imagesrc} />
-      </div>
+<div id="project-display" class="project flex flex-col gap-8">
+  <div class="">
+    <ProjectCard imagesrc={imagesrc} />
+  </div>
+  <article class="proj_article basis-[30em] grow flex flex-col gap-4">
+    <h3 id="proj-title">{name}</h3>
+    <p id="proj-desc">{description}</p>
+    <div class="w-full flex flex-col gap-4 my-[2rem] lg:flex-row text-center">
+      <Buttons width="fit" link={link} size="lg" classes="self-end" isFilled>
+        Visitar web
+      </Buttons>
+      <Buttons width="fit" link={github} size="lg" classes="self-end">
+        Github
+      </Buttons>
     </div>
-  )
-}
-{
-  !position && (
-    <div id="project-display" class="project flex flex-wrap gap-[5rem] my-8">
-      <div class="basis-[30em] grow rotate-2">
-        <ProjectCard imagesrc={imagesrc} />
-      </div>
-      <article class="proj_article basis-[30em] grow flex flex-col justify-around">
-        <h3 id="proj-title">{name}</h3>
-        <p id="proj-desc">{description}</p>
-        <div class="w-full flex flex-col gap-4 my-[2rem] lg:flex-row text-center">
-          <Buttons
-            width="fit"
-            link={link}
-            size="lg"
-            classes="self-end"
-            isFilled
-          >
-            Visitar Sitio
-          </Buttons>
-          <Buttons width="fit" link={github} size="lg" classes="self-end">
-            Github Repo.
-          </Buttons>
-        </div>
-      </article>
-    </div>
-  )
-}
+  </article>
+</div>
