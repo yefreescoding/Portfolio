@@ -19,6 +19,16 @@ export const projects = [
   },
   {
     id: 3,
+    name: 'Overthink',
+    description:
+      'Cuando te sientas lleno de ideas o pensamientos, déjalos salir. Esta app te ayuda a escribir y guardar esas ideas.',
+    link: 'https://overthink.vercel.app',
+    github:
+      'https://github.com/yefreescoding/30-projects-30-days/tree/main/project-19/overthinking',
+    imagesrc: '/images/projects-img/overthink.jpg',
+  },
+  {
+    id: 4,
     name: 'Resetéame',
     description:
       'Archivos resets CSS, y HTML. Próximamente incluiré mas para diferentes frameworks, y workflows.',
@@ -26,13 +36,13 @@ export const projects = [
     github: 'https://github.com/yefreescoding/reseteame',
     imagesrc: '/images/projects-img/reseteame.jpg',
   },
-  {
-    id: 4,
-    name: 'Boxing Match',
-    description:
-      'Noticias del boxeo, las mejores peleas, los mejores boxeadores, la información que te interesa cortita y al pie. ',
-    link: 'https://proyecto-final-colon.000webhostapp.com/index.php',
-    github: 'https://github.com/yefreescoding/final-project-course',
-    imagesrc: '/images/projects-img/boxing.jpg',
-  },
+  // {
+  //   id: 5,
+  //   name: 'Boxing Match',
+  //   description:
+  //     'Noticias del boxeo, las mejores peleas, los mejores boxeadores, la información que te interesa cortita y al pie. ',
+  //   link: 'https://proyecto-final-colon.000webhostapp.com/index.php',
+  //   github: 'https://github.com/yefreescoding/final-project-course',
+  //   imagesrc: '/images/projects-img/boxing.jpg',
+  // },
 ];

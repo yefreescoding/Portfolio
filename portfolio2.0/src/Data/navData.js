@@ -17,7 +17,7 @@ const navData = [
   },
   {
     name: 'blog',
-    link: 'https://you-me-blog.vercel.app/',
+    link: 'https://devlog.vercel.app/',
   },
 ];
 export default navData;
