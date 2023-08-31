@@ -1,14 +1,37 @@
 ---
+import { Image } from "astro:assets";
+
 //import components
-import Nav from '../Components/Nav.astro';
+import Nav from "../Components/Nav.astro";
+
+const subjectImage = "/images/hero-images/Subject.jpg";
+const iconVerify = "/images/icons/verify.png";
 ---
 
 <header class="header" aria-label="Cabecera de la pagina">
   <!--* LOGO contenedor *-->
   <div class="header__home" aria-label="Logo de la pagina">
+    <Image
+      src={subjectImage}
+      alt="Mi foto"
+      width="10"
+      height="10"
+      class="w-12 h-12 rounded-full shadow-sm object-cover"
+      decoding="async"
+      loading="lazy"
+    />
     <a href="/" class="nav__links" aria-label="Link para vlver al inicio">
       yefree Valdez</a
     >
+    <Image
+      src={iconVerify}
+      alt="Icon twitter"
+      width="10"
+      height="10"
+      class="w-6 h-6 rounded-full shadow-sm object-cover"
+      decoding="async"
+      loading="lazy"
+    />
   </div>
   <Nav />
   <button
@@ -26,18 +49,14 @@ import Nav from '../Components/Nav.astro';
 </header>
 
 <style lang="scss" is:global>
-  /* ============================= */
-  /* ============================= */
   .header,
   .nav__ul,
   .header__home {
     display: flex;
   }
 
-  .header__home,
   .header__switch,
   .nav__links {
-    flex: 1;
     text-transform: capitalize;
     font-weight: 600;
     color: var(--clr-text-1);
@@ -54,6 +73,9 @@ import Nav from '../Components/Nav.astro';
     box-shadow: 4px 4px 0 var(--clr-border-2);
     background-color: var(--clr-text-3);
     padding: 1rem;
+    &__home {
+      @apply items-center gap-2;
+    }
   }
 
   .nav__mobile {
@@ -66,7 +88,7 @@ import Nav from '../Components/Nav.astro';
     transition: all 0.17s linear;
     img {
       width: 100%;
-      &[data-dark='false'] {
+      &[data-dark="false"] {
         filter: invert(100%);
       }
     }

@@ -1,9 +1,9 @@
 ---
 //data imports
-import navData from '../Data/navData';
+import navData from "../Data/navData";
 
 // import components
-import DarkModeToggle from '../Components/DarkModeToggle.astro';
+import DarkModeToggle from "../Components/DarkModeToggle.astro";
 ---
 
 <nav class="nav" data-visible="false" aria-label="barra de navegacion">
@@ -30,8 +30,8 @@ import DarkModeToggle from '../Components/DarkModeToggle.astro';
 
 <style lang="scss">
   .nav {
-    flex: 2;
-    flex-grow: 1;
+    // flex: 2;
+    // flex-grow: 1;
   }
   .nav__ul {
     align-items: center;
@@ -67,7 +67,7 @@ import DarkModeToggle from '../Components/DarkModeToggle.astro';
       transition: all 0.2s linear;
     }
   }
-  .nav[data-visible='true'] {
+  .nav[data-visible="true"] {
     transform: translateX(0);
   }
 
@@ -86,5 +86,5 @@ import DarkModeToggle from '../Components/DarkModeToggle.astro';
 </style>
 <script>
   //import utils
-  import '../utils/utils';
+  import "../utils/utils";
 </script>
