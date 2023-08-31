@@ -1,22 +1,22 @@
 @font-face {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 400;
-  src: url(/fonts/Rubik/static/Rubik-Medium.ttf) format('ttf');
+  src: url(/fonts/Rubik/static/Rubik-Medium.ttf) format("ttf");
 }
 @font-face {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 600;
-  src: url(/fonts/Rubik/static/Rubik-Bold.ttf) format('ttf');
+  src: url(/fonts/Rubik/static/Rubik-Bold.ttf) format("ttf");
 }
 @font-face {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 800;
-  src: url(/fonts/Rubik/static/Rubik-ExtraBold.ttf) format('ttf');
+  src: url(/fonts/Rubik/static/Rubik-ExtraBold.ttf) format("ttf");
 }
 
 :root {
   /* --fnt-text-1: 'Monomaniac One', sans-serif; */
-  --fnt-text-2: 'Rubik', sans-serif;
+  --fnt-text-2: "Rubik", sans-serif;
 
   --clr-text-1: hsl(31, 29%, 95%);
   --clr-text-2: #3ecc05;
@@ -31,7 +31,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .menu-img[data-dark='true'] {
+  .menu-img[data-dark="true"] {
     filter: invert(100%);
   }
   body.dark-mode {
@@ -46,7 +46,7 @@
     --clr-box-shd: rgb(80, 80, 80);
     --clr-accent: hsl(35, 100%, 50%);
   }
-  body.dark-mode .menu-img[data-dark='true'] {
+  body.dark-mode .menu-img[data-dark="true"] {
     filter: invert(0);
   }
 }
@@ -76,7 +76,7 @@
     --clr-box-shd: hsla(214, 53%, 7%);
     --clr-accent: hsl(343, 86%, 51%);
   }
-  body.dark-mode .menu-img[data-dark='true'] {
+  body.dark-mode .menu-img[data-dark="true"] {
     filter: invert(100%);
   }
 }
