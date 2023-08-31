@@ -1,16 +1,15 @@
-import { defineConfig } from 'astro/config';
-import sitemap from '@astrojs/sitemap';
-import tailwind from '@astrojs/tailwind';
-import vercel from '@astrojs/vercel/static';
-
+import { defineConfig } from "astro/config";
+import sitemap from "@astrojs/sitemap";
+import tailwind from "@astrojs/tailwind";
+import vercel from "@astrojs/vercel/static";
 import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://portfolioyefreevaldez.vercel.app',
+  site: "https://portfolioyefreevaldez.vercel.app",
   integrations: [sitemap(), tailwind(), react()],
-  output: 'static',
+  output: "static",
   adapter: vercel({
-    analytics: true
-  })
+    analytics: true,
+  }),
 });
