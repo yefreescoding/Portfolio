@@ -1,6 +1,11 @@
 ---
-import { HTMLAttributes } from 'astro/types';
-interface Props extends HTMLAttributes<'a'> {
+// import type atributes
+import { type HTMLAttributes } from "astro/types";
+
+// Library imports
+import { Icon } from "astro-icon";
+
+interface Props extends HTMLAttributes<"a"> {
   topText?: boolean;
   bottomText?: boolean;
 }
@@ -11,25 +16,82 @@ const { topText = true, bottomText = true } = Astro.props;
 <div class="banner">
   {
     topText && (
-      <div class="text text-top rotate-2">
-        <p>
-          Trabajo en equipo • Colaborativo • Comunicacion efectiva • Resolucion
-          de problemas • Pensamiento Crítico y Analítico • Atencion al detalle •
-          Creativo •
-        </p>
+      <div class="grid grid-flow-col auto-cols-[100%] text text-top -rotate-2">
+        <div class="flex flex-nowrap items-center">
+          <Icon class="h-12 md:h-16" name="simple-icons:postgresql" />
+          <Icon class="h-12 md:h-16" name="simple-icons:php" />
+          <Icon class="h-12 md:h-16" name="simple-icons:python" />
+          <Icon class="h-14 md:h-12" name="simple-icons:vercel" />
+          <Icon class="h-14 md:h-14" name="simple-icons:tailwindcss" />
+          <Icon class="h-12 md:h-16" name="ion:logo-sass" />
+          <Icon class="h-14 md:h-12" name="simple-icons:astro" />
+          <Icon class="h-12 md:h-16" name="ri:vuejs-fill" />
+          <Icon class="h-12 md:h-12" name="simple-icons:react" />
+          <Icon class="h-12 md:h-16" name="tabler:brand-javascript" />
+          <Icon class="h-12 md:h-16" name="simple-icons:css3" />
+          <Icon class="h-12 md:h-16" name="simple-icons:html5" />
+        </div>
+        <div class="flex flex-nowrap items-center">
+          <Icon class="h-12 md:h-16" name="simple-icons:postgresql" />
+          <Icon class="h-12 md:h-16" name="simple-icons:php" />
+          <Icon class="h-12 md:h-16" name="simple-icons:python" />
+          <Icon class="h-14 md:h-12" name="simple-icons:vercel" />
+          <Icon class="h-14 md:h-14" name="simple-icons:tailwindcss" />
+          <Icon class="h-12 md:h-16" name="ion:logo-sass" />
+          <Icon class="h-14 md:h-12" name="simple-icons:astro" />
+          <Icon class="h-12 md:h-16" name="ri:vuejs-fill" />
+          <Icon class="h-12 md:h-12" name="simple-icons:react" />
+          <Icon class="h-12 md:h-16" name="tabler:brand-javascript" />
+          <Icon class="h-12 md:h-16" name="simple-icons:css3" />
+          <Icon class="h-12 md:h-16" name="simple-icons:html5" />
+        </div>
       </div>
     )
   }
   {
     bottomText && (
-      <div class="text text-bottom -rotate-2">
-        <p>
-          <span class="text-5xl font-bold">UDEMY</span> Python sin fronteras:
-          HTML, CSS, Flask y MySQL • <span class="text-5xl font-bold">18</span>{' '}
-          Code wars katas completados •{' '}
-          <span class="text-5xl font-bold">566</span> Contribuciones en Github •
-          <span class="text-5xl font-bold">+500</span> puntos Front End Mentor
-        </p>
+      <div class="grid grid-flow-col sm:auto-cols-min md:auto-cols-[100%] text text-bottom rotate-2">
+        <div class="flex flex-nowrap items-center">
+          <p>
+            <span class="text-5xl font-bold">UDEMY</span> Python sin fronteras:
+            HTML, CSS, Flask y MySQL
+          </p>
+          <Icon class="h-8" name="emojione:white-circle" />
+          <p>
+            <span class="text-5xl font-bold">18</span> Code wars katas
+            completados
+          </p>
+          <Icon class="h-8" name="emojione:white-circle" />
+          <p>
+            <span class="text-5xl font-bold">566</span>
+            Contribuciones en Github
+          </p>
+          <Icon class="h-8" name="emojione:white-circle" />
+          <p>
+            <span class="text-5xl font-bold">+500</span> puntos Front End Mentor
+          </p>
+          <Icon class="h-8" name="emojione:white-circle" />
+        </div>
+        <div class="flex flex-nowrap items-center">
+          <p>
+            <span class="text-5xl font-bold">UDEMY</span> Python sin fronteras:
+            HTML, CSS, Flask y MySQL
+          </p>
+          <Icon class="h-8" name="emojione:white-circle" />
+          <p>
+            <span class="text-5xl font-bold">18</span> Code wars katas
+            completados
+          </p>
+          <Icon class="h-8" name="emojione:white-circle" />
+          <p>
+            <span class="text-5xl font-bold">566</span>
+            Contribuciones en Github
+          </p>
+          <Icon class="h-8" name="emojione:white-circle" />
+          <p>
+            <span class="text-5xl font-bold">+500</span> puntos Front End Mentor
+          </p>
+        </div>
       </div>
     )
   }
@@ -37,25 +99,24 @@ const { topText = true, bottomText = true } = Astro.props;
 
 <style>
   .banner {
-    overflow: hidden;
-    display: grid;
-    place-content: center;
-    position: relative;
-    inset: 0;
-    margin: 5vh 0;
-    width: 100%;
-    max-width: 100vw;
-    height: 100%;
-    background-color: transparent;
+    width: 100vw;
     color: var(--text);
+  }
+
+  @media (width < 40em) {
+    .banner {
+      overflow: hidden;
+    }
   }
 
   .banner .text {
     padding: 1rem;
+    gap: 1rem;
+    position: relative;
   }
 
   .text-top {
-    z-index: 1;
+    z-index: 99;
     background-color: var(--clr-background-3);
   }
 
@@ -64,23 +125,33 @@ const { topText = true, bottomText = true } = Astro.props;
     color: #ffff;
   }
 
-  .banner .text p {
-    font-size: 2rem;
-    white-space: nowrap;
-    text-align: center;
+  .banner .text div {
+    gap: 1rem;
     position: relative;
-    animation-duration: 100s;
-    animation-direction: normal;
+    white-space: nowrap;
+    animation-duration: 80s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
 
-  .text-top p {
-    animation-name: moveBanner;
+  .banner .text div:has(p) p {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
   }
 
-  .text-bottom p {
-    animation-name: moveBanner-back;
+  .banner .text:hover div {
+    animation-play-state: paused;
+  }
+
+  .text-top div {
+    animation-name: marquee;
+    animation-direction: reverse;
+  }
+
+  .text-bottom div {
+    animation-name: marquee;
   }
 
   @keyframes moveBanner {
@@ -92,12 +163,23 @@ const { topText = true, bottomText = true } = Astro.props;
     }
   }
 
-  @keyframes moveBanner-back {
+  @keyframes marquee {
     0% {
-      left: -900px;
+      transform: translateX(-100%);
     }
     100% {
-      left: 50%;
+      transform: translateX(0%);
+    }
+  }
+
+  @media (prefers-reduced-motion) {
+    /* styles to apply if a user's device settings are set to reduced motion */
+    .text-top div {
+      animation-name: none;
+    }
+
+    .text-bottom div {
+      animation-name: none;
     }
   }
 </style>

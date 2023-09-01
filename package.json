@@ -21,6 +21,7 @@
     "@types/react-dom": "^18.2.7",
     "@vercel/analytics": "^1.0.1",
     "astro": "^3.0.3",
+    "astro-icon": "^0.8.1",
     "postcss": "^8.4.24",
     "postcss-preset-env": "^8.4.2",
     "react": "^18.2.0",

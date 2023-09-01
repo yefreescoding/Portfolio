@@ -5,12 +5,13 @@ import { Image } from "astro:assets";
 // component imports
 import Buttons from "./Buttons.astro";
 
-const {
-  coverTitle,
-  description,
-  buttonsYes = true,
-  lines = true,
-} = Astro.props;
+interface Props {
+  coverTitle: string;
+  description: string;
+  buttonsYes?: boolean;
+}
+
+const { coverTitle, description, buttonsYes = true } = Astro.props;
 
 import coverImage from "../assets/index-hero.webp";
 ---
@@ -65,15 +66,13 @@ import coverImage from "../assets/index-hero.webp";
     }
 
     .cover {
-      position: relative;
-      overflow: hidden;
       width: min(100% - 2rem, 80em);
-      margin-inline: auto;
+      @apply relative overflow-hidden mx-auto;
     }
 
     .cover__text {
       padding: 5vh 3vw;
-      @apply flex-col justify-center gap-8;
+      @apply flex-col justify-center gap-4;
     }
 
     .cover__image {
@@ -82,7 +81,7 @@ import coverImage from "../assets/index-hero.webp";
 
     .cover__h1 {
       color: var(--clr-text-2);
-      font-size: clamp(2rem, calc(1.75rem + 2.5vw), 5rem);
+      font-size: clamp(3rem, calc(1.75rem + 2.5vw), 5rem);
       @apply lg:tracking-tight xl:tracking-tighter font-black w-fit;
     }
     .cover__p {

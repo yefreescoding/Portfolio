@@ -1,14 +1,14 @@
 ---
-// import layouts
+// layouts imports
 import MainLayout from "../Layout/MainLayout.astro";
 
-// import components
+// components imports
 import Cover from "../Components/Cover.astro";
 import ContactForm from "../Components/ContactForm.astro";
 import ProjectDisplay from "../Components/ProjectDisplay.astro";
-import SkillsSection from "../Components/SkillsSection.astro";
 import DivisionHr from "../Components/DivisionHr.astro";
 
+// data imports
 import { projects } from "../Data/projects";
 ---
 
@@ -16,11 +16,8 @@ import { projects } from "../Data/projects";
   <Cover
     coverTitle="Front End Developer"
     description="Desarrollador de software autodidacta. Aportando mi granito de arena para que la web siga siendo ese lugar curioso, extraño y lleno de oportunidades."
-    coverImage="/images/hero-images/index-hero.webp"
   />
   <DivisionHr />
-  <!--** SKILLS section **-->
-  <!--** PROJECTS section **-->
   <section
     id="projects"
     class="projects flex flex-col gap-[1rem]"
@@ -50,7 +47,7 @@ import { projects } from "../Data/projects";
       }
     </div>
   </section>
-  <SkillsSection />
+  <!-- <SkillsSection /> -->
   <ContactForm />
 </MainLayout>
 
