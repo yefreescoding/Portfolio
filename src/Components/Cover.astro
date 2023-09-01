@@ -1,17 +1,27 @@
 ---
-import Buttons from './Buttons.astro';
+// astro imports
+import { Image } from "astro:assets";
+
+// component imports
+import Buttons from "./Buttons.astro";
+
 const {
   coverTitle,
   description,
   buttonsYes = true,
   lines = true,
 } = Astro.props;
+
+import coverImage from "../assets/index-hero.webp";
 ---
 
 <section id="home" class="cover" aria-label="Portada de la pagina">
   <!--** LEFT SIDE, Desktop. BOTTOM SIDE, mobile **-->
-  <div class="relative cover__text">
-    <h1 class="cover__h1 font-extrabold">
+  <div class="cover__text">
+    <span class="text-regular lg:text-xl font-bold uppercase"
+      >Hola mundo, mi nombre es Yefree.</span
+    >
+    <h1 class="cover__h1">
       {coverTitle}
     </h1>
     <p class="cover__p">{description}</p>
@@ -43,8 +53,8 @@ const {
       }
     </div>
   </div>
-  <div class="relative cover__image grid place-items-center relative">
-    <slot />
+  <div class="cover__image">
+    <img src={coverImage.src} alt="Cover Image" width={50} height={50} />
   </div>
 
   <style>
@@ -54,110 +64,29 @@ const {
       display: flex;
     }
 
-    .cover__text,
-    .cover__image {
-      flex-basis: 25em;
-      flex-grow: 2;
-    }
-
     .cover {
-      flex-wrap: wrap;
+      position: relative;
       overflow: hidden;
       width: min(100% - 2rem, 80em);
       margin-inline: auto;
     }
-    .cover__image {
-      width: min(100%, 30rem);
-      aspect-ratio: 1;
-      object-fit: contain;
-    }
+
     .cover__text {
-      flex-flow: column;
-      justify-content: center;
-      gap: 2rem;
       padding: 5vh 3vw;
+      @apply flex-col justify-center gap-8;
     }
+
+    .cover__image {
+      @apply hidden lg:block absolute -right-[10rem] overflow-hidden;
+    }
+
     .cover__h1 {
       color: var(--clr-text-2);
-      font-size: clamp(2.3rem, calc(2.5rem + 4vw), 7rem);
+      font-size: clamp(2rem, calc(1.75rem + 2.5vw), 5rem);
+      @apply lg:tracking-tight xl:tracking-tighter font-black w-fit;
     }
-
-    .gridLine {
-      --background: #ffffff;
-      --color: var(--clr-text-1);
-      --height: 1px;
-      --width: 5px;
-      --fade-stop: 90%;
-      /* Bleed in or out from the container */
-      --offset: -100px;
-
-      z-index: -1;
-      position: absolute;
-      width: calc(100% + var(--offset));
-      height: var(--height);
-      left: calc(var(--offset) / 2 * -1);
-
-      background: linear-gradient(
-        to right,
-        var(--color),
-        var(--color) 50%,
-        transparent 0,
-        transparent
-      );
-      background-size: var(--width) var(--height);
-
-      /* Fade out the edges */
-      mask-composite: exclude;
-      -webkit-mask: linear-gradient(
-          to left,
-          var(--background) var(--fade-stop),
-          transparent
-        ),
-        linear-gradient(
-          to right,
-          var(--background) var(--fade-stop),
-          transparent
-        ),
-        linear-gradient(black, black);
-    }
-    .gridLine-col {
-      --background: #ffffff;
-      --color: var(--clr-text-1);
-      --height: 100%;
-      --width: 1px;
-      --fade-stop: 90%;
-      /* Bleed in or out from the container */
-      --offset: -100px;
-
-      z-index: -1;
-      position: absolute;
-      width: var(--width);
-      height: var(--height);
-      top: 0;
-      /* left: 30%; */
-
-      background: linear-gradient(
-        180deg,
-        var(--color),
-        var(--color) 50%,
-        transparent 0,
-        transparent
-      );
-      background-size: 1px 5px;
-
-      /* Fade out the edges */
-      mask-composite: exclude;
-      -webkit-mask: linear-gradient(
-          to top,
-          var(--background) var(--fade-stop),
-          transparent
-        ),
-        linear-gradient(
-          to bottom,
-          var(--background) var(--fade-stop),
-          transparent
-        ),
-        linear-gradient(black, black);
+    .cover__p {
+      width: min(100%, 50ch);
     }
   </style>
 </section>

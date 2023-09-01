@@ -1,29 +1,23 @@
 ---
 // import layouts
-import MainLayout from '../Layout/MainLayout.astro';
+import MainLayout from "../Layout/MainLayout.astro";
 
 // import components
-import Cover from '../Components/Cover.astro';
-import ContactForm from '../Components/ContactForm.astro';
-import ProjectDisplay from '../Components/ProjectDisplay.astro';
-import SkillsSection from '../Components/SkillsSection.astro';
-import DivisionHr from '../Components/DivisionHr.astro';
+import Cover from "../Components/Cover.astro";
+import ContactForm from "../Components/ContactForm.astro";
+import ProjectDisplay from "../Components/ProjectDisplay.astro";
+import SkillsSection from "../Components/SkillsSection.astro";
+import DivisionHr from "../Components/DivisionHr.astro";
 
-import { projects } from '../Data/projects';
+import { projects } from "../Data/projects";
 ---
 
 <MainLayout subtitle="HOME">
   <Cover
-    coverTitle="¡Hola mundo!"
-    description="Desarrollador de software autodidacta, especializado en front end. Aportando mi granito de arena para que la web siga siendo ese lugar curioso, extraño y lleno de oportunidades. "
+    coverTitle="Front End Developer"
+    description="Desarrollador de software autodidacta. Aportando mi granito de arena para que la web siga siendo ese lugar curioso, extraño y lleno de oportunidades."
     coverImage="/images/hero-images/index-hero.webp"
-  >
-    <img
-      class="rounded-full aspect-square object-cover mb-4"
-      src="/images/hero-images/index-hero.webp"
-      alt="Personal foto."
-    />
-  </Cover>
+  />
   <DivisionHr />
   <!--** SKILLS section **-->
   <!--** PROJECTS section **-->
@@ -71,7 +65,7 @@ import { projects } from '../Data/projects';
 
     &::after,
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       inset: 0;
       border: inherit;
