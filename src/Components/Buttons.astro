@@ -1,21 +1,30 @@
 ---
+interface Props {
+  link: string;
+  target?: string;
+  size?: string;
+  theme?: string;
+  isFilled?: boolean;
+  classes: string;
+  width?: string;
+}
+
 const {
-  link = '/',
-  target = '_blank',
-  size = 'md',
-  theme = 'clr-background-3',
+  link = "/",
+  target = "_blank",
+  size = "md",
+  theme = "clr-background-3",
   isFilled,
   classes,
-  width = 'fit',
+  width = "fit",
   ...rest
 } = Astro.props;
 
 const background = `var(--${theme})`;
-const foregroundColor = 'rgb(221 243 228)';
 ---
 
 <a
-  class:list={['btn_component', { filled: isFilled }, classes]}
+  class:list={["btn_component", { filled: isFilled }, classes]}
   href={link}
   target={target}
   data-size={size}
@@ -34,19 +43,19 @@ const foregroundColor = 'rgb(221 243 228)';
     transition: all 0.5s ease-in-out;
   }
 
-  .btn_component[data-size='sm'] {
+  .btn_component[data-size="sm"] {
     padding: 0.3rem;
   }
-  .btn_component[data-size='md'] {
+  .btn_component[data-size="md"] {
     padding: 0.5rem;
   }
-  .btn_component[data-size='lg'] {
+  .btn_component[data-size="lg"] {
     padding: 0.8rem;
   }
-  .btn_component[data-width='full'] {
+  .btn_component[data-width="full"] {
     width: 100%;
   }
-  .btn_component[data-width='fit'] {
+  .btn_component[data-width="fit"] {
     width: fit-content;
   }
 

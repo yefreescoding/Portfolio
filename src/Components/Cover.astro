@@ -17,7 +17,6 @@ import coverImage from "../assets/index-hero.webp";
 ---
 
 <section id="home" class="cover" aria-label="Portada de la pagina">
-  <!--** LEFT SIDE, Desktop. BOTTOM SIDE, mobile **-->
   <div class="cover__text">
     <span class="text-regular lg:text-xl font-bold uppercase"
       >Hola mundo, mi nombre es Yefree.</span
@@ -26,26 +25,26 @@ import coverImage from "../assets/index-hero.webp";
       {coverTitle}
     </h1>
     <p class="cover__p">{description}</p>
-    <div class="cover__div flex flex-col items-end lg:flex-row gap-4 my-[2rem]">
+    <div class="flex flex-col md:flex-row items-start gap-4 my-[2rem] md:w-fit">
       {
         buttonsYes && (
           <>
             <Buttons
-              width="fit"
-              link="mailto:yefree13santos@outlook.com"
+              width="full"
+              link="#contact"
               size="lg"
               classes="cover__links text-center"
-              isFilled
+              isFilled={true}
             >
               Contacta Conmigo ;)
             </Buttons>
             <Buttons
-              width="fit"
+              width="full"
               link="cv/YefreeCV2023.pdf"
               size="lg"
               classes="cover__links text-center"
               theme="clr-background-1"
-              isFilled
+              isFilled={true}
             >
               Curriculum PDF
             </Buttons>
@@ -57,35 +56,35 @@ import coverImage from "../assets/index-hero.webp";
   <div class="cover__image">
     <img src={coverImage.src} alt="Cover Image" width={50} height={50} />
   </div>
-
-  <style>
-    .cover,
-    .cover__text,
-    .cover__div {
-      display: flex;
-    }
-
-    .cover {
-      width: min(100% - 2rem, 80em);
-      @apply relative overflow-hidden mx-auto;
-    }
-
-    .cover__text {
-      padding: 5vh 3vw;
-      @apply flex-col justify-center gap-4;
-    }
-
-    .cover__image {
-      @apply hidden lg:block absolute -right-[10rem] overflow-hidden;
-    }
-
-    .cover__h1 {
-      color: var(--clr-text-2);
-      font-size: clamp(3rem, calc(1.75rem + 2.5vw), 5rem);
-      @apply lg:tracking-tight xl:tracking-tighter font-black w-fit;
-    }
-    .cover__p {
-      width: min(100%, 50ch);
-    }
-  </style>
 </section>
+
+<style>
+  .cover,
+  .cover__text,
+  .cover__div {
+    display: flex;
+  }
+
+  .cover {
+    width: min(100% - 2rem, 80em);
+    @apply relative overflow-hidden mx-auto;
+  }
+
+  .cover__text {
+    padding: 5vh 3vw;
+    @apply flex-col justify-center gap-4;
+  }
+
+  .cover__image {
+    @apply hidden lg:block absolute -right-[10rem] overflow-hidden;
+  }
+
+  .cover__h1 {
+    color: var(--clr-text-2);
+    font-size: clamp(3rem, calc(1.75rem + 2.5vw), 5rem);
+    @apply lg:tracking-tight xl:tracking-tighter font-black w-fit;
+  }
+  .cover__p {
+    width: min(100%, 50ch);
+  }
+</style>

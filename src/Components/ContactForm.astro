@@ -72,7 +72,6 @@ import Buttons from "./Buttons.astro";
         <textarea
           name="message"
           required
-          placeholder="Your Message*"
           class=""
           data-error="message"
           rows="4"
@@ -85,7 +84,7 @@ import Buttons from "./Buttons.astro";
         </div>
       </label>
       <button type="submit" class="contact__submit">Enviar</button>
-      <div id="result" class="mt-3 text-center"></div>
+      <div id="result" class="text-center"></div>
     </form>
   </div>
 </section>
@@ -113,7 +112,7 @@ import Buttons from "./Buttons.astro";
 
   .contact__text,
   .contact__form {
-    @apply flex flex-col gap-4 p-8;
+    @apply flex flex-col justify-center gap-4 p-8;
     color: var(--clr-text-1);
   }
 
@@ -122,7 +121,8 @@ import Buttons from "./Buttons.astro";
     width: min(100%, 80em);
     grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
     background-color: var(--clr-text-3);
-    border: 2px solid var(--clr-border-2);
+    border: var(--clr-border-2) 2px solid;
+    box-shadow: 6px 8px 0 var(--clr-border-2);
   }
 
   .contact {
@@ -138,11 +138,11 @@ import Buttons from "./Buttons.astro";
   textarea,
   .contact__submit {
     font-size: 1.1em;
+    font-weight: 600;
     border-radius: 10px;
-    padding: 0.8rem;
-    border: var(--clr-border-2) 2px solid;
+    padding: 1rem;
     background-color: var(--clr-background-2);
-    box-shadow: 3px 6px 0 var(--clr-border-2);
+    border: var(--clr-border-2) 2px solid;
   }
   .contact__submit {
     align-self: flex-end;
