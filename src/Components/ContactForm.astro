@@ -1,70 +1,202 @@
 ---
-import Buttons from './Buttons.astro';
+import Buttons from "./Buttons.astro";
 ---
 
 <section id="contact" class="contact">
   <div class="form_wrapper">
     <div class="contact__text">
-      <h2 class="contact__h2">Contacta conmigo</h2>
+      <h2 class="contact__h2 font-extrabold">Contacta conmigo</h2>
+      <p>¿Te ha gustado mi trabajo?</p>
       <p>
-        ¿Te ha gustado mi trabajo? Estoy abierto a nuevas oportunidades
-        laborales, me gustaria ser parte de un equipo de desarrolladores y dar
-        todo el valor que pueda. Estoy listo para lo nuevo y emocionante
-        Desafíos.
+        Estoy abierto a nuevas oportunidades laborales, me gustaria ser parte de
+        un equipo de desarrolladores y dar todo el valor que pueda.
       </p>
+      <p>Estoy listo para lo nuevo y emocionante Desafíos.</p>
     </div>
-    <form class="contact__form">
-      <input type="text" name="" placeholder="Your name*" required />
-      <input type="email" name="" placeholder="Your email*" required />
-      <input type="url" name="" placeholder="Your web page (If it exist)" />
-      <input type="text" name="" placeholder="How can I help?" required />
-      <Buttons
-        theme="clr-background-1"
-        width="fit"
-        size="lg"
-        classes="contact__submit"
-        isFilled
-      >
-        Enviar mensaje
-      </Buttons>
+    <form
+      action="https://api.web3forms.com/submit"
+      method="POST"
+      id="form"
+      class="contact__form"
+      novalidate
+    >
+      <input
+        type="hidden"
+        name="access_key"
+        value="fa7f8d69-6b06-450d-a5d6-51034a9d7706"
+      />
+      <!-- Create your free access key from https://web3forms.com/ -->
+      <label for="name">
+        <span class="sr-only">Name</span>
+        <input
+          type="text"
+          name="name"
+          placeholder="Your name*"
+          data-error="name"
+          required
+        />
+        <div
+          class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
+          data-error="name"
+        >
+          Enter a correct name...
+        </div>
+      </label>
+      <label for="email_address">
+        <span class="sr-only">Email Address</span>
+        <input
+          id="email_address"
+          type="email"
+          placeholder="Your email address*"
+          name="email"
+          data-error="email"
+          required
+        />
+        <div
+          class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
+          data-error="email"
+        >
+          Plese provide your email address...
+        </div>
+      </label>
+      <label for="website">
+        <span class="sr-only">Your Website</span>
+        <input
+          type="url"
+          name="website"
+          placeholder="Your web page (If it exist)"
+        />
+      </label>
+      <label for="message" class="">
+        <span class="sr-only">Tu mensaje</span>
+        <textarea
+          name="message"
+          required
+          placeholder="Your Message*"
+          class=""
+          data-error="message"
+          rows="4"
+          cols="50"></textarea>
+        <div
+          class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
+          data-error="message"
+        >
+          Please enter your message.
+        </div>
+      </label>
+      <button type="submit" class="contact__submit">Enviar</button>
+      <div id="result" class="mt-3 text-center"></div>
     </form>
   </div>
 </section>
 
 <style lang="scss" is:global>
+  .invalid-feedback,
+  .empty-feedback {
+    display: none;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+
+  .was-validated :placeholder-shown:invalid ~ .empty-feedback {
+    display: block;
+  }
+
+  .was-validated :not(:placeholder-shown):invalid ~ .invalid-feedback {
+    display: block;
+  }
+
+  .is-invalid,
+  .was-validated :invalid {
+    border-color: #dc3545;
+  }
+
   .contact__text,
   .contact__form {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    gap: 1rem;
+    @apply flex flex-col gap-4 p-8;
     color: var(--clr-text-1);
   }
 
   .form_wrapper {
-    margin: 0 auto;
+    @apply grid gap-8 mx-auto;
     width: min(100%, 80em);
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
     background-color: var(--clr-text-3);
     border: 2px solid var(--clr-border-2);
-    gap: 2rem;
   }
 
   .contact {
+    margin: 10vh 0;
     background-color: var(--clr-accent);
-    margin: 10vh auto;
   }
 
-  .contact__form input {
-    border-radius: 10px;
-    background-color: var(--clr-background-2);
-    border: var(--clr-border-2) 2px solid;
-    box-shadow: 3px 6px 0 var(--clr-border-2);
-    padding: 0.8rem;
+  .contact__form label {
+    @apply flex flex-col;
+  }
+
+  :is(.contact__form) input,
+  textarea,
+  .contact__submit {
     font-size: 1.1em;
+    border-radius: 10px;
+    padding: 0.8rem;
+    border: var(--clr-border-2) 2px solid;
+    background-color: var(--clr-background-2);
+    box-shadow: 3px 6px 0 var(--clr-border-2);
   }
   .contact__submit {
     align-self: flex-end;
+    background-color: var(--clr-accent);
   }
 </style>
+
+<script is:inline>
+  const form = document.getElementById("form");
+  const result = document.getElementById("result");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    form.classList.add("was-validated");
+    if (!form.checkValidity()) {
+      form.querySelectorAll(":invalid")[0].focus();
+      return;
+    }
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    result.innerHTML = "Enviando...";
+
+    console.log(json);
+
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    })
+      .then(async (response) => {
+        let json = await response.json();
+        if (response.status == 200) {
+          result.innerHTML = json.message;
+        } else {
+          console.log(response);
+          result.classList.add("text-red-500");
+          result.innerHTML = json.message;
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+        result.innerHTML = "UH UH... parece que algo no funciona.";
+      })
+      .then(function () {
+        form.reset();
+        form.classList.remove("was-validated");
+        setTimeout(() => {
+          result.style.display = "none";
+        }, 5000);
+      });
+  });
+</script>
