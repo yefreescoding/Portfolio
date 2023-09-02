@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 
 //import components
 import Nav from "../Components/Nav.astro";
+import MobileNav from "../Components/MobileNav.astro";
 
 // images
 const subjectImage = "/images/hero-images/Subject.jpg";
@@ -34,19 +35,21 @@ const iconVerify = "/images/icons/verify.png";
       loading="lazy"
     />
   </div>
-  <Nav />
-  <button
-    id="toggle-mobile-menu"
-    class="nav__mobile"
-    aria-label="Boton despliega menu moviles"
-  >
-    <img
-      class="menu-img"
-      data-dark="true"
-      src="/images/icons/more.avif"
-      alt="icon-menu"
-    />
-  </button>
+  <MobileNav>
+    <Nav />
+    <button
+      id="mobile-menu"
+      class="nav__mobile"
+      aria-label="Boton despliega menu moviles"
+    >
+      <img
+        class="menu-img"
+        data-dark="true"
+        src="/images/icons/more.avif"
+        alt="icon-menu"
+      />
+    </button>
+  </MobileNav>
 </header>
 
 <style lang="scss" is:global>
@@ -98,7 +101,3 @@ const iconVerify = "/images/icons/verify.png";
     }
   }
 </style>
-
-<script>
-  import "../utils/utils";
-</script>
