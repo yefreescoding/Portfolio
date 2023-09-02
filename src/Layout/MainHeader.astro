@@ -1,15 +1,16 @@
 ---
+// Astro importd
 import { Image } from "astro:assets";
 
 //import components
 import Nav from "../Components/Nav.astro";
 
+// images
 const subjectImage = "/images/hero-images/Subject.jpg";
 const iconVerify = "/images/icons/verify.png";
 ---
 
 <header class="header" aria-label="Cabecera de la pagina">
-  <!--* LOGO contenedor *-->
   <div class="header__home" aria-label="Logo de la pagina">
     <Image
       src={subjectImage}
@@ -97,3 +98,7 @@ const iconVerify = "/images/icons/verify.png";
     }
   }
 </style>
+
+<script>
+  import "../utils/utils";
+</script>

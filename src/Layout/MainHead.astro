@@ -1,14 +1,14 @@
 ---
 // import Components
-import SiteMeta from '../Components/SiteMeta.astro';
+import SiteMeta from "../Components/SiteMeta.astro";
 
 const {
-  title = 'Yefree Valdez',
+  title = "Yefree Valdez",
   subtitle,
-  description = 'Yefree web developer portfolio',
-  url = 'https://portfolioyefreevaldez.vercel.app',
-  image = '/images/screenshots/cover.png',
-  author = 'Yefree De Los Santos',
+  description = "Yefree web developer portfolio",
+  url = "https://portfolioyefreevaldez.vercel.app",
+  image = "/images/screenshots/cover.png",
+  author = "Yefree De Los Santos",
 } = Astro.props;
 ---
 
@@ -22,7 +22,7 @@ const {
     subtitle={subtitle}
     description={description.substring(0, 100)}
     url={Astro.site
-      ? `${Astro.site}/${title.toLowerCase().replaceAll(' ', '-')}`
+      ? `${Astro.site}/${title.toLowerCase().replaceAll(" ", "-")}`
       : `https://portfolioyefreevaldez.vercel.app`}
     image={image}
     author={author}

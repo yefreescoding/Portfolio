@@ -113,6 +113,7 @@ svg {
   max-width: 100%;
   width: 100%;
   display: block;
+  content-visibility: auto;
 }
 
 ul {
