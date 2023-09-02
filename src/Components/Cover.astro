@@ -25,7 +25,9 @@ import coverImage from "../assets/index-hero.webp";
       {coverTitle}
     </h1>
     <p class="cover__p">{description}</p>
-    <div class="flex flex-col md:flex-row items-start gap-4 my-[2rem] md:w-fit">
+    <div
+      class="flex flex-col md:flex-row items-start gap-4 my-[2rem] md:w-[20em]"
+    >
       {
         buttonsYes && (
           <>
@@ -36,7 +38,7 @@ import coverImage from "../assets/index-hero.webp";
               classes="cover__links text-center"
               isFilled={true}
             >
-              Contacta Conmigo ;)
+              Conectemos ; )
             </Buttons>
             <Buttons
               width="full"
@@ -46,7 +48,7 @@ import coverImage from "../assets/index-hero.webp";
               theme="clr-background-1"
               isFilled={true}
             >
-              Curriculum PDF
+              Curriculum
             </Buttons>
           </>
         )
