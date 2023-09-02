@@ -83,6 +83,7 @@ const iconVerify = "/images/icons/verify.png";
   }
 
   .nav__mobile {
+    isolation: isolate;
     width: 3rem;
     border-radius: 0.3rem;
     padding: 5px;
@@ -91,6 +92,7 @@ const iconVerify = "/images/icons/verify.png";
     background-color: transparent;
     transition: all 0.17s linear;
     img {
+      z-index: -1;
       width: 100%;
       &[data-dark="false"] {
         filter: invert(100%);
