@@ -63,7 +63,7 @@
       class=""
       data-error="message"
       rows="4"
-      cols="50"></textarea>
+      cols="10"></textarea>
     <div
       class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
       data-error="message"
@@ -95,10 +95,14 @@
   .was-validated :invalid {
     border-color: #dc3545;
   }
+
+  .contact__form label {
+    @apply flex flex-col;
+  }
   :is(.contact__form) input,
   textarea,
   .contact__submit {
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 600;
     border-radius: 10px;
     padding: 1rem;

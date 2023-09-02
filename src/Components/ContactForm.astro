@@ -21,25 +21,21 @@ import Form from "./Form.astro";
 <style lang="scss" is:global>
   .contact__text,
   .contact__form {
-    @apply flex flex-col justify-center gap-4 p-8;
+    @apply flex flex-col justify-start gap-4 p-8;
     color: var(--clr-text-1);
   }
 
   .form_wrapper {
-    @apply grid gap-8 mx-auto;
     width: min(100%, 80em);
-    grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(25rem, 100%), 1fr));
     background-color: var(--clr-text-3);
     border: var(--clr-border-2) 2px solid;
+    @apply grid gap-4 mx-auto;
     box-shadow: 6px 8px 0 var(--clr-border-2);
   }
 
   .contact {
     margin: 10vh 0;
     background-color: var(--clr-accent);
-  }
-
-  .contact__form label {
-    @apply flex flex-col;
   }
 </style>
