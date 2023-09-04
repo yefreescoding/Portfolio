@@ -18,11 +18,7 @@ import { projects } from "../Data/projects";
     description="Desarrollador de software autodidacta. Aportando mi granito de arena para que la web siga siendo ese lugar curioso, extraño y lleno de oportunidades."
   />
   <DivisionHr />
-  <section
-    id="projects"
-    class="projects flex flex-col gap-[1rem]"
-    aria-label="Proyectos"
-  >
+  <section id="projects" class="projects" aria-label="Proyectos">
     <header class="flex flex-col gap-4 mb-[10vh]">
       <h2 class="projects__h2">
         Mi <span class="text-green-600">experiencia</span>
@@ -33,12 +29,11 @@ import { projects } from "../Data/projects";
         trabajado, ya sea de manera indivudual o en equipo.
       </p>
     </header>
-    <div class="grid md:grid-cols-2 grid-rows-[50em] gap-8">
+    <div class="projects__container">
       {
         projects.map((project) => (
           <ProjectDisplay
             name={project.name}
-            description={project.description}
             link={project.link}
             github={project.github}
             imagesrc={project.imagesrc}
@@ -51,6 +46,20 @@ import { projects } from "../Data/projects";
 </MainLayout>
 
 <style lang="scss" is:global>
+  .projects {
+    width: min(100% - 2rem, 80em);
+    @apply gap-[1rem] mx-auto;
+
+    &__container {
+      --column-width: 20em;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, var(--column-width)), 1fr)
+      );
+      @apply grid gap-8;
+    }
+  }
+
   .projects__p {
     position: relative;
     width: fit-content;
@@ -78,9 +87,5 @@ import { projects } from "../Data/projects";
       );
       background-color: var(--clr-text-2);
     }
-  }
-  .projects {
-    width: min(100% - 2rem, 80em);
-    margin-inline: auto;
   }
 </style>

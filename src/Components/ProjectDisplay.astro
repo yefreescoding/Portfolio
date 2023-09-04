@@ -1,12 +1,12 @@
 ---
 // import components
-import ProjectCard from '../Components/ProjectCard.astro';
-import Buttons from './Buttons.astro';
+import ProjectCard from "../Components/ProjectCard.astro";
+import Buttons from "./Buttons.astro";
 
 // Props
 interface Props {
   name: string;
-  description: string;
+  description?: string;
   link: string;
   github: string;
   imagesrc: string;
@@ -15,20 +15,20 @@ interface Props {
 const { name, description, link, github, imagesrc } = Astro.props as Props;
 ---
 
-<div id="project-display" class="project flex flex-col gap-8">
+<article id="project-display" class="project flex flex-col gap-4">
   <div class="">
     <ProjectCard imagesrc={imagesrc} />
   </div>
-  <article class="proj_article basis-[30em] grow flex flex-col gap-4">
-    <h3 id="proj-title">{name}</h3>
+  <div class="proj_article flex flex-col">
+    <h3 id="proj-title" class="font-extrabold text-center">{name}</h3>
     <p id="proj-desc">{description}</p>
-    <div class="w-full flex flex-col gap-4 my-[2rem] lg:flex-row text-center">
-      <Buttons width="fit" link={link} size="lg" classes="self-end" isFilled>
+    <div class="w-full flex gap-4 my-[2rem] text-center">
+      <Buttons width="full" link={link} size="lg" classes="self-end" isFilled>
         Visitar web
       </Buttons>
-      <Buttons width="fit" link={github} size="lg" classes="self-end">
+      <Buttons width="full" link={github} size="lg" classes="self-end">
         Github
       </Buttons>
     </div>
-  </article>
-</div>
+  </div>
+</article>

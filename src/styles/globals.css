@@ -165,8 +165,3 @@ p {
   border: 2px solid var(--secondary-color);
   margin: 15vh auto;
 }
-
-.projects,
-.contact {
-  padding: 10vh 0;
-}
