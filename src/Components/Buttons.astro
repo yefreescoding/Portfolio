@@ -1,0 +1,72 @@
+---
+interface Props {
+  link: string;
+  target?: string;
+  size?: string;
+  theme?: string;
+  isFilled?: boolean;
+  classes?: string;
+  width?: string;
+}
+
+const {
+  link = "/",
+  target = "_blank",
+  size = "md",
+  theme = "clr-background-3",
+  isFilled,
+  classes,
+  width = "fit",
+  ...rest
+} = Astro.props;
+
+const background = `var(--${theme})`;
+---
+
+<a
+  class:list={["btn_component", { filled: isFilled }, classes]}
+  href={link}
+  target={target}
+  data-size={size}
+  data-width={width}
+  {...rest}
+>
+  <slot />
+</a>
+<style define:vars={{ background }}>
+  .btn_component {
+    --shadow-length: 3px;
+    font-weight: bold;
+    border-radius: 0.3rem;
+    border: 2px solid var(--clr-border-2);
+    box-shadow: var(--shadow-length) var(--shadow-length) 0 var(--clr-border-2);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .btn_component[data-size="sm"] {
+    padding: 0.3rem;
+  }
+  .btn_component[data-size="md"] {
+    padding: 0.5rem;
+  }
+  .btn_component[data-size="lg"] {
+    padding: 0.8rem;
+  }
+  .btn_component[data-width="full"] {
+    width: 100%;
+  }
+  .btn_component[data-width="fit"] {
+    width: fit-content;
+  }
+
+  .btn_component:is(:hover, :active) {
+    transition: all 0.2s ease-in-out;
+    transform: translate(-3px, -3px);
+    box-shadow: calc(var(--shadow-length) * 2) calc(var(--shadow-length) * 2) 0
+      var(--clr-border-2);
+  }
+
+  .btn_component.filled {
+    background-color: var(--background);
+  }
+</style>

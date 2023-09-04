@@ -1,0 +1,41 @@
+---
+// componen imports
+import Form from "./Form.astro";
+---
+
+<section id="contact" class="contact">
+  <div class="form_wrapper">
+    <div class="contact__text">
+      <p><strong>¿Te ha gustado mi trabajo?</strong></p>
+      <h2 class="contact__h2 font-extrabold">Contacta conmigo</h2>
+      <p>
+        Estoy abierto a nuevas oportunidades laborales, me gustaria ser parte de
+        un equipo de desarrolladores y dar todo el valor que pueda.
+      </p>
+      <p>Estoy listo para nuevos y emocionantes desafíos.</p>
+    </div>
+    <Form />
+  </div>
+</section>
+
+<style lang="scss" is:global>
+  .contact__text,
+  .contact__form {
+    @apply flex flex-col justify-start gap-4 p-8;
+    color: var(--clr-text-1);
+  }
+
+  .form_wrapper {
+    width: min(100%, 80em);
+    grid-template-columns: repeat(auto-fit, minmax(min(25rem, 100%), 1fr));
+    background-color: var(--clr-text-3);
+    border: var(--clr-border-2) 2px solid;
+    @apply grid gap-4 mx-auto;
+    box-shadow: 6px 8px 0 var(--clr-border-2);
+  }
+
+  .contact {
+    margin: 10vh 0;
+    background-color: var(--clr-accent);
+  }
+</style>

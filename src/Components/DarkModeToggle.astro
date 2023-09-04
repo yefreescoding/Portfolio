@@ -1,0 +1,94 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<!-- <label
+  class="inline-flex items-center cursor-pointer outline outline-3 outline-offset-[2px] rounded-lg pr-2 hover:outline-offset-[5px] transition-all"
+>
+  <input
+    id="dark-light"
+    type="checkbox"
+    value=""
+    class="sr-only peer"
+    data-theme="light"
+  />
+  <div
+    class="w-14 h-7 bg-gray-200 peer-focus:outline-none rounded-lg peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[4px] after:bg-white after:border-gray-300 after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-violet-600"
+  >
+  </div>
+  <span id="mode" class="ml-3 nav__links">Mode</span>
+</label> -->
+<div class="relative inline-flex items-center isolate">
+  <button
+    id="dark-light"
+    type="button"
+    data-theme="light"
+    aria-label="Toggle entre modo noche y modo luz"
+    class="w-6 h-6 aspect-square"
+  >
+    <Icon class="h-6" name="bi:moon-fill" />
+  </button>
+  <span id="mode" class="nav__links"> Mode</span>
+</div>
+
+<style>
+  span {
+    z-index: -1;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 240ms;
+  }
+  div:hover span {
+    opacity: 1;
+    transform: translateX(0);
+  }
+</style>
+
+<script>
+  // Dark Light mode toggle
+  const darkModeBtn = document.querySelector("#dark-light");
+  const darkModeBtnText = document.querySelector("#mode");
+
+  // Remove transitions for a better ux
+  const css = document.createElement("style");
+  css.type = "text/css";
+  css.appendChild(
+    document.createTextNode(
+      `* {
+       -webkit-transition: none !important;
+       -moz-transition: none !important;
+       -o-transition: none !important;
+       -ms-transition: none !important;
+       transition: none !important;
+    }`
+    )
+  );
+  document.head.appendChild(css);
+
+  // Save the user dark mode preferences in localStorage
+  const theme = localStorage.getItem("theme");
+  if (theme === "dark") {
+    darkModeBtn.setAttribute("data-theme", "dark");
+    darkModeBtnText.textContent = "dark";
+    document.body.classList.add("dark-mode");
+  }
+
+  darkModeBtn.addEventListener("click", () => {
+    const mode = darkModeBtn.getAttribute("data-theme");
+
+    if (mode === "light") {
+      darkModeBtn.setAttribute("data-theme", "dark");
+      darkModeBtnText.textContent = "light";
+      document.body.classList.add("dark-mode");
+      localStorage.setItem("theme", "dark");
+    } else if (mode === "dark") {
+      darkModeBtn.setAttribute("data-theme", "light");
+      darkModeBtnText.textContent = "dark";
+      document.body.classList.remove("dark-mode");
+      localStorage.setItem("theme", "light");
+    }
+  });
+
+  const _ = window.getComputedStyle(css).opacity;
+  document.head.removeChild(css);
+</script>

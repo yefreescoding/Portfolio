@@ -1,0 +1,93 @@
+---
+// astro imports
+import { Image } from "astro:assets";
+
+// component imports
+import Buttons from "./Buttons.astro";
+
+interface Props {
+  coverTitle: string;
+  description: string;
+  buttonsYes?: boolean;
+}
+
+const { coverTitle, description, buttonsYes = true } = Astro.props;
+
+import coverImage from "../assets/index-hero.webp";
+---
+
+<section id="home" class="cover" aria-label="Portada de la pagina">
+  <div class="cover__text">
+    <span class="text-regular lg:text-xl font-bold uppercase"
+      >Hola mundo, mi nombre es Yefree.</span
+    >
+    <h1 class="cover__h1">
+      {coverTitle}
+    </h1>
+    <p class="cover__p">{description}</p>
+    <div
+      class="flex flex-col md:flex-row items-start gap-4 my-[2rem] md:w-[20em]"
+    >
+      {
+        buttonsYes && (
+          <>
+            <Buttons
+              width="full"
+              link="#contact"
+              size="lg"
+              classes="cover__links text-center"
+              isFilled={true}
+              target="_self"
+            >
+              Conectemos ; )
+            </Buttons>
+            <Buttons
+              width="full"
+              link="cv/YefreeCV2023.pdf"
+              size="lg"
+              classes="cover__links text-center"
+              theme="clr-background-1"
+              isFilled={true}
+            >
+              Curriculum
+            </Buttons>
+          </>
+        )
+      }
+    </div>
+  </div>
+  <div class="cover__image">
+    <img src={coverImage.src} alt="Cover Image" width={50} height={50} />
+  </div>
+</section>
+
+<style>
+  .cover,
+  .cover__text,
+  .cover__div {
+    display: flex;
+  }
+
+  .cover {
+    width: min(100% - 2rem, 80em);
+    @apply relative overflow-hidden mx-auto;
+  }
+
+  .cover__text {
+    padding: 5vh 3vw;
+    @apply flex-col justify-center gap-4;
+  }
+
+  .cover__image {
+    @apply hidden lg:block absolute -right-[10rem] overflow-hidden;
+  }
+
+  .cover__h1 {
+    color: var(--clr-text-2);
+    font-size: clamp(3rem, calc(1.75rem + 2.5vw), 5rem);
+    @apply lg:tracking-tight xl:tracking-tighter font-black w-fit;
+  }
+  .cover__p {
+    width: min(100%, 50ch);
+  }
+</style>

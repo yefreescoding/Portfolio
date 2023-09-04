@@ -1,0 +1,34 @@
+---
+// import components
+import ProjectCard from "../Components/ProjectCard.astro";
+import Buttons from "./Buttons.astro";
+
+// Props
+interface Props {
+  name: string;
+  description?: string;
+  link: string;
+  github: string;
+  imagesrc: string;
+}
+
+const { name, description, link, github, imagesrc } = Astro.props as Props;
+---
+
+<article id="project-display" class="project flex flex-col gap-4">
+  <div class="">
+    <ProjectCard imagesrc={imagesrc} />
+  </div>
+  <div class="proj_article flex flex-col">
+    <h3 id="proj-title" class="font-extrabold text-center">{name}</h3>
+    <p id="proj-desc">{description}</p>
+    <div class="w-full flex gap-4 my-[2rem] text-center">
+      <Buttons width="full" link={link} size="lg" classes="self-end" isFilled>
+        Visitar web
+      </Buttons>
+      <Buttons width="full" link={github} size="lg" classes="self-end">
+        Github
+      </Buttons>
+    </div>
+  </div>
+</article>

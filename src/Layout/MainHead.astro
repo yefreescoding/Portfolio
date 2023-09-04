@@ -1,0 +1,31 @@
+---
+// import Components
+import SiteMeta from "../Components/SiteMeta.astro";
+
+const {
+  title = "Yefree Valdez",
+  subtitle,
+  description = "Yefree web developer portfolio",
+  url = "https://portfolioyefreevaldez.vercel.app",
+  image = "/images/screenshots/cover.png",
+  author = "Yefree De Los Santos",
+} = Astro.props;
+---
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content={Astro.generator} />
+  <SiteMeta
+    title={title}
+    subtitle={subtitle}
+    description={description.substring(0, 100)}
+    url={Astro.site
+      ? `${Astro.site}/${title.toLowerCase().replaceAll(" ", "-")}`
+      : `https://portfolioyefreevaldez.vercel.app`}
+    image={image}
+    author={author}
+  />
+  <!-- Google Fonts import -->
+</head>
