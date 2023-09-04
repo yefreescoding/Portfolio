@@ -38,7 +38,7 @@ import DarkModeToggle from "../Components/DarkModeToggle.astro";
   @media (width < 39.998em) {
     .nav {
       position: fixed;
-      inset: 6rem 1rem auto 1rem;
+      inset: 6rem 1.1rem auto 1.1rem;
       background-color: var(--clr-text-3);
       border: 2px solid var(--clr-border-2);
       border-radius: 2rem;
@@ -57,11 +57,9 @@ import DarkModeToggle from "../Components/DarkModeToggle.astro";
     }
     .nav__links {
       text-align: left;
-      font-size: 2.5rem;
-      border: 3px transparent solid;
-      transition: all 0.2s linear;
     }
   }
+
   .nav[data-visible="true"] {
     transform: translateX(0);
   }
@@ -70,6 +68,7 @@ import DarkModeToggle from "../Components/DarkModeToggle.astro";
     position: relative;
   }
   .nav__links {
+    font-size: clamp(1.3rem, calc(1rem + 2vw), 1.5rem);
     color: var(--clr-text-1);
     text-align: center;
     border: 3px transparent solid;
