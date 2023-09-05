@@ -6,40 +6,30 @@ const subjectImage = "/images/hero-images/Subject.jpg";
 const { title } = Astro.props;
 ---
 
-<article>
+<article class="flex gap-4 border-y border-gray-300 p-6">
   <aside>
     <Image
       src={subjectImage}
       alt="Mi foto"
       width="10"
       height="10"
-      class="w-12 h-12 rounded-full shadow-sm object-cover"
+      class="w-16 aspect-square rounded-full shadow-sm object-cover"
       decoding="async"
       loading="lazy"
     />
-    <!-- <a href="/" class="nav__links" aria-label="Link para vlver al inicio">
-      yefree Valdez</a
-    >
-    <Image
-      src={iconVerify}
-      alt="Icon twitter"
-      width="10"
-      height="10"
-      class="w-6 h-6 rounded-full shadow-sm object-cover"
-      decoding="async"
-      loading="lazy"
-    /> -->
   </aside>
   <div>
-    <div>
-      <div>
-        <h3>YefreeCodes</h3>
-        <span> Sep 5</span>
+    <div class="flex items-center justify-between mb-4">
+      <div class="flex gap-2 items-center">
+        <h3 class="text-base font-bold">YefreeCodes</h3>
+        <span>• Sep 5</span>
       </div>
-      <button role="button">•••</button>
+      <button
+        role="button"
+        class="w-8 rounded-full aspect-square hover:bg-slate-100/50 transition-all"
+        >•••</button
+      >
     </div>
-    <div>
-      <slot />
-    </div>
+    <slot />
   </div>
 </article>

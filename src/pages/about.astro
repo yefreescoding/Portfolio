@@ -20,11 +20,8 @@ import CardAboutMe from "../Components/CardAboutMe.astro";
 ---
 
 <MainLayout subtitle="About">
-  <section id="about" class="section_about">
-    <header
-      aria-label="Cabecera sobre mi"
-      class="pb-8 mb-8 border-b border-gray-300"
-    >
+  <section id="about" class="section_about border-x border-gray-200">
+    <header aria-label="Cabecera sobre mi" class="mb-8 p-6">
       <div class="flex justify-between my-4">
         <Image
           src={subjectImage}
@@ -55,11 +52,11 @@ import CardAboutMe from "../Components/CardAboutMe.astro";
           especializarse en front end en 2023.
         </p>
         <div class="flex gap-4">
-          <span class="flex items-center gap-4 text-base">
+          <span class="flex items-center gap-2 text-base">
             <Icon class="w-6 h-6" name="mdi:link-variant" />
-            <a href="">Links</a>
+            <a href="/" class="text-blue-400">Links</a>
           </span>
-          <p class="flex items-center gap-4 text-base">
+          <p class="flex items-center gap-2 text-base">
             <Icon class="w-6 h-6" name="mdi:calendar-month-outline" />
             13 de Enero de 2023
           </p>
@@ -72,24 +69,19 @@ import CardAboutMe from "../Components/CardAboutMe.astro";
     </header>
     <div aria-label="Cuerpo sobre mi">
       <CardAboutMe>
-        <p>
-          He aprendido un skill que me servira para toda la vida, de eso estoy
-          muy seguro.
-        </p>
-        <p>
-          Ya ire pensando que cosas poner aqui... mientras tanto nos podemos
-          entretener con este divertido Gif.
-        </p>
-        <iframe
-          src="https://giphy.com/embed/zzALYeLqMLDa6PEV2C"
-          width="100%"
-          height="100%"
-          class="giphy-embed"></iframe><p>
-          <a
-            href="https://giphy.com/gifs/gif-artist-g-foodieg-zzALYeLqMLDa6PEV2C"
-            >via GIPHY</a
-          >
-        </p>
+        <div class="grid grid-flow-row gap-4">
+          <p>
+            He aprendido un skill que me servira para toda la vida, de eso estoy
+            muy seguro.
+          </p>
+          <p>
+            Ya ire pensando que cosas poner aqui... mientras tanto nos podemos
+            entretener con este divertido Gif.
+          </p>
+          <iframe
+            src="https://giphy.com/embed/zzALYeLqMLDa6PEV2C"
+            class="w-full aspect-square rounded-2xl"></iframe><p></p>
+        </div>
       </CardAboutMe>
     </div>
   </section>
@@ -98,9 +90,9 @@ import CardAboutMe from "../Components/CardAboutMe.astro";
 
 <style lang="scss" is:global>
   .section_about {
-    width: min(100% - 2rem, 70em);
+    width: min(100% - 2rem, 55em);
     margin-inline: auto;
-    padding: 1rem;
+    // padding: 1rem;
   }
 
   /* CSS */
