@@ -8,177 +8,123 @@ import DivisionHr from "../Components/DivisionHr.astro";
 
 // import data
 import aboutMe from "../Data/aboutMeData";
+import CardAboutMe from "../Components/CardAboutMe.astro";
 ---
 
 <MainLayout subtitle="About">
-  <Cover
-    coverTitle="Yefree Valdez"
-    description="Conoce un poco mas sobre mi, experiencia, habilidades y aficiones. Quien soy dentro y fuera del desarollo web."
-    buttonsYes={false}
-  >
-    <img
-      class="w-[80%] rounded-full aspect-square object-cover mb-4 shadow-black z-10"
-      src="/images/hero-images/Subject.jpg"
-      alt="Personal foto."
-    />
-  </Cover>
-
-  <section id="about" class="section-about">
-    <article class="section-about__article">
-      {aboutMe.map((p) => <p>{p.para}</p>)}
-    </article>
-    <div class="section-about__div">
-      <article class="section-about__article">
-        <h2 class="section-about__h3">Tecnologias</h2>
+  <section id="about" class="section_about">
+    <header aria-label="Cabecera sobre mi" class="">
+      <div>
+        <img src="" alt="" />
+        <button class="twitter_btn" type="button">Twitter</button>
+      </div>
+      <div>
+        <h1>Yefree Valdez</h1>
         <p>
-          Como desarrollador de paginas y aplicaiones web, puedo decir que
-          trabajo continuamente los lenguajes fundamentales HTML, CSS y
-          JavaScript. Tambien tengo entendimiento basico de PHP y, cracion,
-          administracion y modificacion de bases de datos MySQL.
+          Desarrollador de software que ha decidido escoger el camino "dificil":
+          especializarse en front end en 2023.
+        </p>
+        <div>
+          <p>
+            <img src="" alt="person icon" />
+            Followers
+          </p>
+          <p>
+            <img src="" alt="birhtday icon" />
+            13 de Enero de 2023
+          </p>
+          <span>
+            <img src="" alt="link icon" />
+            <link rel="stylesheet" href="" />
+          </span>
+        </div>
+      </div>
+    </header>
+    <div aria-label="Cuerpo sobre mi">
+      <CardAboutMe>
+        <p>
+          He aprendido un skill que me servira para toda la vida, de eso estoy
+          muy seguro.
         </p>
         <p>
-          Las herramientas que uilizo para que mi trabajo sea mas rapido,
-          efectivo y eficaz, que me ayudadan a colaborar en equipo. Herramientas
-          como git, npm, Gulp, NodeJS, ViteJS y nvx.
+          Ya ire pensando que cosas poner aqui... mientras tanto nos podemos
+          entretener con este divertido Gif.
         </p>
-        <p>
-          Actualmente me encuentro desarrollando las mayoria de mis proyectos
-          utilizando la libreria de ReactJS y con la ayuda de frameworks como
-          NextJS y Astro.
+        <iframe
+          src="https://giphy.com/embed/zzALYeLqMLDa6PEV2C"
+          width="480"
+          height="480"
+          class="giphy-embed"></iframe><p>
+          <a
+            href="https://giphy.com/gifs/gif-artist-g-foodieg-zzALYeLqMLDa6PEV2C"
+            >via GIPHY</a
+          >
         </p>
-      </article>
-      <article class="section-about__article">
-        <h2 class="section-about__h3">Objetivos</h2>
-        <p>
-          Mis metas las tengo bastante claras. Poder dedicarme de manera
-          profesional a la creacion de software para agragar valor a la vida de
-          las personas. Poder formar parte de un equipo, un grupo o un
-          movimiento creo que es algo que me llenaria bastante.
-        </p>
-      </article>
+      </CardAboutMe>
     </div>
   </section>
-  <DivisionHr bottomText={false} />
-  <Cover
-    coverTitle="¿Como puedo ayudarte?"
-    description="Gracias a mis habilidades y conocimientos recién adquiridos para ayudar a las empresas a alcanzar sus metas y ofrecer experiencias en línea excepcionales. A través de mi formación académica y pasión por el desarrollo web, estoy listo para aportar valor a tu empresa y contribuir a su éxito en el mundo digital."
-    lines={false}
-  >
-    <ul class="flex flex-col gap-8">
-      <li class="flex items-start gap-4">
-        <img
-          class="w-[5rem] aspect-square object-cover"
-          src="/images/hero-images/web-dev-bg.avif"
-          alt=""
-        />
-        <div>
-          <h4 class="text-md">
-            Desarrollo de sitios web funcionales y atractivos
-          </h4>
-          <p class="text-sm">
-            Como desarrollador front-end, puedo crear sitios web que no solo
-            sean visualmente atractivos, sino también funcionales y fáciles de
-            usar. Utilizo las últimas tecnologías y prácticas recomendadas para
-            garantizar una experiencia de usuario óptima y una navegación
-            intuitiva.
-          </p>
-        </div>
-      </li>
-      <li class="flex items-start gap-4">
-        <img
-          class="w-[5rem] aspect-square object-cover"
-          src="/images/icons/performance.avif"
-          alt=""
-        />
-        <div>
-          <h4 class="text-md">Optimización de rendimiento y velocidad</h4>
-          <p class="text-sm">
-            La velocidad de carga y el rendimiento son aspectos clave para el
-            éxito de un sitio web. Implemento prácticas de optimización de
-            código y utilizo herramientas para maximizar la velocidad y el
-            rendimiento de los sitios web, lo que mejora la experiencia del
-            usuario y ayuda a retener a los visitantes.
-          </p>
-        </div>
-      </li>
-      <li class="flex items-start gap-4">
-        <img
-          class="w-[5rem] aspect-square object-cover"
-          src="/images/icons/team-work.avif"
-          alt=""
-        />
-        <div>
-          <h4 class="text-md">Colaboración y comunicación efectiva:</h4>
-          <p class="text-sm">
-            Valoro la colaboración y la comunicación efectiva con los miembros
-            del equipo y los interesados en el proyecto. Estoy dispuesto a
-            escuchar y comprender los requisitos y objetivos específicos de la
-            empresa para entregar soluciones alineadas con las expectativas y el
-            enfoque del negocio.
-          </p>
-        </div>
-      </li>
-      <li class="flex items-start gap-4">
-        <img
-          class="w-[5rem] aspect-square object-cover"
-          src="/images/icons/test.avif"
-          alt=""
-        />
-        <div>
-          <h4 class="text-md">Aprendizaje y mejora continua:</h4>
-          <p class="text-sm">
-            Como recién graduado, tengo una mentalidad de aprendizaje constante
-            y estoy entusiasmado por mantenerme actualizado con las últimas
-            tendencias y tecnologías en el campo del desarrollo web. Siempre
-            estoy dispuesto a adquirir nuevas habilidades y conocimientos para
-            proporcionar soluciones innovadoras y eficientes.
-          </p>
-        </div>
-      </li>
-    </ul>
-  </Cover>
+  <!-- <DivisionHr bottomText={false} /> -->
 </MainLayout>
 
 <style lang="scss" is:global>
-  .section-about,
-  .section-about__article,
-  .section-about__div {
-    display: grid;
-    gap: 1rem;
+  /* CSS */
+  .twitter_btn {
+    appearance: button;
+    background-color: #1899d6;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: din-round, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 13px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter 0.2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 100%;
   }
 
-  .section-about {
-    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
-    color: var(--clr-text-1);
-    padding: 0 5vw;
-    margin: 8vh 0;
+  .twitter_btn:after {
+    background-clip: padding-box;
+    background-color: #1cb0f6;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
   }
 
-  .section-about__article {
-    padding: 2rem;
-    outline: 2px solid var(--clr-border-2);
-    background-color: var(--clr-background-2);
-    position: relative;
-    --distance: 6px;
+  .twitter_btn:main,
+  .twitter_btn:focus {
+    user-select: auto;
+  }
 
-    &::after,
-    &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border: inherit;
-      z-index: -1;
-    }
-    &::after {
-      transform: translate(var(--distance), var(--distance));
-      background-color: var(--clr-background-1);
-    }
-    &::before {
-      transform: translate(
-        calc(var(--distance) * 2),
-        calc(var(--distance) * 2)
-      );
-      background-color: var(--clr-text-2);
-    }
+  .twitter_btn:hover:not(:disabled) {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+  }
+
+  .twitter_btn:disabled {
+    cursor: auto;
   }
 </style>

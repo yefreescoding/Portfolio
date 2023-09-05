@@ -1,0 +1,45 @@
+---
+import { Image } from "astro:assets";
+
+const subjectImage = "/images/hero-images/Subject.jpg";
+
+const { title } = Astro.props;
+---
+
+<article>
+  <aside>
+    <Image
+      src={subjectImage}
+      alt="Mi foto"
+      width="10"
+      height="10"
+      class="w-12 h-12 rounded-full shadow-sm object-cover"
+      decoding="async"
+      loading="lazy"
+    />
+    <!-- <a href="/" class="nav__links" aria-label="Link para vlver al inicio">
+      yefree Valdez</a
+    >
+    <Image
+      src={iconVerify}
+      alt="Icon twitter"
+      width="10"
+      height="10"
+      class="w-6 h-6 rounded-full shadow-sm object-cover"
+      decoding="async"
+      loading="lazy"
+    /> -->
+  </aside>
+  <div>
+    <div>
+      <div>
+        <h3>YefreeCodes</h3>
+        <span> Sep 5</span>
+      </div>
+      <button role="button">•••</button>
+    </div>
+    <div>
+      <slot />
+    </div>
+  </div>
+</article>
