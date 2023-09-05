@@ -1,4 +1,12 @@
 ---
+import { Image } from "astro:assets";
+
+// Library imports
+import { Icon } from "astro-icon";
+
+const subjectImage = "/images/hero-images/Subject.jpg";
+const iconVerify = "/images/icons/verify.png";
+
 // import Layouts
 import MainLayout from "../Layout/MainLayout.astro";
 
@@ -13,31 +21,53 @@ import CardAboutMe from "../Components/CardAboutMe.astro";
 
 <MainLayout subtitle="About">
   <section id="about" class="section_about">
-    <header aria-label="Cabecera sobre mi" class="">
-      <div>
-        <img src="" alt="" />
+    <header
+      aria-label="Cabecera sobre mi"
+      class="pb-8 mb-8 border-b border-gray-300"
+    >
+      <div class="flex justify-between my-4">
+        <Image
+          src={subjectImage}
+          alt="Mi foto"
+          width="10"
+          height="10"
+          class="w-16 h-16 rounded-full shadow-lg object-cover"
+          decoding="async"
+          loading="lazy"
+        />
         <button class="twitter_btn" type="button">Twitter</button>
       </div>
-      <div>
-        <h1>Yefree Valdez</h1>
+      <div class="grid grid-flow-row gap-4">
+        <div class="flex items-center gap-2">
+          <h1 class="text-xl font-black">Yefree Valdez</h1>
+          <Image
+            src={iconVerify}
+            alt="Icon twitter"
+            width="10"
+            height="10"
+            class="w-6 h-6 rounded-full shadow-sm object-cover"
+            decoding="async"
+            loading="lazy"
+          />
+        </div>
         <p>
           Desarrollador de software que ha decidido escoger el camino "dificil":
           especializarse en front end en 2023.
         </p>
-        <div>
-          <p>
-            <img src="" alt="person icon" />
-            Followers
-          </p>
-          <p>
-            <img src="" alt="birhtday icon" />
+        <div class="flex gap-4">
+          <span class="flex items-center gap-4 text-base">
+            <Icon class="w-6 h-6" name="mdi:link-variant" />
+            <a href="">Links</a>
+          </span>
+          <p class="flex items-center gap-4 text-base">
+            <Icon class="w-6 h-6" name="mdi:calendar-month-outline" />
             13 de Enero de 2023
           </p>
-          <span>
-            <img src="" alt="link icon" />
-            <link rel="stylesheet" href="" />
-          </span>
         </div>
+        <p class="flex items-center gap-2 text-base">
+          <Icon class="w-6 h-6" name="mdi:account-supervisor" />
+          <strong>3</strong> Following
+        </p>
       </div>
     </header>
     <div aria-label="Cuerpo sobre mi">
@@ -52,8 +82,8 @@ import CardAboutMe from "../Components/CardAboutMe.astro";
         </p>
         <iframe
           src="https://giphy.com/embed/zzALYeLqMLDa6PEV2C"
-          width="480"
-          height="480"
+          width="100%"
+          height="100%"
           class="giphy-embed"></iframe><p>
           <a
             href="https://giphy.com/gifs/gif-artist-g-foodieg-zzALYeLqMLDa6PEV2C"
@@ -67,36 +97,34 @@ import CardAboutMe from "../Components/CardAboutMe.astro";
 </MainLayout>
 
 <style lang="scss" is:global>
+  .section_about {
+    width: min(100% - 2rem, 70em);
+    margin-inline: auto;
+    padding: 1rem;
+  }
+
   /* CSS */
   .twitter_btn {
     appearance: button;
     background-color: #1899d6;
-    border: solid transparent;
-    border-radius: 16px;
+    border-radius: 1rem;
     border-width: 0 0 4px;
-    box-sizing: border-box;
     color: #ffffff;
-    cursor: pointer;
     display: inline-block;
-    font-family: din-round, sans-serif;
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 800;
     letter-spacing: 0.8px;
     line-height: 20px;
-    margin: 0;
-    outline: none;
     overflow: visible;
-    padding: 13px 16px;
+    padding: 10px 14px;
     text-align: center;
     text-transform: uppercase;
     touch-action: manipulation;
     transform: translateZ(0);
     transition: filter 0.2s;
-    user-select: none;
-    -webkit-user-select: none;
     vertical-align: middle;
     white-space: nowrap;
-    width: 100%;
+    width: fit-content;
   }
 
   .twitter_btn:after {
