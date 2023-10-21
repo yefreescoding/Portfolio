@@ -15,14 +15,13 @@ import Cover from "../Components/Cover.astro";
 import DivisionHr from "../Components/DivisionHr.astro";
 
 // import data
-import aboutMe from "../Data/aboutMeData";
 import CardAboutMe from "../Components/CardAboutMe.astro";
 ---
 
 <MainLayout subtitle="About">
   <section id="about" class="section_about border-x border-gray-200">
     <header aria-label="Cabecera sobre mi" class="mb-8 p-6">
-      <div class="flex justify-between my-4">
+      <div class="flex justify-between items-end my-4">
         <Image
           src={subjectImage}
           alt="Mi foto"
@@ -32,11 +31,12 @@ import CardAboutMe from "../Components/CardAboutMe.astro";
           decoding="async"
           loading="lazy"
         />
-        <button class="twitter_btn" type="button">Twitter</button>
+        <a href="https://twitter.com/YefreeCodes" class="twitter_btn">Twitter</a
+        >
       </div>
-      <div class="grid grid-flow-row gap-4">
+      <div class="grid grid-flow-row gap-2">
         <div class="flex items-center gap-2">
-          <h1 class="text-xl font-black">Yefree Valdez</h1>
+          <h1 class="text-lg md:text-xl font-bold">Yefree Valdez</h1>
           <Image
             src={iconVerify}
             alt="Icon twitter"
@@ -47,28 +47,50 @@ import CardAboutMe from "../Components/CardAboutMe.astro";
             loading="lazy"
           />
         </div>
-        <p>
-          Desarrollador de software que ha decidido escoger el camino "dificil":
-          especializarse en front end en 2023.
+        <p class="text-base">
+          Desarrollador web especializado en front end. Tratando de unir codigo
+          y artes.
         </p>
-        <div class="flex gap-4">
+        <div class="flex flex-col md:flex-row gap-2">
           <span class="flex items-center gap-2 text-base">
             <Icon class="w-6 h-6" name="mdi:link-variant" />
-            <a href="/" class="text-blue-400">Links</a>
+            <a href="https://github.com/yefreescoding" class="text-blue-400"
+              >Links</a
+            >
           </span>
           <p class="flex items-center gap-2 text-base">
             <Icon class="w-6 h-6" name="mdi:calendar-month-outline" />
-            13 de Enero de 2023
+            Born in 1996
           </p>
         </div>
         <p class="flex items-center gap-2 text-base">
           <Icon class="w-6 h-6" name="mdi:account-supervisor" />
-          <strong>3</strong> Following
+          <strong>13</strong> Following
         </p>
       </div>
     </header>
     <div aria-label="Cuerpo sobre mi">
-      <CardAboutMe>
+      <CardAboutMe date="Oct 21">
+        <div class="grid grid-flow-row gap-4">
+          <p>Algun dia recibire mi primer pago por programar.</p>
+          <p>
+            Y ese dia me comere dos large McChicken menus en Mcdonald large con
+            10 chicken nuggets y un McFlurry.
+          </p>
+          <p>Mark My Words 😤</p>
+        </div>
+      </CardAboutMe>
+      <CardAboutMe date="Oct 19">
+        <div class="grid grid-flow-row gap-4">
+          <p>
+            Actualmente estudiando OOP. Y pensaba que lo mas dificil de
+            programar era usar una API.
+          </p>
+          <p>Siempre hay algo nuevo que te rompa la cabeza...</p>
+        </div>
+      </CardAboutMe>
+
+      <CardAboutMe date="Sep 5">
         <div class="grid grid-flow-row gap-4">
           <p>
             He aprendido un skill que me servira para toda la vida, de eso estoy
@@ -97,26 +119,25 @@ import CardAboutMe from "../Components/CardAboutMe.astro";
 
   /* CSS */
   .twitter_btn {
-    appearance: button;
     background-color: #1899d6;
     border-radius: 1rem;
     border-width: 0 0 4px;
     color: #ffffff;
-    display: inline-block;
-    font-size: 1rem;
+    // display: inline-block;
+    font-size: 0.8rem;
     font-weight: 800;
     letter-spacing: 0.8px;
-    line-height: 20px;
+    // line-height: 20px;
     overflow: visible;
-    padding: 10px 14px;
+    padding: 7px 10px;
     text-align: center;
     text-transform: uppercase;
-    touch-action: manipulation;
+    // touch-action: manipulation;
     transform: translateZ(0);
     transition: filter 0.2s;
-    vertical-align: middle;
+    // vertical-align: middle;
     white-space: nowrap;
-    width: fit-content;
+    width: auto;
   }
 
   .twitter_btn:after {

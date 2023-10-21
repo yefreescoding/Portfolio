@@ -3,26 +3,28 @@ import { Image } from "astro:assets";
 
 const subjectImage = "/images/hero-images/Subject.jpg";
 
-const { title } = Astro.props;
+const { date } = Astro.props;
 ---
 
-<article class="flex gap-4 border-y border-gray-300 p-6">
-  <aside>
+<article
+  class="flex items-start flex-nowrap gap-2 border-y border-gray-300 p-2"
+>
+  <aside class="basis-[3rem]">
     <Image
       src={subjectImage}
       alt="Mi foto"
-      width="10"
-      height="10"
-      class="w-16 aspect-square rounded-full shadow-sm object-cover"
+      width="15"
+      height="15"
+      class="w-[50px] aspect-square rounded-full shadow-sm object-cover"
       decoding="async"
       loading="lazy"
     />
   </aside>
-  <div>
-    <div class="flex items-center justify-between mb-4">
+  <div class="basis-[5rem] flex-grow">
+    <div class="flex items-center justify-between">
       <div class="flex gap-2 items-center">
         <h3 class="text-base font-bold">YefreeCodes</h3>
-        <span>• Sep 5</span>
+        <span>• {date}</span>
       </div>
       <button
         role="button"
