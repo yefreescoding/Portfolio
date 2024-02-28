@@ -7,6 +7,8 @@ import Cover from "../Components/Cover.astro";
 import ContactForm from "../Components/ContactForm.astro";
 import ProjectDisplay from "../Components/ProjectDisplay.astro";
 import DivisionHr from "../Components/DivisionHr.astro";
+import Layout from "../Components/horizontal-comp/Layout.tsx";
+import GalleryDiv from "../Components/horizontal-comp/GalleryDiv.tsx";
 
 // data imports
 import { projects } from "../Data/projects";
@@ -29,18 +31,21 @@ import { projects } from "../Data/projects";
         trabajado, ya sea de manera indivudual o en equipo.
       </p>
     </header>
-    <div class="projects__container">
-      {
-        projects.map((project) => (
-          <ProjectDisplay
-            name={project.name}
-            link={project.link}
-            github={project.github}
-            imagesrc={project.imagesrc}
-          />
-        ))
-      }
-    </div>
+    <Layout contentMaxWidth="80ch">
+      <GalleryDiv direction="normal" galleryItemsAspectRatio="square">
+        {
+          projects.map((project) => (
+            <ProjectDisplay
+              name={project.name}
+              link={project.link}
+              github={project.github}
+              imagesrc={project.imagesrc}
+            />
+          ))
+        }
+      </GalleryDiv>
+    </Layout>
+    <!-- <div class="projects__container"></div> -->
   </section>
   <ContactForm />
 </MainLayout>
