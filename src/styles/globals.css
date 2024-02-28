@@ -42,7 +42,7 @@
     --clr-background-2: hsl(0, 0%, 93%);
     --clr-background-3: #ceff1a;
     --clr-border: hsl(32, 100%, 64%);
-    --clr-border-2: #001e2d;
+    --clr-border-2: hsl(0, 0%, 30%);
     --clr-box-shd: rgb(80, 80, 80);
     --clr-accent: hsl(35, 100%, 50%);
   }
@@ -60,7 +60,7 @@
     --clr-background-2: hsl(0, 0%, 93%);
     --clr-background-3: #ceff1a;
     --clr-border: hsl(32, 100%, 64%);
-    --clr-border-2: hsl(201, 98%, 9%);
+    --clr-border-2: hsl(0, 0%, 30%);
     --clr-box-shd: rgb(80, 80, 80);
     --clr-accent: hsl(35, 100%, 50%);
   }

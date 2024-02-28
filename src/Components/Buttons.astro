@@ -36,11 +36,11 @@ const background = `var(--${theme})`;
 <style define:vars={{ background }}>
   .btn_component {
     --shadow-length: 3px;
-    font-weight: bold;
-    border-radius: 0.3rem;
-    border: 2px solid var(--clr-border-2);
-    box-shadow: var(--shadow-length) var(--shadow-length) 0 var(--clr-border-2);
-    transition: all 0.5s ease-in-out;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    border: 1px solid var(--clr-border-2);
+    /* box-shadow: var(--shadow-length) var(--shadow-length) 0 var(--clr-border-2); */
+    transition: all 240ms ease-in-out;
   }
 
   .btn_component[data-size="sm"] {
@@ -61,9 +61,11 @@ const background = `var(--${theme})`;
 
   .btn_component:is(:hover, :active) {
     transition: all 0.2s ease-in-out;
-    transform: translate(-3px, -3px);
-    box-shadow: calc(var(--shadow-length) * 2) calc(var(--shadow-length) * 2) 0
-      var(--clr-border-2);
+    opacity: 0.8;
+
+    transform: scale(1.05);
+    /* box-shadow: calc(var(--shadow-length) * 2) calc(var(--shadow-length) * 2) 0
+      var(--clr-border-2); */
   }
 
   .btn_component.filled {
