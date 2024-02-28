@@ -18,9 +18,15 @@ import coverImage from "../assets/index-hero.webp";
 
 <section id="home" class="cover" aria-label="Portada de la pagina">
   <div class="cover__text">
-    <span class="text-regular lg:text-xl font-bold uppercase"
-      >Hola mundo, mi nombre es Yefree.</span
+    <p
+      class="border border-slate-400 text-base font-bold w-fit rounded-3xl px-2 py-1 text-gray-700 bg-slate-300"
     >
+      Ultima entrada del blog A must read. <a
+        href="https://devlog.vercel.app/posts/post-7/"
+        target="_blank"
+        class="bg-green-200 text-green-700 rounded-xl px-2 py-[3px]">Aqui</a
+      >
+    </p>
     <h1 class="cover__h1">
       {coverTitle}
     </h1>
@@ -59,35 +65,36 @@ import coverImage from "../assets/index-hero.webp";
   <div class="cover__image">
     <img src={coverImage.src} alt="Cover Image" width={50} height={50} />
   </div>
+
+  <style>
+    .cover,
+    .cover__text,
+    .cover__div {
+      display: flex;
+    }
+
+    .cover {
+      width: min(100% - 2rem, 80em);
+      @apply relative overflow-hidden mx-auto;
+    }
+
+    .cover__text {
+      padding: 5vh 0;
+      @apply flex-col justify-center gap-4;
+    }
+
+    .cover__image {
+      @apply hidden lg:block absolute -right-[10rem] overflow-hidden;
+    }
+
+    .cover__h1 {
+      color: var(--clr-text-2);
+      font-size: clamp(3rem, calc(1.75rem + 2.5vw), 5rem);
+      @apply lg:tracking-tight xl:tracking-tighter font-black w-fit;
+    }
+    .cover__p {
+      width: min(100%, 50ch);
+      font-weight: 600;
+    }
+  </style>
 </section>
-
-<style>
-  .cover,
-  .cover__text,
-  .cover__div {
-    display: flex;
-  }
-
-  .cover {
-    width: min(100% - 2rem, 80em);
-    @apply relative overflow-hidden mx-auto;
-  }
-
-  .cover__text {
-    padding: 5vh 0;
-    @apply flex-col justify-center gap-4;
-  }
-
-  .cover__image {
-    @apply hidden lg:block absolute -right-[10rem] overflow-hidden;
-  }
-
-  .cover__h1 {
-    color: var(--clr-text-2);
-    font-size: clamp(3rem, calc(1.75rem + 2.5vw), 5rem);
-    @apply lg:tracking-tight xl:tracking-tighter font-black w-fit;
-  }
-  .cover__p {
-    width: min(100%, 50ch);
-  }
-</style>
