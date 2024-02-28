@@ -52,16 +52,12 @@ import { projects } from "../Data/projects";
 
 <style lang="scss" is:global>
   .projects {
-    width: min(100% - 2rem, 80em);
+    // width: min(100% - 2rem, 80em);
     @apply gap-[1rem] mx-auto;
 
-    &__container {
-      --column-width: 20em;
-      grid-template-columns: repeat(
-        auto-fit,
-        minmax(min(100%, var(--column-width)), 1fr)
-      );
-      @apply grid gap-8;
+    header {
+      width: min(100% - 2rem, 80em);
+      margin-inline: auto;
     }
   }
 
