@@ -15,20 +15,35 @@ interface Props {
 const { name, description, link, github, imagesrc } = Astro.props as Props;
 ---
 
-<article id="project-display" class="project flex flex-col gap-4">
-  <div class="">
-    <ProjectCard imagesrc={imagesrc} />
-  </div>
-  <div class="proj_article flex flex-col">
-    <h3 id="proj-title" class="font-extrabold text-center">{name}</h3>
-    <p id="proj-desc">{description}</p>
-    <div class="w-full flex gap-4 my-[2rem] text-center">
-      <Buttons width="full" link={link} size="lg" classes="self-end" isFilled>
-        Visitar web
-      </Buttons>
-      <Buttons width="full" link={github} size="lg" classes="self-end">
-        Github
-      </Buttons>
+<article
+  id="project-display"
+  class="relative isolate shadow-xl rounded-2xl flex flex-col align-top hover:shadow-2xl transition-all"
+>
+  <a href={link} target="_blank">
+    <div class="article__text p-6 flex-2">
+      <h3 id="proj-title" class="font-extrabold mb-2">{name}</h3>
+      <p id="proj-desc" class="text-base">{description}</p>
     </div>
-  </div>
+    <div class="article__imgage flex-1">
+      <img src={imagesrc} alt="" class="w-full object-cover aspect-video" />
+    </div>
+  </a>
 </article>
+
+<style>
+  article {
+    background-color: var(--clr-text-3);
+  }
+
+  .article__imgage {
+    position: relative;
+    box-shadow: 0 -3px 2px var(--clr-box-shd);
+    border-radius: 1.5rem;
+    transform: translateY(50px);
+    transition: transform 200ms ease-in-out;
+  }
+
+  article:hover .article__imgage {
+    transform: translateY(20px);
+  }
+</style>

@@ -12,7 +12,7 @@ export const projects = [
     id: 2,
     name: "Music-gram",
     description:
-      "Una pagina web donde poder ver los artistas del momento, sus ultimas canciones, colaboraciones y próximos conciertos. Creado con ASTRO, y utilizando los fundamentos basicos de HTML, CSS y JavaScript.",
+      "Una pagina web donde poder ver los artistas del momento, sus ultimas canciones, colaboraciones y próximos conciertos.",
     link: "https://music-gram-yefreescoding.vercel.app",
     github: "https://github.com/yefreescoding/music-gram.git",
     imagesrc: "/images/projects-img/musicgram.jpg",
@@ -48,7 +48,8 @@ export const projects = [
   {
     id: 6,
     name: "Nike Lite",
-    description: "",
+    description:
+      "Landing page para la pagina oficial de Nike, pero una version mas optimizada.",
     link: "https://nike-lite.vercel.app",
     github: "https://github.com/yefreescoding/nike-lite.git",
     imagesrc: "/images/projects-img/nike-lite.jpg",

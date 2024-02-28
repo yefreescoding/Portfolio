@@ -27,7 +27,7 @@
   --clr-border: hsl(32, 100%, 94%);
   --clr-border-2: hsl(200, 13%, 98%);
   --clr-box-shd: hsla(214, 53%, 7%);
-  --clr-accent: hsl(343, 86%, 51%);
+  --clr-accent: rgb(238, 23, 83);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,7 +39,7 @@
     --clr-text-2: hsl(253, 78%, 57%);
     --clr-text-3: hsl(30, 0%, 98%);
     --clr-background-1: hsl(165, 74%, 65%);
-    --clr-background-2: #f2f5f2;
+    --clr-background-2: hsl(0, 0%, 93%);
     --clr-background-3: #ceff1a;
     --clr-border: hsl(32, 100%, 64%);
     --clr-border-2: #001e2d;
@@ -57,7 +57,7 @@
     --clr-text-2: hsl(253, 78%, 57%);
     --clr-text-3: hsl(30, 0%, 98%);
     --clr-background-1: hsl(165, 74%, 65%);
-    --clr-background-2: #f2f5f2;
+    --clr-background-2: hsl(0, 0%, 93%);
     --clr-background-3: #ceff1a;
     --clr-border: hsl(32, 100%, 64%);
     --clr-border-2: hsl(201, 98%, 9%);
