@@ -13,7 +13,7 @@
   --clr-background-3: #229b04;
   --clr-border: hsl(32, 100%, 94%);
   --clr-border-2: hsl(200, 13%, 98%);
-  --clr-box-shd: hsla(214, 53%, 87%);
+  --clr-box-shd: hsla(214, 53%, 45%);
   --clr-accent: rgb(238, 23, 83);
 }
 
@@ -60,7 +60,7 @@
     --clr-background-3: hsl(263, 91%, 48%);
     --clr-border: hsl(32, 100%, 94%);
     --clr-border-2: hsl(200, 13%, 98%);
-    --clr-box-shd: hsla(214, 53%, 87%);
+    --clr-box-shd: hsla(214, 53%, 45%);
     --clr-accent: hsl(343, 86%, 51%);
   }
   body.dark-mode .menu-img[data-dark="true"] {

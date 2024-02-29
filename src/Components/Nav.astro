@@ -1,4 +1,6 @@
 ---
+import { Icon } from "astro-icon";
+
 // data imports
 import navData from "../Data/navData";
 
@@ -35,46 +37,23 @@ import DarkModeToggle from "../Components/DarkModeToggle.astro";
     gap: 1rem;
   }
 
-  @media (width < 53.4375em) {
-    .nav {
-      position: fixed;
-      inset: 6rem 1.1rem auto 1.1rem;
-      background-color: var(--clr-text-3);
-      border: 2px solid var(--clr-border-2);
-      border-radius: 2rem;
-      box-shadow: 5px 6px var(--clr-box-shd);
-      transform: translateX(-120%);
-      transition: transform 0.24s ease-in;
-    }
-
-    .nav__ul {
-      flex-flow: column;
-      gap: 1rem;
-      height: fit-content;
-      align-items: start;
-      justify-content: start;
-      padding: min(5vh, 10rem) 1rem;
-    }
-    .nav__links {
-      text-align: left;
-    }
-  }
-
   .nav[data-visible="true"] {
     transform: translateX(0);
   }
 
   .nav__li {
     position: relative;
+    transition: all 240ms linear;
   }
   .nav__links {
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: var(--clr-text-1);
     text-align: center;
-    border: 3px transparent solid;
-    transition: all 0.2s linear;
+    border: 1px transparent solid;
   }
-  .nav__links:is(:hover, :active) {
-    border-bottom: 3px var(--clr-text-2) solid;
+  .nav__li:is(:hover, :active) {
+    // border-bottom: 3px var(--clr-text-2) solid;
+    // flex: 1;
+    // transform: rotate(-15deg) translateY(-8px);
   }
 </style>

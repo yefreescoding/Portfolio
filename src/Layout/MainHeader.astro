@@ -12,43 +12,8 @@ const iconVerify = "/images/icons/verify.png";
 ---
 
 <header class="header" aria-label="Cabecera de la pagina">
-  <div class="header__home" aria-label="Logo de la pagina">
-    <Image
-      src={subjectImage}
-      alt="Mi foto"
-      width="10"
-      height="10"
-      class="w-12 h-12 rounded-full shadow-sm object-cover"
-      decoding="async"
-      loading="lazy"
-    />
-    <a href="/" class="nav__links" aria-label="Link para vlver al inicio">
-      yefree Valdez</a
-    >
-    <Image
-      src={iconVerify}
-      alt="Icon twitter"
-      width="10"
-      height="10"
-      class="w-6 h-6 rounded-full shadow-sm object-cover"
-      decoding="async"
-      loading="lazy"
-    />
-  </div>
   <MobileNav>
     <Nav />
-    <button
-      id="mobile-menu"
-      class="nav__mobile"
-      aria-label="Boton despliega menu moviles"
-    >
-      <img
-        class="menu-img"
-        data-dark="true"
-        src="/images/icons/more.avif"
-        alt="icon-menu"
-      />
-    </button>
   </MobileNav>
 </header>
 
@@ -67,18 +32,19 @@ const iconVerify = "/images/icons/verify.png";
   }
 
   .header {
+    width: fit-content;
     align-items: center;
     z-index: 9999;
-    justify-content: space-between;
-    position: fixed;
-    inset: 5px 20px auto 20px;
-    border-radius: 1rem;
-    border: solid 2px var(--clr-border-2);
-    box-shadow: 4px 4px 0 var(--clr-border-2);
+    position: sticky;
+    top: 0.5rem;
+    margin: 0 auto;
+    border-radius: 6rem;
+    border: solid 1px var(--clr-border-2);
     background-color: var(--clr-text-3);
-    padding: 1rem;
-    &__home {
-      @apply items-center gap-2;
+    padding: 0.5rem 1rem;
+    transition: all 300ms ease-in-out;
+    &:hover {
+      transform: scale(1.15);
     }
   }
 

@@ -1,11 +1,11 @@
 ---
 // import styles
-import '../styles/globals.css';
+import "../styles/globals.css";
 
 // import components
-import MainHead from './MainHead.astro';
-import Footer from './MainFooter.astro';
-import Header from './MainHeader.astro';
+import MainHead from "./MainHead.astro";
+import Footer from "./MainFooter.astro";
+import Header from "./MainHeader.astro";
 // import Loader from './Loader.astro';
 
 const { subtitle } = Astro.props;
@@ -14,7 +14,7 @@ const { subtitle } = Astro.props;
 <!DOCTYPE html>
 <html lang="es">
   <MainHead {subtitle} />
-  <body class="">
+  <body class="relative">
     <!-- <Loader /> -->
     <Header />
     <main class="web-page-cont grid">

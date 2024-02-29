@@ -8,16 +8,12 @@ const navData = [
     link: "/about/",
   },
   {
-    name: "mini blog",
-    link: "/memorias/",
-  },
-  {
     name: "GitHub",
     link: "https://github.com/yefreescoding/",
   },
   {
     name: "blog",
-    link: "https://devlog.vercel.app/",
+    link: "/memorias/",
   },
 ];
 export default navData;
