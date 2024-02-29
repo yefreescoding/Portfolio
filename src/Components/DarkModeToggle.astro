@@ -48,7 +48,6 @@ import { Icon } from "astro-icon";
   const theme = localStorage.getItem("theme");
   if (theme === "dark") {
     darkModeBtn.setAttribute("data-theme", "dark");
-    darkModeBtnText.textContent = "dark";
     document.body.classList.add("dark-mode");
   }
 
