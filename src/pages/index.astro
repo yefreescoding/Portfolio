@@ -22,7 +22,7 @@ import { projects } from "../Data/projects";
   <DivisionHr />
   <section id="projects" class="projects" aria-label="Proyectos">
     <header class="flex flex-col gap-4 mb-[10vh]">
-      <h2 class="projects__h2">Projectos</h2>
+      <h2 class="projects__h2">Proyectos</h2>
       <p class="projects__p">
         El trabajo suele hablar por sí solo, estos son los proyectos en los que
         he trabajado, y vale la pena mostrar.
@@ -43,25 +43,21 @@ import { projects } from "../Data/projects";
         }
       </GalleryDiv>
     </Layout>
-    <!-- <div class="projects__container"></div> -->
   </section>
   <ContactForm />
 </MainLayout>
 
 <style lang="scss">
   .projects {
-    // width: min(100% - 2rem, 80em);
-    // @apply gap-[1rem] mx-auto;
     margin-block: 4rem;
-
     header {
       width: min(100% - 2rem, 80em);
       margin-inline: auto;
     }
     &__h2 {
+      text-transform: uppercase;
       font-weight: 800;
     }
-
     &__p {
       font-size: clamp(1.55rem, 1.5vw, 1.75rem);
       font-weight: 600;
