@@ -44,6 +44,25 @@ import { projects } from "../Data/projects";
       </GalleryDiv>
     </Layout>
   </section>
+  <section id="projects" class="projects" aria-label="Proyectos">
+    <header class="flex flex-col gap-4 mb-[10vh]">
+      <h2 class="projects__h2">Posts Destacados</h2>
+      <p class="projects__p">Los post que mas me han gustado del ultimo año</p>
+    </header>
+    <Layout contentMaxWidth="80ch">
+      <GalleryDiv direction="left" galleryItemsAspectRatio="video">
+        {
+          projects.map((project) => (
+            <img
+              class="object-cover shadow-sm border"
+              src={project.imagesrc}
+              alt=""
+            />
+          ))
+        }
+      </GalleryDiv>
+    </Layout>
+  </section>
   <ContactForm />
 </MainLayout>
 
