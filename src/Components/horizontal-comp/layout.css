@@ -21,6 +21,7 @@
 
 .gallery[data-direction="left"] {
   direction: rtl;
+  text-align: start;
 }
 
 /* ========================== */
@@ -59,11 +60,7 @@
   scroll-snap-align: center;
   inline-size: 100%;
   max-inline-size: 25rem;
-  /* font-size: 2rem; */
-  /* background: #f08080; Change this color */
-  /* border-radius: 4px; */
   overflow: hidden;
-  /* object-fit: cover; */
 }
 
 .gallery .floating_content[data-images="video"] > * {
@@ -92,6 +89,6 @@
 }
 
 /* Feel free to delete this styles */
-.gallery img {
+/* .gallery img {
   border-radius: 8px;
-}
+} */

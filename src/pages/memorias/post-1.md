@@ -1,10 +1,10 @@
 ---
-layout: '../../Layout/MainMemoriesLayout.astro'
-title: ¿Por que decidí estudiar programación?
+layout: "../../Layout/MainMemoriesLayout.astro"
+title: "¿Por que decidí estudiar programación?"
 date: 2023-06-07
-image: { src: '/', alt: '/' }
+image: { src: "/", alt: "/" }
 draft: false
-category: memories
+category: "vida"
 ---
 
 Creo que la principal razón por la que empece a prepararme y estudiar a programar fue para tener un trabajo bien remunerado y poder empezar a independizarme. Con 25 años y sin ningún tipo de carrera, preparación o experiencia estaba viendo como la vida me pasaba por encima. No tenia ninguna pasión, y nada que me llamara la atención que no solo pudiera dedicar varias horas del dia a ello sino también poder vivir de ello.

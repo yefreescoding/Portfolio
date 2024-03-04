@@ -12,7 +12,7 @@ const { name, description, link, github, imagesrc } = Astro.props as Props;
 
 <article
   id="project-display"
-  class="relative isolate shadow-lg rounded-2xl flex flex-col align-top hover:shadow-xl transition-all"
+  class="text-center relative isolate shadow-lg rounded-2xl flex flex-col align-top hover:shadow-xl transition-all"
 >
   <a href={link} target="_blank">
     <div class="article__text p-6">
@@ -37,7 +37,7 @@ const { name, description, link, github, imagesrc } = Astro.props as Props;
     box-shadow: 0 0 16px var(--clr-box-shd);
     transform: translateY(70px);
     transition: transform 200ms ease-in-out;
-    margin-inline: 2rem;
+    margin-inline: 1rem;
     overflow: hidden;
   }
 

@@ -3,7 +3,7 @@ export const projects = [
     id: 1,
     name: "30 proyectos 30 días",
     description:
-      "Repositorio de Github de un reto que me he propuesto a finales del mes de Julio. 30 proyectos en 30 dias, uno por dia. ¡No puedo dejar pasar ni uno solo!",
+      "Repositorio de Github. 30 proyectos en 30 dias, uno por dia. ¡No puedo dejar pasar ni uno solo!",
     link: "https://yefreescoding.github.io/30-projects-30-days/",
     github: "https://github.com/yefreescoding/30-projects-30-days.git",
     imagesrc: "/images/projects-img/30-30.jpg",
@@ -12,7 +12,7 @@ export const projects = [
     id: 2,
     name: "Music-gram",
     description:
-      "Una pagina web donde poder ver los artistas del momento, sus ultimas canciones, colaboraciones y próximos conciertos.",
+      "Una pagina web donde poder ver los artistas del momento, sus ultimas canciones, colaboraciones, etc.",
     link: "https://music-gram-yefreescoding.vercel.app",
     github: "https://github.com/yefreescoding/music-gram.git",
     imagesrc: "/images/projects-img/musicgram.jpg",
