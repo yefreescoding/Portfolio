@@ -8,10 +8,6 @@ const navData = [
     link: "/about/",
   },
   {
-    name: "GitHub",
-    link: "https://github.com/yefreescoding/",
-  },
-  {
     name: "blog",
     link: "/memorias/",
   },

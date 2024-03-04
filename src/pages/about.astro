@@ -9,163 +9,121 @@ const iconVerify = "/images/icons/verify.png";
 
 // import Layouts
 import MainLayout from "../Layout/MainLayout.astro";
-
-// import components
-import Cover from "../Components/Cover.astro";
-import DivisionHr from "../Components/DivisionHr.astro";
-
-// import data
-import CardAboutMe from "../Components/CardAboutMe.astro";
 ---
 
 <MainLayout subtitle="About">
-  <section id="about" class="section_about border-x border-gray-200">
-    <header aria-label="Cabecera sobre mi" class="mb-8 p-6">
+  <section id="about" class="section_about">
+    <header
+      aria-label="Cabecera sobre mi"
+      class="flex items-center gap-4 mb-8 p-6"
+    >
       <div class="flex justify-between items-end my-4">
         <Image
           src={subjectImage}
           alt="Mi foto"
           width="10"
           height="10"
-          class="w-16 h-16 rounded-full shadow-lg object-cover"
+          class="w-20 h-20 aspect-square rounded-full shadow-lg object-cover"
           decoding="async"
           loading="lazy"
         />
-        <a href="https://twitter.com/YefreeCodes" class="twitter_btn">Twitter</a
-        >
       </div>
-      <div class="grid grid-flow-row gap-2">
-        <div class="flex items-center gap-2">
-          <h1 class="text-lg md:text-xl font-bold">Yefree Valdez</h1>
-          <Image
-            src={iconVerify}
-            alt="Icon twitter"
-            width="10"
-            height="10"
-            class="w-6 h-6 rounded-full shadow-sm object-cover"
-            decoding="async"
-            loading="lazy"
-          />
+      <div class="grid grid-flow-row">
+        <div class="flex flex-col">
+          <div class="flex items-center gap-1">
+            <h1 class="text-lg md:text-xl font-base">Yefree Valdez</h1>
+            <Image
+              src={iconVerify}
+              alt="Icon twitter"
+              width="10"
+              height="10"
+              class="w-4 h-4 rounded-full shadow-sm object-cover block"
+              decoding="async"
+              loading="lazy"
+            />
+          </div>
+          <p class="text-base">Desarrollador front end. Madrid.</p>
+          <a
+            href=""
+            target="_blank"
+            class="text-[#0077b5] bg-slate-200 rounded-xl w-fit px-2 my-2 transition-all hover:shadow-lg"
+            >Perfil LinkedIn</a
+          >
         </div>
-        <p class="text-base">
-          Desarrollador web especializado en front end. Tratando de unir codigo
-          y artes.
-        </p>
-        <div class="flex flex-col md:flex-row gap-2">
-          <span class="flex items-center gap-2 text-base">
-            <Icon class="w-6 h-6" name="mdi:link-variant" />
-            <a href="https://github.com/yefreescoding" class="text-blue-400"
-              >Links</a
-            >
-          </span>
-          <p class="flex items-center gap-2 text-base">
-            <Icon class="w-6 h-6" name="mdi:calendar-month-outline" />
-            Born in 1996
-          </p>
-        </div>
-        <p class="flex items-center gap-2 text-base">
-          <Icon class="w-6 h-6" name="mdi:account-supervisor" />
-          <strong>13</strong> Following
-        </p>
       </div>
+      <div aria-label="Cuerpo sobre mi"></div>
     </header>
-    <div aria-label="Cuerpo sobre mi">
-      <CardAboutMe date="Oct 21">
-        <div class="grid grid-flow-row gap-4">
-          <p>Algun dia recibire mi primer pago por programar.</p>
-          <p>
-            Y ese dia me comere dos large McChicken menus en Mcdonald large con
-            10 chicken nuggets y un McFlurry.
-          </p>
-          <p>Mark My Words 😤</p>
-        </div>
-      </CardAboutMe>
-      <CardAboutMe date="Oct 19">
-        <div class="grid grid-flow-row gap-4">
-          <p>
-            Actualmente estudiando OOP. Y pensaba que lo mas dificil de
-            programar era usar una API.
-          </p>
-          <p>Siempre hay algo nuevo que te rompa la cabeza...</p>
-        </div>
-      </CardAboutMe>
-
-      <CardAboutMe date="Sep 5">
-        <div class="grid grid-flow-row gap-4">
-          <p>
-            He aprendido un skill que me servira para toda la vida, de eso estoy
-            muy seguro.
-          </p>
-          <p>
-            Ya ire pensando que cosas poner aqui... mientras tanto nos podemos
-            entretener con este divertido Gif.
-          </p>
-          <iframe
-            src="https://giphy.com/embed/zzALYeLqMLDa6PEV2C"
-            class="w-full aspect-square rounded-2xl"></iframe><p></p>
-        </div>
-      </CardAboutMe>
-    </div>
+    <ul class="flex flex-col gap-8 w-fit">
+      <li class="flex flex-col gap-4">
+        <h2 class="text-3xl">Experiencia</h2>
+        <ul class="flex flex-col gap-4">
+          <li class="flex items-center gap-8">
+            <p class="text-base">2023 - Now</p>
+            <a href="/" target="_blank" class="flex-2 justify-self-start"
+              >Freelance Front End Developer</a
+            >
+          </li>
+          <li class="flex items-center gap-8">
+            <p class="text-base">2023 - Now</p>
+            <a href="/" target="_blank" class="flex-2 justify-self-start"
+              >Freelance Programming Teacher</a
+            >
+          </li>
+          <li class="flex items-center gap-8">
+            <p class="text-base">2023 - 2023</p>
+            <a href="/" target="_blank" class="flex-2 justify-self-start"
+              >Practicas Equipo de Desarrollo</a
+            >
+          </li>
+        </ul>
+      </li>
+      <li class="flex flex-col gap-4">
+        <h2 class="text-3xl">Proyectos/Open Source</h2>
+        <ul class="flex flex-col gap-4">
+          <li class="flex items-center gap-8">
+            <p class="text-base">2023 - Now</p>
+            <a href="/" target="_blank" class="flex-2 justify-self-start"
+              >Overthink</a
+            >
+          </li>
+          <li class="flex items-center gap-8">
+            <p class="text-base">2023 - Now</p>
+            <a href="/" target="_blank" class="flex-2 justify-self-start"
+              >Floating scroll componet</a
+            >
+          </li>
+        </ul>
+      </li>
+      <li class="flex flex-col gap-4">
+        <h2 class="text-3xl">Educacion</h2>
+        <ul class="flex flex-col gap-4">
+          <li class="flex items-center gap-8">
+            <p class="text-base">2023</p>
+            <a href="/" target="_blank" class="flex-2 justify-self-start"
+              >Desaroolo de aplicaciones con tecnologias web.</a
+            >
+          </li>
+          <li class="flex items-center gap-8">
+            <p class="text-base">2022</p>
+            <a href="/" target="_blank" class="flex-2 justify-self-start"
+              >Curso de diseño y maquetacion de paginas web</a
+            >
+          </li>
+          <li class="flex items-center gap-8">
+            <p class="text-base">2022</p>
+            <a href="/" target="_blank" class="flex-2 justify-self-start"
+              >Introdccion a python</a
+            >
+          </li>
+        </ul>
+      </li>
+    </ul>
   </section>
-  <!-- <DivisionHr bottomText={false} /> -->
+
+  <style lang="scss" is:global>
+    .section_about {
+      width: min(100% - 2rem, 70ch);
+      margin-inline: auto;
+    }
+  </style>
 </MainLayout>
-
-<style lang="scss" is:global>
-  .section_about {
-    width: min(100% - 2rem, 55em);
-    margin-inline: auto;
-    // padding: 1rem;
-  }
-
-  /* CSS */
-  .twitter_btn {
-    background-color: #1899d6;
-    border-radius: 1rem;
-    border-width: 0 0 4px;
-    color: #ffffff;
-    // display: inline-block;
-    font-size: 0.8rem;
-    font-weight: 800;
-    letter-spacing: 0.8px;
-    // line-height: 20px;
-    overflow: visible;
-    padding: 7px 10px;
-    text-align: center;
-    text-transform: uppercase;
-    // touch-action: manipulation;
-    transform: translateZ(0);
-    transition: filter 0.2s;
-    // vertical-align: middle;
-    white-space: nowrap;
-    width: auto;
-  }
-
-  .twitter_btn:after {
-    background-clip: padding-box;
-    background-color: #1cb0f6;
-    border: solid transparent;
-    border-radius: 16px;
-    border-width: 0 0 4px;
-    bottom: -4px;
-    content: "";
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -1;
-  }
-
-  .twitter_btn:main,
-  .twitter_btn:focus {
-    user-select: auto;
-  }
-
-  .twitter_btn:hover:not(:disabled) {
-    filter: brightness(1.1);
-    -webkit-filter: brightness(1.1);
-  }
-
-  .twitter_btn:disabled {
-    cursor: auto;
-  }
-</style>
