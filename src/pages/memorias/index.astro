@@ -1,84 +1,51 @@
 ---
 // import lauouts
-import MainLayout from '../../Layout/MainLayout.astro';
+import MainLayout from "../../Layout/MainLayout.astro";
 
 // import components
-import Buttons from '../../Components/Buttons.astro';
+import Buttons from "../../Components/Buttons.astro";
 
-const allPost = await Astro.glob('./*.md');
+import { formatDate } from "../../utils/functions";
+import { calculateTimeAgo } from "../../utils/functions";
+
+const allPost = await Astro.glob("./*.md");
 
 const reversedPosts = allPost.reverse();
 ---
 
 <MainLayout title="Diario - Yefree">
   <section class="thoughts" aria-label="Articulos memorias">
-    <div class="thoughts__div">
-      <h2 class="thoughts__h2">2023</h2>
-      {
-        reversedPosts.map((post) => (
-          <Buttons width="fit" link={post.url} size="md" target="_self">
+    <h1 class="thoughts__title">Mis publicaciones</h1>
+    <p class="my-8">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint magnam
+      possimus, ea dolores reiciendis quasi rem nesciunt distinctio unde! Libero
+      eveniet aperiam quo repudiandae.
+    </p>
+    {
+      reversedPosts.map((post) => (
+        <div class="flex flex-col gap-4 hover:text-[var(--clr-accent)] hover:underline transition-all">
+          <span class="font-bold">
+            {calculateTimeAgo(post.frontmatter.date)}
+          </span>
+          <a class="text-xl font-black" href={post.url}>
             {post.frontmatter.title}
-          </Buttons>
-        ))
-      }
-      <a href=""></a>
-    </div>
+          </a>
+        </div>
+      ))
+    }
   </section>
 </MainLayout>
 
 <style lang="scss">
-  .thoughts,
-  .thoughts__div {
-    display: grid;
-    background-color: var(--clr-background-2);
-  }
-
   .thoughts {
+    width: min(100%, 80ch);
+    display: grid;
     position: relative;
-    grid-template-columns: min(15%, 20em) 1fr;
-    border: solid 3px var(--clr-border-2);
-    margin-right: 5vw;
-    // height: ;
+    gap: 1.5rem;
+    padding: 0 5vw;
   }
 
-  .thoughts::before {
-    content: '';
-    position: relative;
-    display: block;
-    background-color: var(--clr-background-3);
-    background-image: repeating-linear-gradient(
-        to right,
-        transparent,
-        transparent 20px,
-        var(--clr-border-2) 20px,
-        var(--clr-border-2) 21px /* determines size */
-      ),
-      repeating-linear-gradient(
-        to top,
-        transparent,
-        transparent 20px,
-        var(--clr-border-2) 20px,
-        var(--clr-border-2) 21px /* determines size */
-      );
-    background-size: 100% 100%, 100% 100%, 350px auto;
-  }
-  .thoughts__h2 {
-    display: flex;
-    align-items: baseline;
+  .thoughts__title {
     color: var(--clr-text-2);
-    font-size: 1.5rem;
-  }
-
-  .thoughts__h2::after {
-    content: '';
-    flex: 1;
-    height: 2px;
-    display: block;
-    background-color: var(--clr-border-2);
-  }
-  .thoughts__div {
-    padding: calc(1rem * 2) 3rem;
-    outline: 1px var(--clr-border-2);
-    gap: 1rem;
   }
 </style>
