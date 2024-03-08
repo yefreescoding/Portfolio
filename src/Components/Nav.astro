@@ -34,11 +34,6 @@ import DarkModeToggle from "../Components/DarkModeToggle.astro";
     flex-wrap: wrap;
     gap: 1rem;
   }
-
-  .nav[data-visible="true"] {
-    transform: translateX(0);
-  }
-
   .nav__li {
     position: relative;
     transition: all 240ms linear;
@@ -48,10 +43,5 @@ import DarkModeToggle from "../Components/DarkModeToggle.astro";
     color: var(--clr-text-1);
     text-align: center;
     border: 1px transparent solid;
-  }
-  .nav__li:is(:hover, :active) {
-    // border-bottom: 3px var(--clr-text-2) solid;
-    // flex: 1;
-    // transform: rotate(-15deg) translateY(-8px);
   }
 </style>

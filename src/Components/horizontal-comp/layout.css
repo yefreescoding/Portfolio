@@ -72,7 +72,7 @@
 }
 
 .gallery .floating_content > *.lg {
-  max-inline-size: 35rem;
+  max-inline-size: 30rem;
 }
 
 .gallery .floating_content > *.sm {
