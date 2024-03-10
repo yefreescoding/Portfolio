@@ -1,20 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
 
 :root {
-  /* --fnt-text-1: 'Monomaniac One', sans-serif; */
   --fnt-headings: "Madimi One", sans-serif;
   --fnt-text-2: "Rubik", sans-serif;
 
-  --clr-text-1: hsl(31, 29%, 95%);
-  --clr-text-2: #3ecc05;
-  --clr-text-3: hsl(0, 3%, 6%);
-  --clr-background-1: hsl(199, 79%, 5%);
-  --clr-background-2: #222921;
-  --clr-background-3: #229b04;
-  --clr-border: hsl(32, 100%, 94%);
-  --clr-border-2: hsl(200, 13%, 98%);
-  --clr-box-shd: hsla(214, 53%, 45%);
-  --clr-accent: rgb(238, 23, 83);
+  --clr-text-1: hsl(0, 0%, 25%);
+  --clr-text-2: hsl(253, 78%, 57%);
+  --clr-text-3: hsl(30, 0%, 99%);
+  --clr-background-1: hsl(165, 74%, 65%);
+  --clr-background-2: hsl(0, 0%, 95%);
+  --clr-background-3: #ceff1a;
+  --clr-border: hsl(32, 100%, 64%);
+  --clr-border-2: hsl(0, 0%, 30%);
+  --clr-box-shd: hsl(0, 0%, 69%);
+  --clr-accent: hsl(35, 100%, 50%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,16 +21,16 @@
     filter: invert(100%);
   }
   body.dark-mode {
-    --clr-text-1: hsl(0, 0%, 25%);
-    --clr-text-2: hsl(253, 78%, 57%);
-    --clr-text-3: hsl(30, 0%, 99%);
-    --clr-background-1: hsl(165, 74%, 65%);
-    --clr-background-2: hsl(0, 0%, 95%);
-    --clr-background-3: #ceff1a;
-    --clr-border: hsl(32, 100%, 64%);
-    --clr-border-2: hsl(0, 0%, 30%);
-    --clr-box-shd: rgb(80, 80, 80);
-    --clr-accent: hsl(35, 100%, 50%);
+    --clr-text-1: hsl(31, 29%, 90%);
+    --clr-text-2: hsl(73, 0%, 95%);
+    --clr-text-3: hsl(0, 3%, 6%);
+    --clr-background-1: hsl(282, 66%, 7%);
+    --clr-background-2: hsl(278, 89%, 5%);
+    --clr-background-3: hsl(282, 91%, 57%);
+    --clr-border: hsl(282, 91%, 27%);
+    --clr-border-2: hsl(282, 91%, 87%);
+    --clr-box-shd: hsla(214, 53%, 5%);
+    --clr-accent: hsl(282, 91%, 67%);
   }
   body.dark-mode .menu-img[data-dark="true"] {
     filter: invert(0);
@@ -52,16 +51,16 @@
     --clr-accent: hsl(35, 100%, 50%);
   }
   body.dark-mode {
-    --clr-text-1: hsl(31, 29%, 95%);
-    --clr-text-2: #ceff1a;
+    --clr-text-1: hsl(31, 29%, 90%);
+    --clr-text-2: hsl(73, 0%, 95%);
     --clr-text-3: hsl(0, 3%, 6%);
-    --clr-background-1: hsl(199, 79%, 5%);
-    --clr-background-2: #222921;
-    --clr-background-3: hsl(263, 91%, 48%);
-    --clr-border: hsl(32, 100%, 94%);
-    --clr-border-2: hsl(200, 13%, 98%);
-    --clr-box-shd: hsla(214, 53%, 45%);
-    --clr-accent: hsl(343, 86%, 51%);
+    --clr-background-1: hsl(282, 66%, 7%);
+    --clr-background-2: hsl(278, 89%, 5%);
+    --clr-background-3: hsl(282, 91%, 57%);
+    --clr-border: hsl(282, 91%, 27%);
+    --clr-border-2: hsl(282, 91%, 87%);
+    --clr-box-shd: hsla(214, 53%, 5%);
+    --clr-accent: hsl(282, 91%, 67%);
   }
   body.dark-mode .menu-img[data-dark="true"] {
     filter: invert(100%);
