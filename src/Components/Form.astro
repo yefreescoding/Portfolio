@@ -72,7 +72,7 @@
     </div>
   </label>
   <button type="submit" class="contact__submit">Enviar</button>
-  <div id="result" class="text-center hidden"></div>
+  <div id="result" class="text-center"></div>
 </form>
 
 <style>
@@ -145,7 +145,8 @@
       .then(async (response) => {
         let json = await response.json();
         if (response.status == 200) {
-          result.innerHTML = json.message;
+          result.innerHTML = "Form submitted succesfully.";
+          result.classList.add("text-green-800");
         } else {
           console.log(response);
           result.classList.add("text-red-500");
@@ -155,7 +156,7 @@
       })
       .catch((error) => {
         console.log(error);
-        result.innerHTML = "UH UH... parece que algo no funciona.";
+        result.innerHTML = "UH UH... no se pudo enviar el formulario.";
       })
       .then(function () {
         form.reset();
