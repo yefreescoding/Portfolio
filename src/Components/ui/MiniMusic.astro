@@ -1,0 +1,20 @@
+---
+---
+
+<div
+  id="mini-music"
+  class="mini_music"
+  aria-hidden="true"
+  aria-label="Mini Music Component, just a fun little component to play music"
+>
+  music component
+</div>
+
+<style>
+  .mini_music {
+    display: block;
+    &[aria-hidden="true"] {
+      display: none;
+    }
+  }
+</style>

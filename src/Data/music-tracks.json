@@ -1,0 +1,26 @@
+[
+  {
+    "song": "Funk Pop",
+    "artist": "Artist001",
+    "track": "/tracks/track-1.music",
+    "cover": "images/music/cover-2.jpg"
+  },
+  {
+    "song": "Funk Pop",
+    "artist": "Artist001",
+    "track": "/tracks/track-1.music",
+    "cover": "images/music/cover-2.jpg"
+  },
+  {
+    "song": "Funk Pop",
+    "artist": "Artist001",
+    "track": "/tracks/track-1.music",
+    "cover": "images/music/cover-2.jpg"
+  },
+  {
+    "song": "Funk Pop",
+    "artist": "Artist001",
+    "track": "/tracks/track-1.music",
+    "cover": "images/music/cover-2.jpg"
+  }
+]
