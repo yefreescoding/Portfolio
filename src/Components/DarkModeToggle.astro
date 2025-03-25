@@ -45,11 +45,11 @@ import { Icon } from "astro-icon";
   document.head.appendChild(css);
 
   // Save the user dark mode preferences in localStorage
-  const theme = localStorage.getItem("theme");
-  if (theme === "dark") {
-    darkModeBtn.setAttribute("data-theme", "dark");
-    document.body.classList.add("dark-mode");
-  }
+  // const theme = localStorage.getItem("theme");
+  // if (theme === "dark") {
+  //   darkModeBtn.setAttribute("data-theme", "dark");
+  //   document.body.classList.add("dark-mode");
+  // }
 
   darkModeBtn.addEventListener("click", () => {
     const mode = darkModeBtn.getAttribute("data-theme");
@@ -57,11 +57,11 @@ import { Icon } from "astro-icon";
     if (mode === "light") {
       darkModeBtn.setAttribute("data-theme", "dark");
       document.body.classList.add("dark-mode");
-      localStorage.setItem("theme", "dark");
+      // localStorage.setItem("theme", "dark");
     } else if (mode === "dark") {
       darkModeBtn.setAttribute("data-theme", "light");
       document.body.classList.remove("dark-mode");
-      localStorage.setItem("theme", "light");
+      // localStorage.setItem("theme", "light");
     }
   });
 

@@ -14,7 +14,7 @@ import GalleryDiv from "../Components/horizontal-comp/GalleryDiv.tsx";
 import { projects } from "../Data/projects";
 import Buttons from "../Components/Buttons.astro";
 
-const allPost = await Astro.glob("./memorias/*.md");
+const allPosts = await Astro.glob("./memorias/*.md");
 ---
 
 <MainLayout subtitle="HOME">
@@ -56,7 +56,7 @@ const allPost = await Astro.glob("./memorias/*.md");
     <Layout contentMaxWidth="80ch">
       <GalleryDiv direction="normal" galleryItemsAspectRatio="video">
         {
-          allPost.slice(0, 5).map((post) => (
+          allPosts.slice(0, 5).map((post) => (
             <article class="flex flex-col justify-between p-4 border border-[var(--clr-border-2)] bg-[var(--clr-text-3)] rounded-2xl shadow-lg">
               <div class="flex-1">
                 <p>{post.frontmatter.category}</p>

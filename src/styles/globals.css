@@ -127,7 +127,7 @@ h4 {
   letter-spacing: 1.25;
   text-wrap: balance;
   line-height: 1.25;
-  font-family: var(--fnt-headings);
+  /* font-family: var(--fnt-headings); */
 }
 
 h1 {
@@ -135,7 +135,7 @@ h1 {
 }
 h2 {
   font-size: clamp(2rem, 3vw, 2.8rem);
-  color: var(--clr-text-2);
+  /* color: var(--clr-text-2); */
 }
 h3 {
   font-size: clamp(1.3rem, calc(1rem + 3vw), 1.5rem);

@@ -1,19 +1,19 @@
 ---
 // data imports
 import navData from "../Data/navData";
-
-// import components
-import DarkModeToggle from "../Components/DarkModeToggle.astro";
 ---
 
-<nav class="nav" data-visible="false" aria-label="barra de navegacion">
-  <ul class="nav__ul" aria-label="lista links de navegacion">
+<nav class="nav" data-visible="false" aria-label="barra de navegación">
+  <ul
+    class="flex items-center justify-between"
+    aria-label="lista links de navegación"
+  >
     {
       navData.map((link) => (
-        <li class="nav__li">
+        <li class="">
           <a
             href={link.link}
-            class="nav__links"
+            class="px-2 py-1  capitalize text-inherit hover:bg-zinc-700 hover:text-zinc-400 rounded-full transition-all"
             aria-label={`Link hacia ${link.name}`}
           >
             {link.name}
@@ -21,13 +21,10 @@ import DarkModeToggle from "../Components/DarkModeToggle.astro";
         </li>
       ))
     }
-    <li class="nav__li mt-2">
-      <DarkModeToggle />
-    </li>
   </ul>
 </nav>
 
-<style lang="scss">
+<style>
   .nav__ul {
     align-items: center;
     justify-content: space-between;
