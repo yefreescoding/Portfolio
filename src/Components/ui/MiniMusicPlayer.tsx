@@ -1,16 +1,34 @@
+import musicTracks from "../../Data/music-tracks.json";
 import { useState } from "react";
 
 export default function MusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [volume, setVolume] = useState(50);
+  const [tracks] = useState(musicTracks);
+  const [currentTrack, setCurrentTrack] = useState(0);
 
   const togglePlayback = () => {
     setIsPlaying(!isPlaying);
   };
 
-  // const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   setVolume(Number(e.target.value));
-  // };
+  const handleNextTrack = () => {
+    setCurrentTrack((prevTrack) => {
+      if (prevTrack === tracks.length - 1) {
+        return 0;
+      } else {
+        return prevTrack + 1;
+      }
+    });
+  };
+
+  const handlePreviousTrack = () => {
+    setCurrentTrack((prevTrack) => {
+      if (prevTrack === 0) {
+        return tracks.length - 1;
+      } else {
+        return prevTrack - 1;
+      }
+    });
+  };
 
   return (
     <div className="w-full p-2 max-w-[400px] h-auto rounded-xl overflow-hidden shadow-lg bg-zinc-800 border border-zinc-700">
@@ -19,14 +37,21 @@ export default function MusicPlayer() {
         <div className=" p-2 rounded-lg flex flex-col justify-between">
           {/* Song Info */}
           <div>
-            <h2 className="text-lg font-bold">Song Title</h2>
-            <p className="text-sm text-gray-500">Artist Name</p>
+            <h2 className="text-base text-slate-100 text-nowrap font-bold">
+              {tracks[currentTrack].song}
+            </h2>
+            <p className="text-sm text-gray-500">
+              {tracks[currentTrack].artist}
+            </p>
           </div>
 
           {/* Playback Controls */}
           <div className="flex justify-center items-center gap-4 mt-2">
             {/* Previous Button */}
-            <button className="h-8 w-8 rounded-full border border-zinc-500 flex items-center justify-center active:bg-zinc-400 hover:bg-zinc-700 transition-colors">
+            <button
+              onClick={handlePreviousTrack}
+              className="h-8 w-8 rounded-full border border-zinc-500 flex items-center justify-center active:bg-zinc-400 hover:bg-zinc-700 transition-colors"
+            >
               <svg
                 width="12"
                 height="12"
@@ -80,7 +105,10 @@ export default function MusicPlayer() {
             </button>
 
             {/* Next Button */}
-            <button className="h-8 w-8 rounded-full border border-zinc-500 flex items-center justify-center hover:bg-zinc-700 transition-colors">
+            <button
+              onClick={handleNextTrack}
+              className="h-8 w-8 rounded-full border border-zinc-500 flex items-center justify-center hover:bg-zinc-700 transition-colors"
+            >
               <svg
                 width="14"
                 height="14"
@@ -146,17 +174,17 @@ export default function MusicPlayer() {
         {/* Album Cover - On the side */}
         <div className="relative w-[120px] h-full overflow-hidden rounded-2xl aspect-square bg-gray-100">
           <img
-            src="/images/music/music-cover.jpg"
+            src={tracks[currentTrack].cover}
             alt="Album cover"
             loading="lazy"
             className="object-cover object-center w-full h-full"
           />
           {isPlaying && (
-            <div className="absolute grid place-items-center inset-0 bg-zinc-800/30">
+            <div className="absolute grid place-items-center inset-0 bg-zinc-800/20">
               <img
                 src="/images/icons/waves.gif"
                 alt="Music Icon"
-                className="w-24 h-24 mix-blend-multiply"
+                className="w-20 h-20 mix-blend-multiply"
               />
             </div>
           )}

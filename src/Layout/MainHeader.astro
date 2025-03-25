@@ -14,6 +14,8 @@ import MiniMusicPlayer from "../Components/ui/MiniMusicPlayer.tsx";
     hidden = !hidden;
     header.setAttribute("aria-expanded", `${hidden}`);
     musicComp.setAttribute("aria-hidden", `${!hidden}`);
+    musicToggle.setAttribute("aria-controls", `${hidden ? "open" : "closed"}`);
+    musicToggle.classList.toggle(`w-5`);
     console.log(hidden);
   });
 </script>
@@ -28,8 +30,11 @@ import MiniMusicPlayer from "../Components/ui/MiniMusicPlayer.tsx";
     <button
       type="button"
       id="music-toggle"
-      class="ml-auto cursor-pointer bg-white aspect-square w-6 h-6 rounded-full"
-      aria-label="Toggle music"></button>
+      class="ml-auto cursor-pointer aspect-square w-4 rounded-full transition-all"
+      aria-controls="closed"
+      aria-label="Toggle music"
+    >
+    </button>
   </div>
   <div id="div-music" aria-hidden="true">
     <MiniMusicPlayer client:load />
@@ -69,6 +74,13 @@ import MiniMusicPlayer from "../Components/ui/MiniMusicPlayer.tsx";
       --_rounded: 1rem;
       height: var(--_h-open);
       width: var(--_w-open);
+    }
+
+    #music-toggle {
+      background-color: hsl(120, 100%, 70%);
+      &[aria-controls="open"] {
+        background-color: hsl(0, 100%, 70%);
+      }
     }
 
     #div-music {

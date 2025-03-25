@@ -3,24 +3,24 @@
     "song": "Funk Pop",
     "artist": "Artist001",
     "track": "/tracks/track-1.music",
-    "cover": "images/music/cover-2.jpg"
+    "cover": "/images/music/music-cover.jpeg"
   },
   {
-    "song": "Funk Pop",
-    "artist": "Artist001",
-    "track": "/tracks/track-1.music",
-    "cover": "images/music/cover-2.jpg"
+    "song": "Yumma Hip Hop",
+    "artist": "Artist002",
+    "track": "/tracks/track-2.music",
+    "cover": "/images/music/music-cover-2.jpeg"
   },
   {
-    "song": "Funk Pop",
-    "artist": "Artist001",
-    "track": "/tracks/track-1.music",
-    "cover": "images/music/cover-2.jpg"
+    "song": "Cosas de la vida",
+    "artist": "Artist003",
+    "track": "/tracks/track-3.music",
+    "cover": "/images/music/music-cover-3.jpeg"
   },
   {
-    "song": "Funk Pop",
-    "artist": "Artist001",
-    "track": "/tracks/track-1.music",
-    "cover": "images/music/cover-2.jpg"
+    "song": "Cuban Salsa",
+    "artist": "Artist004",
+    "track": "/tracks/track-4.music",
+    "cover": "/images/music/music-cover-4.jpeg"
   }
 ]
