@@ -14,12 +14,25 @@ const { subtitle } = Astro.props;
 <!DOCTYPE html>
 <html lang="es">
   <MainHead {subtitle} />
-  <body class="relative">
+  <body class="relative bg-[#E6E6E6]">
     <!-- <Loader /> -->
     <Header />
     <main class="web-page-cont grid">
       <slot />
     </main>
     <Footer />
+    <style is:global>
+      :root {
+        --base-color: hsl(0, 0%, 96%);
+        --bgk-color: hsl(0, 0%, 96%);
+
+        --w-app: min(100% - 2rem, 80em);
+      }
+
+      .box-component {
+        width: var(--w-app);
+        @apply bg-[var(--base-color)] mx-auto shadow-sm rounded-lg p-6;
+      }
+    </style>
   </body>
 </html>

@@ -1,7 +1,4 @@
 ---
-// astro imports
-import { Image } from "astro:assets";
-
 // component imports
 import Buttons from "./Buttons.astro";
 
@@ -12,90 +9,50 @@ interface Props {
 }
 
 const { coverTitle, description, buttonsYes = true } = Astro.props;
-
-import coverImage from "../assets/index-hero.webp";
 ---
 
-<section id="home" class="cover" aria-label="Portada de la pagina">
-  <div class="cover__text">
-    <p
-      class="border border-slate-600 text-base font-bold w-fit rounded-full p-1 pl-2 text-slate-600 bg-slate-200"
-    >
-      Ultima entrada del blog A must read. <a
-        href="https://devlog.vercel.app/posts/post-7/"
-        target="_blank"
-        class="border border-green-700 bg-green-200 text-green-700 rounded-2xl px-2 py-[3px]"
-        >Aqui</a
-      >
-    </p>
-    <h1 class="cover__h1">
-      {coverTitle}
-    </h1>
-    <p class="cover__p">{description}</p>
-    <div
-      class="flex flex-col md:flex-row items-start gap-4 my-[2rem] md:w-[20em]"
-    >
-      {
-        buttonsYes && (
-          <>
-            <Buttons
-              width="full"
-              link="#contact"
-              size="lg"
-              classes="cover__links text-center"
-              isFilled={true}
-              target="_self"
+<section
+  id="home"
+  class="box-component h-[60dvh]"
+  aria-label="Portada de la pagina"
+>
+  <div class="h-full flex">
+    <div class="h-full w-full flex flex-col items-start justify-between">
+      <div class="w-full h-full flex flex-col items-start">
+        <p
+          class="mb-8 mx-auto md:mx-0 text-sm flex items-center gap-2 w-fit rounded-full p-1 pl-2 text-zinc-800"
+        >
+          <span class="bg-blue-200/60 text-blue-800 rounded-2xl px-2 py-[3px]"
+            >Nuevo</span
+          >
+
+          Ultima entrada del blog.
+          <a
+            href="https://devlog.vercel.app/posts/post-7/"
+            target="_blank"
+            class="w-fit flex items-center gap-2 border border-zinc-700 bg-zinc-900 text-zinc-100 rounded-2xl py-1 px-2 ml-2"
+          >
+            <span>Leer aquí</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-4"
             >
-              Conectemos ; )
-            </Buttons>
-            <Buttons
-              width="full"
-              link="cv/YefreeCV2023.pdf"
-              size="lg"
-              classes="cover__links text-center"
-              theme="clr-background-1"
-              isFilled={true}
-            >
-              Mi CV
-            </Buttons>
-          </>
-        )
-      }
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
+            </svg>
+          </a>
+        </p>
+        <h1 class="mb-6 text-3xl font-bold">{coverTitle}</h1>
+      </div>
+      <p class="text-xl md:text-2xl font-bold text-balance">{description}</p>
     </div>
+    <div></div>
   </div>
-  <div class="cover__image">
-    <img src={coverImage.src} alt="Cover Image" width={50} height={50} />
-  </div>
-
-  <style>
-    .cover,
-    .cover__text,
-    .cover__div {
-      display: flex;
-    }
-
-    .cover {
-      width: min(100% - 2rem, 80em);
-      @apply relative overflow-hidden mx-auto;
-    }
-
-    .cover__text {
-      padding: 5vh 1rem;
-      @apply flex-col justify-center gap-4;
-    }
-
-    .cover__image {
-      @apply hidden lg:block absolute -right-[10rem] overflow-hidden;
-    }
-
-    .cover__h1 {
-      color: var(--clr-text-2);
-      font-size: clamp(3rem, calc(1.75rem + 2.5vw), 5rem);
-      @apply lg:tracking-tight xl:tracking-tighter font-black w-fit;
-    }
-    .cover__p {
-      width: min(100%, 50ch);
-      font-weight: 600;
-    }
-  </style>
+  <style></style>
 </section>
