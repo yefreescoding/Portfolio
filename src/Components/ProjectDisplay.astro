@@ -12,7 +12,7 @@ const { name, link, github, imagesrc, video } = Astro.props as Props;
 
 <article
   id="project-display"
-  class="relative overflow-hidden isolate shadow-md rounded-xl flex h-full aspect-video border border-zinc-300 transition-all"
+  class="relative overflow-hidden isolate shadow-md rounded-2xl flex h-full aspect-video border border-zinc-200 transition-all"
 >
   <a href={link} target="_blank" class="flex">
     <div
@@ -28,7 +28,12 @@ const { name, link, github, imagesrc, video } = Astro.props as Props;
     <div class="w-full h-full bg-green-500">
       {
         video ? (
-          <video autoplay muted loop class="w-full aspect-video object-cover">
+          <video
+            autoplay
+            muted
+            loop
+            class="w-full h-full aspect-video object-cover"
+          >
             <source src={imagesrc} type="video/mp4" />
             Your browser does not support the video tag.
           </video>

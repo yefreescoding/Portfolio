@@ -7,7 +7,14 @@ interface Props {
 const { videoSrc, type } = Astro.props;
 ---
 
-<video autoplay muted loop>
+<video
+  preload="none"
+  poster="one-does-not-simply-placeholder.jpg"
+  autoplay
+  playsinline
+  muted
+  loop
+>
   <source src={videoSrc} type={`video/${type}`} />
   Your browser does not support the video tag.
 </video>

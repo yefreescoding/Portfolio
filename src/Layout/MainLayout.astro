@@ -14,8 +14,7 @@ const { subtitle } = Astro.props;
 <!DOCTYPE html>
 <html lang="es">
   <MainHead {subtitle} />
-  <body class="relative bg-[#E6E6E6]">
-    <!-- <Loader /> -->
+  <body class="">
     <Header />
     <main class="web-page-cont grid">
       <slot />
@@ -24,9 +23,15 @@ const { subtitle } = Astro.props;
     <style is:global>
       :root {
         --base-color: hsl(0, 0%, 96%);
-        --bgk-color: hsl(0, 0%, 96%);
+        --bgk-color: hsl(0, 0%, 91%);
 
         --w-app: min(100% - 2rem, 80em);
+      }
+
+      body {
+        position: relative;
+        background-color: var(--bgk-color);
+        margin-bottom: 5vh;
       }
 
       .box-component {
@@ -35,7 +40,7 @@ const { subtitle } = Astro.props;
         margin-block: 0.2rem;
 
         &.cover {
-          padding: 1.5rem;
+          padding: 2rem 1.5rem;
           background-color: var(--base-color);
           box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.1);
           border-radius: 1rem;

@@ -35,15 +35,16 @@ const background = `var(--${theme})`;
 </a>
 <style define:vars={{ background }}>
   .btn_component {
-    --shadow-length: 3px;
-    font-weight: 800;
-    border-radius: 0.5rem;
-    border: 1px solid var(--clr-border-2);
+    text-transform: capitalize;
+    padding: 1rem 2rem;
+    font-weight: 500;
+    border-radius: 1rem;
+    border: 1px solid hsl(0, 0%, 70%);
     transition: all 240ms ease-in-out;
   }
 
   .btn_component[data-size="sm"] {
-    padding: 0.3rem;
+    padding: 0.3rem 0.8rem;
   }
   .btn_component[data-size="md"] {
     padding: 0.5rem;

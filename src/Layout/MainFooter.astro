@@ -1,84 +1,54 @@
 ---
 // import components
-import Buttons from '../Components/Buttons.astro';
+import Buttons from "../Components/Buttons.astro";
 // import info
-import footerLinks from '../Data/footerDataLinks';
-import socialLinks from '../Data/footerDataSocials';
+import footerLinks from "../Data/footerDataLinks";
+import socialLinks from "../Data/footerDataSocials";
 ---
 
-<footer class="footer">
-  <div class="footer__top">
-    <div class="footer__links">
+<footer class="box-component cover">
+  <h2 class="text-xl font-bold">Fue un placer, ten un buen día 🍱</h2>
+  <div class="flex flex-col gap-4 py-4">
+    <div class="flex items-center justify-end gap-2">
       {
         footerLinks.map((link) => (
-          <Buttons
-            width="full"
-            link={link.link}
-            size="sm"
-            classes="footer__link"
-          >
-            {link.name}
-          </Buttons>
-        ))
-      }
-    </div>
-    <div class="footer__links footer__links--right">
-      {
-        socialLinks.map((link) => (
           <Buttons link={link.link} size="sm" classes="footer__link">
             {link.name}
           </Buttons>
         ))
       }
     </div>
+    <div class="flex items-center justify-start gap-2">
+      {
+        socialLinks.map((link) => (
+          <Buttons link={link.link} size="sm">
+            {link.name}
+          </Buttons>
+        ))
+      }
+    </div>
   </div>
-  <div class="footer__bottom">
-    <small class="footer__p">
-      • Made by Yefree | copyright &copy; <span id="year"></span> | All right reserved
-      •
-    </small>
+  <div
+    class="p-4 border-t border-zinc-300 text-zinc-500 flex justify-between items-end"
+  >
+    <p class="text-sm">
+      &copy; <span id="year"></span> All right reserved
+    </p>
+    <p class="text-sm">
+      <a
+        href="https://github.com/yefreescoding/portfolio-website"
+        target="_blank"
+        class="text-inherit">Made by Yefree</a
+      >
+      <span class="italic"> in Dominican Republic</span>
+    </p>
   </div>
 </footer>
 
-<style is:global>
-  .footer,
-  .footer__top,
-  .footer__bottom {
-    display: grid;
-  }
-  .footer__top,
-  .footer__bottom {
-    padding: 1rem;
-  }
-  .footer,
-  .footer__bottom {
-    text-align: center;
-    color: var(--clr-text-1);
-  }
+<style is:global></style>
 
-  .footer__top {
-    border-top: 2px solid var(--clr-border-2);
-    grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
-    gap: 2rem;
-  }
-  .footer__links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    text-transform: capitalize;
-    gap: 1rem;
-  }
-
-  .footer__link {
-    font-size: clamp(0.5rem, 1.5vw, 1.1rem);
-    color: var(--clr-text-1);
-    flex-basis: 3rem;
-  }
-</style>
-
-<script defer>
-  document.querySelector('#year').textContent = new Date()
+<script is:inline>
+  document.querySelector("#year").textContent = new Date()
     .getFullYear()
     .toString();
 </script>
