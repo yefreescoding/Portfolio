@@ -1,4 +1,5 @@
 ---
+import { ClientRouter, slide } from "astro:transitions";
 // import styles
 import "../styles/globals.css";
 
@@ -12,10 +13,35 @@ const { subtitle } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" transition:name="root" transition:animate="none">
+  <ClientRouter />
   <MainHead {subtitle} />
+  <script>
+    import gsap from "gsap";
+
+    // document.addEventListener("DOMContentLoaded", () => {
+    //   gsap.from(".web-page-cont", { opacity: 0, y: 50, duration: 1 });
+    // });
+
+    // document.querySelectorAll("a").forEach((link) => {
+    //   link.addEventListener("click", (e) => {
+    //     e.preventDefault(); // Prevent default navigation
+
+    //     const target = link.href;
+
+    //     gsap.to(".web-page-cont", {
+    //       opacity: 0,
+    //       y: -100,
+    //       duration: 0.2,
+    //       onComplete: () => {
+    //         window.location.href = target; // Navigate after animation
+    //       },
+    //     });
+    //   });
+    // });
+  </script>
   <body class="">
-    <Header />
+    <Header transition:animate="none" />
     <main class="web-page-cont grid">
       <slot />
     </main>
@@ -44,6 +70,45 @@ const { subtitle } = Astro.props;
           background-color: var(--base-color);
           box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.1);
           border-radius: 1rem;
+        }
+      }
+
+      @-webkit-keyframes moveToTop {
+        from {
+        }
+        to {
+          opacity: 0;
+          -webkit-transform: translateY(-100%);
+        }
+      }
+      @keyframes moveToTop {
+        from {
+        }
+        to {
+          opacity: 0;
+          -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+        }
+      }
+      @-webkit-keyframes moveFromBottom {
+        from {
+          opacity: 0;
+          -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes moveFromBottom {
+        from {
+          opacity: 0;
+          -webkit-transform: translateY(100%) rotateX(15deg);
+          transform: translateY(100%) rotateX(15deg);
+        }
+        to {
+          opacity: 1;
         }
       }
     </style>

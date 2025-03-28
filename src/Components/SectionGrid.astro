@@ -6,12 +6,32 @@ interface Props {
 }
 
 const { arr } = Astro.props;
+
+const anim = {
+  old: {
+    name: "moveToTop",
+    duration: "0.2s",
+    easing: "ease-in",
+  },
+  new: {
+    name: "moveFromBottom",
+    duration: "1s",
+    easing: "ease-out",
+    delay: "0.2s",
+  },
+};
+
+const customTransition = {
+  forwards: anim,
+  backwards: anim,
+};
 ---
 
 <section
   id="projects"
   class="box-component grid grid-cols-2 gap-2"
   aria-label="Proyectos"
+  transition:animate={customTransition}
 >
   {
     arr.map((project) => (

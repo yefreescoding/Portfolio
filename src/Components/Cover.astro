@@ -1,17 +1,39 @@
 ---
+import { deserializeActionResult } from "astro:actions";
+
 interface Props {
   coverTitle: string;
   description: string;
-  buttonsYes?: boolean;
+  animation?: any;
 }
 
-const { coverTitle, description } = Astro.props;
+const { coverTitle, description, animation = "none" } = Astro.props;
+
+const anim = {
+  old: {
+    name: "moveToTop",
+    duration: "0.2s",
+    easing: "ease-in",
+  },
+  new: {
+    name: "moveFromBottom",
+    duration: "0.6s",
+    easing: "ease-out",
+    delay: "0.3s",
+  },
+};
+
+const customTransition = {
+  forwards: anim,
+  backwards: anim,
+};
 ---
 
 <section
   id="home"
   class="box-component cover min-h-[60dvh]"
   aria-label="Portada de la pagina"
+  transition:animate={customTransition}
 >
   <div class="h-full grid grid-cols-1 md:grid-cols-2 gap-4">
     <!-- Texto -->

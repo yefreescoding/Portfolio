@@ -6,6 +6,8 @@ import MiniMusicPlayer from "../Components/ui/MiniMusicPlayer.tsx";
 ---
 
 <script>
+  import { transitionEnabledOnThisPage } from "astro:transitions/client";
+
   const header = document.querySelector(".header") as HTMLElement;
   // Buttons
   const musicToggle = document.querySelector(
@@ -124,7 +126,7 @@ import MiniMusicPlayer from "../Components/ui/MiniMusicPlayer.tsx";
     --_height: 42px;
     --_weight: 360px;
 
-    z-index: 9999;
+    z-index: calc(9 * 9999);
     position: fixed;
     top: 1rem;
     right: 1rem;

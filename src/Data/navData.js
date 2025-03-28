@@ -1,6 +1,6 @@
 const navData = [
   {
-    name: "persona",
+    name: "Yefree",
     link: "/about/",
   },
   {
