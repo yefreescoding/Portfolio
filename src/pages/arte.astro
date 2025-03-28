@@ -1,0 +1,17 @@
+---
+import MainLayout from "../Layout/MainLayout.astro";
+import Cover from "../Components/Cover.astro";
+---
+
+<MainLayout subtitle="About">
+  <Cover
+    coverTitle="Hola, esta es mi galería de arte 🎨"
+    description="Aparte de ser programador, también me gusta pintar, escribir, diseñar, y crear cosas. Me gusta trabajar en equipo, aprender cosas nuevas, y me gusta hacer cosas que me inspiren."
+  >
+    <img
+      class="aspect-square w-full max-w-[400px] object-cover"
+      src="/images/hero-images/about-hero.webp"
+      alt="Modern Concept Hero"
+    />
+  </Cover>
+</MainLayout>

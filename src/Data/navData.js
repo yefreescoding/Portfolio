@@ -1,11 +1,15 @@
 const navData = [
   {
-    name: "proyectos",
-    link: "/#projects",
+    name: "persona",
+    link: "/about/",
   },
   {
-    name: "Sobre mi",
-    link: "/about/",
+    name: "web dev",
+    link: "/",
+  },
+  {
+    name: "arte",
+    link: "/arte/",
   },
   {
     name: "posts",

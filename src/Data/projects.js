@@ -1,5 +1,25 @@
 export const projects = [
   {
+    id: 2,
+    name: "Banking Landing Page",
+    description:
+      "Easy to use landing page for your banking website. No framework was used in the development of this website.",
+    link: "/",
+    github: "/",
+    imagesrc: "/images/projects-img/hero-video-1.mov",
+    video: true,
+  },
+  {
+    id: 14,
+    name: "Modern Concept Hero",
+    description:
+      "Easy to use landing page for your banking website. No framework was used in the development of this website.",
+    link: "/",
+    github: "/",
+    imagesrc: "/images/projects-img/hero-video-3.mov",
+    video: true,
+  },
+  {
     id: 3,
     name: "Overthink v2",
     description:
@@ -11,7 +31,7 @@ export const projects = [
   },
   {
     id: 7,
-    name: "React component. Horizontal scrolling.",
+    name: "Horizontal scrolling.",
     description:
       "React + typeScript application, no framework was used in the development of this website.",
     link: "https://horizontal-scrolling-react.vercel.app",

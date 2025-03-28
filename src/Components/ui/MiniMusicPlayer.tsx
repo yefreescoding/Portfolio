@@ -31,8 +31,8 @@ export default function MusicPlayer() {
   };
 
   return (
-    <div className="w-full p-2 max-w-[400px] h-auto rounded-xl overflow-hidden shadow-lg bg-zinc-800 border border-zinc-700">
-      <div className="flex md:flex-row">
+    <div className="w-full p-2 max-w-[400px] h-full rounded-xl overflow-hidden shadow-lg bg-zinc-800 border border-zinc-700">
+      <div className="flex md:flex-row justify-between">
         {/* Controls Section */}
         <div className=" p-2 rounded-lg flex flex-col justify-between">
           {/* Song Info */}
@@ -126,53 +126,10 @@ export default function MusicPlayer() {
               </svg>
             </button>
           </div>
-
-          {/* Volume Control */}
-          {/* <div className="pt-4 border-t border-gray-200">
-            <div className="flex items-center justify-center gap-2">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="text-gray-500 flex-1"
-              >
-                <path d="M11 5L6 9H2V15H6L11 19V5Z" fill="currentColor" />
-                <path
-                  d="M15.54 8.46C16.4774 9.39764 17.0039 10.6692 17.0039 11.995C17.0039 13.3208 16.4774 14.5924 15.54 15.53"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M19.07 4.93C20.9447 6.80528 21.9979 9.34836 21.9979 12C21.9979 14.6516 20.9447 17.1947 19.07 19.07"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-
-              <input
-                type="range"
-                min="0"
-                max="100"
-                value={volume}
-                onChange={handleVolumeChange}
-                className="flex-2 w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
-              />
-
-              <span className="text-xs text-gray-500 w-8 text-right">
-                {volume}%
-              </span>
-            </div>
-          </div> */}
         </div>
 
         {/* Album Cover - On the side */}
-        <div className="relative w-[120px] h-full overflow-hidden rounded-2xl aspect-square bg-gray-100">
+        <div className="relative w-[140px] h-full overflow-hidden rounded-lg aspect-square bg-gray-100">
           <img
             src={tracks[currentTrack].cover}
             alt="Album cover"

@@ -1,0 +1,27 @@
+---
+import ProjectDisplay from "./ProjectDisplay.astro";
+
+interface Props {
+  arr: any[];
+}
+
+const { arr } = Astro.props;
+---
+
+<section
+  id="projects"
+  class="box-component grid grid-cols-2 gap-2 my-2"
+  aria-label="Proyectos"
+>
+  {
+    arr.map((project) => (
+      <ProjectDisplay
+        name={project.name}
+        link={project.link}
+        github={project.github}
+        imagesrc={project.imagesrc}
+        video={project.video}
+      />
+    ))
+  }
+</section>
