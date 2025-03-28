@@ -1,6 +1,4 @@
 ---
-import ProjectDisplay from "./ProjectDisplay.astro";
-
 interface Props {
   arr: any[];
 }
@@ -29,19 +27,9 @@ const customTransition = {
 
 <section
   id="projects"
-  class="box-component grid grid-cols-2 gap-2"
+  class="box-component grid grid-cols-1 md:grid-cols-2 gap-2"
   aria-label="Proyectos"
   transition:animate={customTransition}
 >
-  {
-    arr.map((project) => (
-      <ProjectDisplay
-        name={project.name}
-        link={project.link}
-        github={project.github}
-        imagesrc={project.imagesrc}
-        video={project.video}
-      />
-    ))
-  }
+  <slot />
 </section>

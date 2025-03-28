@@ -1,6 +1,8 @@
 ---
 import MainLayout from "../Layout/MainLayout.astro";
 import Cover from "../Components/Cover.astro";
+
+import SectionGrid from "../Components/SectionGrid.astro";
 ---
 
 <MainLayout subtitle="About">
@@ -10,8 +12,39 @@ import Cover from "../Components/Cover.astro";
   >
     <img
       class="aspect-square w-full max-w-[400px] object-cover"
-      src="/images/hero-images/about-hero.webp"
+      src="/images/hero-images/hero-img-2.png"
       alt="Modern Concept Hero"
     />
   </Cover>
+  <SectionGrid>
+    <!-- <Image/> -->
+    <div>
+      <img
+        class="aspect-square w-full max-w-[400px] object-cover"
+        src="/images/hero-images/hero-img-4.webp"
+        alt="Modern Concept Hero"
+      />
+    </div>
+    <div>
+      <img
+        class="aspect-square w-full max-w-[400px] object-cover"
+        src="/images/hero-images/hero-img-2.png"
+        alt="Modern Concept Hero"
+      />
+    </div>
+    <div>
+      <img
+        class="aspect-square w-full max-w-[400px] object-cover"
+        src="/images/hero-images/hero-img-1.webp"
+        alt="Modern Concept Hero"
+      />
+    </div>
+    <div>
+      <img
+        class="aspect-square w-full max-w-[400px] object-cover"
+        src="/images/hero-images/hero-img-3.jpg"
+        alt="Modern Concept Hero"
+      />
+    </div>
+  </SectionGrid>
 </MainLayout>
