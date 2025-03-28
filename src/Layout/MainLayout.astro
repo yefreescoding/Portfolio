@@ -31,7 +31,15 @@ const { subtitle } = Astro.props;
 
       .box-component {
         width: var(--w-app);
-        @apply bg-[var(--base-color)] mx-auto shadow-sm rounded-lg p-6;
+        margin-inline: auto;
+        margin-block: 0.2rem;
+
+        &.cover {
+          padding: 1.5rem;
+          background-color: var(--base-color);
+          box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.1);
+          border-radius: 1rem;
+        }
       }
     </style>
   </body>
