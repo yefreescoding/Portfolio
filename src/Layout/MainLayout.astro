@@ -40,7 +40,7 @@ const { subtitle } = Astro.props;
     //   });
     // });
   </script>
-  <body class="">
+  <body>
     <Header transition:animate="none" />
     <main class="web-page-cont grid">
       <slot />
@@ -63,7 +63,7 @@ const { subtitle } = Astro.props;
       .box-component {
         width: var(--w-app);
         margin-inline: auto;
-        margin-block: 0.2rem;
+        margin-block: 0.5rem;
 
         &.cover {
           padding: 2rem 1.5rem;

@@ -4,135 +4,50 @@ import { Image } from "astro:assets";
 // Library imports
 import { Icon } from "astro-icon";
 
+import Cover from "../Components/Cover.astro";
+
 const subjectImage = "/images/hero-images/Subject.jpg";
 const iconVerify = "/images/icons/verify.png";
 
 // import Layouts
 import MainLayout from "../Layout/MainLayout.astro";
+import SectionGrid from "../Components/SectionGrid.astro";
 ---
 
 <MainLayout subtitle="About">
-  <section id="about" class="section_about">
-    <header aria-label="Cabecera sobre mi" class="flex items-center gap-4 mb-8">
-      <div class="flex justify-between items-end my-4">
-        <Image
-          src={subjectImage}
-          alt="Mi foto"
-          width="10"
-          height="10"
-          class="w-20 h-20 aspect-square rounded-full shadow-lg object-cover"
-          decoding="async"
-          loading="lazy"
-        />
-      </div>
-      <div class="grid grid-flow-row">
-        <div class="flex flex-col">
-          <div class="flex items-center gap-1">
-            <h1 class="text-lg md:text-xl font-base">Yefree Valdez</h1>
-            <Image
-              src={iconVerify}
-              alt="Icon twitter"
-              width="10"
-              height="10"
-              class="w-4 h-4 rounded-full shadow-sm object-cover block"
-              decoding="async"
-              loading="lazy"
-            />
-          </div>
-          <p class="text-base">Desarrollador front end. Madrid.</p>
-          <a
-            href=""
-            target="_blank"
-            class="text-[#0077b5] bg-slate-200 rounded-xl w-fit px-2 my-2 transition-all hover:shadow-lg"
-            >Perfil LinkedIn</a
-          >
-        </div>
-      </div>
-      <div aria-label="Cuerpo sobre mi"></div>
-    </header>
-    <ul class="flex flex-col gap-8 w-full">
-      <li class="flex flex-col gap-4">
-        <h2 class="text-3xl">Experiencia</h2>
-        <ul class="flex flex-col gap-4">
-          <li class="flex items-center gap-8">
-            <p class="text-base">2023 - Now</p>
-            <a href="/" target="_blank" class="flex-2 justify-self-start"
-              >Freelance Front End Developer</a
-            >
-          </li>
-          <li class="flex items-center gap-8">
-            <p class="text-base">2023 - Now</p>
-            <a href="/" target="_blank" class="flex-2 justify-self-start"
-              >Freelance Programming Teacher</a
-            >
-          </li>
-          <li class="flex items-center gap-8">
-            <p class="text-base">2023 - 2023</p>
-            <a href="/" target="_blank" class="flex-2 justify-self-start"
-              >Practicas Equipo de Desarrollo</a
-            >
-          </li>
-        </ul>
-      </li>
-      <li class="flex flex-col gap-4">
-        <h2 class="text-3xl">Proyectos/Open Source</h2>
-        <ul class="flex flex-col gap-4">
-          <li class="flex items-center gap-8">
-            <p class="text-base">2023</p>
-            <a href="/" target="_blank" class="flex-2 justify-self-start"
-              >Front End Encyclopedia</a
-            >
-          </li>
-          <li class="flex items-center gap-8">
-            <p class="text-base">2023</p>
-            <a href="/" target="_blank" class="flex-2 justify-self-start"
-              >Floating scroll componet</a
-            >
-          </li>
-          <li class="flex items-center gap-8">
-            <p class="text-base">2023</p>
-            <a href="/" target="_blank" class="flex-2 justify-self-start"
-              >Hackertab.dev</a
-            >
-          </li>
-        </ul>
-      </li>
-      <li class="flex flex-col gap-4">
-        <h2 class="text-3xl">Educacion</h2>
-        <ul class="flex flex-col gap-4">
-          <li class="flex items-center gap-8">
-            <p class="text-base">2023</p>
-            <a href="/" target="_blank" class="flex-2 justify-self-start"
-              >Desaroolo de aplicaciones con tecnologias web.</a
-            >
-          </li>
-          <li class="flex items-center gap-8">
-            <p class="text-base">2022</p>
-            <a href="/" target="_blank" class="flex-2 justify-self-start"
-              >Curso de diseño y maquetacion de paginas web</a
-            >
-          </li>
-          <li class="flex items-center gap-8">
-            <p class="text-base">2022</p>
-            <a href="/" target="_blank" class="flex-2 justify-self-start"
-              >Python sin fronteras: HTML, CSS, Flask y MySQL</a
-            >
-          </li>
-          <li class="flex items-center gap-8">
-            <p class="text-base">2022</p>
-            <a href="/" target="_blank" class="flex-2 justify-self-start"
-              >Introducion a python</a
-            >
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </section>
-
-  <style lang="scss" is:global>
-    .section_about {
-      width: min(100% - 2rem, 70ch);
-      margin-inline: auto;
-    }
-  </style>
+  <Cover
+    coverTitle="Hola 👋"
+    description="Soy Yefree, ingeniero de software dominicano – Este es mi espacio para mostrar trabajos, experiencias y hobbies. Explora, disfruta y contácteme si te gusta lo que ves. Tip: Haz click el botoncito verde del header arriba ☝️😉."
+  >
+    <Image
+      width="10"
+      height="10"
+      src={"/images/hero-images/about-img.jpeg"}
+      class="w-full h-[420px] object-cover object-center rounded-xl"
+      decoding="async"
+      loading="lazy"
+      alt="Modern Concept Hero"
+    />
+  </Cover>
+  <SectionGrid>
+    <Image
+      width="10"
+      height="10"
+      src={"/images/hero-images/about-img-3.JPG"}
+      class="w-full h-[620px] object-cover object-bottom rounded-xl"
+      decoding="async"
+      loading="lazy"
+      alt="A photo of a landscape with a mountain, a cow and some trees in the background"
+    />
+    <Image
+      width="10"
+      height="10"
+      src={"/images/hero-images/about-img-2.JPG"}
+      class="w-full h-[620px] object-cover object-bottom rounded-xl"
+      decoding="async"
+      loading="lazy"
+      alt="A photo of a landscape with a mountain, a cow and some trees in the background"
+    />
+  </SectionGrid>
+  <style lang="scss" is:global></style>
 </MainLayout>

@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  imagen: string;
+  date: string;
+  title: string;
+  customHeight?: string;
+}
+
+const { imagen, date, title, customHeight = "auto" } = Astro.props;
+---
+
+<div class="mb-4 shadow-xl overflow-hidden rounded-xl">
+  <Image
+    width="10"
+    height="10"
+    src={imagen}
+    style={{ height: customHeight }}
+    class="w-full h-[420px] object-cover object-center"
+    decoding="async"
+    loading="lazy"
+    alt="Modern Concept Hero"
+  />
+</div>

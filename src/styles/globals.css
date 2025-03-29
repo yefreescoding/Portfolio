@@ -150,5 +150,6 @@ p {
 
 .web-page-cont {
   /* border: 2px solid var(--secondary-color); */
-  margin: 8vh auto;
+  margin-inline: auto;
+  margin-block: 8vh 0;
 }

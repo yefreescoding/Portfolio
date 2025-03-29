@@ -1,50 +1,58 @@
 ---
+import { Image } from "astro:assets";
 import MainLayout from "../Layout/MainLayout.astro";
 import Cover from "../Components/Cover.astro";
 
 import SectionGrid from "../Components/SectionGrid.astro";
+import GalleryDiv from "../Components/ui/GalleryDiv.astro";
 ---
 
 <MainLayout subtitle="About">
   <Cover
-    coverTitle="Hola, esta es mi galería de arte 🎨"
+    coverTitle="Bonjour 🎨"
     description="Aparte de ser programador, también me gusta pintar, escribir, diseñar, y crear cosas. Me gusta trabajar en equipo, aprender cosas nuevas, y me gusta hacer cosas que me inspiren."
   >
-    <img
-      class="aspect-square w-full max-w-[400px] object-cover"
-      src="/images/hero-images/hero-img-2.png"
-      alt="Modern Concept Hero"
+    <Image
+      width="10"
+      height="10"
+      src={"/images/hero-images/arte-img-cover.JPG"}
+      class="w-full h-[420px] object-cover object-center rounded-xl"
+      decoding="async"
+      loading="lazy"
+      alt="A sketch of a woman looking down."
     />
   </Cover>
-  <SectionGrid>
+  <SectionGrid masonry={true}>
     <!-- <Image/> -->
-    <div>
-      <img
-        class="aspect-square w-full max-w-[400px] object-cover"
-        src="/images/hero-images/hero-img-4.webp"
-        alt="Modern Concept Hero"
-      />
-    </div>
-    <div>
-      <img
-        class="aspect-square w-full max-w-[400px] object-cover"
-        src="/images/hero-images/hero-img-2.png"
-        alt="Modern Concept Hero"
-      />
-    </div>
-    <div>
-      <img
-        class="aspect-square w-full max-w-[400px] object-cover"
-        src="/images/hero-images/hero-img-1.webp"
-        alt="Modern Concept Hero"
-      />
-    </div>
-    <div>
-      <img
-        class="aspect-square w-full max-w-[400px] object-cover"
-        src="/images/hero-images/hero-img-3.jpg"
-        alt="Modern Concept Hero"
-      />
-    </div>
+    <GalleryDiv
+      imagen="/images/hero-images/arte-img-1.JPG"
+      date="2023"
+      title="Arte 1"
+    />
+    <GalleryDiv
+      imagen="/images/hero-images/arte-img-2.JPG"
+      date="2023"
+      title="Arte 2"
+    />
+    <GalleryDiv
+      imagen="/images/hero-images/arte-img-3.JPG"
+      date="2023"
+      title="Arte 3"
+    />
+    <GalleryDiv
+      imagen="/images/hero-images/arte-img-4.JPG"
+      date="2023"
+      title="Arte 4"
+    />
+    <GalleryDiv
+      imagen="/images/hero-images/arte-img-5.JPG"
+      date="2023"
+      title="Arte 5"
+    />
+    <GalleryDiv
+      imagen="/images/hero-images/arte-img-6.JPG"
+      date="2023"
+      title="Arte 6"
+    />
   </SectionGrid>
 </MainLayout>

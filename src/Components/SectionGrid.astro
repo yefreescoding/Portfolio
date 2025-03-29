@@ -1,9 +1,7 @@
 ---
 interface Props {
-  arr: any[];
+  masonry?: boolean;
 }
-
-const { arr } = Astro.props;
 
 const anim = {
   old: {
@@ -23,13 +21,33 @@ const customTransition = {
   forwards: anim,
   backwards: anim,
 };
+
+const { masonry = false } = Astro.props;
+
+const customClasses = masonry
+  ? "masonry"
+  : "grid grid-cols-1 md:grid-cols-2 gap-2";
 ---
 
 <section
   id="projects"
-  class="box-component grid grid-cols-1 md:grid-cols-2 gap-2"
+  class={`box-component ${customClasses}`}
   aria-label="Proyectos"
   transition:animate={customTransition}
 >
   <slot />
 </section>
+
+<style>
+  .masonry {
+    --gap: clamp(0.5rem, 2vw, 0.6rem);
+    --columns-size: calc(var(--w-app) / 4);
+    columns: var(--columns-size);
+    columns: 400px;
+    gap: var(--gap);
+  }
+  .masonry > * {
+    break-inside: avoid;
+    margin-bottom: var(--gap);
+  }
+</style>
