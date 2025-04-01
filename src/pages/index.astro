@@ -39,25 +39,20 @@ import SectionGrid from "../Components/SectionGrid.astro";
   </SectionGrid>
 
   <section id="projects" class="projects" aria-label="Proyectos">
-    <header class="flex flex-col gap-4 mb-[10vh]">
-      <h2 class="projects__h2">Posts Destacados</h2>
-      <p class="projects__p">Los post que mas me han gustado del ultimo año</p>
-    </header>
     <Layout contentMaxWidth="80ch">
       <GalleryDiv direction="normal" galleryItemsAspectRatio="video">
         {
           allPosts.slice(0, 5).map((post) => (
-            <article class="flex flex-col justify-between p-4 border border-[var(--clr-border-2)] bg-[var(--clr-text-3)] rounded-2xl shadow-lg">
+            <article class="flex flex-col justify-between p-4 border border-zinc-300 bg-zinc-100 rounded-2xl shadow-lg">
               <div class="flex-1">
                 <p>{post.frontmatter.category}</p>
-                <h3 class="text-3xl">{post.frontmatter.title}</h3>
+                <h3 class="text-xl">{post.frontmatter.title}</h3>
               </div>
               <Buttons
                 width="full"
                 link={post.url}
-                size="lg"
-                classes="cover__links text-center"
-                isFilled={true}
+                size="md"
+                classes=" text-center"
                 target="_self"
               >
                 Leer post
@@ -68,7 +63,7 @@ import SectionGrid from "../Components/SectionGrid.astro";
       </GalleryDiv>
     </Layout>
   </section>
-  <ContactForm />
+  <!-- <ContactForm /> -->
 </MainLayout>
 
 <style lang="scss">

@@ -1,5 +1,5 @@
 ---
-import { ClientRouter, slide } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 // import styles
 import "../styles/globals.css";
 
@@ -29,10 +29,11 @@ const { subtitle } = Astro.props;
 
     //     const target = link.href;
 
-    //     gsap.to(".web-page-cont", {
+    //     gsap.to(".box-component.cover", {
     //       opacity: 0,
     //       y: -100,
     //       duration: 0.2,
+    //       delay: 0.5,
     //       onComplete: () => {
     //         window.location.href = target; // Navigate after animation
     //       },

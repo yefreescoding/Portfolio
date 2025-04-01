@@ -41,13 +41,17 @@ const customClasses = masonry
 <style>
   .masonry {
     --gap: clamp(0.5rem, 2vw, 0.6rem);
-    --columns-size: calc(var(--w-app) / 4);
-    columns: var(--columns-size);
+    --columns-size: 400px;
+
+    --webkit-columns: var(--columns-size);
+    --moz-columns: var(--columns-size);
+    /* columns: var(--columns-size); */
     columns: 400px;
-    gap: var(--gap);
+    gap: 0.5rem;
   }
   .masonry > * {
+    -webkit-break-inside: avoid;
     break-inside: avoid;
-    margin-bottom: var(--gap);
+    margin-bottom: 0.5rem;
   }
 </style>

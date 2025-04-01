@@ -33,6 +33,7 @@ const { name, link, github, imagesrc, video } = Astro.props as Props;
             muted
             loop
             class="w-full h-full aspect-video object-cover"
+            transition:persist
           >
             <source src={imagesrc} type="video/mp4" />
             Your browser does not support the video tag.

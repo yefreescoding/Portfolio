@@ -5,79 +5,6 @@ import { MiniMenu } from "../Components/ui/MiniMenu";
 import MiniMusicPlayer from "../Components/ui/MiniMusicPlayer.tsx";
 ---
 
-<script>
-  import { transitionEnabledOnThisPage } from "astro:transitions/client";
-
-  const header = document.querySelector(".header") as HTMLElement;
-  // Buttons
-  const musicToggle = document.querySelector(
-    "#music-toggle"
-  ) as HTMLButtonElement;
-  const menuToggle = document.querySelector(
-    "#menu-toggle"
-  ) as HTMLButtonElement;
-  // components
-  const musicComp = document.querySelector("#div-music") as HTMLElement;
-  const menuComp = document.querySelector("#div-menu") as HTMLElement;
-
-  const states = {
-    music: {
-      id: "music",
-      state: "music",
-      component: musicComp,
-      expanded: "true",
-    },
-    menu: {
-      id: "menu",
-      state: "menu",
-      component: menuComp,
-    },
-  };
-
-  musicToggle.addEventListener("click", () => {
-    const state = musicToggle.getAttribute("aria-controls");
-
-    menuToggle.setAttribute("aria-controls", "closed");
-    menuComp.setAttribute("aria-hidden", "true");
-
-    if (state === "closed") {
-      header.setAttribute("aria-expanded", "true");
-      header.setAttribute("aria-mode", "music");
-      musicToggle.setAttribute("aria-controls", "open");
-      musicComp.setAttribute("aria-hidden", "false");
-    } else {
-      header.setAttribute("aria-expanded", "false");
-      header.setAttribute("aria-mode", "nada");
-      musicToggle.setAttribute("aria-controls", "closed");
-      musicComp.setAttribute("aria-hidden", "true");
-    }
-
-    console.log(state);
-  });
-
-  menuToggle.addEventListener("click", () => {
-    const state = menuToggle.getAttribute("aria-controls");
-
-    musicToggle.setAttribute("aria-controls", "closed");
-    musicComp.setAttribute("aria-hidden", "true");
-
-    if (state === "closed") {
-      header.setAttribute("aria-expanded", "true");
-      header.setAttribute("aria-mode", "menu");
-      menuToggle.setAttribute("aria-controls", "open");
-      menuComp.setAttribute("aria-hidden", "false");
-    } else {
-      header.setAttribute("aria-expanded", "false");
-      header.setAttribute("aria-mode", "nada");
-      menuToggle.setAttribute("aria-controls", "closed");
-      menuComp.setAttribute("aria-hidden", "true");
-    }
-
-    console.log(state);
-    console.log(musicComp.getAttribute("aria-hidden"));
-  });
-</script>
-
 <header
   class="header flex flex-col items-center gap-4"
   aria-label="Cabecera de la pagina"
@@ -117,7 +44,9 @@ import MiniMusicPlayer from "../Components/ui/MiniMusicPlayer.tsx";
   </div>
 </header>
 
-<style is:global>
+<script src="../utils/header.js"></script>
+
+<style>
   .header {
     --_bgk-color: hsl(0, 0%, 10%);
     --_text-color: #f5f5f5;
