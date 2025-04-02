@@ -7,6 +7,7 @@ import Buttons from "../../Components/Buttons.astro";
 
 import { formatDate } from "../../utils/functions";
 import { calculateTimeAgo } from "../../utils/functions";
+import Cover from "../../Components/Cover.astro";
 
 const allPost = await Astro.glob("./*.md");
 
@@ -14,7 +15,8 @@ const reversedPosts = allPost.reverse();
 ---
 
 <MainLayout title="Diario - Yefree">
-  <section class="thoughts" aria-label="Articulos memorias">
+  <Cover coverTitle="Ciao 📨" description="En construcción... Coming Soon." />
+  <!-- <section class="thoughts" aria-label="Articulos memorias">
     <h1 class="thoughts__title">Mis publicaciones</h1>
     <p class="my-8">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint magnam
@@ -33,7 +35,7 @@ const reversedPosts = allPost.reverse();
         </div>
       ))
     }
-  </section>
+  </section> -->
 </MainLayout>
 
 <style lang="scss">
