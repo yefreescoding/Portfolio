@@ -1,4 +1,6 @@
 ---
+import data from "../Data/arte.json";
+
 import { Image } from "astro:assets";
 import MainLayout from "../Layout/MainLayout.astro";
 import Cover from "../Components/Cover.astro";
@@ -15,7 +17,7 @@ import GalleryDiv from "../Components/ui/GalleryDiv.astro";
     <Image
       width="10"
       height="10"
-      src={"/images/hero-images/arte-img-cover.JPG"}
+      src={data[0].image}
       class="w-full h-[420px] object-cover object-center rounded-xl"
       decoding="async"
       loading="lazy"
@@ -23,36 +25,15 @@ import GalleryDiv from "../Components/ui/GalleryDiv.astro";
     />
   </Cover>
   <SectionGrid masonry={true}>
-    <!-- <Image/> -->
-    <GalleryDiv
-      imagen="/images/hero-images/arte-img-1.JPG"
-      date="2023"
-      title="Arte 1"
-    />
-    <GalleryDiv
-      imagen="/images/hero-images/arte-img-2.JPG"
-      date="2023"
-      title="Arte 2"
-    />
-    <GalleryDiv
-      imagen="/images/hero-images/arte-img-3.JPG"
-      date="2023"
-      title="Arte 3"
-    />
-    <GalleryDiv
-      imagen="/images/hero-images/arte-img-4.JPG"
-      date="2023"
-      title="Arte 4"
-    />
-    <GalleryDiv
-      imagen="/images/hero-images/arte-img-5.JPG"
-      date="2023"
-      title="Arte 5"
-    />
-    <GalleryDiv
-      imagen="/images/hero-images/arte-img-6.JPG"
-      date="2023"
-      title="Arte 6"
-    />
+    {
+      data.map((post) => (
+        <GalleryDiv
+          imagen={post.image}
+          alt={post.alt}
+          date={post.date}
+          id={post.id}
+        />
+      ))
+    }
   </SectionGrid>
 </MainLayout>

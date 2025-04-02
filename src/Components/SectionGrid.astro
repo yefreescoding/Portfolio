@@ -25,7 +25,7 @@ const customTransition = {
 const { masonry = false } = Astro.props;
 
 const customClasses = masonry
-  ? "masonry"
+  ? "masonry-container"
   : "grid grid-cols-1 md:grid-cols-2 gap-2";
 ---
 
@@ -39,19 +39,59 @@ const customClasses = masonry
 </section>
 
 <style>
-  .masonry {
-    --gap: clamp(0.5rem, 2vw, 0.6rem);
-    --columns-size: 400px;
-
-    --webkit-columns: var(--columns-size);
-    --moz-columns: var(--columns-size);
-    /* columns: var(--columns-size); */
-    columns: 400px;
-    gap: 0.5rem;
+  .masonry-container {
+    --gap: 10px;
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: auto;
   }
-  .masonry > * {
-    -webkit-break-inside: avoid;
-    break-inside: avoid;
-    margin-bottom: 0.5rem;
+
+  .masonry-column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    height: 100%;
   }
 </style>
+
+<!-- <script src="/path/to/masonry.pkgd.min.js"></script> -->
+
+<script src="../utils/masonry.js"></script>
+
+<!-- <script is:inline>
+  async function createMasonry() {
+    const container = document.querySelector(".masonry-container");
+    if (!container) return;
+
+    // Calculate number of columns based on screen width
+    let columnCount = 1;
+    if (window.innerWidth > 720) {
+      columnCount = 4;
+    } else if (window.innerWidth > 480) {
+      columnCount = 2;
+    }
+
+    // Create columns
+    const columns = [];
+    for (let i = 0; i < columnCount; i++) {
+      const column = document.createElement("div");
+      column.classList.add("masonry-column");
+      container.appendChild(column);
+      columns.push(column);
+    }
+
+    // Distribute items to columns
+    const items = Array.from(container.children);
+    items.forEach((item, index) => {
+      if (!item.classList.contains("masonry-column")) {
+        columns[index % columnCount].appendChild(item);
+      }
+    });
+  }
+
+  createMasonry();
+
+  //Re-calculate the masonry layout when the window is resized.
+  window.addEventListener("resize", createMasonry);
+</script> -->
