@@ -3,16 +3,16 @@ import HeroButton from "./ui/HeroButton.astro";
 import VideoContainer from "./ui/VideoContainer.astro";
 ---
 
-<>
+<div>
+  <div class="flex items-center justify-center gap-4 bg-zinc-100 p-2">
+    <HeroButton buttonText="react projects" buttonIcon="react" />
+    <HeroButton buttonText="react projects" buttonIcon="typescript" />
+    <HeroButton buttonText="react projects" buttonIcon="astro" />
+  </div>
   <div class="border border-zinc-200 shadow-sm overflow-hidden rounded-lg">
     <VideoContainer
       videoSrc={"/images/projects-img/avril-cover.mp4"}
       type="mp4"
     />
   </div>
-  <div class="flex items-center justify-center gap-4 bg-zinc-100 p-2">
-    <HeroButton buttonText="react projects" buttonIcon="react" />
-    <HeroButton buttonText="react projects" buttonIcon="typescript" />
-    <HeroButton buttonText="react projects" buttonIcon="astro" />
-  </div>
-</>
+</div>

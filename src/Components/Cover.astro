@@ -35,9 +35,11 @@ const customTransition = {
   aria-label="Portada de la pagina"
   transition:animate={customTransition}
 >
-  <div class="h-full grid grid-cols-1 md:grid-cols-2 gap-4">
+  <div class="h-full grid grid-cols-1 md:grid-cols-2 gap-8">
     <!-- Texto -->
-    <div class="h-full w-full flex flex-col items-start justify-between">
+    <div
+      class="text-balance h-full w-full flex flex-col items-start justify-between"
+    >
       <div class="w-full h-full flex flex-col items-start">
         <p
           class="mb-8 mx-auto md:mx-0 text-sm flex-wrap flex items-center justify-center gap-2 w-fit rounded-full p-1 pl-2 text-zinc-400"
@@ -51,7 +53,9 @@ const customTransition = {
       </div>
       <p class="text-lg md:text-xl font-bold text-balance">{description}</p>
     </div>
-    <div class="w-full h-full flex flex-col justify-center items-center gap-4">
+    <div
+      class="flex-2 w-full h-full flex flex-col justify-center items-center gap-4"
+    >
       <slot />
     </div>
   </div>

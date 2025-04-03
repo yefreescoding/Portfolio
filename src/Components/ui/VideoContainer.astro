@@ -8,7 +8,7 @@ interface Props {
 const { videoSrc, type, poster } = Astro.props;
 ---
 
-<div class="relative flex w-full h-full items-center justify-center">
+<div class="video-container relative flex items-center justify-center">
   <video
     class="lazy-video"
     data-src={videoSrc}
@@ -40,6 +40,18 @@ const { videoSrc, type, poster } = Astro.props;
   </div>
 
   <style>
+    .video-container {
+      width: 636px;
+      height: 356px;
+    }
+
+    @media (width < 1080px) {
+      .video-container {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
     .lazy-video {
       --width: 100%;
       --height: 100%;

@@ -8,10 +8,10 @@
 document.addEventListener("astro:page-load", () => {
   createMasonry();
   console.log("createMasonry");
+  document.addEventListener("resize", createMasonry);
 });
 
 //Re-calculate the masonry layout when the window is resized.
-document.addEventListener("resize", createMasonry);
 
 function createMasonry() {
   const container = document.querySelector(".masonry-container");

@@ -55,43 +55,4 @@ const customClasses = masonry
   }
 </style>
 
-<!-- <script src="/path/to/masonry.pkgd.min.js"></script> -->
-
 <script src="../utils/masonry.js"></script>
-
-<!-- <script is:inline>
-  async function createMasonry() {
-    const container = document.querySelector(".masonry-container");
-    if (!container) return;
-
-    // Calculate number of columns based on screen width
-    let columnCount = 1;
-    if (window.innerWidth > 720) {
-      columnCount = 4;
-    } else if (window.innerWidth > 480) {
-      columnCount = 2;
-    }
-
-    // Create columns
-    const columns = [];
-    for (let i = 0; i < columnCount; i++) {
-      const column = document.createElement("div");
-      column.classList.add("masonry-column");
-      container.appendChild(column);
-      columns.push(column);
-    }
-
-    // Distribute items to columns
-    const items = Array.from(container.children);
-    items.forEach((item, index) => {
-      if (!item.classList.contains("masonry-column")) {
-        columns[index % columnCount].appendChild(item);
-      }
-    });
-  }
-
-  createMasonry();
-
-  //Re-calculate the masonry layout when the window is resized.
-  window.addEventListener("resize", createMasonry);
-</script> -->

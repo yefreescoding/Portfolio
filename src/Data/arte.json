@@ -1,116 +1,122 @@
 [
   {
-    "id": "Funk Pop",
+    "id": "001",
     "date": "2023",
-    "image": "/images/arte/arte-img-1.jpg",
+    "image": "/images/arte/arte-img-019.jpg",
     "alt": "Obra de arte hecha por Yefree."
   },
   {
-    "id": "Funk Pop",
+    "id": "002",
     "date": "2023",
-    "image": "/images/arte/arte-img-2.jpg",
+    "image": "/images/arte/arte-img-02.jpg",
     "alt": "Obra de arte hecha por Yefree."
   },
   {
-    "id": "Funk Pop",
+    "id": "003",
     "date": "2023",
-    "image": "/images/arte/arte-img-3.jpg",
+    "image": "/images/arte/arte-img-018.jpg",
     "alt": "Obra de arte hecha por Yefree."
   },
   {
-    "id": "Funk Pop",
+    "id": "004",
     "date": "2023",
-    "image": "/images/arte/arte-img-4.jpg",
+    "image": "/images/arte/arte-img-04.jpg",
     "alt": "Obra de arte hecha por Yefree."
   },
   {
-    "id": "Funk Pop",
+    "id": "005",
     "date": "2023",
-    "image": "/images/arte/arte-img-5.jpg",
+    "image": "/images/arte/arte-img-05.jpg",
     "alt": "Obra de arte hecha por Yefree."
   },
   {
-    "id": "Funk Pop",
+    "id": "006",
     "date": "2023",
-    "image": "/images/arte/arte-img-6.jpg",
+    "image": "/images/arte/arte-img-06.jpg",
     "alt": "Obra de arte hecha por Yefree."
   },
   {
-    "id": "Funk Pop",
+    "id": "007",
     "date": "2023",
-    "image": "/images/arte/arte-img-7.jpg",
+    "image": "/images/arte/arte-img-07.jpg",
     "alt": "Obra de arte hecha por Yefree."
   },
   {
-    "id": "Funk Pop",
+    "id": "008",
     "date": "2023",
-    "image": "/images/arte/arte-img-8.jpg",
+    "image": "/images/arte/arte-img-08.jpg",
     "alt": "Obra de arte hecha por Yefree."
   },
   {
-    "id": "Funk Pop",
+    "id": "009",
     "date": "2023",
-    "image": "/images/arte/arte-img-9.jpg",
+    "image": "/images/arte/arte-img-09.jpg",
     "alt": "Obra de arte hecha por Yefree."
   },
   {
-    "id": "Funk Pop",
+    "id": "0010",
     "date": "2023",
-    "image": "/images/arte/arte-img-10.jpg",
+    "image": "/images/arte/arte-img-010.jpg",
     "alt": "Obra de arte hecha por Yefree."
   },
   {
-    "id": "Funk Pop",
+    "id": "0011",
     "date": "2023",
-    "image": "/images/arte/arte-img-11.jpg",
+    "image": "/images/arte/arte-img-011.jpg",
     "alt": "Obra de arte hecha por Yefree."
   },
   {
-    "id": "Funk Pop",
+    "id": "0012",
     "date": "2023",
-    "image": "/images/arte/arte-img-12.jpg",
+    "image": "/images/arte/arte-img-012.jpg",
     "alt": "Obra de arte hecha por Yefree."
   },
   {
-    "id": "Funk Pop",
+    "id": "0013",
     "date": "2023",
-    "image": "/images/arte/arte-img-13.jpg",
+    "image": "/images/arte/arte-img-013.jpg",
     "alt": "Obra de arte hecha por Yefree."
   },
   {
-    "id": "Funk Pop",
+    "id": "0014",
     "date": "2023",
-    "image": "/images/arte/arte-img-14.jpg",
+    "image": "/images/arte/arte-img-014.jpg",
     "alt": "Obra de arte hecha por Yefree."
   },
   {
-    "id": "Funk Pop",
+    "id": "0015",
     "date": "2023",
-    "image": "/images/arte/arte-img-15.jpg",
+    "image": "/images/arte/arte-img-015.jpg",
     "alt": "Obra de arte hecha por Yefree."
   },
   {
-    "id": "Funk Pop",
+    "id": "0016",
     "date": "2023",
-    "image": "/images/arte/arte-img-16.jpg",
+    "image": "/images/arte/arte-img-016.jpg",
     "alt": "Obra de arte hecha por Yefree."
   },
   {
-    "id": "Funk Pop",
+    "id": "0017",
     "date": "2023",
-    "image": "/images/arte/arte-img-17.jpg",
+    "image": "/images/arte/arte-img-017.jpg",
     "alt": "Obra de arte hecha por Yefree."
   },
   {
-    "id": "Funk Pop",
+    "id": "0018",
     "date": "2023",
-    "image": "/images/arte/arte-img-18.jpg",
+    "image": "/images/arte/arte-img-020.jpg",
     "alt": "Obra de arte hecha por Yefree."
   },
   {
-    "id": "Funk Pop",
+    "id": "0019",
     "date": "2023",
-    "image": "/images/arte/arte-img-19.jpg",
+    "image": "/images/arte/arte-img-01.jpg",
+    "alt": "Obra de arte hecha por Yefree."
+  },
+  {
+    "id": "0020",
+    "date": "2023",
+    "image": "/images/arte/arte-img-03.jpg",
     "alt": "Obra de arte hecha por Yefree."
   }
 ]
