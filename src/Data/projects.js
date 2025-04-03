@@ -21,12 +21,21 @@ export const projects = [
   },
   {
     id: 3,
-    name: "Overthink v2",
+    name: "GNX Landing Page",
     description:
-      "React + typeScript application, no framework was used in the development of this website.",
+      "Landing page for a release album. No framework was used in the development of this website.",
     link: "/memorias/",
     github: "/memorias/",
-    imagesrc: "/images/projects/video/overthink-v2.webm",
+    imagesrc: "/images/projects/video/gnx-landing-page.webm",
+    video: true,
+  },
+  {
+    id: 3007,
+    name: "Nice Hover Effect",
+    description: "Description",
+    link: "/memorias/",
+    github: "/memorias/",
+    imagesrc: "/images/projects/video/article-card-video.webm",
     video: true,
   },
   {
@@ -47,6 +56,16 @@ export const projects = [
     link: "/memorias/",
     github: "/memorias/",
     imagesrc: "/images/projects/video/scroll-react.webm",
+    video: true,
+  },
+  {
+    id: 79807,
+    name: "Cool Social Card.",
+    description:
+      "React + typeScript application, no framework was used in the development of this website.",
+    link: "/memorias/",
+    github: "/memorias/",
+    imagesrc: "/images/projects/video/cool-social-card.webm",
     video: true,
   },
   {
