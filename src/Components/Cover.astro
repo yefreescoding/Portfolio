@@ -40,39 +40,18 @@ const customTransition = {
     <div class="h-full w-full flex flex-col items-start justify-between">
       <div class="w-full h-full flex flex-col items-start">
         <p
-          class="mb-8 mx-auto md:mx-0 text-sm flex-wrap flex items-center justify-center gap-2 w-fit rounded-full p-1 pl-2 text-zinc-800"
+          class="mb-8 mx-auto md:mx-0 text-sm flex-wrap flex items-center justify-center gap-2 w-fit rounded-full p-1 pl-2 text-zinc-400"
         >
-          <span class="bg-blue-200/60 text-blue-800 rounded-2xl px-2 py-[3px]"
-            >Nuevo</span
+          <span>Portfolio 2025</span>
+          <span class="bg-blue-100/90 text-blue-800 rounded-2xl px-2 py-[3px]"
+            >Beta v3.05</span
           >
-
-          Ultima entrada de mi blog.
-          <a
-            href="https://devlog.vercel.app/posts/post-7/"
-            target="_blank"
-            class="w-full md:w-fit flex items-center justify-center gap-2 border border-zinc-700 bg-zinc-900 text-zinc-100 rounded-2xl py-1 px-2 ml-2"
-          >
-            <span>Leer aquí</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-4"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
-            </svg>
-          </a>
         </p>
         <h1 class="mb-6 text-3xl font-bold">{coverTitle}</h1>
       </div>
       <p class="text-lg md:text-xl font-bold text-balance">{description}</p>
     </div>
-    <div class="w-full flex flex-col justify-center items-center gap-4">
+    <div class="w-full h-full flex flex-col justify-center items-center gap-4">
       <slot />
     </div>
   </div>

@@ -22,7 +22,7 @@ export const MiniMenu = () => {
     <div className="flex items-center gap-4 justify-between border border-zinc-700 bg-zinc-800 p-4 w-full rounded-lg">
       <div className="flex-auto  flex items-center gap-2">
         <img
-          src="/images/hero-images/profile-pic.png"
+          src="/images/hero-images/profile-pic.jpg"
           alt="Profile"
           className="w-14 rounded-full aspect-square"
         />

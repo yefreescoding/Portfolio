@@ -1,4 +1,6 @@
 ---
+import VideoContainer from "./ui/VideoContainer.astro";
+
 interface Props {
   name: string;
   link: string;
@@ -25,19 +27,10 @@ const { name, link, github, imagesrc, video } = Astro.props as Props;
         {name}
       </h3>
     </div>
-    <div class="w-full h-full bg-green-500">
+    <div class="w-full h-full">
       {
         video ? (
-          <video
-            autoplay
-            muted
-            loop
-            class="w-full h-full aspect-video object-cover"
-            transition:persist
-          >
-            <source src={imagesrc} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <VideoContainer videoSrc={imagesrc} type="mp4" />
         ) : (
           <img src={imagesrc} alt="" class="w-full h-full object-cover" />
         )
