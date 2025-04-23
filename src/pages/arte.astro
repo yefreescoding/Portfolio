@@ -35,5 +35,33 @@ import GalleryDiv from "../Components/ui/GalleryDiv.astro";
         />
       ))
     }
+    <div
+      id="image-show"
+      style="display: none;"
+      class="fixed z-50 inset-0 grid place-items-center w-full h-full bg-zinc-800/80 backdrop-blur-sm"
+    >
+      <img
+        class="w-full max-w-[400px]"
+        src="/images/arte/arte-img-019.jpg"
+        alt=""
+      />
+    </div>
   </SectionGrid>
 </MainLayout>
+
+<script is:inline>
+  document.addEventListener("astro:page-load", () => {
+    const images = document.querySelectorAll(".masonry-img");
+
+    images.forEach((image) => {
+      image.addEventListener("click", () => {
+        const imageShow = document.querySelector("#image-show");
+        const src = image.getAttribute("src");
+        imageShow.style.display = "block";
+        imageShow.querySelector("img").src = image.setAttribute("src", src);
+
+        console.log({ imageClicked: src });
+      });
+    });
+  });
+</script>
